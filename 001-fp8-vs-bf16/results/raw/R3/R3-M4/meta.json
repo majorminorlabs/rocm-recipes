@@ -1,0 +1,21 @@
+{
+  "run_id": "R3-M4",
+  "model": "openai/gpt-oss-120b",
+  "model_revision": "b5c939de8f754692c1647ca79fbf85e8c1e70f8a",
+  "precision": "mxfp4",
+  "engine_version": "0.29.1.dev0+g98dff2a81.d20261002",
+  "image_digest": "rocm/vllm@sha256:e0ea9a10b729573ea8598bdc073bda0ea382fe1037eec7c0761b6fa7f46baaf4",
+  "rocm_version": "",
+  "started_at": "2026-10-08T00:20:53+00:00",
+  "finished_at": "2026-10-08T00:26:41+00:00",
+  "error": "",
+  "lm_eval_version": "0.4.9",
+  "recipe": "R3",
+  "engine": "vllm",
+  "concurrency": 32,
+  "input_len": null,
+  "output_len": 8192,
+  "num_prompts": 250,
+  "status": "ok",
+  "empty_responses": 4
+}

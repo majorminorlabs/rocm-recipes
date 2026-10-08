@@ -1,0 +1,2 @@
+name=rocm/vllm:latest
+digest=rocm/vllm@sha256:e0ea9a10b729573ea8598bdc073bda0ea382fe1037eec7c0761b6fa7f46baaf4

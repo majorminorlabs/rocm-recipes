@@ -1,0 +1,20 @@
+{
+  "run_id": "R4-M5-q4km",
+  "model_revision": "b17cb02dd882d5b6ab62fc777ad2995f19668350",
+  "engine_version": "06cad0b9e77315bd2930bd4f70a6d7b37b2a01c1",
+  "rocm_version": "",
+  "started_at": "2026-10-08T00:31:24+00:00",
+  "finished_at": "2026-10-08T00:31:30+00:00",
+  "error": "",
+  "recipe": "R4",
+  "model": "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF",
+  "precision": "q4_k_m",
+  "engine": "llama.cpp",
+  "image_digest": "",
+  "concurrency": 1,
+  "input_len": 512,
+  "output_len": 128,
+  "num_prompts": 3,
+  "gguf_path": "/mnt/scratch/hf/hub/models--unsloth--Qwen3-Coder-30B-A3B-Instruct-GGUF/snapshots/b17cb02dd882d5b6ab62fc777ad2995f19668350/Qwen3-Coder-30B-A3B-Instruct-Q4_K_M.gguf",
+  "status": "ok"
+}

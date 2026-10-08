@@ -1,0 +1,19 @@
+{
+  "run_id": "R2-M1-c64",
+  "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+  "model_revision": "b2cff646eb4bb1d68355c01b18ae02e7cf42d120",
+  "precision": "bf16",
+  "engine_version": "0.29.1.dev0+g98dff2a81.d20261002",
+  "image_digest": "rocm/vllm@sha256:e0ea9a10b729573ea8598bdc073bda0ea382fe1037eec7c0761b6fa7f46baaf4",
+  "rocm_version": "",
+  "started_at": "2026-10-07T21:07:04+00:00",
+  "finished_at": "2026-10-07T21:08:12+00:00",
+  "error": "",
+  "recipe": "R2",
+  "engine": "vllm",
+  "concurrency": 64,
+  "input_len": 1024,
+  "output_len": 256,
+  "num_prompts": 512,
+  "status": "ok"
+}

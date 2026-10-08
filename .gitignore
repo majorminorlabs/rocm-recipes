@@ -1,0 +1,5 @@
+.DS_Store
+config.env
+logs/
+*_bundle.txt
+STATE.json

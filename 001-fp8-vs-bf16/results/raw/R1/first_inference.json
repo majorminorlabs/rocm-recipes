@@ -1,0 +1,43 @@
+{
+  "response": {
+    "id": "chatcmpl-885b1a84a522f11e",
+    "object": "chat.completion",
+    "created": 1791406313,
+    "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Hello! It's nice to meet you! How can I help you today?",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "length",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.29.1.dev0+g98dff2a81.d20261002-b5622823",
+    "usage": {
+      "prompt_tokens": 11,
+      "total_tokens": 27,
+      "completion_tokens": 16,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "minutes_to_first_token": 11.9785
+}
