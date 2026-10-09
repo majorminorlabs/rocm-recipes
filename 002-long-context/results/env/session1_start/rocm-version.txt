@@ -1,0 +1,2 @@
+cat: /opt/rocm/.info/version: No such file or directory
+NOT AVAILABLE

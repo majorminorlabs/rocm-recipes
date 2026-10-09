@@ -7,6 +7,7 @@ Each folder is one study: a plan, the scripts that ran it, the raw results, and 
 | Study | Question | Headline |
 |---|---|---|
 | [001-fp8-vs-bf16](001-fp8-vs-bf16/) | Is FP8 faster than BF16 on one MI300X? | For one user, FP8 was 31% slower. At 64 concurrent requests it was 35% faster, and it scored 2.4 points lower on GSM8K. |
+| [002-long-context](002-long-context/) | How much context fits on one MI300X? | Qwen3-Coder fit 256K tokens for about 3.8 users and found the target in 9/9 hard retrieval trials, but decoded at 1.1 tokens/s on the tested kernel. |
 
 ## How these are run
 

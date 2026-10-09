@@ -1,0 +1,110 @@
+[
+  {
+    "depth": 0.1,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2058756",
+    "prompt_tokens": 257732,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.87121501799993,
+    "content": "2058756"
+  },
+  {
+    "depth": 0.1,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "2536537",
+    "prompt_tokens": 257735,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.96860522399948,
+    "content": "2536537"
+  },
+  {
+    "depth": 0.1,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "3188131",
+    "prompt_tokens": 257732,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.96561683400068,
+    "content": "3188131"
+  },
+  {
+    "depth": 0.5,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2058756",
+    "prompt_tokens": 257732,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.90723654300018,
+    "content": "2058756"
+  },
+  {
+    "depth": 0.5,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "2536537",
+    "prompt_tokens": 257735,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.8543090660005,
+    "content": "2536537"
+  },
+  {
+    "depth": 0.5,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "3188131",
+    "prompt_tokens": 257732,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.86174367900094,
+    "content": "3188131"
+  },
+  {
+    "depth": 0.9,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2058756",
+    "prompt_tokens": 257732,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.95315388699964,
+    "content": "2058756"
+  },
+  {
+    "depth": 0.9,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "2536537",
+    "prompt_tokens": 257735,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.92574620100095,
+    "content": "2536537"
+  },
+  {
+    "depth": 0.9,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "3188131",
+    "prompt_tokens": 257732,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 145.92903965500045,
+    "content": "3188131"
+  }
+]

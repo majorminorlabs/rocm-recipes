@@ -1,0 +1,23 @@
+{
+  "run_id": "L2-M4-autokv-in32768-out256-c8",
+  "recipe": "L2",
+  "model": "openai/gpt-oss-120b",
+  "weights_precision": "mxfp4",
+  "kv_cache_dtype": "auto",
+  "max_model_len": 131072,
+  "gpu_memory_utilization": 0.92,
+  "server_args": "--host 0.0.0.0 --port 8000 --max-model-len 131072 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --kv-cache-dtype auto",
+  "engine": "vllm",
+  "input_len": 32768,
+  "output_len": 256,
+  "concurrency": 8,
+  "num_prompts": 16,
+  "started_at": "2026-10-09T02:22:19+00:00",
+  "finished_at": "2026-10-09T02:23:23+00:00",
+  "status": "ok",
+  "error": "",
+  "model_revision": "b5c939de8f754692c1647ca79fbf85e8c1e70f8a",
+  "engine_version": "0.29.1.dev0+g98dff2a81.d20261002",
+  "image_digest": "rocm/vllm@sha256:e0ea9a10b729573ea8598bdc073bda0ea382fe1037eec7c0761b6fa7f46baaf4",
+  "rocm_version": "10.1.0"
+}

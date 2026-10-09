@@ -1,0 +1,110 @@
+[
+  {
+    "depth": 0.1,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2058756",
+    "prompt_tokens": 110304,
+    "completion_tokens": 14,
+    "finish_reason": "stop",
+    "latency_s": 106.97754575399995,
+    "content": "The special magic number for indigo is 2058756."
+  },
+  {
+    "depth": 0.1,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "2536537",
+    "prompt_tokens": 110302,
+    "completion_tokens": 13,
+    "finish_reason": "stop",
+    "latency_s": 107.01929153699984,
+    "content": "The special magic number for dawn is 2536537."
+  },
+  {
+    "depth": 0.1,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "3188131",
+    "prompt_tokens": 110304,
+    "completion_tokens": 14,
+    "finish_reason": "stop",
+    "latency_s": 107.22352088499974,
+    "content": "The special magic number for pebble is 3188131."
+  },
+  {
+    "depth": 0.5,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2058756",
+    "prompt_tokens": 110304,
+    "completion_tokens": 14,
+    "finish_reason": "stop",
+    "latency_s": 107.20725095099988,
+    "content": "The special magic number for indigo is 2058756."
+  },
+  {
+    "depth": 0.5,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "2536537",
+    "prompt_tokens": 110302,
+    "completion_tokens": 13,
+    "finish_reason": "stop",
+    "latency_s": 107.05385374999969,
+    "content": "The special magic number for dawn is 2536537."
+  },
+  {
+    "depth": 0.5,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "3188131",
+    "prompt_tokens": 110304,
+    "completion_tokens": 14,
+    "finish_reason": "stop",
+    "latency_s": 107.27749528299955,
+    "content": "The special magic number for pebble is 3188131."
+  },
+  {
+    "depth": 0.9,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2058756",
+    "prompt_tokens": 110304,
+    "completion_tokens": 14,
+    "finish_reason": "stop",
+    "latency_s": 107.08435403299973,
+    "content": "The special magic number for indigo is 2058756."
+  },
+  {
+    "depth": 0.9,
+    "seed": 2,
+    "correct": false,
+    "key": "dawn",
+    "number": "2536537",
+    "prompt_tokens": 110302,
+    "completion_tokens": 11,
+    "finish_reason": "stop",
+    "latency_s": 106.97689945899947,
+    "content": "The special magic number for dawn is 1."
+  },
+  {
+    "depth": 0.9,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "3188131",
+    "prompt_tokens": 110304,
+    "completion_tokens": 14,
+    "finish_reason": "stop",
+    "latency_s": 107.2465747010001,
+    "content": "The special magic number for pebble is 3188131."
+  }
+]
