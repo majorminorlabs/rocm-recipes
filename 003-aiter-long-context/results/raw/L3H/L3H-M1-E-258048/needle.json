@@ -1,0 +1,209 @@
+[
+  {
+    "depth": 0.1,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2978347",
+    "distractor_keys": [
+      "kernel",
+      "ember",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "9312021",
+      "8541208",
+      "8922960"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 47.799894478999704,
+    "content": "2978347",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "6169671",
+    "distractor_keys": [
+      "frost",
+      "xenon",
+      "kestrel"
+    ],
+    "distractor_numbers": [
+      "5220867",
+      "4560440",
+      "1599524"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 47.83860251799888,
+    "content": "6169671",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "7206817",
+    "distractor_keys": [
+      "meadow",
+      "island",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "8953298",
+      "2099391",
+      "1220922"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 47.86694588899991,
+    "content": "7206817",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.5,
+    "seed": 1,
+    "correct": false,
+    "key": "indigo",
+    "number": "2978347",
+    "distractor_keys": [
+      "kernel",
+      "ember",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "9312021",
+      "8541208",
+      "8922960"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 9,
+    "finish_reason": "stop",
+    "latency_s": 47.891859404999195,
+    "content": "8922960\n",
+    "distractor_hit": true
+  },
+  {
+    "depth": 0.5,
+    "seed": 2,
+    "correct": false,
+    "key": "dawn",
+    "number": "6169671",
+    "distractor_keys": [
+      "frost",
+      "xenon",
+      "kestrel"
+    ],
+    "distractor_numbers": [
+      "5220867",
+      "4560440",
+      "1599524"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 47.831545559000006,
+    "content": "4560440",
+    "distractor_hit": true
+  },
+  {
+    "depth": 0.5,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "7206817",
+    "distractor_keys": [
+      "meadow",
+      "island",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "8953298",
+      "2099391",
+      "1220922"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 47.81036208099977,
+    "content": "7206817",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2978347",
+    "distractor_keys": [
+      "kernel",
+      "ember",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "9312021",
+      "8541208",
+      "8922960"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 10,
+    "finish_reason": "stop",
+    "latency_s": 47.841261387000486,
+    "content": "2978347\n```",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "6169671",
+    "distractor_keys": [
+      "frost",
+      "xenon",
+      "kestrel"
+    ],
+    "distractor_numbers": [
+      "5220867",
+      "4560440",
+      "1599524"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 47.856845909000185,
+    "content": "6169671",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "7206817",
+    "distractor_keys": [
+      "meadow",
+      "island",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "8953298",
+      "2099391",
+      "1220922"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 9,
+    "finish_reason": "stop",
+    "latency_s": 47.91830995100099,
+    "content": "7206817\n",
+    "distractor_hit": false
+  }
+]

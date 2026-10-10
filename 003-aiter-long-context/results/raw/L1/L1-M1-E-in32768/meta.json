@@ -1,0 +1,23 @@
+{
+  "run_id": "L1-M1-E-in32768",
+  "recipe": "L1",
+  "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+  "weights_precision": "bf16",
+  "kv_cache_dtype": "fp8",
+  "max_model_len": 262144,
+  "gpu_memory_utilization": 0.92,
+  "server_args": "--host 0.0.0.0 --port 8000 --max-model-len 262144 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --kv-cache-dtype fp8 --attention-backend ROCM_AITER_UNIFIED_ATTN",
+  "engine": "vllm",
+  "input_len": 32768,
+  "output_len": 256,
+  "concurrency": 1,
+  "num_prompts": 4,
+  "started_at": "2026-10-10T02:10:07+00:00",
+  "finished_at": "2026-10-10T02:10:41+00:00",
+  "status": "ok",
+  "error": "",
+  "model_revision": "b2cff646eb4bb1d68355c01b18ae02e7cf42d120",
+  "engine_version": "0.29.1.dev0+g98dff2a81.d20261002",
+  "image_digest": "rocm/vllm@sha256:e0ea9a10b729573ea8598bdc073bda0ea382fe1037eec7c0761b6fa7f46baaf4",
+  "rocm_version": "10.1.0"
+}

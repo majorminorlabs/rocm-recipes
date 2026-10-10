@@ -1,0 +1,692 @@
+[
+  {
+    "depth": 0.1,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2978347",
+    "distractor_keys": [
+      "kernel",
+      "ember",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "9312021",
+      "8541208",
+      "8922960"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.7692472180006,
+    "content": "2978347",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "6169671",
+    "distractor_keys": [
+      "frost",
+      "xenon",
+      "kestrel"
+    ],
+    "distractor_numbers": [
+      "5220867",
+      "4560440",
+      "1599524"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.97494975600057,
+    "content": "6169671",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "7206817",
+    "distractor_keys": [
+      "meadow",
+      "island",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "8953298",
+      "2099391",
+      "1220922"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.67625030199997,
+    "content": "7206817",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 4,
+    "correct": true,
+    "key": "pebble",
+    "number": "7644754",
+    "distractor_keys": [
+      "thistle",
+      "grove",
+      "valley"
+    ],
+    "distractor_numbers": [
+      "9034246",
+      "3600003",
+      "2511631"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.87184401000013,
+    "content": "7644754",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 5,
+    "correct": true,
+    "key": "opal",
+    "number": "9892593",
+    "distractor_keys": [
+      "quartz",
+      "winter",
+      "willow"
+    ],
+    "distractor_numbers": [
+      "1486626",
+      "8811851",
+      "5178410"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.64803374300027,
+    "content": "9892593",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 6,
+    "correct": true,
+    "key": "kernel",
+    "number": "1617783",
+    "distractor_keys": [
+      "frost",
+      "fern",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "1007578",
+      "3442393",
+      "8889557"
+    ],
+    "prompt_tokens": 257891,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.85776105199966,
+    "content": "1617783",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 7,
+    "correct": true,
+    "key": "umber",
+    "number": "1810111",
+    "distractor_keys": [
+      "juniper",
+      "zephyr",
+      "quiet"
+    ],
+    "distractor_numbers": [
+      "2215279",
+      "9990608",
+      "2579240"
+    ],
+    "prompt_tokens": 257896,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.636355998,
+    "content": "1810111",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 8,
+    "correct": true,
+    "key": "olive",
+    "number": "4239959",
+    "distractor_keys": [
+      "xenon",
+      "yarrow",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "1734480",
+      "2429171",
+      "3295844"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.8317821770006,
+    "content": "4239959",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 9,
+    "correct": true,
+    "key": "drift",
+    "number": "3324305",
+    "distractor_keys": [
+      "opal",
+      "xenon",
+      "river"
+    ],
+    "distractor_numbers": [
+      "4122994",
+      "1107962",
+      "6676160"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.7227864639999,
+    "content": "3324305",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.1,
+    "seed": 10,
+    "correct": false,
+    "key": "kernel",
+    "number": "1248847",
+    "distractor_keys": [
+      "cedar",
+      "beacon",
+      "echo"
+    ],
+    "distractor_numbers": [
+      "4457754",
+      "8760813",
+      "9242586"
+    ],
+    "prompt_tokens": 257891,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.9016026039999,
+    "content": "4457754",
+    "distractor_hit": true
+  },
+  {
+    "depth": 0.5,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2978347",
+    "distractor_keys": [
+      "kernel",
+      "ember",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "9312021",
+      "8541208",
+      "8922960"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.68303734300025,
+    "content": "2978347",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.5,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "6169671",
+    "distractor_keys": [
+      "frost",
+      "xenon",
+      "kestrel"
+    ],
+    "distractor_numbers": [
+      "5220867",
+      "4560440",
+      "1599524"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.84159108400036,
+    "content": "6169671",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.5,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "7206817",
+    "distractor_keys": [
+      "meadow",
+      "island",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "8953298",
+      "2099391",
+      "1220922"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.673609597,
+    "content": "7206817",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.5,
+    "seed": 4,
+    "correct": true,
+    "key": "pebble",
+    "number": "7644754",
+    "distractor_keys": [
+      "thistle",
+      "grove",
+      "valley"
+    ],
+    "distractor_numbers": [
+      "9034246",
+      "3600003",
+      "2511631"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.81081015000018,
+    "content": "7644754",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.5,
+    "seed": 5,
+    "correct": true,
+    "key": "opal",
+    "number": "9892593",
+    "distractor_keys": [
+      "quartz",
+      "winter",
+      "willow"
+    ],
+    "distractor_numbers": [
+      "1486626",
+      "8811851",
+      "5178410"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.628546121,
+    "content": "9892593",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.5,
+    "seed": 6,
+    "correct": false,
+    "key": "kernel",
+    "number": "1617783",
+    "distractor_keys": [
+      "frost",
+      "fern",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "1007578",
+      "3442393",
+      "8889557"
+    ],
+    "prompt_tokens": 257891,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.85889332899933,
+    "content": "1007578",
+    "distractor_hit": true
+  },
+  {
+    "depth": 0.5,
+    "seed": 7,
+    "correct": true,
+    "key": "umber",
+    "number": "1810111",
+    "distractor_keys": [
+      "juniper",
+      "zephyr",
+      "quiet"
+    ],
+    "distractor_numbers": [
+      "2215279",
+      "9990608",
+      "2579240"
+    ],
+    "prompt_tokens": 257896,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.65398801800075,
+    "content": "1810111",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.5,
+    "seed": 8,
+    "correct": false,
+    "key": "olive",
+    "number": "4239959",
+    "distractor_keys": [
+      "xenon",
+      "yarrow",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "1734480",
+      "2429171",
+      "3295844"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.85658515899922,
+    "content": "1734480",
+    "distractor_hit": true
+  },
+  {
+    "depth": 0.5,
+    "seed": 9,
+    "correct": true,
+    "key": "drift",
+    "number": "3324305",
+    "distractor_keys": [
+      "opal",
+      "xenon",
+      "river"
+    ],
+    "distractor_numbers": [
+      "4122994",
+      "1107962",
+      "6676160"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.66998049200083,
+    "content": "3324305",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.5,
+    "seed": 10,
+    "correct": true,
+    "key": "kernel",
+    "number": "1248847",
+    "distractor_keys": [
+      "cedar",
+      "beacon",
+      "echo"
+    ],
+    "distractor_numbers": [
+      "4457754",
+      "8760813",
+      "9242586"
+    ],
+    "prompt_tokens": 257891,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.87254322800072,
+    "content": "1248847",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 1,
+    "correct": true,
+    "key": "indigo",
+    "number": "2978347",
+    "distractor_keys": [
+      "kernel",
+      "ember",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "9312021",
+      "8541208",
+      "8922960"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.6414130459998,
+    "content": "2978347",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 2,
+    "correct": true,
+    "key": "dawn",
+    "number": "6169671",
+    "distractor_keys": [
+      "frost",
+      "xenon",
+      "kestrel"
+    ],
+    "distractor_numbers": [
+      "5220867",
+      "4560440",
+      "1599524"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.94231618999947,
+    "content": "6169671",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 3,
+    "correct": true,
+    "key": "pebble",
+    "number": "7206817",
+    "distractor_keys": [
+      "meadow",
+      "island",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "8953298",
+      "2099391",
+      "1220922"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.7656510880006,
+    "content": "7206817",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 4,
+    "correct": true,
+    "key": "pebble",
+    "number": "7644754",
+    "distractor_keys": [
+      "thistle",
+      "grove",
+      "valley"
+    ],
+    "distractor_numbers": [
+      "9034246",
+      "3600003",
+      "2511631"
+    ],
+    "prompt_tokens": 257895,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.9164181849992,
+    "content": "7644754",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 5,
+    "correct": true,
+    "key": "opal",
+    "number": "9892593",
+    "distractor_keys": [
+      "quartz",
+      "winter",
+      "willow"
+    ],
+    "distractor_numbers": [
+      "1486626",
+      "8811851",
+      "5178410"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.7189937990006,
+    "content": "9892593",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 6,
+    "correct": true,
+    "key": "kernel",
+    "number": "1617783",
+    "distractor_keys": [
+      "frost",
+      "fern",
+      "quartz"
+    ],
+    "distractor_numbers": [
+      "1007578",
+      "3442393",
+      "8889557"
+    ],
+    "prompt_tokens": 257891,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.8330213650006,
+    "content": "1617783",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 7,
+    "correct": true,
+    "key": "umber",
+    "number": "1810111",
+    "distractor_keys": [
+      "juniper",
+      "zephyr",
+      "quiet"
+    ],
+    "distractor_numbers": [
+      "2215279",
+      "9990608",
+      "2579240"
+    ],
+    "prompt_tokens": 257896,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.65405491699858,
+    "content": "1810111",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 8,
+    "correct": true,
+    "key": "olive",
+    "number": "4239959",
+    "distractor_keys": [
+      "xenon",
+      "yarrow",
+      "indigo"
+    ],
+    "distractor_numbers": [
+      "1734480",
+      "2429171",
+      "3295844"
+    ],
+    "prompt_tokens": 257894,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.84132601199963,
+    "content": "4239959",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 9,
+    "correct": true,
+    "key": "drift",
+    "number": "3324305",
+    "distractor_keys": [
+      "opal",
+      "xenon",
+      "river"
+    ],
+    "distractor_numbers": [
+      "4122994",
+      "1107962",
+      "6676160"
+    ],
+    "prompt_tokens": 257893,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.68747976000122,
+    "content": "3324305",
+    "distractor_hit": false
+  },
+  {
+    "depth": 0.9,
+    "seed": 10,
+    "correct": true,
+    "key": "kernel",
+    "number": "1248847",
+    "distractor_keys": [
+      "cedar",
+      "beacon",
+      "echo"
+    ],
+    "distractor_numbers": [
+      "4457754",
+      "8760813",
+      "9242586"
+    ],
+    "prompt_tokens": 257891,
+    "completion_tokens": 8,
+    "finish_reason": "stop",
+    "latency_s": 148.82392869499927,
+    "content": "1248847",
+    "distractor_hit": false
+  }
+]
