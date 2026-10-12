@@ -2,7 +2,7 @@
 
 Reproducible inference tests on AMD Instinct GPUs, by MAJOR//MINOR.
 
-Each folder is one study: a plan, the scripts that ran it, the raw results, and a log of everything that went wrong.
+Each folder is one study: the reproduction scripts, raw results, environment records, and a summary of findings.
 
 | Study | Question | Headline |
 |---|---|---|
@@ -12,7 +12,7 @@ Each folder is one study: a plan, the scripts that ran it, the raw results, and 
 
 ## How these are run
 
-Every study runs on a fresh cloud GPU. An AI agent executes the plan unattended, a second agent fixes broken scripts, and a watchdog destroys the server at a hard deadline. Every run records its container digest, model revision and engine version.
+Every study runs on a fresh cloud GPU and records its container digest, model revision and engine version. The scripts document setup, measurement, synchronization, and teardown.
 
 ## License
 
