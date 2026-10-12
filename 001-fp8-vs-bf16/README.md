@@ -94,7 +94,7 @@ Install `doctl`, prepare an SSH key, and obtain an AMD Developer Cloud account. 
 cp config.env.example config.env
 ```
 
-Fill in the configuration and start with [PLAN.md section 3](PLAN.md#3-human-setup-dippo-before-luna-starts). The plan was written for an agent executor, but a person can follow it step by step.
+Fill in the configuration, then use `scripts/remote_setup.sh`, `scripts/serve_vllm.sh`, and the benchmark scripts in `scripts/` to run the experiment. Use `scripts/destroy.sh` when finished.
 
 ## Versions
 
@@ -102,4 +102,4 @@ See [results/env/VERSIONS.md](results/env/VERSIONS.md) for recorded versions and
 
 ## Cost
 
-2.88 GPU-hours, about $5.73 at $1.99/hr. The [session report](notes/session_3_report.md) records the total across sessions.
+2.88 GPU-hours, about $5.73 at $1.99/hr across the recorded runs.

@@ -4,7 +4,7 @@ Only recorded values are listed here. Existing run metadata has not been amended
 
 | Item | Recorded value | Source |
 |---|---|---|
-| AMD Dev Cloud image label | ROCm 10.1 quick-start, Ubuntu 24.04; droplet name `rocm-10-1-gpu-mi300x1-192gb-devcloud-atl1` | Console label recorded in [ESC-007 section 4](../../escalations/ESC-007-metadata-cleanup.md); droplet name corroborated by [session1_start/uname.txt](session1_start/uname.txt) |
+| AMD Dev Cloud image label | ROCm 10.1 quick-start, Ubuntu 24.04; droplet name `rocm-10-1-gpu-mi300x1-192gb-devcloud-atl1` | AMD Dev Cloud console label; droplet name corroborated by [session1_start/uname.txt](session1_start/uname.txt) |
 | Kernel and uname | `Linux rocm-10-1-gpu-mi300x1-192gb-devcloud-atl1 6.8.0-146-generic #146-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep  3 16:12:30 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux` | [session1_start/uname.txt](session1_start/uname.txt) |
 | AMDGPU/ROCk driver | `6.19.14.31400000` | `ROCk module version` line in [session1_start/rocminfo.txt](session1_start/rocminfo.txt) |
 | HSA runtime | `1.21` | `Runtime Version` line in [session1_start/rocminfo.txt](session1_start/rocminfo.txt) |
@@ -15,4 +15,4 @@ Only recorded values are listed here. Existing run metadata has not been amended
 
 Container HIP/ROCm version: not recorded; to be read from the pinned image on the next droplet.
 
-Source for that absence: blank `rocm_version` in [R3-M1/meta.json](../raw/R3/R3-M1/meta.json) and the missing-file report in [session1_start/rocm-version.txt](session1_start/rocm-version.txt). The console image label, driver version, and HSA runtime above are retained as separate facts and are not substituted for an unrecorded runtime version.
+Source for that absence: blank `rocm_version` in [R3-M1/meta.json](../raw/R3/R3-M1/meta.json) and [session1_start/rocm-version.txt](session1_start/rocm-version.txt). The console image label, driver version, and HSA runtime above are retained as separate facts and are not substituted for an unrecorded runtime version.
