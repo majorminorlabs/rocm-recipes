@@ -3,3 +3,14 @@ config.env
 logs/
 *_bundle.txt
 STATE.json
+
+# Internal working files never belong in the public repo.
+# Second guard behind tools/publish_public.sh; see tools/README.md.
+PLAN*.md
+HANDOFF*.md
+PUBLISH*.md
+SOCIAL*.md
+**/phase0_review*.md
+**/escalations/
+__pycache__/
+*.pyc

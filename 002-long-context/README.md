@@ -2,6 +2,10 @@
 
 How much context fits on one 192 GB MI300X, how fast does it answer, and can it still find a fact at the far end? Qwen3-Coder 30B fit a 256K-token window for about 3.8 simultaneous users with BF16 KV cache (7.6 with FP8), and found the target in all nine hard retrieval trials at 256K. On the tested vLLM stack, its decode slowed to 1.1 tokens/s at that length after the attention kernel fell back to Triton. Two sessions used 8.8 GPU-hours, costing $17.56 at $1.99/hour.
 
+## Method
+
+See [METHOD.md](METHOD.md) for how the study was designed and run.
+
 ## Folder map
 
 - [scripts/](scripts/): setup, serving, benchmarking, retrieval, sync, teardown, and summarization commands.

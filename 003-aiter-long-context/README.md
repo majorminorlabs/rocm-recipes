@@ -2,6 +2,10 @@
 
 On one AMD Instinct MI300X, adding `--attention-backend ROCM_AITER_UNIFIED_ATTN` took Qwen3-Coder-30B decoding at 256K from 1.1 to 80 tokens per second and nearly halved time to first token, with no accuracy change. Setting `VLLM_ROCM_USE_AITER=1` alone did not change attention. This study compares five server configurations using the same model, GPU, container and prompts.
 
+## Method
+
+See [METHOD.md](METHOD.md) for how the study was designed and run.
+
 ## The five configurations
 
 | Config | Setting | Attention backend |
