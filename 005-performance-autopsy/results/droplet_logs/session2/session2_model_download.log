@@ -1,0 +1,4 @@
+Fetching 28 files:   0%|          | 0/28 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 28 files:  29%|██▊       | 8/28 [00:11<00:28,  1.43s/it]Fetching 28 files:  43%|████▎     | 12/28 [00:12<00:14,  1.07it/s]Fetching 28 files:  57%|█████▋    | 16/28 [00:15<00:10,  1.15it/s]Fetching 28 files:  68%|██████▊   | 19/28 [00:15<00:05,  1.57it/s]Fetching 28 files:  75%|███████▌  | 21/28 [00:15<00:03,  1.95it/s]Fetching 28 files:  82%|████████▏ | 23/28 [00:19<00:04,  1.17it/s]Fetching 28 files:  93%|█████████▎| 26/28 [00:20<00:01,  1.49it/s]Fetching 28 files: 100%|██████████| 28/28 [00:20<00:00,  1.36it/s]
+[32m✓ Downloaded[0m
+  path: /root/.cache/huggingface/hub/models--Qwen--Qwen3-Coder-30B-A3B-Instruct/snapshots/b2cff646eb4bb1d68355c01b18ae02e7cf42d120

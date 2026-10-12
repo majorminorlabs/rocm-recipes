@@ -1,0 +1,1112 @@
+/sgl-workspace/sglang/python/sglang/launch_server.py:71: UserWarning: 'python -m sglang.launch_server' is still supported, but 'sglang serve' is the recommended entrypoint.
+  Example: sglang serve --model-path <model> [options]
+  warnings.warn(
+[2026-10-11 17:14:53] Registered linear attn model: config=GigaChat35Config, backend=GDNAttnBackend, archs=['GigaChat35ForCausalLM', 'GigaChat35ForCausalLMNextN']
+[aiter] import [module_aiter_core] under /sgl-workspace/aiter/aiter/jit/module_aiter_core.so
+[aiter] merge tuned file under model_configs/ and configs/ /sgl-workspace/aiter/aiter/configs/bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/llama70B_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm47_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/dsv3_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik3_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/dsv4_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimi_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm53_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm5_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_8b_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/llama405B_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/flux2_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_5_397b_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/q3vl_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/minimax_m3_eagle_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/gptoss_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik2_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen32B_bf16_tuned_gemm.csv
+[2026-10-11 17:14:57] Attention backend not specified. Use aiter backend by default.
+[2026-10-11 17:15:12] aiter fused_qk_norm_mrope_3d kernel available
+[2026-10-11 17:15:12] server_args={'model_path': 'Qwen/Qwen3-Coder-30B-A3B-Instruct', 'tokenizer_path': 'Qwen/Qwen3-Coder-30B-A3B-Instruct', 'tokenizer_mode': 'auto', 'tokenizer_backend': 'huggingface', 'tokenizer_worker_num': 1, 'detokenizer_worker_num': 1, 'skip_tokenizer_init': False, 'load_format': 'auto', 'model_loader_extra_config': '{}', 'trust_remote_code': False, 'context_length': 131072, 'is_embedding': False, 'enable_multimodal': None, 'revision': None, 'model_impl': 'auto', 'model_config_parser': 'auto', 'json_model_override_args': '{}', 'dtype': 'auto', 'quantization': None, 'quantization_param_path': None, 'kv_cache_dtype': 'auto', 'enable_fp32_lm_head': False, 'modelopt_quant': None, 'modelopt_checkpoint_restore_path': None, 'modelopt_checkpoint_save_path': None, 'modelopt_export_path': None, 'quantize_and_serve': False, 'rl_quant_profile': None, 'enable_tf32_matmul': False, 'mem_fraction_static': 0.7361, 'max_running_requests': None, 'max_queued_requests': None, 'max_total_tokens': None, 'chunked_prefill_size': 16384, 'prefill_decode_interval': 0, 'enable_dynamic_chunking': False, 'max_prefill_tokens': 16384, 'prefill_max_requests': None, 'schedule_policy': 'lpm', 'enable_priority_scheduling': False, 'disable_priority_preemption': False, 'default_priority_value': None, 'abort_on_priority_when_disabled': False, 'schedule_low_priority_values_first': False, 'priority_scheduling_preemption_threshold': 10, 'retraction_policy': 'length', 'schedule_conservativeness': 1.0, 'page_size': 1, 'c128_page_size': 16, 'swa_full_tokens_ratio': 0.8, 'disable_hybrid_swa_memory': False, 'radix_eviction_policy': 'lru', 'radix_eviction_policy_config': None, 'prefill_only_disable_kv_cache': False, 'disable_radix_cache': False, 'enable_page_major_kv_layout': False, 'enable_unified_memory': False, 'disable_chunked_prefix_cache': False, 'disable_overlap_schedule': False, 'num_continuous_decode_steps': 1, 'scheduler_recv_interval': 1, 'enable_mixed_chunk': False, 'nccl_port': None, 'dist_timeout': None, 'dist_init_addr': None, 'gated_launch_port': None, 'nnodes': 1, 'node_rank': 0, 'tp_size': 1, 'dcp_size': 1, 'pp_size': 1, 'pp_max_micro_batch_size': None, 'pp_async_batch_depth': 0, 'dp_size': 1, 'load_balance_method': 'round_robin', 'attn_cp_size': 1, 'moe_dp_size': 1, 'dwdp_size': 1, 'dcp_comm_backend': 'ag_rs', 'dcp_replicate_q_proj': None, 'enable_prefill_cp': False, 'cp_strategy': None, 'enable_dsa_cache_layer_split': False, 'enable_cp_decode_attn_tp': False, 'enable_dp_attention': False, 'enable_dp_attention_local_control_broadcast': False, 'enable_dp_lm_head': False, 'enable_tp_lm_head_all_to_all': False, 'enable_attn_tp_input_scattered': False, 'enable_shared_experts_attn_tp': False, 'shared_experts_tp_size': None, 'enable_dense_mlp_attn_tp': False, 'enable_layernorm_sp': False, 'disable_attn_tp_gather': False, 'enable_p2p_check': False, 'device': 'cuda', 'base_gpu_id': 0, 'gpu_id_step': 1, 'random_seed': 963654289, 'mlx_enable_sampling': False, 'watchdog_timeout': 300, 'soft_watchdog_timeout': None, 'sleep_on_idle': False, 'use_ray': False, 'custom_sigquit_handler': None, 'numa_node': None, 'gc_threshold': None, 'host': '0.0.0.0', 'port': 8000, 'fastapi_root_path': '', 'smg_grpc_mode': False, 'grpc_mode': False, 'grpc_port': None, 'grpc_worker_threads': 4, 'sidecar': None, 'sidecar_args': None, 'skip_server_warmup': False, 'warmups': None, 'enable_http2': False, 'http2_max_concurrent_streams': 200, 'http2_initial_connection_window_size': 1048576, 'ssl_keyfile': None, 'ssl_certfile': None, 'ssl_ca_certs': None, 'ssl_keyfile_password': None, 'enable_ssl_refresh': False, 'api_key': None, 'admin_api_key': None, 'served_model_name': 'Qwen/Qwen3-Coder-30B-A3B-Instruct', 'weight_version': 'default', 'chat_template': None, 'trust_request_chat_template': False, 'hf_chat_template_name': None, 'completion_template': None, 'file_storage_path': 'sglang_storage', 'enable_cache_report': False, 'return_input_ids': False, 'return_output_ids': False, 'reasoning_parser': None, 'default_chat_template_kwargs': None, 'strip_thinking_cache': False, 'enable_strict_thinking': False, 'tool_call_parser': None, 'tool_server': None, 'sampling_defaults': 'model', 'asr_max_buffer_seconds': 60, 'asr_max_concurrent_sessions': 32, 'preferred_sampling_params': None, 'allow_auto_truncate': False, 'stream_interval': 1, 'batch_notify_size': 16, 'stream_response_default_include_usage': False, 'incremental_streaming_output': False, 'enable_streaming_session': False, 'enable_session_radix_cache': False, 'log_level': 'info', 'log_level_http': None, 'log_requests': False, 'log_requests_level': 2, 'log_requests_format': 'text', 'log_requests_target': None, 'uvicorn_access_log_exclude_prefixes': [], 'crash_dump_folder': None, 'show_time_cost': False, 'enable_metrics': True, 'smg_http_sidecar_port': None, 'enable_mfu_metrics': False, 'enable_metrics_for_all_schedulers': False, 'load_snapshot_publish_interval': 15, 'tokenizer_metrics_custom_labels_header': 'x-custom-labels', 'tokenizer_metrics_allowed_custom_labels': None, 'extra_metric_labels': None, 'bucket_time_to_first_token': None, 'bucket_inter_token_latency': None, 'bucket_e2e_request_latency': None, 'prompt_tokens_buckets': None, 'generation_tokens_buckets': None, 'gc_warning_threshold_secs': 0.0, 'decode_log_interval': 40, 'enable_request_time_stats_logging': False, 'kv_events_config': None, 'load_publish_endpoint': None, 'enable_forward_pass_metrics': False, 'forward_pass_metrics_worker_id': '', 'forward_pass_metrics_ipc_name': None, 'enable_trace': False, 'trace_modules': 'request', 'otlp_traces_endpoint': 'localhost:4317', 'export_metrics_to_file': False, 'export_metrics_to_file_dir': None, 'stat_loggers': None, 'constrained_json_whitespace_pattern': None, 'constrained_json_disable_any_whitespace': False, 'constrained_json_max_whitespace_cnt': None, 'attention_backend': 'aiter', 'decode_attention_backend': None, 'enable_lean_attention': None, 'prefill_attention_backend': None, 'sampling_backend': 'pytorch', 'grammar_backend': 'xgrammar', 'radix_cache_backend': None, 'mm_attention_backend': None, 'fp8_gemm_runner_backend': 'auto', 'fp4_gemm_runner_backend': 'auto', 'bf16_gemm_backend': 'auto', 'dsa_prefill_backend': None, 'dsv4_prefill_backend': 'auto', 'dsa_decode_backend': None, 'dsa_paged_mqa_logits_backend': 'auto', 'dsa_topk_backend': 'sgl-kernel', 'disable_flashinfer_autotune': False, 'flashinfer_autotune_skip_ops': None, 'mamba_backend': 'triton', 'cuda_graph_config': {'decode': {'backend': 'full', 'max_bs': 512, 'bs': [1, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'tc_compiler': 'eager', 'max_context_size': None, 'full_prefill_max_req': None, 'full_prefill_prefix_chunk_tokens': None, 'max_seq_len': None}, 'prefill': {'backend': 'disabled', 'max_bs': 16384, 'bs': [4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 576, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 3072, 3328, 3584, 3840, 4096, 4608, 5120, 5632, 6144, 6656, 7168, 7680, 8192, 8704, 9216, 9728, 10240, 10752, 11264, 11776, 12288, 12800, 13312, 13824, 14336, 14848, 15360, 15872, 16384], 'tc_compiler': 'eager', 'max_context_size': None, 'full_prefill_max_req': None, 'full_prefill_prefix_chunk_tokens': None, 'max_seq_len': None}}, 'cuda_graph_backend_decode': None, 'cuda_graph_backend_prefill': None, 'cuda_graph_max_bs_decode': None, 'cuda_graph_max_bs_prefill': None, 'cuda_graph_bs_decode': None, 'cuda_graph_bs_prefill': None, 'cuda_graph_prefill_max_context': None, 'cuda_graph_tc_compiler': None, 'disable_prefill_cuda_graph': False, 'disable_decode_cuda_graph': False, 'disable_cuda_graph': False, 'disable_cuda_graph_padding': False, 'enable_profile_cuda_graph': False, 'enable_cudagraph_gc': False, 'debug_cuda_graph': False, 'enable_layerwise_nvtx_marker': False, 'enable_nccl_nvls': False, 'enable_symm_mem': False, 'triton_attention_reduce_in_fp32': False, 'triton_attention_num_kv_splits': 16, 'triton_attention_split_tile_size': None, 'flashinfer_mla_disable_ragged': False, 'enable_fused_qk_norm_rope': False, 'enable_precise_embedding_interpolation': False, 'enable_fused_moe_sum_all_reduce': False, 'enable_deepseek_v4_fp4_indexer': False, 'disable_custom_all_reduce': False, 'enable_mscclpp': False, 'enable_torch_symm_mem': False, 'enable_scattered_sconv': False, 'pre_warm_nccl': False, 'boundary_reduction': 'rs+rsv', 'enable_quant_communications': False, 'enable_flashinfer_allreduce_fusion': False, 'enforce_disable_flashinfer_allreduce_fusion': False, 'flashinfer_allreduce_fusion_backend': None, 'enable_aiter_allreduce_fusion': False, 'enable_torch_compile': False, 'enable_torch_compile_debug_mode': False, 'torch_compile_max_bs': 32, 'speculative_algorithm': None, 'uno_lora_path': None, 'speculative_draft_model_path': None, 'speculative_draft_model_revision': None, 'speculative_draft_load_format': None, 'speculative_num_steps': None, 'speculative_eagle_topk': None, 'speculative_num_draft_tokens': None, 'speculative_dflash_block_size': None, 'speculative_dspark_block_size': None, 'speculative_dspark_sps_table_path': None, 'speculative_dspark_confidence_sts_path': None, 'speculative_dspark_align_verify_tokens_to_graph_tier': False, 'speculative_accept_threshold_single': 1.0, 'speculative_accept_threshold_acc': 1.0, 'speculative_use_rejection_sampling': False, 'speculative_token_map': None, 'speculative_attention_mode': 'prefill', 'speculative_draft_attention_backend': None, 'speculative_dsa_topk_backend': 'sgl-kernel', 'speculative_draft_kv_cache_dtype': None, 'speculative_draft_window_size': None, 'speculative_moe_runner_backend': 'auto', 'speculative_moe_a2a_backend': None, 'speculative_draft_model_quantization': None, '_speculative_draft_quantization_explicitly_set': False, 'speculative_skip_dp_mlp_sync': False, 'enable_multi_layer_eagle': False, 'speculative_adaptive': False, 'speculative_adaptive_config': None, 'decoupled_spec_bind_endpoint': None, 'decoupled_spec_connect_endpoints': None, 'decoupled_spec_rank': None, 'decoupled_spec_role': 'null', 'spec_trace_dir': None, 'speculative_ngram_min_bfs_breadth': 1, 'speculative_ngram_max_bfs_breadth': 10, 'speculative_ngram_match_type': 'BFS', 'speculative_ngram_max_trie_depth': 18, 'speculative_ngram_capacity': 10000000, 'speculative_ngram_external_corpus_path': None, 'speculative_ngram_external_sam_budget': 0, 'speculative_ngram_external_corpus_max_tokens': 10000000, 'ep_size': 1, 'moe_a2a_backend': 'none', 'enable_w4a4_mxfp4_megamoe': False, 'deepep_v2_mode': 'direct', 'moe_runner_backend': 'auto', 'flashinfer_mxfp4_moe_precision': 'default', 'deepep_mode': 'auto', 'fuseep_mode': 2, 'deepep_dispatcher_output_dtype': 'auto', 'ep_num_redundant_experts': 0, 'ep_dispatch_algorithm': None, 'init_expert_location': 'trivial', 'enable_eplb': False, 'eplb_algorithm': 'auto', 'eplb_rebalance_num_iterations': 1000, 'eplb_rebalance_layers_per_chunk': None, 'eplb_min_rebalancing_utilization_threshold': 1.0, 'expert_distribution_recorder_mode': None, 'expert_distribution_recorder_buffer_size': 1000, 'expert_balancedness_report_mode': 'off', 'deepep_config': None, 'moe_dense_tp_size': None, 'elastic_ep_backend': None, 'enable_elastic_expert_backup': False, 'mooncake_ib_device': None, 'enable_waterfill': False, 'ep_join_mode': None, 'ep_join_rank_offset': 0, 'elastic_ep_initial_size': None, 'max_ep_size': None, 'elastic_ep_scale_timeout': 600, 'disable_flashinfer_cutlass_moe_fp4_allgather': False, 'disable_shared_experts_fusion': False, 'enforce_shared_experts_fusion': False, 'max_mamba_cache_size': None, 'mamba_ssm_dtype': None, 'mamba_max_states_per_path': -1, 'enable_mamba_cache_stochastic_rounding': False, 'mamba_cache_philox_rounds': 0, 'mamba_full_memory_ratio': 0.9, 'mamba_radix_cache_strategy': 'auto', 'uses_mamba_radix_cache': False, 'mamba_track_interval': 256, 'enable_int8_mamba_checkpoint': False, 'int8_mamba_ckpt_size': None, 'linear_attn_backend': 'triton', 'linear_attn_decode_backend': None, 'linear_attn_prefill_backend': None, 'linear_attn_verify_backend': None, 'enable_linear_replayssm': False, 'linear_replayssm_cache_len': 16, 'enable_linear_replayssm_spec': False, 'enable_hierarchical_cache': False, 'hicache_host_memory_mode': 'cache', 'hicache_ratio': 2.0, 'hicache_size': 0, 'hicache_write_policy': 'write_through', 'hicache_io_backend': 'kernel', 'hicache_mem_layout': 'page_first', 'hicache_storage_backend': None, 'hicache_storage_prefetch_policy': 'timeout', 'hicache_storage_backend_extra_config': None, 'hicache_storage_prefetch_retry_poll_interval': 8, 'hicache_storage_prefetch_retry_max_attempts': 8, 'enable_unified_cache_external_linker': False, 'unified_cache_external_linker_backend': 'mooncake', 'enable_hisparse': False, 'hisparse_config': None, 'enable_broadcast_mm_inputs_process': False, 'enable_prefix_mm_cache': False, 'mm_enable_dp_encoder': False, 'mm_process_config': {}, 'mm_processor_worker_num': 0, 'mm_io_worker_num': 0, 'allowed_media_domains': [], 'media_url_max_file_size_mb': 64, 'mm_preprocess_cache_size_mb': None, 'trust_mm_content_hashes': False, 'limit_mm_data_per_request': None, 'enable_mm_global_cache': False, 'image_processor_backend': 'auto', 'mm_global_cache_backend': 'mooncake', 'disable_fast_image_processor': False, 'mm_feature_transport': 'cpu', 'enable_lora': None, 'enable_lora_overlap_loading': None, 'max_lora_rank': None, 'lora_target_modules': None, 'lora_paths': None, 'max_loaded_loras': None, 'max_loras_per_batch': 8, 'lora_eviction_policy': 'lru', 'lora_backend': 'csgmv', 'max_lora_chunk_size': 16, 'experts_shared_outer_loras': None, 'lora_use_virtual_experts': False, 'lora_strict_loading': False, 'lora_drain_wait_threshold': 0.0, 'enable_two_batch_overlap': False, 'enable_single_batch_overlap': False, 'tbo_token_distribution_threshold': 0.48, 'cpu_offload_gb': 0, 'offload_group_size': -1, 'offload_num_in_group': 1, 'offload_prefetch_step': 1, 'offload_mode': 'cpu', 'enable_lmcache': False, 'lmcache_config_file': None, 'enable_flexkv': False, 'flexkv_config_file': None, 'kt_weight_path': None, 'kt_method': 'AMXINT4', 'kt_cpuinfer': None, 'kt_threadpool_count': 2, 'kt_num_gpu_experts': None, 'kt_max_deferred_experts_per_token': None, 'dllm_algorithm': None, 'dllm_algorithm_config': None, 'dllm_fdfo': True, 'disaggregation_mode': 'null', 'disaggregation_transfer_backend': 'mooncake', 'disaggregation_bootstrap_port': 8998, 'disaggregation_ib_device': None, 'disaggregation_decode_enable_radix_cache': False, 'disaggregation_decode_enable_offload_kvcache': False, 'disaggregation_decode_retraction_backup': None, 'num_reserved_decode_tokens': 512, 'disaggregation_decode_extra_slots': None, 'disaggregation_decode_polling_interval': 1, 'optimistic_prefill_attempts': 0, 'encoder_only': False, 'language_only': False, 'language_model_only': False, 'encoder_transfer_backend': 'zmq_to_scheduler', 'encoder_urls': [], 'encoder_bootstrap_port': 8997, 'encoder_register_urls': [], 'enable_adaptive_dispatch_to_encoder': False, 'enable_pdmux': False, 'pdmux_config_path': None, 'sm_group_num': 8, 'startup_weight_load_mode': 'serial', 'custom_weight_loader': [], 'weight_loader_disable_mmap': False, 'weight_loader_prefetch_checkpoints': False, 'weight_loader_prefetch_num_threads': 4, 'weight_loader_drop_cache_after_load': False, 'remote_instance_weight_loader_seed_instance_ip': None, 'remote_instance_weight_loader_seed_instance_service_port': None, 'remote_instance_weight_loader_send_weights_group_ports': None, 'remote_instance_weight_loader_backend': 'nccl', 'remote_instance_weight_loader_start_seed_via_transfer_engine': False, 'engine_info_bootstrap_port': 6789, 'modelexpress_config': None, 'download_dir': None, 'model_checksum': None, 'delete_ckpt_after_loading': False, 'decrypted_config_file': None, 'decrypted_draft_config_file': None, 'checkpoint_engine_wait_weights_before_ready': False, 'enable_prefill_delayer': False, 'prefill_delayer_max_delay_passes': 30, 'prefill_delayer_token_usage_low_watermark': None, 'prefill_delayer_forward_passes_buckets': None, 'prefill_delayer_wait_seconds_buckets': None, 'prefill_delayer_queue_min_ratio': None, 'prefill_delayer_max_delay_ms': None, 'min_free_slots_delay': None, 'enable_deterministic_inference': False, 'rl_on_policy_target': None, 'kv_canary': 'none', 'kv_canary_real_data': 'none', 'kv_canary_sweep_interval': 0, 'enable_dynamic_batch_tokenizer': False, 'dynamic_batch_tokenizer_batch_size': 32, 'dynamic_batch_tokenizer_batch_timeout': 0.002, 'enable_tokenizer_batch_encode': False, 'disable_tokenizer_batch_decode': False, 'debug_tensor_dump_output_folder': None, 'debug_tensor_dump_layers': None, 'debug_tensor_dump_input_file': None, 'enable_memory_saver': False, 'enable_weights_cpu_backup': False, 'enable_draft_weights_cpu_backup': False, 'enable_custom_logit_processor': False, 'enable_return_hidden_states': False, 'return_hidden_states_mode': None, 'enable_return_routed_experts': False, 'enable_return_indexer_topk': False, 'sampling_mask_max_tokens': 4096, 'disable_outlines_disk_cache': False, 'enable_mis': False, 'weight_cache_mode': 'off', 'weight_cache_socket': None, 'weight_cache_timeout': 1800, 'forward_hooks': None, 'msprobe_dump_config': None, 'ple_offload_embedding': None, 'ple_offload_backend': 'pinned', 'ple_offload_dir': None, 'disaggregation_enable_kv_checksum': False, 'enable_pd_role_switch': False, 'speculative_domino_candidate_pool_size': 2048, 'flashinfer_a2a_dispatch_type': None, 'cuda_graph_max_seq_len_prefill': None, 'prefill_kv_cache_dequant_dtype': 'auto', 'dsv4_attn_backend': 'auto', 'otlp_service_name': None, '_radix_eviction_policy_explicitly_set': False, 'hicache_host_memory_fraction': 0.8, 'enable_linker_mla_dedup': False, '_swa_full_tokens_ratio_explicitly_set': False, 'swa_prefix_tails': None, 'enable_encoder_swa_bounded_replay': False, 'enable_decoder_swa_bounded_replay': False, 'enable_response_store': False, 'disaggregation_decode_host_receive_threshold': 0.0, 'speculative_boundary_reduction': 'rs+rsv', 'speculative_draft_sink_size': None, 'disable_aiter_allreduce_fusion_in_prefill': False, 'disable_aiter_allreduce_fusion_in_decode': False, 'grpc_response_timeout_secs': 300}
+[2026-10-11 17:15:13] Using default HuggingFace chat template with detected content format: string
+[2026-10-11 17:15:13] Auto-detected template features: tool_call_parser=qwen3_coder
+[aiter] import [module_aiter_core] under /sgl-workspace/aiter/aiter/jit/module_aiter_core.so
+[aiter] import [module_aiter_core] under /sgl-workspace/aiter/aiter/jit/module_aiter_core.so
+[aiter] merge tuned file under model_configs/ and configs/ /sgl-workspace/aiter/aiter/configs/bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/llama70B_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm47_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/dsv3_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik3_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/dsv4_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimi_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm53_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm5_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_8b_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/llama405B_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/flux2_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_5_397b_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/q3vl_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/minimax_m3_eagle_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/gptoss_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik2_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen32B_bf16_tuned_gemm.csv
+[aiter] merge tuned file under model_configs/ and configs/ /sgl-workspace/aiter/aiter/configs/bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/llama70B_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm47_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/dsv3_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik3_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/dsv4_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimi_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm53_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm5_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_8b_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/llama405B_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/flux2_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_5_397b_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/q3vl_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/minimax_m3_eagle_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/gptoss_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik2_bf16_tuned_gemm.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen32B_bf16_tuned_gemm.csv
+[2026-10-11 17:15:19] Process 145 gpu_id 0 is running on CPUs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+[2026-10-11 17:15:19] Init parallel begin.
+[2026-10-11 17:15:19] Init parallel ends. elapsed=0.28 s
+[2026-10-11 17:15:20] Memory baseline taken. mem usage=0.00 GB
+[2026-10-11 17:15:20] aiter fused_qk_norm_mrope_3d kernel available
+[2026-10-11 17:15:21] Ignore import error when loading sglang.srt.models.falcon_mamba: cannot import name 'causal_conv1d_fn' from 'sglang.srt.layers.attention.mamba.mamba' (/sgl-workspace/sglang/python/sglang/srt/layers/attention/mamba/mamba.py)
+[2026-10-11 17:15:21] Ignore import error when loading sglang.srt.models.inkling: No module named 'cutlass'
+[2026-10-11 17:15:21] Ignore import error when loading sglang.srt.models.mamba: cannot import name 'causal_conv1d_fn' from 'sglang.srt.layers.attention.mamba.mamba' (/sgl-workspace/sglang/python/sglang/srt/layers/attention/mamba/mamba.py)
+[2026-10-11 17:15:22] Load weight begin. avail mem=191.18 GB
+[2026-10-11 17:15:22] Found local HF snapshot for Qwen/Qwen3-Coder-30B-A3B-Instruct at /root/.cache/huggingface/hub/models--Qwen--Qwen3-Coder-30B-A3B-Instruct/snapshots/b2cff646eb4bb1d68355c01b18ae02e7cf42d120; skipping download.
+Multi-thread loading shards:   0% Completed | 0/16 [00:00<?, ?it/s]Multi-thread loading shards:   6% Completed | 1/16 [00:02<00:44,  2.95s/it]Multi-thread loading shards:  12% Completed | 2/16 [00:04<00:28,  2.01s/it]Multi-thread loading shards:  19% Completed | 3/16 [00:04<00:18,  1.40s/it]Multi-thread loading shards:  25% Completed | 4/16 [00:05<00:13,  1.12s/it]Multi-thread loading shards:  31% Completed | 5/16 [00:06<00:10,  1.04it/s]Multi-thread loading shards:  38% Completed | 6/16 [00:07<00:08,  1.15it/s]Multi-thread loading shards:  44% Completed | 7/16 [00:07<00:07,  1.25it/s]Multi-thread loading shards:  50% Completed | 8/16 [00:08<00:06,  1.32it/s]Multi-thread loading shards:  56% Completed | 9/16 [00:09<00:05,  1.38it/s]Multi-thread loading shards:  62% Completed | 10/16 [00:09<00:04,  1.42it/s]Multi-thread loading shards:  69% Completed | 11/16 [00:10<00:03,  1.44it/s]Multi-thread loading shards:  75% Completed | 12/16 [00:11<00:02,  1.45it/s]Multi-thread loading shards:  81% Completed | 13/16 [00:11<00:02,  1.46it/s]Multi-thread loading shards:  88% Completed | 14/16 [00:12<00:01,  1.47it/s]Multi-thread loading shards:  94% Completed | 15/16 [00:13<00:00,  1.48it/s]Multi-thread loading shards: 100% Completed | 16/16 [00:13<00:00,  1.88it/s]Multi-thread loading shards: 100% Completed | 16/16 [00:13<00:00,  1.21it/s]
+[2026-10-11 17:15:36] Load weight end. elapsed=13.71 s, type=Qwen3MoeForCausalLM, avail mem=134.20 GB, mem usage=56.98 GB.
+[2026-10-11 17:15:36] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 914643, K size: 41.87 GB, V size: 41.87 GB
+[2026-10-11 17:15:36] Memory pool end. avail mem=48.64 GB
+[2026-10-11 17:15:38] Disable prefill CUDA graph because cuda_graph_config resolved prefill.backend='disabled' (e.g. via --cuda-graph-backend-prefill=disabled or auto-disable rules).
+[2026-10-11 17:15:38] Capture target decode CUDA graph begin. backend=full, num_tokens_per_req=1, bs=[1, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], avail mem=20.06 GB
+  0%|          | 0/52 [00:00<?, ?it/s]Capturing batches (bs=512 avail_mem=19.46 GB):   0%|          | 0/52 [00:00<?, ?it/s][aiter] import [module_rmsnorm_quant] under /sgl-workspace/aiter/aiter/jit/module_rmsnorm_quant.so
+[aiter] shape is M:512, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] compile_template_op func_name = 'pa_ragged_c8dfcd8e81d1e71c06afffc183ac016a' with {'src_template': <Template memory:78bb9768e8a0>, 'md_name': 'pa_ragged', 'includes': ['/sgl-workspace/aiter/csrc/cpp_itfs/utils.h', '/sgl-workspace/aiter/csrc/cpp_itfs/pa/pa_ragged.cuh', '/sgl-workspace/aiter/csrc/cpp_itfs/pa/pa_kernels.cuh', '/sgl-workspace/aiter/csrc/cpp_itfs/pa/pa_common.cuh', '/sgl-workspace/aiter/csrc/include', '/sgl-workspace/aiter/csrc/include/ck_tile/'], 'sources': [], 'cxxflags': [], 'func_name': 'pa_ragged_c8dfcd8e81d1e71c06afffc183ac016a', 'folder': 'pa_ragged_c8dfcd8e81d1e71c06afffc183ac016a', 'kwargs': OrderedDict({'gqa_ratio': 8, 'head_size': 128, 'npar_loops': 8, 'dtype': '__hip_bfloat16', 'kv_dtype': '__hip_bfloat16', 'fp8_kv_dtype': 'auto', 'out_dtype': '__hip_bfloat16', 'block_size': 1, 'partition_size': 256, 'mtp': 1, 'alibi_enabled': False, 'logits_soft_cap_enabled': False, 'version': 'GOLDEN'})}...
+[aiter] start build /root/.aiter/build/pa_ragged_c8dfcd8e81d1e71c06afffc183ac016a
+clang (LLVM option parsing): Unknown command line argument '-amdgpu-coerce-illegal-types=1'.  Try: 'clang (LLVM option parsing) --help'
+clang (LLVM option parsing): Did you mean '--amdgpu-mode-register=1'?
+failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++  --offload-arch=gfx942 -O3  -mllvm -amdgpu-coerce-illegal-types=1 -x hip -c /dev/null -o "/dev/null"
+[aiter] -mllvm -amdgpu-coerce-illegal-types=1 is not supported by hipcc.
+[aiter] finish build /root/.aiter/build/pa_ragged_c8dfcd8e81d1e71c06afffc183ac016a, cost 19.09814386s
+[aiter] shape is M:512, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:512, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] LoadKernel: _ZN5aiter24topksoftmax_4x128x8_bf16E hsaco: /sgl-workspace/aiter/hsa//gfx942/topksoftmax/topksoftmax_4x128x8_bf16.co
+[aiter] merge tuned file under model_configs/ and configs/ /sgl-workspace/aiter/aiter/configs/tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_minimax-m2_5.csv:/sgl-workspace/aiter/aiter/configs/model_configs/q3vl_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik3_a16w4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm5_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/minimax_m3_mxfp8_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_ds_v3.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik3_a4w4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik3_a8w4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm5_mxfp8_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/mimo_v2_5_pro_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_qwen3_235b.csv:/sgl-workspace/aiter/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_glm5_1.csv:/sgl-workspace/aiter/aiter/configs/model_configs/k2_horizon_375b_bf16_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik2_fp8fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/gptoss_a16w4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik2_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm5_ptpc_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/minimax_m25_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik2_i4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_glm5.csv:/sgl-workspace/aiter/aiter/configs/model_configs/glm47_fp8_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/dsv3_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3next_80b_fp8_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/gptoss_fp8fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/dsv4_fp8fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_235b_bf16_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/kimik3_i4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/minimax_m3_a16w4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_8_2400b_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/gptoss_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_qwen3_5_397b.csv:/sgl-workspace/aiter/aiter/configs/model_configs/minimax_m3_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_vl_fp4_tuned_fmoe.csv:/sgl-workspace/aiter/aiter/configs/model_configs/qwen3_5_397b_fp4_tuned_fmoe.csv
+[aiter] [fused_moe] duplicate tuned rows (primary) in /tmp/aiter_configs/tuned_fmoe.csv; keeping first match for 12 rows
+[aiter] [fused_moe] duplicate tuned rows after disabling act_type in /tmp/aiter_configs/tuned_fmoe.csv; keeping first match for 96 rows
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 64 use_nt = True, estimated_m_per_expert = 32
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 512, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] import [module_moe_sorting_opus] under /sgl-workspace/aiter/aiter/jit/module_moe_sorting_opus.so
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 64 use_nt = True, estimated_m_per_expert = 32
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 512, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] [pid=145 pname=Process-1] start build [module_moe_ck2stages_b16_b16_preshuffle_off_b16_silu_no_mulWeightStage2] under /sgl-workspace/aiter/aiter/jit/build/module_moe_ck2stages_b16_b16_preshuffle_off_b16_silu_no_mulWeightStage2
+[aiter] Current hipcc not support: -mllvm -amdgpu-coerce-illegal-types=1, skip it.
+[aiter] [pid=145 pname=Process-1] [32mfinish build [module_moe_ck2stages_b16_b16_preshuffle_off_b16_silu_no_mulWeightStage2], cost 94.3s [0m
+[aiter] import [module_moe_ck2stages_b16_b16_preshuffle_off_b16_silu_no_mulWeightStage2] under /sgl-workspace/aiter/aiter/jit/module_moe_ck2stages_b16_b16_preshuffle_off_b16_silu_no_mulWeightStage2.so
+[aiter] type hints mismatch, override to --> ck_moe_stage1(hidden_states: torch.Tensor, w1: torch.Tensor, w2: torch.Tensor, sorted_token_ids: torch.Tensor, sorted_expert_ids: torch.Tensor, num_valid_ids: torch.Tensor, out: torch.Tensor, topk: int, kernelName: str = None, w1_scale: Optional[torch.Tensor] = None, a1_scale: Optional[torch.Tensor] = None, block_m: Optional[int] = 32, sorted_weights: Optional[torch.Tensor] = None, quant_type: int = 0, activation: int = 0, splitk: Optional[int] = 1, non_temporal_load: bool = False, dst_type: Optional[str] = None, is_shuffled: bool = True) -> None
+[aiter] type hints mismatch, override to --> ck_moe_stage2(inter_states: torch.Tensor, w1: torch.Tensor, w2: torch.Tensor, sorted_token_ids: torch.Tensor, sorted_expert_ids: torch.Tensor, num_valid_ids: torch.Tensor, out: torch.Tensor, topk: int, kernelName: str = None, w2_scale: Optional[torch.Tensor] = None, a2_scale: Optional[torch.Tensor] = None, block_m: Optional[int] = 32, sorted_weights: Optional[torch.Tensor] = None, quant_type: int = 0, activation: int = 0, splitk: Optional[int] = 1, non_temporal_load: bool = False, dst_type: Optional[str] = None, is_shuffled: bool = True) -> None
+Capturing batches (bs=512 avail_mem=19.46 GB):   2%|▏         | 1/52 [01:55<1:38:30, 115.88s/it]Capturing batches (bs=496 avail_mem=19.09 GB):   2%|▏         | 1/52 [01:55<1:38:30, 115.88s/it][aiter] shape is M:496, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:496, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:496, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=496 avail_mem=19.09 GB):   4%|▍         | 2/52 [01:56<39:51, 47.82s/it]   Capturing batches (bs=480 avail_mem=19.09 GB):   4%|▍         | 2/52 [01:56<39:51, 47.82s/it][aiter] shape is M:480, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:480, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:480, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=480 avail_mem=19.09 GB):   6%|▌         | 3/52 [01:56<21:17, 26.07s/it]Capturing batches (bs=464 avail_mem=19.09 GB):   6%|▌         | 3/52 [01:56<21:17, 26.07s/it][aiter] shape is M:464, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:464, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:464, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=464 avail_mem=19.09 GB):   8%|▊         | 4/52 [01:56<12:40, 15.85s/it]Capturing batches (bs=448 avail_mem=19.09 GB):   8%|▊         | 4/52 [01:56<12:40, 15.85s/it][aiter] shape is M:448, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:448, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:448, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=448 avail_mem=19.09 GB):  10%|▉         | 5/52 [01:56<07:59, 10.20s/it]Capturing batches (bs=432 avail_mem=19.08 GB):  10%|▉         | 5/52 [01:56<07:59, 10.20s/it][aiter] shape is M:432, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:432, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:432, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=432 avail_mem=19.08 GB):  12%|█▏        | 6/52 [01:56<05:12,  6.79s/it]Capturing batches (bs=416 avail_mem=19.08 GB):  12%|█▏        | 6/52 [01:56<05:12,  6.79s/it][aiter] shape is M:416, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:416, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:416, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=416 avail_mem=19.08 GB):  13%|█▎        | 7/52 [01:56<03:28,  4.63s/it]Capturing batches (bs=400 avail_mem=19.08 GB):  13%|█▎        | 7/52 [01:56<03:28,  4.63s/it][aiter] shape is M:400, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:400, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:400, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=400 avail_mem=19.08 GB):  15%|█▌        | 8/52 [01:57<02:21,  3.21s/it]Capturing batches (bs=384 avail_mem=19.08 GB):  15%|█▌        | 8/52 [01:57<02:21,  3.21s/it][aiter] shape is M:384, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:384, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:384, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=384 avail_mem=19.08 GB):  17%|█▋        | 9/52 [01:57<01:37,  2.26s/it]Capturing batches (bs=368 avail_mem=19.08 GB):  17%|█▋        | 9/52 [01:57<01:37,  2.26s/it][aiter] shape is M:368, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:368, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:368, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=368 avail_mem=19.08 GB):  19%|█▉        | 10/52 [01:57<01:08,  1.62s/it]Capturing batches (bs=352 avail_mem=19.07 GB):  19%|█▉        | 10/52 [01:57<01:08,  1.62s/it][aiter] shape is M:352, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:352, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:352, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=352 avail_mem=19.07 GB):  21%|██        | 11/52 [01:57<00:48,  1.18s/it]Capturing batches (bs=336 avail_mem=19.07 GB):  21%|██        | 11/52 [01:57<00:48,  1.18s/it][aiter] shape is M:336, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:336, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:336, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=336 avail_mem=19.07 GB):  23%|██▎       | 12/52 [01:57<00:34,  1.14it/s]Capturing batches (bs=320 avail_mem=19.07 GB):  23%|██▎       | 12/52 [01:57<00:34,  1.14it/s][aiter] shape is M:320, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:320, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:320, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=320 avail_mem=19.07 GB):  25%|██▌       | 13/52 [01:58<00:25,  1.51it/s]Capturing batches (bs=304 avail_mem=19.07 GB):  25%|██▌       | 13/52 [01:58<00:25,  1.51it/s][aiter] shape is M:304, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:304, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:304, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=304 avail_mem=19.07 GB):  27%|██▋       | 14/52 [01:58<00:19,  1.94it/s]Capturing batches (bs=288 avail_mem=19.07 GB):  27%|██▋       | 14/52 [01:58<00:19,  1.94it/s][aiter] shape is M:288, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:288, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:288, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=288 avail_mem=19.07 GB):  29%|██▉       | 15/52 [01:58<00:15,  2.40it/s]Capturing batches (bs=272 avail_mem=19.06 GB):  29%|██▉       | 15/52 [01:58<00:15,  2.40it/s][aiter] shape is M:272, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:272, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:272, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=272 avail_mem=19.06 GB):  31%|███       | 16/52 [01:58<00:12,  2.90it/s]Capturing batches (bs=256 avail_mem=19.06 GB):  31%|███       | 16/52 [01:58<00:12,  2.90it/s][aiter] shape is M:256, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:256, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:256, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = True, estimated_m_per_expert = 16
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 256, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = True, estimated_m_per_expert = 16
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 256, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=256 avail_mem=19.06 GB):  33%|███▎      | 17/52 [01:58<00:10,  3.38it/s]Capturing batches (bs=248 avail_mem=19.05 GB):  33%|███▎      | 17/52 [01:58<00:10,  3.38it/s][aiter] shape is M:248, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:248, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:248, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=248 avail_mem=19.05 GB):  35%|███▍      | 18/52 [01:59<00:10,  3.09it/s]Capturing batches (bs=240 avail_mem=19.05 GB):  35%|███▍      | 18/52 [01:59<00:10,  3.09it/s][aiter] shape is M:240, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:240, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:240, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=240 avail_mem=19.05 GB):  37%|███▋      | 19/52 [01:59<00:09,  3.58it/s]Capturing batches (bs=232 avail_mem=19.05 GB):  37%|███▋      | 19/52 [01:59<00:09,  3.58it/s][aiter] shape is M:232, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:232, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:232, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=232 avail_mem=19.05 GB):  38%|███▊      | 20/52 [01:59<00:07,  4.01it/s]Capturing batches (bs=224 avail_mem=19.04 GB):  38%|███▊      | 20/52 [01:59<00:07,  4.01it/s][aiter] shape is M:224, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:224, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:224, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=224 avail_mem=19.04 GB):  40%|████      | 21/52 [01:59<00:07,  4.38it/s]Capturing batches (bs=216 avail_mem=19.04 GB):  40%|████      | 21/52 [01:59<00:07,  4.38it/s][aiter] shape is M:216, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:216, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:216, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=216 avail_mem=19.04 GB):  42%|████▏     | 22/52 [01:59<00:06,  4.67it/s]Capturing batches (bs=208 avail_mem=19.04 GB):  42%|████▏     | 22/52 [01:59<00:06,  4.67it/s][aiter] shape is M:208, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:208, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:208, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=208 avail_mem=19.04 GB):  44%|████▍     | 23/52 [02:00<00:05,  4.92it/s]Capturing batches (bs=200 avail_mem=19.04 GB):  44%|████▍     | 23/52 [02:00<00:05,  4.92it/s][aiter] shape is M:200, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:200, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:200, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=200 avail_mem=19.04 GB):  46%|████▌     | 24/52 [02:00<00:05,  5.09it/s]Capturing batches (bs=192 avail_mem=19.04 GB):  46%|████▌     | 24/52 [02:00<00:05,  5.09it/s][aiter] shape is M:192, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:192, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:192, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=192 avail_mem=19.04 GB):  48%|████▊     | 25/52 [02:00<00:05,  5.23it/s]Capturing batches (bs=184 avail_mem=19.04 GB):  48%|████▊     | 25/52 [02:00<00:05,  5.23it/s][aiter] shape is M:184, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:184, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:184, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=184 avail_mem=19.04 GB):  50%|█████     | 26/52 [02:00<00:04,  5.33it/s]Capturing batches (bs=176 avail_mem=19.03 GB):  50%|█████     | 26/52 [02:00<00:04,  5.33it/s][aiter] shape is M:176, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:176, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:176, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=176 avail_mem=19.03 GB):  52%|█████▏    | 27/52 [02:00<00:04,  5.42it/s]Capturing batches (bs=168 avail_mem=19.03 GB):  52%|█████▏    | 27/52 [02:00<00:04,  5.42it/s][aiter] shape is M:168, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:168, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:168, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=168 avail_mem=19.03 GB):  54%|█████▍    | 28/52 [02:00<00:04,  5.47it/s]Capturing batches (bs=160 avail_mem=19.03 GB):  54%|█████▍    | 28/52 [02:00<00:04,  5.47it/s][aiter] shape is M:160, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:160, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:160, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=160 avail_mem=19.03 GB):  56%|█████▌    | 29/52 [02:01<00:04,  5.52it/s]Capturing batches (bs=152 avail_mem=19.03 GB):  56%|█████▌    | 29/52 [02:01<00:04,  5.52it/s][aiter] shape is M:152, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:152, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:152, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=152 avail_mem=19.03 GB):  58%|█████▊    | 30/52 [02:01<00:03,  5.53it/s]Capturing batches (bs=144 avail_mem=19.03 GB):  58%|█████▊    | 30/52 [02:01<00:03,  5.53it/s][aiter] shape is M:144, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:144, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:144, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=144 avail_mem=19.03 GB):  60%|█████▉    | 31/52 [02:01<00:03,  5.56it/s]Capturing batches (bs=136 avail_mem=19.02 GB):  60%|█████▉    | 31/52 [02:01<00:03,  5.56it/s][aiter] shape is M:136, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:136, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:136, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=136 avail_mem=19.02 GB):  62%|██████▏   | 32/52 [02:01<00:03,  5.60it/s]Capturing batches (bs=128 avail_mem=19.02 GB):  62%|██████▏   | 32/52 [02:01<00:03,  5.60it/s][aiter] shape is M:128, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:128, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:128, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 64 use_nt = True, estimated_m_per_expert = 8
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 128, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 64 use_nt = True, estimated_m_per_expert = 8
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 128, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=128 avail_mem=19.02 GB):  63%|██████▎   | 33/52 [02:01<00:03,  5.57it/s]Capturing batches (bs=120 avail_mem=19.02 GB):  63%|██████▎   | 33/52 [02:01<00:03,  5.57it/s][aiter] shape is M:120, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:120, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:120, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=120 avail_mem=19.02 GB):  65%|██████▌   | 34/52 [02:01<00:03,  5.47it/s]Capturing batches (bs=112 avail_mem=19.02 GB):  65%|██████▌   | 34/52 [02:01<00:03,  5.47it/s][aiter] shape is M:112, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:112, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:112, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=112 avail_mem=19.02 GB):  67%|██████▋   | 35/52 [02:02<00:03,  5.52it/s]Capturing batches (bs=104 avail_mem=19.02 GB):  67%|██████▋   | 35/52 [02:02<00:03,  5.52it/s][aiter] shape is M:104, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:104, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:104, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=104 avail_mem=19.02 GB):  69%|██████▉   | 36/52 [02:02<00:02,  5.54it/s]Capturing batches (bs=96 avail_mem=19.01 GB):  69%|██████▉   | 36/52 [02:02<00:02,  5.54it/s] [aiter] shape is M:96, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:96, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:96, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=96 avail_mem=19.01 GB):  71%|███████   | 37/52 [02:02<00:02,  5.56it/s]Capturing batches (bs=88 avail_mem=19.01 GB):  71%|███████   | 37/52 [02:02<00:02,  5.56it/s][aiter] shape is M:88, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:88, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:88, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=88 avail_mem=19.01 GB):  73%|███████▎  | 38/52 [02:02<00:02,  5.59it/s]Capturing batches (bs=80 avail_mem=19.01 GB):  73%|███████▎  | 38/52 [02:02<00:02,  5.59it/s][aiter] shape is M:80, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:80, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:80, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=80 avail_mem=19.01 GB):  75%|███████▌  | 39/52 [02:02<00:02,  5.60it/s]Capturing batches (bs=72 avail_mem=19.01 GB):  75%|███████▌  | 39/52 [02:02<00:02,  5.60it/s][aiter] shape is M:72, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:72, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:72, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=72 avail_mem=19.01 GB):  77%|███████▋  | 40/52 [02:03<00:02,  5.62it/s]Capturing batches (bs=64 avail_mem=19.01 GB):  77%|███████▋  | 40/52 [02:03<00:02,  5.62it/s][aiter] shape is M:64, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:64, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:64, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 4
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 64, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 4
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 64, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=64 avail_mem=19.01 GB):  79%|███████▉  | 41/52 [02:03<00:01,  5.61it/s]Capturing batches (bs=56 avail_mem=19.00 GB):  79%|███████▉  | 41/52 [02:03<00:01,  5.61it/s][aiter] shape is M:56, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:56, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:56, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=56 avail_mem=19.00 GB):  81%|████████  | 42/52 [02:03<00:01,  5.65it/s]Capturing batches (bs=48 avail_mem=19.00 GB):  81%|████████  | 42/52 [02:03<00:01,  5.65it/s][aiter] shape is M:48, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:48, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:48, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=48 avail_mem=19.00 GB):  83%|████████▎ | 43/52 [02:03<00:01,  5.65it/s]Capturing batches (bs=40 avail_mem=19.00 GB):  83%|████████▎ | 43/52 [02:03<00:01,  5.65it/s][aiter] shape is M:40, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:40, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:40, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=40 avail_mem=19.00 GB):  85%|████████▍ | 44/52 [02:03<00:01,  5.68it/s]Capturing batches (bs=32 avail_mem=18.99 GB):  85%|████████▍ | 44/52 [02:03<00:01,  5.68it/s][aiter] shape is M:32, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:32, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:32, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 2
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 32, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 2
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 32, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=32 avail_mem=18.99 GB):  87%|████████▋ | 45/52 [02:03<00:01,  5.67it/s]Capturing batches (bs=24 avail_mem=18.99 GB):  87%|████████▋ | 45/52 [02:03<00:01,  5.67it/s][aiter] shape is M:24, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:24, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:24, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=24 avail_mem=18.99 GB):  88%|████████▊ | 46/52 [02:04<00:01,  5.66it/s]Capturing batches (bs=16 avail_mem=18.99 GB):  88%|████████▊ | 46/52 [02:04<00:01,  5.66it/s][aiter] shape is M:16, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:16, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:16, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 1
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 1
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=16 avail_mem=18.99 GB):  90%|█████████ | 47/52 [02:04<00:01,  4.99it/s]Capturing batches (bs=12 avail_mem=18.98 GB):  90%|█████████ | 47/52 [02:04<00:01,  4.99it/s][aiter] shape is M:12, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:12, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:12, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+Capturing batches (bs=12 avail_mem=18.98 GB):  92%|█████████▏| 48/52 [02:04<00:00,  5.15it/s]Capturing batches (bs=8 avail_mem=18.98 GB):  92%|█████████▏| 48/52 [02:04<00:00,  5.15it/s] [aiter] shape is M:8, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:8, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:8, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using skinny solution:2
+[aiter] import [module_custom] under /sgl-workspace/aiter/aiter/jit/module_custom.so
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 8, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 8, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=8 avail_mem=18.98 GB):  94%|█████████▍| 49/52 [02:04<00:00,  5.19it/s]Capturing batches (bs=4 avail_mem=18.97 GB):  94%|█████████▍| 49/52 [02:04<00:00,  5.19it/s][aiter] shape is M:4, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:4, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:4, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using skinny solution:2
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=4 avail_mem=18.97 GB):  96%|█████████▌| 50/52 [02:04<00:00,  5.33it/s]Capturing batches (bs=2 avail_mem=18.97 GB):  96%|█████████▌| 50/52 [02:04<00:00,  5.33it/s][aiter] shape is M:2, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:2, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:2, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using skinny solution:2
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 2, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 2, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=2 avail_mem=18.97 GB):  98%|█████████▊| 51/52 [02:05<00:00,  5.41it/s]Capturing batches (bs=1 avail_mem=18.97 GB):  98%|█████████▊| 51/52 [02:05<00:00,  5.41it/s][aiter] shape is M:1, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:1, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:1, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using skinny solution:2
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+Capturing batches (bs=1 avail_mem=18.97 GB): 100%|██████████| 52/52 [02:05<00:00,  4.19it/s]Capturing batches (bs=1 avail_mem=18.97 GB): 100%|██████████| 52/52 [02:05<00:00,  2.41s/it]
+[2026-10-11 17:17:44] Capture target decode CUDA graph end. elapsed=125.95 s, mem usage=1.10 GB, avail mem=18.97 GB.
+[2026-10-11 17:17:44] max_total_num_tokens=914643, chunked_prefill_size=16384, max_prefill_tokens=16384, max_running_requests=3572, context_len=131072, available_gpu_mem=18.97 GB
+[2026-10-11 17:17:52] Building sglang.srt.mem_cache.rust_tree_core.mem_cache with `cargo build --release --locked --package sglang-radix-tree --features python-extension`
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded pyo3-build-config v0.22.6
+  Downloaded pyo3-macros v0.22.6
+  Downloaded find-msvc-tools v0.1.11
+  Downloaded sha2-asm v0.6.4
+  Downloaded pyo3-macros-backend v0.22.6
+  Downloaded pyo3-ffi v0.22.6
+  Downloaded target-lexicon v0.12.16
+  Downloaded safetensors v0.3.3
+  Downloaded crc32fast v1.5.1
+  Downloaded cc v1.4.4
+  Downloaded zerocopy-derive v0.8.56
+  Downloaded torch-sys v0.24.0
+  Downloaded zerocopy v0.8.56
+  Downloaded ndarray v0.16.1
+  Downloaded syn v3.0.4
+  Downloaded pyo3 v0.22.6
+  Downloaded zstd-sys v2.0.16+zstd.1.5.7
+  Downloaded tch v0.24.0
+   Compiling libc v0.2.189
+   Compiling version_check v0.9.5
+   Compiling find-msvc-tools v0.1.11
+   Compiling shlex v2.0.1
+   Compiling pkg-config v0.3.34
+   Compiling proc-macro2 v1.0.107
+   Compiling generic-array v0.14.7
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling typenum v1.20.1
+   Compiling target-lexicon v0.12.16
+   Compiling cfg-if v1.0.4
+   Compiling autocfg v1.5.1
+   Compiling jobserver v0.1.35
+   Compiling cc v1.4.4
+   Compiling crypto-common v0.1.7
+   Compiling zstd-safe v5.0.2+zstd.1.5.2
+   Compiling crc32fast v1.5.1
+   Compiling pyo3-build-config v0.22.6
+   Compiling syn v2.0.119
+   Compiling subtle v2.6.1
+   Compiling block-buffer v0.10.4
+   Compiling once_cell v1.21.4
+   Compiling digest v0.10.7
+   Compiling cpufeatures v0.2.17
+   Compiling zstd-sys v2.0.16+zstd.1.5.7
+   Compiling bzip2-sys v0.1.13+1.0.8
+   Compiling inout v0.1.4
+   Compiling rand_core v0.6.4
+   Compiling simd-adler32 v0.3.10
+   Compiling base64ct v1.8.3
+   Compiling adler2 v2.0.1
+   Compiling miniz_oxide v0.9.1
+   Compiling password-hash v0.4.2
+   Compiling cipher v0.4.4
+   Compiling sha2 v0.10.9
+   Compiling hmac v0.12.1
+   Compiling getrandom v0.2.17
+   Compiling powerfmt v0.2.0
+   Compiling num-conv v0.2.2
+   Compiling zerocopy v0.8.56
+   Compiling anyhow v1.0.104
+   Compiling time-core v0.1.9
+   Compiling deranged v0.5.8
+   Compiling pbkdf2 v0.11.0
+   Compiling aes v0.8.4
+   Compiling zerocopy-derive v0.8.56
+   Compiling time v0.3.55
+   Compiling flate2 v1.1.10
+   Compiling bzip2 v0.4.4
+   Compiling sha1 v0.10.7
+   Compiling num-traits v0.2.19
+   Compiling byteorder v1.5.0
+   Compiling constant_time_eq v0.1.5
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling pyo3-ffi v0.22.6
+   Compiling pyo3-macros-backend v0.22.6
+   Compiling matrixmultiply v0.3.11
+   Compiling syn v3.0.4
+   Compiling serde v1.0.229
+   Compiling serde_json v1.0.151
+   Compiling serde_derive v1.0.229
+   Compiling ppv-lite86 v0.2.21
+   Compiling zstd v0.11.2+zstd.1.5.2
+   Compiling zip v0.6.6
+   Compiling memoffset v0.9.1
+   Compiling torch-sys v0.24.0
+   Compiling heck v0.5.0
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling thiserror v1.0.69
+   Compiling rawpointer v0.2.1
+   Compiling rand_chacha v0.3.1
+   Compiling num-integer v0.1.47
+   Compiling num-complex v0.4.6
+   Compiling thiserror-impl v1.0.69
+   Compiling pyo3 v0.22.6
+   Compiling tch v0.24.0
+   Compiling ndarray v0.16.1
+   Compiling pyo3-macros v0.22.6
+   Compiling rand v0.8.8
+   Compiling safetensors v0.3.3
+   Compiling half v2.7.1
+   Compiling equivalent v1.0.2
+   Compiling foldhash v0.2.0
+   Compiling indoc v2.0.7
+   Compiling lazy_static v1.5.0
+   Compiling unindent v0.2.4
+   Compiling allocator-api2 v0.2.21
+   Compiling hashbrown v0.16.1
+   Compiling sglang-radix-tree v0.1.0 (/sgl-workspace/sglang/rust/sglang-radix-tree)
+    Finished `release` profile [optimized] target(s) in 1m 15s
+[2026-10-11 17:19:07] Init Unified Radix Cache. Components: (<ComponentType.FULL: 0>,). Tree Core: RustUnifiedTreeCore
+[2026-10-11 17:19:07] Tree cache initialized: source=default impl=UnifiedRadixCache hybrid_swa=False hybrid_ssm=False hicache_attached=False streaming_wrapped=False
+[2026-10-11 17:19:08] Engine startup timings (s): load_weight=13.71, kv_cache_allocation=0.26, scheduler_e2e=228.65, cuda_graph={prefill=0.00, decode=125.95, target_verify=0.00, draft_prefill=0.00, draft_decode=0.00, draft_extend=0.00}, tokenizer_e2e=235.58
+[2026-10-11 17:19:08] INFO:     Started server process [1]
+[2026-10-11 17:19:08] INFO:     Waiting for application startup.
+[2026-10-11 17:19:08] Using default chat sampling params from model generation config: {'repetition_penalty': 1.05, 'temperature': 0.7, 'top_k': 20, 'top_p': 0.8}
+[2026-10-11 17:19:08] INFO:     Application startup complete.
+[2026-10-11 17:19:08] INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-10-11 17:19:09] INFO:     127.0.0.1:46060 - "GET /model_info HTTP/1.1" 200 OK
+[aiter] shape is M:6, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] [pid=145 pname=Process-1] start build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/build/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink
+/sgl-workspace/sglang/python/sglang/srt/entrypoints/http_server.py:470: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
+  return await original_handler(ORJSONRequest(request.scope, request.receive))
+[2026-10-11 17:19:10] INFO:     <droplet-ip>:45276 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-11 17:20:10] INFO:     <droplet-ip>:41998 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-11 17:20:19] INFO:     <droplet-ip>:50420 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:20:19] INFO:     <droplet-ip>:50426 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:20:53] INFO:     <droplet-ip>:54132 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:20:53] INFO:     <droplet-ip>:54140 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:20:53] INFO:     <droplet-ip>:54140 - "GET /metrics HTTP/1.1" 200 OK
+[aiter] [pid=145 pname=Process-1] [32mfinish build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink], cost 111.3s [0m
+[aiter] import [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink.so
+[aiter] type hints mismatch, override to --> mha_batch_prefill(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, cu_seqlens_q: torch.Tensor, kv_indptr: torch.Tensor, kv_page_indices: torch.Tensor, max_seqlen_q: int, max_seqlen_k: int, dropout_p: float, softmax_scale: float, logits_soft_cap: float, zero_tensors: bool, is_causal: bool, window_size_left: int, window_size_right: int, sink_size: int, return_softmax_lse: bool, return_dropout_randval: bool, out: Optional[torch.Tensor] = None, bias: Optional[torch.Tensor] = None, alibi_slopes: Optional[torch.Tensor] = None, q_descale: Optional[torch.Tensor] = None, k_descale: Optional[torch.Tensor] = None, v_descale: Optional[torch.Tensor] = None, kv_block_descale: Optional[torch.Tensor] = None, kv_last_page_lens: Optional[torch.Tensor] = None, block_table: Optional[torch.Tensor] = None, seqlen_k: Optional[torch.Tensor] = None, sink_ptr: Optional[torch.Tensor] = None, gen: Optional[torch.Generator] = None) -> List[torch.Tensor]
+[aiter] shape is M:6, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:6, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using skinny solution:2
+[aiter] import [module_sample] under /sgl-workspace/aiter/aiter/jit/module_sample.so
+[aiter] shape is M:1024, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:1024, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:1024, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 64
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1024, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 64
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1024, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[2026-10-11 17:21:01] Prefill batch, #new-seq: 1, #new-token: 6, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 0.05
+[2026-10-11 17:21:04] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 288.68
+[2026-10-11 17:21:04] INFO:     <droplet-ip>:54140 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:21:04] INFO:     127.0.0.1:46068 - "POST /generate HTTP/1.1" 200 OK
+[2026-10-11 17:21:04] INFO:     127.0.0.1:47648 - "POST /freeze_gc HTTP/1.1" 200 OK
+[2026-10-11 17:21:04] The server is fired up and ready to roll!
+[2026-10-11 17:21:05] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 0.41, #queue-req: 0
+[2026-10-11 17:21:05] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1799.21
+[2026-10-11 17:21:05] INFO:     <droplet-ip>:54140 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:21:05] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 154.25, #queue-req: 0
+[2026-10-11 17:21:05] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 213.98, #queue-req: 0
+[2026-10-11 17:21:05] INFO:     <droplet-ip>:54140 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:05] INFO:     <droplet-ip>:54140 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:06] INFO:     <droplet-ip>:37440 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:07] INFO:     <droplet-ip>:37450 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:08] INFO:     <droplet-ip>:37454 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:09] INFO:     <droplet-ip>:37456 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:10] INFO:     <droplet-ip>:37464 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:11] INFO:     <droplet-ip>:37476 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:12] INFO:     <droplet-ip>:37488 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:13] INFO:     <droplet-ip>:37500 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:14] INFO:     <droplet-ip>:51620 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:16] INFO:     <droplet-ip>:51626 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:17] INFO:     <droplet-ip>:51634 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:18] INFO:     <droplet-ip>:51644 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:18] INFO:     <droplet-ip>:51656 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:21:19] INFO:     <droplet-ip>:51672 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:19] INFO:     <droplet-ip>:51672 - "GET /metrics HTTP/1.1" 200 OK
+[aiter] shape is M:4096, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:4096, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:4096, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 256
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4096, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 256
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4096, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[2026-10-11 17:21:19] INFO:     <droplet-ip>:51674 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:19] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 290.36
+[2026-10-11 17:21:19] INFO:     <droplet-ip>:51672 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:21:19] Decode batch, #running-req: 1, #token: 4129, token usage: 0.00, cuda graph: True, gen throughput (token/s): 2.86, #queue-req: 0
+[2026-10-11 17:21:19] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 9982.78
+[2026-10-11 17:21:19] INFO:     <droplet-ip>:51672 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:21:19] Decode batch, #running-req: 1, #token: 4105, token usage: 0.00, cuda graph: True, gen throughput (token/s): 134.93, #queue-req: 0
+[2026-10-11 17:21:20] Decode batch, #running-req: 1, #token: 4145, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.66, #queue-req: 0
+[2026-10-11 17:21:20] INFO:     <droplet-ip>:51672 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:20] INFO:     <droplet-ip>:51672 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:20] INFO:     <droplet-ip>:51676 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:58] INFO:     <droplet-ip>:54536 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:21:59] INFO:     <droplet-ip>:54546 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:21:59] INFO:     <droplet-ip>:54546 - "GET /metrics HTTP/1.1" 200 OK
+[aiter] [pid=145 pname=Process-1] start build [mha_batch_prefill_bf16_nlogits_nbias_nmask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/build/mha_batch_prefill_bf16_nlogits_nbias_nmask_nlse_ndropout_nqscale_nsink
+[aiter] [pid=145 pname=Process-1] [32mfinish build [mha_batch_prefill_bf16_nlogits_nbias_nmask_nlse_ndropout_nqscale_nsink], cost 109.2s [0m
+[aiter] import [mha_batch_prefill_bf16_nlogits_nbias_nmask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/mha_batch_prefill_bf16_nlogits_nbias_nmask_nlse_ndropout_nqscale_nsink.so
+[2026-10-11 17:23:48] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 1023, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 0.01
+[2026-10-11 17:23:48] INFO:     <droplet-ip>:54546 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:23:48] Decode batch, #running-req: 1, #token: 1049, token usage: 0.00, cuda graph: True, gen throughput (token/s): 0.27, #queue-req: 0
+[2026-10-11 17:23:48] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 214.18, #queue-req: 0
+[2026-10-11 17:23:48] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 1023, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2.26
+[2026-10-11 17:23:48] INFO:     <droplet-ip>:54546 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:23:49] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 120.57, #queue-req: 0
+[2026-10-11 17:23:49] INFO:     <droplet-ip>:54546 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:49] INFO:     <droplet-ip>:54546 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:49] INFO:     <droplet-ip>:51252 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:51] INFO:     <droplet-ip>:51268 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:52] INFO:     <droplet-ip>:51276 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:53] INFO:     <droplet-ip>:51280 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:54] INFO:     <droplet-ip>:51292 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:55] INFO:     <droplet-ip>:47916 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:56] INFO:     <droplet-ip>:47918 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:57] INFO:     <droplet-ip>:47934 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:58] INFO:     <droplet-ip>:47944 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:23:59] INFO:     <droplet-ip>:47956 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:00] INFO:     <droplet-ip>:47962 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:01] INFO:     <droplet-ip>:47970 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:02] INFO:     <droplet-ip>:47974 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:24:02] INFO:     <droplet-ip>:47976 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:02] INFO:     <droplet-ip>:47976 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:02] INFO:     <droplet-ip>:47986 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:02] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 292.10
+[2026-10-11 17:24:02] INFO:     <droplet-ip>:47976 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:24:03] Decode batch, #running-req: 1, #token: 4113, token usage: 0.00, cuda graph: True, gen throughput (token/s): 2.88, #queue-req: 0
+[2026-10-11 17:24:03] Decode batch, #running-req: 1, #token: 4153, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.36, #queue-req: 0
+[2026-10-11 17:24:03] Decode batch, #running-req: 1, #token: 4193, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.77, #queue-req: 0
+[2026-10-11 17:24:03] Decode batch, #running-req: 1, #token: 4233, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.11, #queue-req: 0
+[2026-10-11 17:24:03] Decode batch, #running-req: 1, #token: 4273, token usage: 0.00, cuda graph: True, gen throughput (token/s): 208.22, #queue-req: 0
+[2026-10-11 17:24:04] INFO:     <droplet-ip>:47998 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:04] Decode batch, #running-req: 1, #token: 4313, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.35, #queue-req: 0
+[2026-10-11 17:24:04] Decode batch, #running-req: 1, #token: 4353, token usage: 0.00, cuda graph: True, gen throughput (token/s): 206.40, #queue-req: 0
+[2026-10-11 17:24:04] Decode batch, #running-req: 1, #token: 4393, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.96, #queue-req: 0
+[2026-10-11 17:24:04] Decode batch, #running-req: 1, #token: 4433, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.80, #queue-req: 0
+[2026-10-11 17:24:04] Decode batch, #running-req: 1, #token: 4473, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.58, #queue-req: 0
+[2026-10-11 17:24:05] Decode batch, #running-req: 1, #token: 4513, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.30, #queue-req: 0
+[2026-10-11 17:24:05] INFO:     <droplet-ip>:35316 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:05] Decode batch, #running-req: 1, #token: 4553, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.81, #queue-req: 0
+[2026-10-11 17:24:05] Decode batch, #running-req: 1, #token: 4593, token usage: 0.01, cuda graph: True, gen throughput (token/s): 203.58, #queue-req: 0
+[aiter] shape is M:2560, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:2560, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:2560, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:24:05] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 999.00
+[2026-10-11 17:24:05] INFO:     <droplet-ip>:47976 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:24:05] Decode batch, #running-req: 1, #token: 4121, token usage: 0.00, cuda graph: True, gen throughput (token/s): 145.50, #queue-req: 0
+[2026-10-11 17:24:05] Decode batch, #running-req: 1, #token: 4161, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.33, #queue-req: 0
+[2026-10-11 17:24:06] Decode batch, #running-req: 1, #token: 4201, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.72, #queue-req: 0
+[2026-10-11 17:24:06] INFO:     <droplet-ip>:35324 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:06] Decode batch, #running-req: 1, #token: 4241, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.16, #queue-req: 0
+[2026-10-11 17:24:06] Decode batch, #running-req: 1, #token: 4281, token usage: 0.00, cuda graph: True, gen throughput (token/s): 208.03, #queue-req: 0
+[2026-10-11 17:24:06] Decode batch, #running-req: 1, #token: 4321, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.35, #queue-req: 0
+[2026-10-11 17:24:06] Decode batch, #running-req: 1, #token: 4361, token usage: 0.00, cuda graph: True, gen throughput (token/s): 206.22, #queue-req: 0
+[2026-10-11 17:24:07] Decode batch, #running-req: 1, #token: 4401, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.08, #queue-req: 0
+[2026-10-11 17:24:07] Decode batch, #running-req: 1, #token: 4441, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.73, #queue-req: 0
+[2026-10-11 17:24:07] INFO:     <droplet-ip>:35332 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:07] Decode batch, #running-req: 1, #token: 4481, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.47, #queue-req: 0
+[2026-10-11 17:24:07] Decode batch, #running-req: 1, #token: 4521, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.17, #queue-req: 0
+[2026-10-11 17:24:07] Decode batch, #running-req: 1, #token: 4561, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.67, #queue-req: 0
+[2026-10-11 17:24:07] Decode batch, #running-req: 1, #token: 4601, token usage: 0.01, cuda graph: True, gen throughput (token/s): 203.35, #queue-req: 0
+[2026-10-11 17:24:08] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 999.76
+[2026-10-11 17:24:08] INFO:     <droplet-ip>:47976 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:24:08] Decode batch, #running-req: 1, #token: 4129, token usage: 0.00, cuda graph: True, gen throughput (token/s): 146.86, #queue-req: 0
+[2026-10-11 17:24:08] INFO:     <droplet-ip>:35334 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:08] Decode batch, #running-req: 1, #token: 4169, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.13, #queue-req: 0
+[2026-10-11 17:24:08] Decode batch, #running-req: 1, #token: 4209, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.37, #queue-req: 0
+[2026-10-11 17:24:08] Decode batch, #running-req: 1, #token: 4249, token usage: 0.00, cuda graph: True, gen throughput (token/s): 208.80, #queue-req: 0
+[2026-10-11 17:24:09] Decode batch, #running-req: 1, #token: 4289, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.70, #queue-req: 0
+[2026-10-11 17:24:09] Decode batch, #running-req: 1, #token: 4329, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.07, #queue-req: 0
+[2026-10-11 17:24:09] Decode batch, #running-req: 1, #token: 4369, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.79, #queue-req: 0
+[2026-10-11 17:24:09] INFO:     <droplet-ip>:35346 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:09] Decode batch, #running-req: 1, #token: 4409, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.01, #queue-req: 0
+[2026-10-11 17:24:09] Decode batch, #running-req: 1, #token: 4449, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.65, #queue-req: 0
+[2026-10-11 17:24:10] Decode batch, #running-req: 1, #token: 4489, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.40, #queue-req: 0
+[2026-10-11 17:24:10] Decode batch, #running-req: 1, #token: 4529, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.95, #queue-req: 0
+[2026-10-11 17:24:10] Decode batch, #running-req: 1, #token: 4569, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.59, #queue-req: 0
+[2026-10-11 17:24:10] INFO:     <droplet-ip>:35362 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:10] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.27, #queue-req: 0
+[2026-10-11 17:24:10] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 999.97
+[2026-10-11 17:24:10] INFO:     <droplet-ip>:47976 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:24:10] Decode batch, #running-req: 1, #token: 4137, token usage: 0.00, cuda graph: True, gen throughput (token/s): 148.48, #queue-req: 0
+[2026-10-11 17:24:11] Decode batch, #running-req: 1, #token: 4177, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.03, #queue-req: 0
+[2026-10-11 17:24:11] Decode batch, #running-req: 1, #token: 4217, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.40, #queue-req: 0
+[2026-10-11 17:24:11] Decode batch, #running-req: 1, #token: 4257, token usage: 0.00, cuda graph: True, gen throughput (token/s): 208.73, #queue-req: 0
+[2026-10-11 17:24:11] INFO:     <droplet-ip>:35374 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:11] Decode batch, #running-req: 1, #token: 4297, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.47, #queue-req: 0
+[2026-10-11 17:24:11] Decode batch, #running-req: 1, #token: 4337, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.22, #queue-req: 0
+[2026-10-11 17:24:12] Decode batch, #running-req: 1, #token: 4377, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.67, #queue-req: 0
+[2026-10-11 17:24:12] Decode batch, #running-req: 1, #token: 4417, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.02, #queue-req: 0
+[2026-10-11 17:24:12] Decode batch, #running-req: 1, #token: 4457, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.65, #queue-req: 0
+[2026-10-11 17:24:12] Decode batch, #running-req: 1, #token: 4497, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.22, #queue-req: 0
+[2026-10-11 17:24:12] INFO:     <droplet-ip>:35390 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:12] Decode batch, #running-req: 1, #token: 4537, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.90, #queue-req: 0
+[2026-10-11 17:24:13] Decode batch, #running-req: 1, #token: 4577, token usage: 0.01, cuda graph: True, gen throughput (token/s): 203.61, #queue-req: 0
+[2026-10-11 17:24:13] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1000.22
+[2026-10-11 17:24:13] INFO:     <droplet-ip>:47976 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:24:13] Decode batch, #running-req: 1, #token: 4105, token usage: 0.00, cuda graph: True, gen throughput (token/s): 145.50, #queue-req: 0
+[2026-10-11 17:24:13] Decode batch, #running-req: 1, #token: 4145, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.61, #queue-req: 0
+[2026-10-11 17:24:13] Decode batch, #running-req: 1, #token: 4185, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.07, #queue-req: 0
+[2026-10-11 17:24:13] INFO:     <droplet-ip>:35392 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:13] Decode batch, #running-req: 1, #token: 4225, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.35, #queue-req: 0
+[2026-10-11 17:24:14] Decode batch, #running-req: 1, #token: 4265, token usage: 0.00, cuda graph: True, gen throughput (token/s): 208.49, #queue-req: 0
+[2026-10-11 17:24:14] Decode batch, #running-req: 1, #token: 4305, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.45, #queue-req: 0
+[2026-10-11 17:24:14] Decode batch, #running-req: 1, #token: 4345, token usage: 0.00, cuda graph: True, gen throughput (token/s): 206.72, #queue-req: 0
+[2026-10-11 17:24:14] Decode batch, #running-req: 1, #token: 4385, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.44, #queue-req: 0
+[2026-10-11 17:24:14] Decode batch, #running-req: 1, #token: 4425, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.01, #queue-req: 0
+[2026-10-11 17:24:14] INFO:     <droplet-ip>:35398 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:15] Decode batch, #running-req: 1, #token: 4465, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.68, #queue-req: 0
+[2026-10-11 17:24:15] Decode batch, #running-req: 1, #token: 4505, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.18, #queue-req: 0
+[2026-10-11 17:24:15] Decode batch, #running-req: 1, #token: 4545, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.85, #queue-req: 0
+[2026-10-11 17:24:15] Decode batch, #running-req: 1, #token: 4585, token usage: 0.01, cuda graph: True, gen throughput (token/s): 203.55, #queue-req: 0
+[2026-10-11 17:24:15] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1002.16
+[2026-10-11 17:24:15] INFO:     <droplet-ip>:47976 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:24:15] Decode batch, #running-req: 1, #token: 4113, token usage: 0.00, cuda graph: True, gen throughput (token/s): 148.74, #queue-req: 0
+[2026-10-11 17:24:15] INFO:     <droplet-ip>:48250 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:16] Decode batch, #running-req: 1, #token: 4153, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.44, #queue-req: 0
+[2026-10-11 17:24:16] Decode batch, #running-req: 1, #token: 4193, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.78, #queue-req: 0
+[2026-10-11 17:24:16] Decode batch, #running-req: 1, #token: 4233, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.08, #queue-req: 0
+[2026-10-11 17:24:16] Decode batch, #running-req: 1, #token: 4273, token usage: 0.00, cuda graph: True, gen throughput (token/s): 208.22, #queue-req: 0
+[2026-10-11 17:24:16] Decode batch, #running-req: 1, #token: 4313, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.34, #queue-req: 0
+[2026-10-11 17:24:16] INFO:     <droplet-ip>:48258 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:17] Decode batch, #running-req: 1, #token: 4353, token usage: 0.00, cuda graph: True, gen throughput (token/s): 206.62, #queue-req: 0
+[2026-10-11 17:24:17] Decode batch, #running-req: 1, #token: 4393, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.16, #queue-req: 0
+[2026-10-11 17:24:17] Decode batch, #running-req: 1, #token: 4433, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.73, #queue-req: 0
+[2026-10-11 17:24:17] Decode batch, #running-req: 1, #token: 4473, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.54, #queue-req: 0
+[2026-10-11 17:24:17] Decode batch, #running-req: 1, #token: 4513, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.19, #queue-req: 0
+[2026-10-11 17:24:17] Decode batch, #running-req: 1, #token: 4553, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.65, #queue-req: 0
+[2026-10-11 17:24:18] INFO:     <droplet-ip>:48270 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:18] Decode batch, #running-req: 1, #token: 4593, token usage: 0.01, cuda graph: True, gen throughput (token/s): 203.41, #queue-req: 0
+[2026-10-11 17:24:18] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1000.06
+[2026-10-11 17:24:18] INFO:     <droplet-ip>:47976 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:24:18] Decode batch, #running-req: 1, #token: 4121, token usage: 0.00, cuda graph: True, gen throughput (token/s): 146.89, #queue-req: 0
+[2026-10-11 17:24:18] Decode batch, #running-req: 1, #token: 4161, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.41, #queue-req: 0
+[2026-10-11 17:24:18] Decode batch, #running-req: 1, #token: 4201, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.73, #queue-req: 0
+[2026-10-11 17:24:19] Decode batch, #running-req: 1, #token: 4241, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.09, #queue-req: 0
+[2026-10-11 17:24:19] INFO:     <droplet-ip>:48278 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:19] Decode batch, #running-req: 1, #token: 4281, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.87, #queue-req: 0
+[2026-10-11 17:24:19] Decode batch, #running-req: 1, #token: 4321, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.16, #queue-req: 0
+[2026-10-11 17:24:19] Decode batch, #running-req: 1, #token: 4361, token usage: 0.00, cuda graph: True, gen throughput (token/s): 206.33, #queue-req: 0
+[2026-10-11 17:24:19] Decode batch, #running-req: 1, #token: 4401, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.08, #queue-req: 0
+[2026-10-11 17:24:20] Decode batch, #running-req: 1, #token: 4441, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.77, #queue-req: 0
+[2026-10-11 17:24:20] Decode batch, #running-req: 1, #token: 4481, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.33, #queue-req: 0
+[2026-10-11 17:24:20] INFO:     <droplet-ip>:48286 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:20] Decode batch, #running-req: 1, #token: 4521, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.11, #queue-req: 0
+[2026-10-11 17:24:20] Decode batch, #running-req: 1, #token: 4561, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.65, #queue-req: 0
+[2026-10-11 17:24:20] Decode batch, #running-req: 1, #token: 4601, token usage: 0.01, cuda graph: True, gen throughput (token/s): 203.30, #queue-req: 0
+[2026-10-11 17:24:20] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1001.47
+[2026-10-11 17:24:20] INFO:     <droplet-ip>:47976 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:24:21] Decode batch, #running-req: 1, #token: 4129, token usage: 0.00, cuda graph: True, gen throughput (token/s): 149.50, #queue-req: 0
+[2026-10-11 17:24:21] Decode batch, #running-req: 1, #token: 4169, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.05, #queue-req: 0
+[2026-10-11 17:24:21] INFO:     <droplet-ip>:48302 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:21] Decode batch, #running-req: 1, #token: 4209, token usage: 0.00, cuda graph: True, gen throughput (token/s): 209.41, #queue-req: 0
+[2026-10-11 17:24:21] Decode batch, #running-req: 1, #token: 4249, token usage: 0.00, cuda graph: True, gen throughput (token/s): 208.73, #queue-req: 0
+[2026-10-11 17:24:21] Decode batch, #running-req: 1, #token: 4289, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.63, #queue-req: 0
+[2026-10-11 17:24:22] Decode batch, #running-req: 1, #token: 4329, token usage: 0.00, cuda graph: True, gen throughput (token/s): 207.13, #queue-req: 0
+[2026-10-11 17:24:22] Decode batch, #running-req: 1, #token: 4369, token usage: 0.00, cuda graph: True, gen throughput (token/s): 205.66, #queue-req: 0
+[2026-10-11 17:24:22] INFO:     <droplet-ip>:48314 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:22] Decode batch, #running-req: 1, #token: 4409, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.98, #queue-req: 0
+[2026-10-11 17:24:22] Decode batch, #running-req: 1, #token: 4449, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.53, #queue-req: 0
+[2026-10-11 17:24:22] Decode batch, #running-req: 1, #token: 4489, token usage: 0.00, cuda graph: True, gen throughput (token/s): 204.26, #queue-req: 0
+[2026-10-11 17:24:22] Decode batch, #running-req: 1, #token: 4529, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.81, #queue-req: 0
+[2026-10-11 17:24:23] Decode batch, #running-req: 1, #token: 4569, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.47, #queue-req: 0
+[2026-10-11 17:24:23] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 203.20, #queue-req: 0
+[2026-10-11 17:24:23] INFO:     <droplet-ip>:47976 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:23] INFO:     <droplet-ip>:47976 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:24:23] INFO:     <droplet-ip>:48318 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:15] INFO:     <droplet-ip>:59756 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:25:15] INFO:     <droplet-ip>:59772 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:15] INFO:     <droplet-ip>:59772 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:16] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 1023, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 0.02
+[2026-10-11 17:25:16] INFO:     <droplet-ip>:59772 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:16] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 0.76, #queue-req: 0
+[2026-10-11 17:25:16] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 1023, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2.80
+[2026-10-11 17:25:16] INFO:     <droplet-ip>:59772 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:16] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 163.05, #queue-req: 0
+[2026-10-11 17:25:16] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 214.05, #queue-req: 0
+[2026-10-11 17:25:16] INFO:     <droplet-ip>:59772 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:16] INFO:     <droplet-ip>:59772 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:17] INFO:     <droplet-ip>:59776 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:18] INFO:     <droplet-ip>:59790 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:19] INFO:     <droplet-ip>:59794 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:20] INFO:     <droplet-ip>:59806 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:21] INFO:     <droplet-ip>:59812 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:22] INFO:     <droplet-ip>:59820 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:23] INFO:     <droplet-ip>:59832 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:24] INFO:     <droplet-ip>:46642 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:26] INFO:     <droplet-ip>:46652 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:27] INFO:     <droplet-ip>:46666 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:28] INFO:     <droplet-ip>:46672 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:29] INFO:     <droplet-ip>:46678 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:30] INFO:     <droplet-ip>:46694 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:25:30] INFO:     <droplet-ip>:46708 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:30] INFO:     <droplet-ip>:46720 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:30] INFO:     <droplet-ip>:46720 - "GET /metrics HTTP/1.1" 200 OK
+[aiter] shape is M:12288, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:12288, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:12288, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] LoadKernel: _ZN5aiter25topksoftmax_12x128x8_bf16E hsaco: /sgl-workspace/aiter/hsa//gfx942/topksoftmax/topksoftmax_12x128x8_bf16.co
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 1024
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16384, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 1024
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16384, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[2026-10-11 17:25:30] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 288.17
+[2026-10-11 17:25:30] INFO:     <droplet-ip>:46720 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:30] Prefill batch, #new-seq: 3, #new-token: 12288, #cached-token: 0, token usage: 0.01, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 66233.00
+[2026-10-11 17:25:30] INFO:     <droplet-ip>:46732 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:30] INFO:     <droplet-ip>:46744 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:30] INFO:     <droplet-ip>:46748 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:31] Decode batch, #running-req: 4, #token: 11908, token usage: 0.01, cuda graph: True, gen throughput (token/s): 9.48, #queue-req: 0
+[2026-10-11 17:25:31] Decode batch, #running-req: 4, #token: 12068, token usage: 0.01, cuda graph: True, gen throughput (token/s): 614.16, #queue-req: 0
+[2026-10-11 17:25:31] INFO:     <droplet-ip>:46754 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:31] Decode batch, #running-req: 4, #token: 12228, token usage: 0.01, cuda graph: True, gen throughput (token/s): 620.01, #queue-req: 0
+[2026-10-11 17:25:31] Decode batch, #running-req: 4, #token: 12388, token usage: 0.01, cuda graph: True, gen throughput (token/s): 614.61, #queue-req: 0
+[2026-10-11 17:25:32] Decode batch, #running-req: 4, #token: 12548, token usage: 0.01, cuda graph: True, gen throughput (token/s): 581.22, #queue-req: 0
+[2026-10-11 17:25:32] Decode batch, #running-req: 4, #token: 12708, token usage: 0.01, cuda graph: True, gen throughput (token/s): 581.44, #queue-req: 0
+[2026-10-11 17:25:32] INFO:     <droplet-ip>:46756 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:32] Decode batch, #running-req: 4, #token: 12868, token usage: 0.01, cuda graph: True, gen throughput (token/s): 581.96, #queue-req: 0
+[2026-10-11 17:25:32] Decode batch, #running-req: 4, #token: 13028, token usage: 0.01, cuda graph: True, gen throughput (token/s): 579.89, #queue-req: 0
+[2026-10-11 17:25:33] Decode batch, #running-req: 4, #token: 13188, token usage: 0.01, cuda graph: True, gen throughput (token/s): 580.21, #queue-req: 0
+[2026-10-11 17:25:33] Decode batch, #running-req: 4, #token: 13348, token usage: 0.01, cuda graph: True, gen throughput (token/s): 577.72, #queue-req: 0
+[2026-10-11 17:25:33] INFO:     <droplet-ip>:46762 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:33] Decode batch, #running-req: 4, #token: 13508, token usage: 0.01, cuda graph: True, gen throughput (token/s): 575.47, #queue-req: 0
+[2026-10-11 17:25:34] Decode batch, #running-req: 4, #token: 13668, token usage: 0.01, cuda graph: True, gen throughput (token/s): 570.17, #queue-req: 0
+[2026-10-11 17:25:34] Decode batch, #running-req: 4, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 577.22, #queue-req: 0
+[aiter] shape is M:7680, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:7680, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:7680, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 512
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 8192, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 512
+[aiter] [fused_moe] using 2stage default for ('gfx942', 304, 8192, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+[2026-10-11 17:25:34] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.01, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 697.21
+[2026-10-11 17:25:34] INFO:     <droplet-ip>:46720 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:34] Prefill batch, #new-seq: 3, #new-token: 7680, #cached-token: 4608, token usage: 0.01, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 67253.66
+[2026-10-11 17:25:34] INFO:     <droplet-ip>:46732 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:34] INFO:     <droplet-ip>:46744 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:34] INFO:     <droplet-ip>:46748 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:34] INFO:     <droplet-ip>:46776 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:34] Decode batch, #running-req: 4, #token: 11940, token usage: 0.01, cuda graph: True, gen throughput (token/s): 281.56, #queue-req: 0
+[2026-10-11 17:25:35] Decode batch, #running-req: 4, #token: 12100, token usage: 0.01, cuda graph: True, gen throughput (token/s): 611.27, #queue-req: 0
+[2026-10-11 17:25:35] Decode batch, #running-req: 4, #token: 12260, token usage: 0.01, cuda graph: True, gen throughput (token/s): 577.60, #queue-req: 0
+[2026-10-11 17:25:35] Decode batch, #running-req: 4, #token: 12420, token usage: 0.01, cuda graph: True, gen throughput (token/s): 569.54, #queue-req: 0
+[2026-10-11 17:25:35] INFO:     <droplet-ip>:40336 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:35] Decode batch, #running-req: 4, #token: 12580, token usage: 0.01, cuda graph: True, gen throughput (token/s): 570.02, #queue-req: 0
+[2026-10-11 17:25:36] Decode batch, #running-req: 4, #token: 12740, token usage: 0.01, cuda graph: True, gen throughput (token/s): 567.45, #queue-req: 0
+[2026-10-11 17:25:36] Decode batch, #running-req: 4, #token: 12900, token usage: 0.01, cuda graph: True, gen throughput (token/s): 572.48, #queue-req: 0
+[2026-10-11 17:25:36] Decode batch, #running-req: 4, #token: 13060, token usage: 0.01, cuda graph: True, gen throughput (token/s): 566.36, #queue-req: 0
+[2026-10-11 17:25:36] INFO:     <droplet-ip>:40350 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:37] Decode batch, #running-req: 4, #token: 13220, token usage: 0.01, cuda graph: True, gen throughput (token/s): 562.85, #queue-req: 0
+[2026-10-11 17:25:37] Decode batch, #running-req: 4, #token: 13380, token usage: 0.01, cuda graph: True, gen throughput (token/s): 575.02, #queue-req: 0
+[2026-10-11 17:25:37] Decode batch, #running-req: 4, #token: 13540, token usage: 0.01, cuda graph: True, gen throughput (token/s): 560.76, #queue-req: 0
+[2026-10-11 17:25:37] Decode batch, #running-req: 4, #token: 13700, token usage: 0.01, cuda graph: True, gen throughput (token/s): 544.94, #queue-req: 0
+[2026-10-11 17:25:37] INFO:     <droplet-ip>:40352 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:38] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.01, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 687.78
+[2026-10-11 17:25:38] INFO:     <droplet-ip>:46720 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:38] Prefill batch, #new-seq: 3, #new-token: 7680, #cached-token: 4608, token usage: 0.01, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 67401.58
+[2026-10-11 17:25:38] INFO:     <droplet-ip>:46732 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:38] INFO:     <droplet-ip>:46744 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:38] INFO:     <droplet-ip>:46748 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:38] Decode batch, #running-req: 4, #token: 11812, token usage: 0.01, cuda graph: True, gen throughput (token/s): 296.48, #queue-req: 0
+[2026-10-11 17:25:38] Decode batch, #running-req: 4, #token: 11972, token usage: 0.01, cuda graph: True, gen throughput (token/s): 624.72, #queue-req: 0
+[2026-10-11 17:25:39] Decode batch, #running-req: 4, #token: 12132, token usage: 0.01, cuda graph: True, gen throughput (token/s): 616.03, #queue-req: 0
+[2026-10-11 17:25:39] INFO:     <droplet-ip>:40362 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:39] Decode batch, #running-req: 4, #token: 12292, token usage: 0.01, cuda graph: True, gen throughput (token/s): 621.16, #queue-req: 0
+[2026-10-11 17:25:39] Decode batch, #running-req: 4, #token: 12452, token usage: 0.01, cuda graph: True, gen throughput (token/s): 619.43, #queue-req: 0
+[2026-10-11 17:25:39] Decode batch, #running-req: 4, #token: 12612, token usage: 0.01, cuda graph: True, gen throughput (token/s): 619.31, #queue-req: 0
+[2026-10-11 17:25:40] Decode batch, #running-req: 4, #token: 12772, token usage: 0.01, cuda graph: True, gen throughput (token/s): 616.63, #queue-req: 0
+[2026-10-11 17:25:40] INFO:     <droplet-ip>:40366 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:40] Decode batch, #running-req: 4, #token: 12932, token usage: 0.01, cuda graph: True, gen throughput (token/s): 613.61, #queue-req: 0
+[2026-10-11 17:25:40] Decode batch, #running-req: 4, #token: 13092, token usage: 0.01, cuda graph: True, gen throughput (token/s): 614.21, #queue-req: 0
+[2026-10-11 17:25:40] Decode batch, #running-req: 4, #token: 13252, token usage: 0.01, cuda graph: True, gen throughput (token/s): 614.35, #queue-req: 0
+[2026-10-11 17:25:41] Decode batch, #running-req: 4, #token: 13412, token usage: 0.01, cuda graph: True, gen throughput (token/s): 615.34, #queue-req: 0
+[2026-10-11 17:25:41] INFO:     <droplet-ip>:40372 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:41] Decode batch, #running-req: 4, #token: 13572, token usage: 0.01, cuda graph: True, gen throughput (token/s): 617.19, #queue-req: 0
+[2026-10-11 17:25:41] Decode batch, #running-req: 4, #token: 13732, token usage: 0.02, cuda graph: True, gen throughput (token/s): 613.41, #queue-req: 0
+[2026-10-11 17:25:41] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.01, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 739.75
+[2026-10-11 17:25:41] INFO:     <droplet-ip>:46720 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:42] Prefill batch, #new-seq: 3, #new-token: 7680, #cached-token: 4608, token usage: 0.01, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 68629.42
+[2026-10-11 17:25:42] INFO:     <droplet-ip>:46732 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:42] INFO:     <droplet-ip>:46744 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:42] INFO:     <droplet-ip>:46748 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:25:42] Decode batch, #running-req: 4, #token: 11844, token usage: 0.01, cuda graph: True, gen throughput (token/s): 312.09, #queue-req: 0
+[2026-10-11 17:25:42] INFO:     <droplet-ip>:40382 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:42] Decode batch, #running-req: 4, #token: 12004, token usage: 0.01, cuda graph: True, gen throughput (token/s): 601.25, #queue-req: 0
+[2026-10-11 17:25:42] Decode batch, #running-req: 4, #token: 12164, token usage: 0.01, cuda graph: True, gen throughput (token/s): 582.90, #queue-req: 0
+[2026-10-11 17:25:42] Decode batch, #running-req: 4, #token: 12324, token usage: 0.01, cuda graph: True, gen throughput (token/s): 587.23, #queue-req: 0
+[2026-10-11 17:25:43] Decode batch, #running-req: 4, #token: 12484, token usage: 0.01, cuda graph: True, gen throughput (token/s): 583.96, #queue-req: 0
+[2026-10-11 17:25:43] INFO:     <droplet-ip>:40392 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:43] Decode batch, #running-req: 4, #token: 12644, token usage: 0.01, cuda graph: True, gen throughput (token/s): 579.85, #queue-req: 0
+[2026-10-11 17:25:43] Decode batch, #running-req: 4, #token: 12804, token usage: 0.01, cuda graph: True, gen throughput (token/s): 582.84, #queue-req: 0
+[2026-10-11 17:25:44] Decode batch, #running-req: 4, #token: 12964, token usage: 0.01, cuda graph: True, gen throughput (token/s): 585.05, #queue-req: 0
+[2026-10-11 17:25:44] Decode batch, #running-req: 4, #token: 13124, token usage: 0.01, cuda graph: True, gen throughput (token/s): 580.06, #queue-req: 0
+[2026-10-11 17:25:44] INFO:     <droplet-ip>:40402 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:44] Decode batch, #running-req: 4, #token: 13284, token usage: 0.01, cuda graph: True, gen throughput (token/s): 563.32, #queue-req: 0
+[2026-10-11 17:25:44] Decode batch, #running-req: 4, #token: 13444, token usage: 0.01, cuda graph: True, gen throughput (token/s): 576.77, #queue-req: 0
+[2026-10-11 17:25:45] Decode batch, #running-req: 4, #token: 13604, token usage: 0.01, cuda graph: True, gen throughput (token/s): 570.48, #queue-req: 0
+[2026-10-11 17:25:45] Decode batch, #running-req: 4, #token: 13764, token usage: 0.02, cuda graph: True, gen throughput (token/s): 541.86, #queue-req: 0
+[2026-10-11 17:25:45] INFO:     <droplet-ip>:48986 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:45] INFO:     <droplet-ip>:46720 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:25:45] INFO:     <droplet-ip>:46732 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:23] INFO:     <droplet-ip>:39666 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:26:24] INFO:     <droplet-ip>:39678 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:24] INFO:     <droplet-ip>:39678 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:24] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 1023, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 0.02
+[2026-10-11 17:26:24] INFO:     <droplet-ip>:39678 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:24] Decode batch, #running-req: 1, #token: 1049, token usage: 0.00, cuda graph: True, gen throughput (token/s): 2.26, #queue-req: 0
+[2026-10-11 17:26:24] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 214.23, #queue-req: 0
+[2026-10-11 17:26:24] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 1023, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2.79
+[2026-10-11 17:26:24] INFO:     <droplet-ip>:39678 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:24] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 162.22, #queue-req: 0
+[2026-10-11 17:26:24] INFO:     <droplet-ip>:39678 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:24] INFO:     <droplet-ip>:39678 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:25] INFO:     <droplet-ip>:54944 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:26] INFO:     <droplet-ip>:54954 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:27] INFO:     <droplet-ip>:54962 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:28] INFO:     <droplet-ip>:54964 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:29] INFO:     <droplet-ip>:54976 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:31] INFO:     <droplet-ip>:54986 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:32] INFO:     <droplet-ip>:54992 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:33] INFO:     <droplet-ip>:54998 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:34] INFO:     <droplet-ip>:55010 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:35] INFO:     <droplet-ip>:51492 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:36] INFO:     <droplet-ip>:51494 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:37] INFO:     <droplet-ip>:51508 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:38] INFO:     <droplet-ip>:51518 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:38] INFO:     <droplet-ip>:51524 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:26:38] INFO:     <droplet-ip>:51526 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:38] INFO:     <droplet-ip>:51526 - "GET /metrics HTTP/1.1" 200 OK
+[aiter] shape is M:16384, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:16384, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:16384, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:26:39] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 2, #pending-token: 0, cuda graph: False, input throughput (token/s): 282.44
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51526 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] Prefill batch, #new-seq: 4, #new-token: 16384, #cached-token: 0, token usage: 0.02, #running-req: 1, #queue-req: 0, #pending-token: 8192, cuda graph: False, input throughput (token/s): 50958.88
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51534 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51540 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51554 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51570 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] Prefill batch, #new-seq: 3, #new-token: 7680, #cached-token: 4608, token usage: 0.02, #running-req: 5, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 68407.06
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51574 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51582 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51594 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] INFO:     <droplet-ip>:51610 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:39] Decode batch, #running-req: 8, #token: 22152, token usage: 0.02, cuda graph: True, gen throughput (token/s): 10.22, #queue-req: 0
+[2026-10-11 17:26:40] Decode batch, #running-req: 8, #token: 22472, token usage: 0.02, cuda graph: True, gen throughput (token/s): 971.87, #queue-req: 0
+[2026-10-11 17:26:40] Decode batch, #running-req: 8, #token: 22792, token usage: 0.02, cuda graph: True, gen throughput (token/s): 963.08, #queue-req: 0
+[2026-10-11 17:26:40] Decode batch, #running-req: 8, #token: 23112, token usage: 0.03, cuda graph: True, gen throughput (token/s): 937.71, #queue-req: 0
+[2026-10-11 17:26:40] INFO:     <droplet-ip>:51624 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:41] Decode batch, #running-req: 8, #token: 23432, token usage: 0.03, cuda graph: True, gen throughput (token/s): 923.10, #queue-req: 0
+[2026-10-11 17:26:41] Decode batch, #running-req: 8, #token: 23752, token usage: 0.03, cuda graph: True, gen throughput (token/s): 904.94, #queue-req: 0
+[2026-10-11 17:26:41] Decode batch, #running-req: 8, #token: 24072, token usage: 0.03, cuda graph: True, gen throughput (token/s): 910.65, #queue-req: 0
+[2026-10-11 17:26:41] INFO:     <droplet-ip>:51634 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:42] Decode batch, #running-req: 8, #token: 24392, token usage: 0.03, cuda graph: True, gen throughput (token/s): 884.28, #queue-req: 0
+[2026-10-11 17:26:42] Decode batch, #running-req: 8, #token: 24712, token usage: 0.03, cuda graph: True, gen throughput (token/s): 886.34, #queue-req: 0
+[2026-10-11 17:26:42] Decode batch, #running-req: 8, #token: 25032, token usage: 0.03, cuda graph: True, gen throughput (token/s): 871.55, #queue-req: 0
+[2026-10-11 17:26:42] INFO:     <droplet-ip>:51648 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:43] Decode batch, #running-req: 8, #token: 25352, token usage: 0.03, cuda graph: True, gen throughput (token/s): 868.16, #queue-req: 0
+[2026-10-11 17:26:43] Decode batch, #running-req: 8, #token: 25672, token usage: 0.03, cuda graph: True, gen throughput (token/s): 871.18, #queue-req: 0
+[2026-10-11 17:26:43] Decode batch, #running-req: 8, #token: 25992, token usage: 0.03, cuda graph: True, gen throughput (token/s): 883.09, #queue-req: 0
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51660 - "GET /metrics HTTP/1.1" 200 OK
+[aiter] shape is M:12800, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:12800, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:12800, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:26:44] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 549.89
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51526 - "POST /v1/completions HTTP/1.1" 200 OK
+[aiter] shape is M:5120, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:5120, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:5120, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:26:44] Prefill batch, #new-seq: 5, #new-token: 12800, #cached-token: 7680, token usage: 0.02, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 46498.42
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51534 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51540 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51554 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51570 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51574 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:44] Prefill batch, #new-seq: 2, #new-token: 5120, #cached-token: 3072, token usage: 0.02, #running-req: 6, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 82250.19
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51582 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:44] INFO:     <droplet-ip>:51594 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:44] Decode batch, #running-req: 8, #token: 22216, token usage: 0.02, cuda graph: True, gen throughput (token/s): 392.61, #queue-req: 0
+[2026-10-11 17:26:45] Decode batch, #running-req: 8, #token: 22536, token usage: 0.02, cuda graph: True, gen throughput (token/s): 961.45, #queue-req: 0
+[2026-10-11 17:26:45] INFO:     <droplet-ip>:33422 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:45] Decode batch, #running-req: 8, #token: 22856, token usage: 0.02, cuda graph: True, gen throughput (token/s): 942.45, #queue-req: 0
+[2026-10-11 17:26:45] Decode batch, #running-req: 8, #token: 23176, token usage: 0.03, cuda graph: True, gen throughput (token/s): 955.19, #queue-req: 0
+[2026-10-11 17:26:46] Decode batch, #running-req: 8, #token: 23496, token usage: 0.03, cuda graph: True, gen throughput (token/s): 940.67, #queue-req: 0
+[2026-10-11 17:26:46] INFO:     <droplet-ip>:33432 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:46] Decode batch, #running-req: 8, #token: 23816, token usage: 0.03, cuda graph: True, gen throughput (token/s): 941.67, #queue-req: 0
+[2026-10-11 17:26:46] Decode batch, #running-req: 8, #token: 24136, token usage: 0.03, cuda graph: True, gen throughput (token/s): 952.36, #queue-req: 0
+[2026-10-11 17:26:47] Decode batch, #running-req: 8, #token: 24456, token usage: 0.03, cuda graph: True, gen throughput (token/s): 946.63, #queue-req: 0
+[2026-10-11 17:26:47] INFO:     <droplet-ip>:33438 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:47] Decode batch, #running-req: 8, #token: 24776, token usage: 0.03, cuda graph: True, gen throughput (token/s): 945.46, #queue-req: 0
+[2026-10-11 17:26:47] Decode batch, #running-req: 8, #token: 25096, token usage: 0.03, cuda graph: True, gen throughput (token/s): 953.46, #queue-req: 0
+[2026-10-11 17:26:48] Decode batch, #running-req: 8, #token: 25416, token usage: 0.03, cuda graph: True, gen throughput (token/s): 941.81, #queue-req: 0
+[2026-10-11 17:26:48] INFO:     <droplet-ip>:33444 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:48] Decode batch, #running-req: 8, #token: 25736, token usage: 0.03, cuda graph: True, gen throughput (token/s): 946.99, #queue-req: 0
+[2026-10-11 17:26:48] Decode batch, #running-req: 8, #token: 26056, token usage: 0.03, cuda graph: True, gen throughput (token/s): 932.60, #queue-req: 0
+[aiter] shape is M:15360, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:15360, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:15360, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:26:49] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 573.25
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:51526 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] Prefill batch, #new-seq: 6, #new-token: 15360, #cached-token: 9216, token usage: 0.02, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 47383.54
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:51534 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:51540 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:51554 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:51570 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:51574 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:51582 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.02, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 245638.29
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:51594 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] INFO:     <droplet-ip>:33460 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:49] Decode batch, #running-req: 8, #token: 22280, token usage: 0.02, cuda graph: True, gen throughput (token/s): 389.76, #queue-req: 0
+[2026-10-11 17:26:50] Decode batch, #running-req: 8, #token: 22600, token usage: 0.02, cuda graph: True, gen throughput (token/s): 945.92, #queue-req: 0
+[2026-10-11 17:26:50] Decode batch, #running-req: 8, #token: 22920, token usage: 0.03, cuda graph: True, gen throughput (token/s): 907.36, #queue-req: 0
+[2026-10-11 17:26:50] INFO:     <droplet-ip>:33468 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:50] Decode batch, #running-req: 8, #token: 23240, token usage: 0.03, cuda graph: True, gen throughput (token/s): 887.07, #queue-req: 0
+[2026-10-11 17:26:51] Decode batch, #running-req: 8, #token: 23560, token usage: 0.03, cuda graph: True, gen throughput (token/s): 880.02, #queue-req: 0
+[2026-10-11 17:26:51] Decode batch, #running-req: 8, #token: 23880, token usage: 0.03, cuda graph: True, gen throughput (token/s): 893.34, #queue-req: 0
+[2026-10-11 17:26:51] INFO:     <droplet-ip>:33478 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:51] Decode batch, #running-req: 8, #token: 24200, token usage: 0.03, cuda graph: True, gen throughput (token/s): 884.82, #queue-req: 0
+[2026-10-11 17:26:52] Decode batch, #running-req: 8, #token: 24520, token usage: 0.03, cuda graph: True, gen throughput (token/s): 866.40, #queue-req: 0
+[2026-10-11 17:26:52] Decode batch, #running-req: 8, #token: 24840, token usage: 0.03, cuda graph: True, gen throughput (token/s): 843.75, #queue-req: 0
+[2026-10-11 17:26:52] INFO:     <droplet-ip>:33490 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:52] Decode batch, #running-req: 8, #token: 25160, token usage: 0.03, cuda graph: True, gen throughput (token/s): 839.12, #queue-req: 0
+[2026-10-11 17:26:53] Decode batch, #running-req: 8, #token: 25480, token usage: 0.03, cuda graph: True, gen throughput (token/s): 843.89, #queue-req: 0
+[2026-10-11 17:26:53] Decode batch, #running-req: 8, #token: 25800, token usage: 0.03, cuda graph: True, gen throughput (token/s): 847.24, #queue-req: 0
+[2026-10-11 17:26:53] INFO:     <droplet-ip>:33504 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] Decode batch, #running-req: 8, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 848.37, #queue-req: 0
+[2026-10-11 17:26:54] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 532.96
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:51526 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] Prefill batch, #new-seq: 6, #new-token: 15360, #cached-token: 9216, token usage: 0.02, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 46815.02
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:51540 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:51534 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:51554 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:51570 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:51574 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:51582 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.02, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 329427.43
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:51594 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:26:54] Decode batch, #running-req: 8, #token: 22344, token usage: 0.02, cuda graph: True, gen throughput (token/s): 404.58, #queue-req: 0
+[2026-10-11 17:26:54] INFO:     <droplet-ip>:46362 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:55] Decode batch, #running-req: 8, #token: 22664, token usage: 0.02, cuda graph: True, gen throughput (token/s): 998.89, #queue-req: 0
+[2026-10-11 17:26:55] Decode batch, #running-req: 8, #token: 22984, token usage: 0.03, cuda graph: True, gen throughput (token/s): 970.38, #queue-req: 0
+[2026-10-11 17:26:55] Decode batch, #running-req: 8, #token: 23304, token usage: 0.03, cuda graph: True, gen throughput (token/s): 926.81, #queue-req: 0
+[2026-10-11 17:26:55] INFO:     <droplet-ip>:46364 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:56] Decode batch, #running-req: 8, #token: 23624, token usage: 0.03, cuda graph: True, gen throughput (token/s): 893.66, #queue-req: 0
+[2026-10-11 17:26:56] Decode batch, #running-req: 8, #token: 23944, token usage: 0.03, cuda graph: True, gen throughput (token/s): 894.37, #queue-req: 0
+[2026-10-11 17:26:56] Decode batch, #running-req: 8, #token: 24264, token usage: 0.03, cuda graph: True, gen throughput (token/s): 878.71, #queue-req: 0
+[2026-10-11 17:26:57] INFO:     <droplet-ip>:46370 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:57] Decode batch, #running-req: 8, #token: 24584, token usage: 0.03, cuda graph: True, gen throughput (token/s): 873.06, #queue-req: 0
+[2026-10-11 17:26:57] Decode batch, #running-req: 8, #token: 24904, token usage: 0.03, cuda graph: True, gen throughput (token/s): 861.75, #queue-req: 0
+[2026-10-11 17:26:58] Decode batch, #running-req: 8, #token: 25224, token usage: 0.03, cuda graph: True, gen throughput (token/s): 870.05, #queue-req: 0
+[2026-10-11 17:26:58] INFO:     <droplet-ip>:46374 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:58] Decode batch, #running-req: 8, #token: 25544, token usage: 0.03, cuda graph: True, gen throughput (token/s): 871.84, #queue-req: 0
+[2026-10-11 17:26:58] Decode batch, #running-req: 8, #token: 25864, token usage: 0.03, cuda graph: True, gen throughput (token/s): 867.59, #queue-req: 0
+[2026-10-11 17:26:59] INFO:     <droplet-ip>:51526 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:59] INFO:     <droplet-ip>:51540 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:26:59] INFO:     <droplet-ip>:46382 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:36] INFO:     <droplet-ip>:50388 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:28:36] INFO:     <droplet-ip>:50398 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:37] INFO:     <droplet-ip>:50398 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:37] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 1023, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 0.01
+[2026-10-11 17:28:37] INFO:     <droplet-ip>:50398 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:37] Decode batch, #running-req: 1, #token: 1033, token usage: 0.00, cuda graph: True, gen throughput (token/s): 2.68, #queue-req: 0
+[2026-10-11 17:28:37] Decode batch, #running-req: 1, #token: 1073, token usage: 0.00, cuda graph: True, gen throughput (token/s): 213.90, #queue-req: 0
+[2026-10-11 17:28:37] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 1023, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2.79
+[2026-10-11 17:28:37] INFO:     <droplet-ip>:50398 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:37] Decode batch, #running-req: 1, #token: 1049, token usage: 0.00, cuda graph: True, gen throughput (token/s): 162.06, #queue-req: 0
+[2026-10-11 17:28:37] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 214.13, #queue-req: 0
+[2026-10-11 17:28:37] INFO:     <droplet-ip>:50398 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:37] INFO:     <droplet-ip>:50398 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:38] INFO:     <droplet-ip>:50406 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:39] INFO:     <droplet-ip>:50420 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:40] INFO:     <droplet-ip>:50424 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:41] INFO:     <droplet-ip>:50434 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:42] INFO:     <droplet-ip>:50450 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:43] INFO:     <droplet-ip>:50462 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:44] INFO:     <droplet-ip>:43262 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:45] INFO:     <droplet-ip>:43274 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:47] INFO:     <droplet-ip>:43286 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:48] INFO:     <droplet-ip>:43290 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:49] INFO:     <droplet-ip>:43296 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:50] INFO:     <droplet-ip>:43312 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:51] INFO:     <droplet-ip>:43320 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:51] INFO:     <droplet-ip>:43324 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43330 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43330 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 2, #pending-token: 0, cuda graph: False, input throughput (token/s): 275.60
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43330 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43472 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] Prefill batch, #new-seq: 4, #new-token: 16384, #cached-token: 0, token usage: 0.03, #running-req: 1, #queue-req: 4, #pending-token: 8192, cuda graph: False, input throughput (token/s): 50784.10
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43334 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43350 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43344 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43358 - "POST /v1/completions HTTP/1.1" 200 OK
+[aiter] shape is M:11776, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:11776, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:11776, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:28:52] Prefill batch, #new-seq: 7, #new-token: 16384, #cached-token: 10752, token usage: 0.05, #running-req: 5, #queue-req: 0, #pending-token: 17920, cuda graph: False, input throughput (token/s): 47498.09
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43360 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43376 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43380 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43392 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43400 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:52] INFO:     <droplet-ip>:43402 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:53] Prefill batch, #new-seq: 5, #new-token: 11776, #cached-token: 6144, token usage: 0.05, #running-req: 11, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 60054.57
+[2026-10-11 17:28:53] INFO:     <droplet-ip>:43432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:53] INFO:     <droplet-ip>:43434 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:53] INFO:     <droplet-ip>:43436 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:53] INFO:     <droplet-ip>:43446 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:53] INFO:     <droplet-ip>:43458 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:53] Decode batch, #running-req: 16, #token: 43151, token usage: 0.05, cuda graph: True, gen throughput (token/s): 40.39, #queue-req: 0
+[2026-10-11 17:28:53] INFO:     <droplet-ip>:43480 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:54] Decode batch, #running-req: 16, #token: 43791, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1507.87, #queue-req: 0
+[2026-10-11 17:28:54] Decode batch, #running-req: 16, #token: 44431, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1493.83, #queue-req: 0
+[2026-10-11 17:28:54] INFO:     <droplet-ip>:43486 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:54] Decode batch, #running-req: 16, #token: 45071, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1480.43, #queue-req: 0
+[2026-10-11 17:28:55] Decode batch, #running-req: 16, #token: 45711, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1462.33, #queue-req: 0
+[2026-10-11 17:28:55] Decode batch, #running-req: 16, #token: 46351, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1467.41, #queue-req: 0
+[2026-10-11 17:28:55] INFO:     <droplet-ip>:34408 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:56] Decode batch, #running-req: 16, #token: 46991, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1470.64, #queue-req: 0
+[2026-10-11 17:28:56] Decode batch, #running-req: 16, #token: 47631, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1457.65, #queue-req: 0
+[2026-10-11 17:28:56] INFO:     <droplet-ip>:34424 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:57] Decode batch, #running-req: 16, #token: 48271, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1460.48, #queue-req: 0
+[2026-10-11 17:28:57] Decode batch, #running-req: 16, #token: 48911, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1455.33, #queue-req: 0
+[2026-10-11 17:28:57] INFO:     <droplet-ip>:34436 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:57] Decode batch, #running-req: 16, #token: 49551, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1398.28, #queue-req: 0
+[2026-10-11 17:28:58] Decode batch, #running-req: 16, #token: 50191, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1396.73, #queue-req: 0
+[2026-10-11 17:28:58] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 445.52
+[2026-10-11 17:28:58] INFO:     <droplet-ip>:43330 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:34442 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] Prefill batch, #new-seq: 6, #new-token: 15360, #cached-token: 9216, token usage: 0.04, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 47648.72
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43334 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43350 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43344 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43358 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43360 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43376 - "POST /v1/completions HTTP/1.1" 200 OK
+[aiter] shape is M:6654, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:6654, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:6654, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:28:59] Prefill batch, #new-seq: 7, #new-token: 16384, #cached-token: 10753, token usage: 0.05, #running-req: 7, #queue-req: 0, #pending-token: 1535, cuda graph: False, input throughput (token/s): 47188.49
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43402 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43380 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43392 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43400 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43434 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] Prefill batch, #new-seq: 3, #new-token: 6654, #cached-token: 3073, token usage: 0.05, #running-req: 13, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 68287.78
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43436 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43458 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] INFO:     <droplet-ip>:43446 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:28:59] Decode batch, #running-req: 16, #token: 42639, token usage: 0.05, cuda graph: True, gen throughput (token/s): 474.27, #queue-req: 0
+[2026-10-11 17:29:00] INFO:     <droplet-ip>:34452 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:00] Decode batch, #running-req: 16, #token: 43279, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1554.09, #queue-req: 0
+[2026-10-11 17:29:00] Decode batch, #running-req: 16, #token: 43919, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1566.91, #queue-req: 0
+[2026-10-11 17:29:00] Decode batch, #running-req: 16, #token: 44559, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1592.56, #queue-req: 0
+[2026-10-11 17:29:01] INFO:     <droplet-ip>:34454 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:01] Decode batch, #running-req: 16, #token: 45199, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1562.78, #queue-req: 0
+[2026-10-11 17:29:01] Decode batch, #running-req: 16, #token: 45839, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1597.88, #queue-req: 0
+[2026-10-11 17:29:02] Decode batch, #running-req: 16, #token: 46479, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1596.80, #queue-req: 0
+[2026-10-11 17:29:02] INFO:     <droplet-ip>:34460 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:02] Decode batch, #running-req: 16, #token: 47119, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1595.10, #queue-req: 0
+[2026-10-11 17:29:03] Decode batch, #running-req: 16, #token: 47759, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1514.17, #queue-req: 0
+[2026-10-11 17:29:03] INFO:     <droplet-ip>:34464 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:03] Decode batch, #running-req: 16, #token: 48399, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1537.58, #queue-req: 0
+[2026-10-11 17:29:03] Decode batch, #running-req: 16, #token: 49039, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1489.99, #queue-req: 0
+[2026-10-11 17:29:04] Decode batch, #running-req: 16, #token: 49679, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1453.91, #queue-req: 0
+[2026-10-11 17:29:04] INFO:     <droplet-ip>:34472 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:04] Decode batch, #running-req: 16, #token: 50319, token usage: 0.06, cuda graph: True, gen throughput (token/s): 1466.36, #queue-req: 0
+[aiter] shape is M:15358, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:15358, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:15358, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:29:05] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 468.07
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43330 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] Prefill batch, #new-seq: 6, #new-token: 15358, #cached-token: 9218, token usage: 0.04, #running-req: 1, #queue-req: 1, #pending-token: 0, cuda graph: False, input throughput (token/s): 45956.89
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43344 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43360 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43334 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43350 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43358 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43376 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:58260 - "GET /metrics HTTP/1.1" 200 OK
+[aiter] shape is M:6656, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:6656, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:6656, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:29:05] Prefill batch, #new-seq: 7, #new-token: 16384, #cached-token: 10752, token usage: 0.05, #running-req: 7, #queue-req: 0, #pending-token: 5632, cuda graph: False, input throughput (token/s): 47533.94
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43402 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43380 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43392 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43400 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43434 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] Prefill batch, #new-seq: 3, #new-token: 6656, #cached-token: 3072, token usage: 0.05, #running-req: 13, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 69572.04
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43436 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43458 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:05] INFO:     <droplet-ip>:43446 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:06] Decode batch, #running-req: 16, #token: 42767, token usage: 0.05, cuda graph: True, gen throughput (token/s): 475.84, #queue-req: 0
+[2026-10-11 17:29:06] Decode batch, #running-req: 16, #token: 43407, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1596.85, #queue-req: 0
+[2026-10-11 17:29:06] INFO:     <droplet-ip>:58274 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:06] Decode batch, #running-req: 16, #token: 44047, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1586.84, #queue-req: 0
+[2026-10-11 17:29:07] Decode batch, #running-req: 16, #token: 44687, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1587.65, #queue-req: 0
+[2026-10-11 17:29:07] INFO:     <droplet-ip>:58278 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:07] Decode batch, #running-req: 16, #token: 45327, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1580.44, #queue-req: 0
+[2026-10-11 17:29:08] Decode batch, #running-req: 16, #token: 45967, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1520.74, #queue-req: 0
+[2026-10-11 17:29:08] Decode batch, #running-req: 16, #token: 46607, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1541.99, #queue-req: 0
+[2026-10-11 17:29:08] INFO:     <droplet-ip>:58280 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:08] Decode batch, #running-req: 16, #token: 47247, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1522.72, #queue-req: 0
+[2026-10-11 17:29:09] Decode batch, #running-req: 16, #token: 47887, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1519.44, #queue-req: 0
+[2026-10-11 17:29:09] Decode batch, #running-req: 16, #token: 48527, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1489.87, #queue-req: 0
+[2026-10-11 17:29:09] INFO:     <droplet-ip>:58288 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:10] Decode batch, #running-req: 16, #token: 49167, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1437.79, #queue-req: 0
+[2026-10-11 17:29:10] Decode batch, #running-req: 16, #token: 49807, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1442.05, #queue-req: 0
+[2026-10-11 17:29:10] INFO:     <droplet-ip>:58290 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:11] Decode batch, #running-req: 16, #token: 50447, token usage: 0.06, cuda graph: True, gen throughput (token/s): 1454.00, #queue-req: 0
+[aiter] shape is M:12798, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:12798, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:12798, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:29:11] Prefill batch, #new-seq: 1, #new-token: 2560, #cached-token: 1536, token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 462.66
+[2026-10-11 17:29:11] INFO:     <droplet-ip>:43330 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:11] Prefill batch, #new-seq: 5, #new-token: 12798, #cached-token: 7682, token usage: 0.04, #running-req: 1, #queue-req: 2, #pending-token: 0, cuda graph: False, input throughput (token/s): 46450.45
+[2026-10-11 17:29:11] INFO:     <droplet-ip>:43360 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:11] INFO:     <droplet-ip>:43358 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:11] INFO:     <droplet-ip>:43344 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:11] INFO:     <droplet-ip>:43334 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:11] INFO:     <droplet-ip>:43350 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:11] INFO:     <droplet-ip>:58298 - "GET /metrics HTTP/1.1" 200 OK
+[aiter] shape is M:9215, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:9215, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[aiter] shape is M:9215, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
+[2026-10-11 17:29:12] Prefill batch, #new-seq: 7, #new-token: 16384, #cached-token: 10753, token usage: 0.05, #running-req: 6, #queue-req: 0, #pending-token: 9727, cuda graph: False, input throughput (token/s): 46821.85
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43458 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43376 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43402 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43380 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43392 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43400 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] Prefill batch, #new-seq: 4, #new-token: 9215, #cached-token: 4608, token usage: 0.05, #running-req: 12, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 62380.56
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43434 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43436 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] INFO:     <droplet-ip>:43446 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 17:29:12] Decode batch, #running-req: 16, #token: 42895, token usage: 0.05, cuda graph: True, gen throughput (token/s): 476.67, #queue-req: 0
+[2026-10-11 17:29:12] Decode batch, #running-req: 16, #token: 43535, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1516.16, #queue-req: 0
+[2026-10-11 17:29:13] INFO:     <droplet-ip>:58312 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:13] Decode batch, #running-req: 16, #token: 44175, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1477.82, #queue-req: 0
+[2026-10-11 17:29:13] Decode batch, #running-req: 16, #token: 44815, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1458.45, #queue-req: 0
+[2026-10-11 17:29:14] INFO:     <droplet-ip>:58328 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:14] Decode batch, #running-req: 16, #token: 45455, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1453.05, #queue-req: 0
+[2026-10-11 17:29:14] Decode batch, #running-req: 16, #token: 46095, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1427.29, #queue-req: 0
+[2026-10-11 17:29:15] Decode batch, #running-req: 16, #token: 46735, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1418.96, #queue-req: 0
+[2026-10-11 17:29:15] INFO:     <droplet-ip>:38716 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:15] Decode batch, #running-req: 16, #token: 47375, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1412.45, #queue-req: 0
+[2026-10-11 17:29:16] Decode batch, #running-req: 16, #token: 48015, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1371.81, #queue-req: 0
+[2026-10-11 17:29:16] INFO:     <droplet-ip>:38732 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:16] Decode batch, #running-req: 16, #token: 48655, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1390.50, #queue-req: 0
+[2026-10-11 17:29:16] Decode batch, #running-req: 16, #token: 49295, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1372.81, #queue-req: 0
+[2026-10-11 17:29:17] INFO:     <droplet-ip>:38748 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:17] Decode batch, #running-req: 16, #token: 49935, token usage: 0.05, cuda graph: True, gen throughput (token/s): 1406.90, #queue-req: 0
+[2026-10-11 17:29:17] Decode batch, #running-req: 16, #token: 50575, token usage: 0.06, cuda graph: True, gen throughput (token/s): 1413.00, #queue-req: 0
+[2026-10-11 17:29:17] INFO:     <droplet-ip>:43330 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:17] INFO:     <droplet-ip>:43360 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 17:29:18] INFO:     <droplet-ip>:38756 - "GET /metrics HTTP/1.1" 200 OK

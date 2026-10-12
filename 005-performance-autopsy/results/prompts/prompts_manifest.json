@@ -1,0 +1,1922 @@
+{
+  "repo_tarball_sha256": "adbb3c6702033d417401ce1925f7307b70ee2d8bfca636c82c66a38c55b97dda",
+  "tokenizer_revision": "b2cff646eb4bb1d68355c01b18ae02e7cf42d120",
+  "prefix_tokens_requested": 1536,
+  "shared_prefix_tokens_min": 1543,
+  "target_tokens": 4096,
+  "tolerance": 32,
+  "prompts_built": 192,
+  "source_blocks_used": 2043,
+  "source_blocks_available": 3364,
+  "token_count": {
+    "min": 4066,
+    "max": 4128,
+    "mean": 4115.817708333333
+  },
+  "files_sha256": {
+    "w1-c1.jsonl": "7669311e4035c2408edc12edc314817a96b79982cda1149f6f32c4fd12884b36",
+    "w1-c4.jsonl": "745f222aeb9a853ecd88a721adcf1aeaaccefb14174a391bf657ff9ef7ff2500",
+    "w1-c8.jsonl": "d8878f4c5a86bf5a8d22a37b3445492582bdda181579f573ab0043549341b246",
+    "w1-c16.jsonl": "b90b964d1ba4634cb025437ad28e3964a045f4159d6c878c4545b178a1f1ddb7",
+    "w1-c8-r2.jsonl": "c18a2d178756897a008c99f56217cbe59bbbd0b18a7897e556f6fbff5b5a6715"
+  },
+  "splits": {
+    "w1-c1.jsonl": 8,
+    "w1-c4.jsonl": 16,
+    "w1-c8.jsonl": 32,
+    "w1-c16.jsonl": 64,
+    "w1-c8-r2.jsonl": 32
+  },
+  "prompts": [
+    {
+      "index": 0,
+      "tokens": 4075,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/__init__.py",
+        "django/__main__.py",
+        "django/apps/__init__.py",
+        "django/apps/config.py"
+      ]
+    },
+    {
+      "index": 1,
+      "tokens": 4124,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/apps/registry.py"
+      ]
+    },
+    {
+      "index": 2,
+      "tokens": 4122,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/conf/__init__.py",
+        "django/conf/global_settings.py"
+      ]
+    },
+    {
+      "index": 3,
+      "tokens": 4125,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/conf/urls/__init__.py",
+        "django/conf/urls/i18n.py",
+        "django/conf/urls/static.py",
+        "django/contrib/admin/__init__.py",
+        "django/contrib/admin/actions.py",
+        "django/contrib/admin/apps.py",
+        "django/contrib/admin/checks.py"
+      ]
+    },
+    {
+      "index": 4,
+      "tokens": 4127,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/admin/checks.py"
+      ]
+    },
+    {
+      "index": 5,
+      "tokens": 4127,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/admin/checks.py"
+      ]
+    },
+    {
+      "index": 6,
+      "tokens": 4122,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/admin/checks.py",
+        "django/contrib/admin/decorators.py",
+        "django/contrib/admin/exceptions.py",
+        "django/contrib/admin/filters.py"
+      ]
+    },
+    {
+      "index": 7,
+      "tokens": 4121,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/admin/filters.py"
+      ]
+    },
+    {
+      "index": 8,
+      "tokens": 4127,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/admin/filters.py",
+        "django/contrib/admin/forms.py",
+        "django/contrib/admin/helpers.py"
+      ]
+    },
+    {
+      "index": 9,
+      "tokens": 4095,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/admin/helpers.py"
+      ]
+    },
+    {
+      "index": 10,
+      "tokens": 4127,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/admin/models.py",
+        "django/contrib/admin/options.py"
+      ]
+    },
+    {
+      "index": 11,
+      "tokens": 4118,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/admin/options.py"
+      ]
+    },
+    {
+      "index": 12,
+      "tokens": 4124,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/admin/options.py",
+        "django/contrib/admin/sites.py"
+      ]
+    },
+    {
+      "index": 13,
+      "tokens": 4088,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/admin/sites.py",
+        "django/contrib/admin/templatetags/admin_list.py"
+      ]
+    },
+    {
+      "index": 14,
+      "tokens": 4125,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/admin/templatetags/admin_list.py",
+        "django/contrib/admin/templatetags/admin_modify.py"
+      ]
+    },
+    {
+      "index": 15,
+      "tokens": 4122,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/admin/templatetags/admin_urls.py",
+        "django/contrib/admin/templatetags/base.py",
+        "django/contrib/admin/templatetags/log.py",
+        "django/contrib/admin/tests.py"
+      ]
+    },
+    {
+      "index": 16,
+      "tokens": 4120,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/admin/utils.py"
+      ]
+    },
+    {
+      "index": 17,
+      "tokens": 4124,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/admin/utils.py",
+        "django/contrib/admin/views/autocomplete.py"
+      ]
+    },
+    {
+      "index": 18,
+      "tokens": 4127,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/admin/views/decorators.py",
+        "django/contrib/admin/views/main.py"
+      ]
+    },
+    {
+      "index": 19,
+      "tokens": 4117,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/admin/widgets.py"
+      ]
+    },
+    {
+      "index": 20,
+      "tokens": 4095,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/admin/widgets.py",
+        "django/contrib/admindocs/apps.py",
+        "django/contrib/admindocs/middleware.py",
+        "django/contrib/admindocs/urls.py",
+        "django/contrib/admindocs/utils.py"
+      ]
+    },
+    {
+      "index": 21,
+      "tokens": 4109,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/admindocs/utils.py",
+        "django/contrib/admindocs/views.py"
+      ]
+    },
+    {
+      "index": 22,
+      "tokens": 4082,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/admindocs/views.py"
+      ]
+    },
+    {
+      "index": 23,
+      "tokens": 4119,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/admindocs/views.py",
+        "django/contrib/auth/__init__.py",
+        "django/contrib/auth/admin.py"
+      ]
+    },
+    {
+      "index": 24,
+      "tokens": 4112,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/auth/admin.py",
+        "django/contrib/auth/apps.py",
+        "django/contrib/auth/backends.py"
+      ]
+    },
+    {
+      "index": 25,
+      "tokens": 4125,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/auth/backends.py",
+        "django/contrib/auth/base_user.py",
+        "django/contrib/auth/checks.py"
+      ]
+    },
+    {
+      "index": 26,
+      "tokens": 4120,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/auth/checks.py",
+        "django/contrib/auth/context_processors.py",
+        "django/contrib/auth/decorators.py",
+        "django/contrib/auth/forms.py"
+      ]
+    },
+    {
+      "index": 27,
+      "tokens": 4107,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/auth/forms.py"
+      ]
+    },
+    {
+      "index": 28,
+      "tokens": 4116,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/auth/forms.py",
+        "django/contrib/auth/handlers/modwsgi.py",
+        "django/contrib/auth/hashers.py"
+      ]
+    },
+    {
+      "index": 29,
+      "tokens": 4119,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/auth/hashers.py"
+      ]
+    },
+    {
+      "index": 30,
+      "tokens": 4128,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/auth/hashers.py",
+        "django/contrib/auth/management/__init__.py",
+        "django/contrib/auth/management/commands/changepassword.py",
+        "django/contrib/auth/management/commands/createsuperuser.py"
+      ]
+    },
+    {
+      "index": 31,
+      "tokens": 4074,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/auth/middleware.py",
+        "django/contrib/auth/mixins.py",
+        "django/contrib/auth/models.py"
+      ]
+    },
+    {
+      "index": 32,
+      "tokens": 4128,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/auth/models.py"
+      ]
+    },
+    {
+      "index": 33,
+      "tokens": 4121,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/auth/models.py",
+        "django/contrib/auth/password_validation.py"
+      ]
+    },
+    {
+      "index": 34,
+      "tokens": 4123,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/auth/signals.py",
+        "django/contrib/auth/tokens.py",
+        "django/contrib/auth/urls.py",
+        "django/contrib/auth/validators.py",
+        "django/contrib/auth/views.py"
+      ]
+    },
+    {
+      "index": 35,
+      "tokens": 4123,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/auth/views.py",
+        "django/contrib/contenttypes/admin.py"
+      ]
+    },
+    {
+      "index": 36,
+      "tokens": 4128,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/contenttypes/admin.py",
+        "django/contrib/contenttypes/apps.py",
+        "django/contrib/contenttypes/checks.py",
+        "django/contrib/contenttypes/fields.py"
+      ]
+    },
+    {
+      "index": 37,
+      "tokens": 4115,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/contenttypes/fields.py"
+      ]
+    },
+    {
+      "index": 38,
+      "tokens": 4128,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/contenttypes/forms.py",
+        "django/contrib/contenttypes/management/__init__.py",
+        "django/contrib/contenttypes/management/commands/remove_stale_contenttypes.py"
+      ]
+    },
+    {
+      "index": 39,
+      "tokens": 4111,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/contenttypes/management/commands/remove_stale_contenttypes.py",
+        "django/contrib/contenttypes/models.py",
+        "django/contrib/contenttypes/prefetch.py",
+        "django/contrib/contenttypes/views.py"
+      ]
+    },
+    {
+      "index": 40,
+      "tokens": 4121,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/flatpages/admin.py",
+        "django/contrib/flatpages/apps.py",
+        "django/contrib/flatpages/forms.py",
+        "django/contrib/flatpages/middleware.py",
+        "django/contrib/flatpages/models.py",
+        "django/contrib/flatpages/sitemaps.py",
+        "django/contrib/flatpages/templatetags/flatpages.py",
+        "django/contrib/flatpages/urls.py",
+        "django/contrib/flatpages/views.py"
+      ]
+    },
+    {
+      "index": 41,
+      "tokens": 4091,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/flatpages/views.py",
+        "django/contrib/gis/admin/__init__.py",
+        "django/contrib/gis/admin/options.py",
+        "django/contrib/gis/apps.py",
+        "django/contrib/gis/db/backends/base/adapter.py",
+        "django/contrib/gis/db/backends/base/features.py",
+        "django/contrib/gis/db/backends/base/models.py"
+      ]
+    },
+    {
+      "index": 42,
+      "tokens": 4126,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/db/backends/base/operations.py",
+        "django/contrib/gis/db/backends/mysql/base.py",
+        "django/contrib/gis/db/backends/mysql/features.py",
+        "django/contrib/gis/db/backends/mysql/introspection.py",
+        "django/contrib/gis/db/backends/mysql/operations.py"
+      ]
+    },
+    {
+      "index": 43,
+      "tokens": 4120,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/db/backends/mysql/schema.py",
+        "django/contrib/gis/db/backends/oracle/adapter.py",
+        "django/contrib/gis/db/backends/oracle/base.py",
+        "django/contrib/gis/db/backends/oracle/features.py",
+        "django/contrib/gis/db/backends/oracle/introspection.py",
+        "django/contrib/gis/db/backends/oracle/models.py",
+        "django/contrib/gis/db/backends/oracle/operations.py"
+      ]
+    },
+    {
+      "index": 44,
+      "tokens": 4120,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/db/backends/oracle/operations.py",
+        "django/contrib/gis/db/backends/oracle/schema.py"
+      ]
+    },
+    {
+      "index": 45,
+      "tokens": 4067,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/db/backends/postgis/adapter.py",
+        "django/contrib/gis/db/backends/postgis/base.py",
+        "django/contrib/gis/db/backends/postgis/const.py",
+        "django/contrib/gis/db/backends/postgis/features.py",
+        "django/contrib/gis/db/backends/postgis/introspection.py"
+      ]
+    },
+    {
+      "index": 46,
+      "tokens": 4113,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/db/backends/postgis/introspection.py",
+        "django/contrib/gis/db/backends/postgis/models.py",
+        "django/contrib/gis/db/backends/postgis/operations.py"
+      ]
+    },
+    {
+      "index": 47,
+      "tokens": 4124,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/db/backends/postgis/pgraster.py",
+        "django/contrib/gis/db/backends/postgis/schema.py",
+        "django/contrib/gis/db/backends/spatialite/adapter.py",
+        "django/contrib/gis/db/backends/spatialite/base.py"
+      ]
+    },
+    {
+      "index": 48,
+      "tokens": 4125,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/db/backends/spatialite/client.py",
+        "django/contrib/gis/db/backends/spatialite/features.py",
+        "django/contrib/gis/db/backends/spatialite/introspection.py",
+        "django/contrib/gis/db/backends/spatialite/models.py",
+        "django/contrib/gis/db/backends/spatialite/operations.py"
+      ]
+    },
+    {
+      "index": 49,
+      "tokens": 4081,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/db/backends/spatialite/schema.py",
+        "django/contrib/gis/db/backends/utils.py",
+        "django/contrib/gis/db/models/__init__.py",
+        "django/contrib/gis/db/models/aggregates.py"
+      ]
+    },
+    {
+      "index": 50,
+      "tokens": 4101,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/db/models/aggregates.py",
+        "django/contrib/gis/db/models/fields.py"
+      ]
+    },
+    {
+      "index": 51,
+      "tokens": 4068,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/db/models/fields.py",
+        "django/contrib/gis/db/models/functions.py"
+      ]
+    },
+    {
+      "index": 52,
+      "tokens": 4126,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/db/models/functions.py"
+      ]
+    },
+    {
+      "index": 53,
+      "tokens": 4118,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/db/models/functions.py",
+        "django/contrib/gis/db/models/lookups.py"
+      ]
+    },
+    {
+      "index": 54,
+      "tokens": 4128,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/db/models/lookups.py",
+        "django/contrib/gis/db/models/proxy.py",
+        "django/contrib/gis/db/models/sql/__init__.py",
+        "django/contrib/gis/db/models/sql/conversion.py",
+        "django/contrib/gis/feeds.py"
+      ]
+    },
+    {
+      "index": 55,
+      "tokens": 4078,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/feeds.py",
+        "django/contrib/gis/forms/__init__.py",
+        "django/contrib/gis/forms/fields.py",
+        "django/contrib/gis/forms/widgets.py",
+        "django/contrib/gis/gdal/__init__.py"
+      ]
+    },
+    {
+      "index": 56,
+      "tokens": 4127,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/gdal/base.py",
+        "django/contrib/gis/gdal/datasource.py",
+        "django/contrib/gis/gdal/driver.py",
+        "django/contrib/gis/gdal/envelope.py"
+      ]
+    },
+    {
+      "index": 57,
+      "tokens": 4079,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/gdal/error.py",
+        "django/contrib/gis/gdal/feature.py",
+        "django/contrib/gis/gdal/field.py"
+      ]
+    },
+    {
+      "index": 58,
+      "tokens": 4128,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/gdal/field.py",
+        "django/contrib/gis/gdal/geometries.py"
+      ]
+    },
+    {
+      "index": 59,
+      "tokens": 4124,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/gdal/geometries.py",
+        "django/contrib/gis/gdal/geomtype.py"
+      ]
+    },
+    {
+      "index": 60,
+      "tokens": 4126,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/gdal/layer.py",
+        "django/contrib/gis/gdal/libgdal.py"
+      ]
+    },
+    {
+      "index": 61,
+      "tokens": 4126,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/gdal/libgdal.py",
+        "django/contrib/gis/gdal/prototypes/ds.py",
+        "django/contrib/gis/gdal/prototypes/errcheck.py"
+      ]
+    },
+    {
+      "index": 62,
+      "tokens": 4120,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/gdal/prototypes/errcheck.py",
+        "django/contrib/gis/gdal/prototypes/generation.py",
+        "django/contrib/gis/gdal/prototypes/geom.py"
+      ]
+    },
+    {
+      "index": 63,
+      "tokens": 4126,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/gdal/prototypes/raster.py",
+        "django/contrib/gis/gdal/prototypes/srs.py"
+      ]
+    },
+    {
+      "index": 64,
+      "tokens": 4109,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/gdal/raster/band.py",
+        "django/contrib/gis/gdal/raster/base.py",
+        "django/contrib/gis/gdal/raster/const.py"
+      ]
+    },
+    {
+      "index": 65,
+      "tokens": 4124,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/gdal/raster/source.py"
+      ]
+    },
+    {
+      "index": 66,
+      "tokens": 4127,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/gdal/srs.py"
+      ]
+    },
+    {
+      "index": 67,
+      "tokens": 4119,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/gdal/srs.py",
+        "django/contrib/gis/geoip2.py",
+        "django/contrib/gis/geometry.py"
+      ]
+    },
+    {
+      "index": 68,
+      "tokens": 4127,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/geos/__init__.py",
+        "django/contrib/gis/geos/base.py",
+        "django/contrib/gis/geos/collections.py",
+        "django/contrib/gis/geos/coordseq.py"
+      ]
+    },
+    {
+      "index": 69,
+      "tokens": 4111,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/geos/error.py",
+        "django/contrib/gis/geos/factory.py",
+        "django/contrib/gis/geos/geometry.py"
+      ]
+    },
+    {
+      "index": 70,
+      "tokens": 4123,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/geos/geometry.py",
+        "django/contrib/gis/geos/io.py",
+        "django/contrib/gis/geos/libgeos.py",
+        "django/contrib/gis/geos/linestring.py"
+      ]
+    },
+    {
+      "index": 71,
+      "tokens": 4127,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/geos/linestring.py",
+        "django/contrib/gis/geos/mutable_list.py",
+        "django/contrib/gis/geos/point.py"
+      ]
+    },
+    {
+      "index": 72,
+      "tokens": 4117,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/geos/polygon.py",
+        "django/contrib/gis/geos/prepared.py",
+        "django/contrib/gis/geos/prototypes/__init__.py",
+        "django/contrib/gis/geos/prototypes/coordseq.py"
+      ]
+    },
+    {
+      "index": 73,
+      "tokens": 4070,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/geos/prototypes/coordseq.py",
+        "django/contrib/gis/geos/prototypes/errcheck.py",
+        "django/contrib/gis/geos/prototypes/geom.py",
+        "django/contrib/gis/geos/prototypes/io.py"
+      ]
+    },
+    {
+      "index": 74,
+      "tokens": 4091,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/geos/prototypes/io.py"
+      ]
+    },
+    {
+      "index": 75,
+      "tokens": 4128,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/geos/prototypes/io.py",
+        "django/contrib/gis/geos/prototypes/misc.py",
+        "django/contrib/gis/geos/prototypes/predicates.py",
+        "django/contrib/gis/geos/prototypes/prepared.py",
+        "django/contrib/gis/geos/prototypes/threadsafe.py",
+        "django/contrib/gis/geos/prototypes/topology.py"
+      ]
+    },
+    {
+      "index": 76,
+      "tokens": 4121,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/management/commands/inspectdb.py",
+        "django/contrib/gis/management/commands/ogrinspect.py",
+        "django/contrib/gis/measure.py"
+      ]
+    },
+    {
+      "index": 77,
+      "tokens": 4115,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/gis/measure.py",
+        "django/contrib/gis/ptr.py",
+        "django/contrib/gis/serializers/geojson.py",
+        "django/contrib/gis/shortcuts.py"
+      ]
+    },
+    {
+      "index": 78,
+      "tokens": 4127,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/gis/shortcuts.py",
+        "django/contrib/gis/sitemaps/__init__.py",
+        "django/contrib/gis/sitemaps/kml.py",
+        "django/contrib/gis/sitemaps/views.py",
+        "django/contrib/gis/utils/__init__.py",
+        "django/contrib/gis/utils/layermapping.py"
+      ]
+    },
+    {
+      "index": 79,
+      "tokens": 4120,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/gis/utils/ogrinfo.py",
+        "django/contrib/gis/utils/ogrinspect.py"
+      ]
+    },
+    {
+      "index": 80,
+      "tokens": 4128,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/gis/utils/srs.py",
+        "django/contrib/gis/views.py",
+        "django/contrib/humanize/apps.py",
+        "django/contrib/humanize/templatetags/humanize.py"
+      ]
+    },
+    {
+      "index": 81,
+      "tokens": 4093,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/humanize/templatetags/humanize.py",
+        "django/contrib/messages/__init__.py",
+        "django/contrib/messages/api.py",
+        "django/contrib/messages/apps.py",
+        "django/contrib/messages/constants.py"
+      ]
+    },
+    {
+      "index": 82,
+      "tokens": 4128,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/messages/context_processors.py",
+        "django/contrib/messages/middleware.py",
+        "django/contrib/messages/storage/__init__.py",
+        "django/contrib/messages/storage/base.py",
+        "django/contrib/messages/storage/cookie.py"
+      ]
+    },
+    {
+      "index": 83,
+      "tokens": 4078,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/messages/storage/cookie.py",
+        "django/contrib/messages/storage/fallback.py",
+        "django/contrib/messages/storage/session.py",
+        "django/contrib/messages/test.py",
+        "django/contrib/messages/utils.py",
+        "django/contrib/messages/views.py",
+        "django/contrib/postgres/aggregates/__init__.py",
+        "django/contrib/postgres/aggregates/general.py",
+        "django/contrib/postgres/aggregates/mixins.py",
+        "django/contrib/postgres/aggregates/statistics.py"
+      ]
+    },
+    {
+      "index": 84,
+      "tokens": 4127,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/postgres/apps.py",
+        "django/contrib/postgres/constraints.py"
+      ]
+    },
+    {
+      "index": 85,
+      "tokens": 4088,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/postgres/expressions.py",
+        "django/contrib/postgres/fields/__init__.py",
+        "django/contrib/postgres/fields/array.py"
+      ]
+    },
+    {
+      "index": 86,
+      "tokens": 4108,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/postgres/fields/array.py",
+        "django/contrib/postgres/fields/citext.py",
+        "django/contrib/postgres/fields/hstore.py",
+        "django/contrib/postgres/fields/jsonb.py",
+        "django/contrib/postgres/fields/ranges.py"
+      ]
+    },
+    {
+      "index": 87,
+      "tokens": 4122,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/postgres/fields/ranges.py",
+        "django/contrib/postgres/fields/utils.py",
+        "django/contrib/postgres/forms/__init__.py",
+        "django/contrib/postgres/forms/array.py"
+      ]
+    },
+    {
+      "index": 88,
+      "tokens": 4113,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/postgres/forms/array.py",
+        "django/contrib/postgres/forms/hstore.py",
+        "django/contrib/postgres/forms/ranges.py",
+        "django/contrib/postgres/functions.py",
+        "django/contrib/postgres/indexes.py"
+      ]
+    },
+    {
+      "index": 89,
+      "tokens": 4078,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/postgres/indexes.py",
+        "django/contrib/postgres/lookups.py",
+        "django/contrib/postgres/operations.py"
+      ]
+    },
+    {
+      "index": 90,
+      "tokens": 4118,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/postgres/operations.py",
+        "django/contrib/postgres/search.py"
+      ]
+    },
+    {
+      "index": 91,
+      "tokens": 4125,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/postgres/search.py",
+        "django/contrib/postgres/serializers.py",
+        "django/contrib/postgres/signals.py",
+        "django/contrib/postgres/utils.py",
+        "django/contrib/postgres/validators.py"
+      ]
+    },
+    {
+      "index": 92,
+      "tokens": 4128,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/postgres/validators.py",
+        "django/contrib/redirects/admin.py",
+        "django/contrib/redirects/apps.py",
+        "django/contrib/redirects/middleware.py",
+        "django/contrib/redirects/models.py",
+        "django/contrib/sessions/apps.py",
+        "django/contrib/sessions/backends/base.py"
+      ]
+    },
+    {
+      "index": 93,
+      "tokens": 4120,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/sessions/backends/cache.py",
+        "django/contrib/sessions/backends/cached_db.py",
+        "django/contrib/sessions/backends/db.py"
+      ]
+    },
+    {
+      "index": 94,
+      "tokens": 4120,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/sessions/backends/file.py",
+        "django/contrib/sessions/backends/signed_cookies.py",
+        "django/contrib/sessions/base_session.py"
+      ]
+    },
+    {
+      "index": 95,
+      "tokens": 4099,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/sessions/exceptions.py",
+        "django/contrib/sessions/management/commands/clearsessions.py",
+        "django/contrib/sessions/middleware.py",
+        "django/contrib/sessions/models.py",
+        "django/contrib/sessions/serializers.py",
+        "django/contrib/sitemaps/__init__.py"
+      ]
+    },
+    {
+      "index": 96,
+      "tokens": 4118,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/sitemaps/apps.py",
+        "django/contrib/sitemaps/views.py",
+        "django/contrib/sites/admin.py",
+        "django/contrib/sites/apps.py",
+        "django/contrib/sites/checks.py",
+        "django/contrib/sites/management.py",
+        "django/contrib/sites/managers.py",
+        "django/contrib/sites/middleware.py",
+        "django/contrib/sites/models.py"
+      ]
+    },
+    {
+      "index": 97,
+      "tokens": 4127,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/contrib/sites/models.py",
+        "django/contrib/sites/requests.py",
+        "django/contrib/sites/shortcuts.py",
+        "django/contrib/staticfiles/apps.py",
+        "django/contrib/staticfiles/checks.py",
+        "django/contrib/staticfiles/finders.py"
+      ]
+    },
+    {
+      "index": 98,
+      "tokens": 4126,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/contrib/staticfiles/finders.py",
+        "django/contrib/staticfiles/handlers.py",
+        "django/contrib/staticfiles/management/commands/collectstatic.py"
+      ]
+    },
+    {
+      "index": 99,
+      "tokens": 4128,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/contrib/staticfiles/management/commands/findstatic.py",
+        "django/contrib/staticfiles/management/commands/runserver.py",
+        "django/contrib/staticfiles/storage.py"
+      ]
+    },
+    {
+      "index": 100,
+      "tokens": 4125,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/contrib/staticfiles/storage.py",
+        "django/contrib/staticfiles/testing.py",
+        "django/contrib/staticfiles/urls.py",
+        "django/contrib/staticfiles/utils.py",
+        "django/contrib/staticfiles/views.py",
+        "django/contrib/syndication/apps.py",
+        "django/contrib/syndication/views.py"
+      ]
+    },
+    {
+      "index": 101,
+      "tokens": 4118,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/asgi.py",
+        "django/core/cache/__init__.py",
+        "django/core/cache/backends/base.py"
+      ]
+    },
+    {
+      "index": 102,
+      "tokens": 4087,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/cache/backends/base.py",
+        "django/core/cache/backends/db.py",
+        "django/core/cache/backends/dummy.py"
+      ]
+    },
+    {
+      "index": 103,
+      "tokens": 4126,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/cache/backends/filebased.py",
+        "django/core/cache/backends/locmem.py",
+        "django/core/cache/backends/memcached.py"
+      ]
+    },
+    {
+      "index": 104,
+      "tokens": 4067,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/cache/backends/memcached.py",
+        "django/core/cache/backends/redis.py",
+        "django/core/cache/utils.py",
+        "django/core/checks/__init__.py"
+      ]
+    },
+    {
+      "index": 105,
+      "tokens": 4125,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/checks/async_checks.py",
+        "django/core/checks/caches.py",
+        "django/core/checks/compatibility/django_4_0.py",
+        "django/core/checks/database.py",
+        "django/core/checks/files.py",
+        "django/core/checks/messages.py",
+        "django/core/checks/model_checks.py"
+      ]
+    },
+    {
+      "index": 106,
+      "tokens": 4110,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/checks/model_checks.py",
+        "django/core/checks/registry.py",
+        "django/core/checks/security/base.py"
+      ]
+    },
+    {
+      "index": 107,
+      "tokens": 4067,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/checks/security/base.py",
+        "django/core/checks/security/csrf.py",
+        "django/core/checks/security/sessions.py",
+        "django/core/checks/templates.py",
+        "django/core/checks/translation.py",
+        "django/core/checks/urls.py"
+      ]
+    },
+    {
+      "index": 108,
+      "tokens": 4124,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/checks/urls.py",
+        "django/core/exceptions.py",
+        "django/core/files/__init__.py",
+        "django/core/files/base.py"
+      ]
+    },
+    {
+      "index": 109,
+      "tokens": 4097,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/files/base.py",
+        "django/core/files/images.py",
+        "django/core/files/locks.py",
+        "django/core/files/move.py"
+      ]
+    },
+    {
+      "index": 110,
+      "tokens": 4128,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/files/storage/__init__.py",
+        "django/core/files/storage/base.py",
+        "django/core/files/storage/filesystem.py"
+      ]
+    },
+    {
+      "index": 111,
+      "tokens": 4116,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/files/storage/handler.py",
+        "django/core/files/storage/memory.py",
+        "django/core/files/storage/mixins.py",
+        "django/core/files/temp.py"
+      ]
+    },
+    {
+      "index": 112,
+      "tokens": 4120,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/files/uploadedfile.py",
+        "django/core/files/uploadhandler.py",
+        "django/core/files/utils.py"
+      ]
+    },
+    {
+      "index": 113,
+      "tokens": 4127,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/files/utils.py",
+        "django/core/handlers/asgi.py"
+      ]
+    },
+    {
+      "index": 114,
+      "tokens": 4125,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/handlers/base.py"
+      ]
+    },
+    {
+      "index": 115,
+      "tokens": 4118,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/handlers/base.py",
+        "django/core/handlers/exception.py",
+        "django/core/handlers/wsgi.py"
+      ]
+    },
+    {
+      "index": 116,
+      "tokens": 4126,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/handlers/wsgi.py",
+        "django/core/mail/__init__.py",
+        "django/core/mail/backends/__init__.py",
+        "django/core/mail/backends/base.py",
+        "django/core/mail/backends/console.py",
+        "django/core/mail/backends/dummy.py",
+        "django/core/mail/backends/filebased.py"
+      ]
+    },
+    {
+      "index": 117,
+      "tokens": 4109,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/mail/backends/locmem.py",
+        "django/core/mail/backends/smtp.py",
+        "django/core/mail/message.py"
+      ]
+    },
+    {
+      "index": 118,
+      "tokens": 4127,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/mail/message.py"
+      ]
+    },
+    {
+      "index": 119,
+      "tokens": 4120,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/mail/utils.py",
+        "django/core/management/__init__.py"
+      ]
+    },
+    {
+      "index": 120,
+      "tokens": 4124,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/management/__init__.py",
+        "django/core/management/base.py"
+      ]
+    },
+    {
+      "index": 121,
+      "tokens": 4128,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/management/base.py",
+        "django/core/management/color.py",
+        "django/core/management/commands/check.py",
+        "django/core/management/commands/compilemessages.py"
+      ]
+    },
+    {
+      "index": 122,
+      "tokens": 4118,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/management/commands/createcachetable.py",
+        "django/core/management/commands/dbshell.py",
+        "django/core/management/commands/diffsettings.py",
+        "django/core/management/commands/dumpdata.py"
+      ]
+    },
+    {
+      "index": 123,
+      "tokens": 4123,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/management/commands/flush.py",
+        "django/core/management/commands/inspectdb.py"
+      ]
+    },
+    {
+      "index": 124,
+      "tokens": 4127,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/management/commands/loaddata.py"
+      ]
+    },
+    {
+      "index": 125,
+      "tokens": 4128,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/management/commands/loaddata.py",
+        "django/core/management/commands/makemessages.py"
+      ]
+    },
+    {
+      "index": 126,
+      "tokens": 4125,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/management/commands/makemigrations.py"
+      ]
+    },
+    {
+      "index": 127,
+      "tokens": 4128,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/management/commands/migrate.py"
+      ]
+    },
+    {
+      "index": 128,
+      "tokens": 4097,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/management/commands/optimizemigration.py",
+        "django/core/management/commands/runserver.py"
+      ]
+    },
+    {
+      "index": 129,
+      "tokens": 4127,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/management/commands/sendtestemail.py",
+        "django/core/management/commands/shell.py",
+        "django/core/management/commands/showmigrations.py"
+      ]
+    },
+    {
+      "index": 130,
+      "tokens": 4123,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/management/commands/sqlflush.py",
+        "django/core/management/commands/sqlmigrate.py",
+        "django/core/management/commands/sqlsequencereset.py",
+        "django/core/management/commands/squashmigrations.py"
+      ]
+    },
+    {
+      "index": 131,
+      "tokens": 4118,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/management/commands/startapp.py",
+        "django/core/management/commands/startproject.py",
+        "django/core/management/commands/test.py",
+        "django/core/management/commands/testserver.py",
+        "django/core/management/sql.py",
+        "django/core/management/templates.py"
+      ]
+    },
+    {
+      "index": 132,
+      "tokens": 4126,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/management/utils.py",
+        "django/core/paginator.py"
+      ]
+    },
+    {
+      "index": 133,
+      "tokens": 4124,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/paginator.py",
+        "django/core/serializers/__init__.py",
+        "django/core/serializers/base.py"
+      ]
+    },
+    {
+      "index": 134,
+      "tokens": 4119,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/serializers/base.py",
+        "django/core/serializers/json.py"
+      ]
+    },
+    {
+      "index": 135,
+      "tokens": 4109,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/serializers/json.py",
+        "django/core/serializers/jsonl.py",
+        "django/core/serializers/python.py",
+        "django/core/serializers/pyyaml.py"
+      ]
+    },
+    {
+      "index": 136,
+      "tokens": 4120,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/serializers/pyyaml.py",
+        "django/core/serializers/xml_serializer.py"
+      ]
+    },
+    {
+      "index": 137,
+      "tokens": 4124,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/serializers/xml_serializer.py",
+        "django/core/servers/basehttp.py"
+      ]
+    },
+    {
+      "index": 138,
+      "tokens": 4115,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/core/servers/basehttp.py",
+        "django/core/signals.py",
+        "django/core/signing.py"
+      ]
+    },
+    {
+      "index": 139,
+      "tokens": 4119,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/core/validators.py"
+      ]
+    },
+    {
+      "index": 140,
+      "tokens": 4087,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/core/validators.py"
+      ]
+    },
+    {
+      "index": 141,
+      "tokens": 4123,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/core/wsgi.py",
+        "django/db/__init__.py",
+        "django/db/backends/base/base.py"
+      ]
+    },
+    {
+      "index": 142,
+      "tokens": 4120,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/backends/base/client.py",
+        "django/db/backends/base/creation.py"
+      ]
+    },
+    {
+      "index": 143,
+      "tokens": 4115,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/backends/base/features.py"
+      ]
+    },
+    {
+      "index": 144,
+      "tokens": 4121,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/backends/base/introspection.py",
+        "django/db/backends/base/operations.py"
+      ]
+    },
+    {
+      "index": 145,
+      "tokens": 4121,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/backends/base/schema.py"
+      ]
+    },
+    {
+      "index": 146,
+      "tokens": 4121,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/backends/base/validation.py",
+        "django/db/backends/ddl_references.py",
+        "django/db/backends/dummy/base.py",
+        "django/db/backends/dummy/features.py",
+        "django/db/backends/mysql/base.py"
+      ]
+    },
+    {
+      "index": 147,
+      "tokens": 4118,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/backends/mysql/base.py"
+      ]
+    },
+    {
+      "index": 148,
+      "tokens": 4119,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/backends/mysql/client.py",
+        "django/db/backends/mysql/compiler.py",
+        "django/db/backends/mysql/creation.py",
+        "django/db/backends/mysql/features.py"
+      ]
+    },
+    {
+      "index": 149,
+      "tokens": 4112,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/backends/mysql/introspection.py"
+      ]
+    },
+    {
+      "index": 150,
+      "tokens": 4124,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/backends/mysql/operations.py"
+      ]
+    },
+    {
+      "index": 151,
+      "tokens": 4127,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/backends/mysql/schema.py",
+        "django/db/backends/mysql/validation.py"
+      ]
+    },
+    {
+      "index": 152,
+      "tokens": 4109,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/backends/oracle/base.py"
+      ]
+    },
+    {
+      "index": 153,
+      "tokens": 4066,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/backends/oracle/base.py",
+        "django/db/backends/oracle/client.py"
+      ]
+    },
+    {
+      "index": 154,
+      "tokens": 4123,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/backends/oracle/creation.py"
+      ]
+    },
+    {
+      "index": 155,
+      "tokens": 4125,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/backends/oracle/features.py",
+        "django/db/backends/oracle/functions.py",
+        "django/db/backends/oracle/introspection.py"
+      ]
+    },
+    {
+      "index": 156,
+      "tokens": 4122,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/backends/oracle/operations.py"
+      ]
+    },
+    {
+      "index": 157,
+      "tokens": 4094,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/backends/oracle/oracledb_any.py",
+        "django/db/backends/oracle/schema.py"
+      ]
+    },
+    {
+      "index": 158,
+      "tokens": 4118,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/backends/oracle/utils.py",
+        "django/db/backends/oracle/validation.py",
+        "django/db/backends/postgresql/base.py"
+      ]
+    },
+    {
+      "index": 159,
+      "tokens": 4119,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/backends/postgresql/client.py",
+        "django/db/backends/postgresql/creation.py",
+        "django/db/backends/postgresql/features.py"
+      ]
+    },
+    {
+      "index": 160,
+      "tokens": 4117,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/backends/postgresql/introspection.py"
+      ]
+    },
+    {
+      "index": 161,
+      "tokens": 4126,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/backends/postgresql/operations.py"
+      ]
+    },
+    {
+      "index": 162,
+      "tokens": 4122,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/backends/postgresql/psycopg_any.py",
+        "django/db/backends/postgresql/schema.py"
+      ]
+    },
+    {
+      "index": 163,
+      "tokens": 4128,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/backends/signals.py",
+        "django/db/backends/sqlite3/_functions.py"
+      ]
+    },
+    {
+      "index": 164,
+      "tokens": 4127,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/backends/sqlite3/_functions.py",
+        "django/db/backends/sqlite3/base.py"
+      ]
+    },
+    {
+      "index": 165,
+      "tokens": 4118,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/backends/sqlite3/base.py",
+        "django/db/backends/sqlite3/client.py",
+        "django/db/backends/sqlite3/creation.py",
+        "django/db/backends/sqlite3/features.py"
+      ]
+    },
+    {
+      "index": 166,
+      "tokens": 4127,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/backends/sqlite3/introspection.py"
+      ]
+    },
+    {
+      "index": 167,
+      "tokens": 4127,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/backends/sqlite3/operations.py"
+      ]
+    },
+    {
+      "index": 168,
+      "tokens": 4123,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/backends/sqlite3/schema.py"
+      ]
+    },
+    {
+      "index": 169,
+      "tokens": 4128,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/backends/utils.py",
+        "django/db/models/__init__.py"
+      ]
+    },
+    {
+      "index": 170,
+      "tokens": 4124,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/models/aggregates.py",
+        "django/db/models/base.py"
+      ]
+    },
+    {
+      "index": 171,
+      "tokens": 4115,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/models/base.py"
+      ]
+    },
+    {
+      "index": 172,
+      "tokens": 4119,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/models/base.py",
+        "django/db/models/constants.py",
+        "django/db/models/constraints.py"
+      ]
+    },
+    {
+      "index": 173,
+      "tokens": 4120,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/models/constraints.py"
+      ]
+    },
+    {
+      "index": 174,
+      "tokens": 4128,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/models/deletion.py"
+      ]
+    },
+    {
+      "index": 175,
+      "tokens": 4125,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/models/enums.py",
+        "django/db/models/expressions.py"
+      ]
+    },
+    {
+      "index": 176,
+      "tokens": 4115,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/models/expressions.py"
+      ]
+    },
+    {
+      "index": 177,
+      "tokens": 4092,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/models/expressions.py"
+      ]
+    },
+    {
+      "index": 178,
+      "tokens": 4118,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/models/expressions.py"
+      ]
+    },
+    {
+      "index": 179,
+      "tokens": 4127,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/models/expressions.py"
+      ]
+    },
+    {
+      "index": 180,
+      "tokens": 4115,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/models/expressions.py",
+        "django/db/models/fields/__init__.py"
+      ]
+    },
+    {
+      "index": 181,
+      "tokens": 4127,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/models/fields/__init__.py"
+      ]
+    },
+    {
+      "index": 182,
+      "tokens": 4125,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/models/fields/__init__.py"
+      ]
+    },
+    {
+      "index": 183,
+      "tokens": 4120,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/models/fields/__init__.py"
+      ]
+    },
+    {
+      "index": 184,
+      "tokens": 4126,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/models/fields/__init__.py"
+      ]
+    },
+    {
+      "index": 185,
+      "tokens": 4125,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/models/fields/__init__.py",
+        "django/db/models/fields/files.py"
+      ]
+    },
+    {
+      "index": 186,
+      "tokens": 4128,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/models/fields/files.py",
+        "django/db/models/fields/generated.py"
+      ]
+    },
+    {
+      "index": 187,
+      "tokens": 4066,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/models/fields/json.py"
+      ]
+    },
+    {
+      "index": 188,
+      "tokens": 4125,
+      "task": "Write pytest tests for the source below.",
+      "files": [
+        "django/db/models/fields/json.py",
+        "django/db/models/fields/mixins.py"
+      ]
+    },
+    {
+      "index": 189,
+      "tokens": 4119,
+      "task": "Find and explain one bug or unhandled edge case in the source below.",
+      "files": [
+        "django/db/models/fields/mixins.py",
+        "django/db/models/fields/proxy.py",
+        "django/db/models/fields/related.py"
+      ]
+    },
+    {
+      "index": 190,
+      "tokens": 4111,
+      "task": "Refactor the source below for readability without changing behavior.",
+      "files": [
+        "django/db/models/fields/related.py"
+      ]
+    },
+    {
+      "index": 191,
+      "tokens": 4125,
+      "task": "Add precise type hints and docstrings to the source below.",
+      "files": [
+        "django/db/models/fields/related.py"
+      ]
+    }
+  ]
+}

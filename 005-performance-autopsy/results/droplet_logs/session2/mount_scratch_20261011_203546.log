@@ -1,0 +1,2 @@
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/vdc1      ext4  5.0T   28K  4.8T   1% /mnt/scratch

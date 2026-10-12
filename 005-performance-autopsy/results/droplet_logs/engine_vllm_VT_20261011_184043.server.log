@@ -1,0 +1,982 @@
+(APIServer pid=1) INFO 10-11 18:41:08 [api_utils.py:347] 
+(APIServer pid=1) INFO 10-11 18:41:08 [api_utils.py:347]        █     █     █▄   ▄█
+(APIServer pid=1) INFO 10-11 18:41:08 [api_utils.py:347]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.29.1.dev0+g98dff2a81.d20261002
+(APIServer pid=1) INFO 10-11 18:41:08 [api_utils.py:347]   █▄█▀ █     █     █     █  model   Qwen/Qwen3-Coder-30B-A3B-Instruct
+(APIServer pid=1) INFO 10-11 18:41:08 [api_utils.py:347]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=1) INFO 10-11 18:41:08 [api_utils.py:347] 
+(APIServer pid=1) INFO 10-11 18:41:08 [api_utils.py:286] non-default args: {'model_tag': 'Qwen/Qwen3-Coder-30B-A3B-Instruct', 'host': '0.0.0.0', 'model': 'Qwen/Qwen3-Coder-30B-A3B-Instruct', 'max_model_len': 131072, 'attention_backend': 'ROCM_AITER_UNIFIED_ATTN', 'enable_prefix_caching': False}
+(APIServer pid=1) INFO 10-11 18:41:14 [model.py:684] Resolved architecture: Qwen3MoeForCausalLM
+(APIServer pid=1) INFO 10-11 18:41:14 [model.py:2021] Using max model len 131072
+(APIServer pid=1) INFO 10-11 18:41:14 [scheduler.py:277] Chunked prefill is enabled with max_num_batched_tokens=16384.
+(APIServer pid=1) INFO 10-11 18:41:14 [kernel.py:369] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['aiter', 'native'], fused_add_rms_norm=['aiter', 'native'])
+(APIServer pid=1) INFO 10-11 18:41:14 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant, mla_dual_rms_norm
+(EngineCore pid=182) INFO 10-11 18:41:21 [core.py:123] Initializing a V1 LLM engine (v0.29.1.dev0+g98dff2a81.d20261002) with config: model='Qwen/Qwen3-Coder-30B-A3B-Instruct', speculative_config=None, tokenizer='Qwen/Qwen3-Coder-30B-A3B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=main, tokenizer_revision=main, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, per_request_spec_decode_metrics='none', kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=Qwen/Qwen3-Coder-30B-A3B-Instruct, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['+quant_fp8', '+grouped_topk', '+sparse_attn_indexer', 'none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::qwen4_exp_compute_ple_ngram_ids', 'vllm::qwen4_exp_ple_short_conv', 'vllm::qwen4_exp_qsa_with_output', 'vllm::linear_attention', 'vllm::qwen_gdn_attention_core', 'vllm::qwen_gdn_attention_core_fused_norm_packed', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::hpc_rope_norm_forward', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_mla_dual_rms_norm': True, 'fuse_rope_kvcache': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['aiter', 'native'], fused_add_rms_norm=['aiter', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=182) INFO 10-11 18:41:22 [parallel_state.py:1775] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://<droplet-ip>:43243 backend=nccl
+(EngineCore pid=182) INFO 10-11 18:41:22 [parallel_state.py:2119] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank 0, EPLB rank N/A
+(EngineCore pid=182) INFO 10-11 18:41:22 [gpu_worker.py:429] Using V2 Model Runner
+(EngineCore pid=182) INFO 10-11 18:41:23 [model_runner.py:382] Loading model from scratch...
+(EngineCore pid=182) INFO 10-11 18:41:23 [rocm.py:638] Using ROCM_AITER_UNIFIED_ATTN backend (selected via --attention-backend).
+(EngineCore pid=182) INFO 10-11 18:41:23 [rocm_aiter_unified_attn.py:165] Using aiter unified attention for RocmAiterUnifiedAttentionImpl
+(EngineCore pid=182) [aiter] import [module_aiter_core] under /opt/python/lib/python3.14/site-packages/aiter/jit/module_aiter_core.so
+(EngineCore pid=182) INFO 10-11 18:41:25 [unquantized.py:282] Using ROCm AITER Unquantized MoE backend out of potential backends: ['ROCm AITER', 'TRITON', 'BATCHED_TRITON'].
+(EngineCore pid=182) WARNING 10-11 18:41:25 [compilation.py:1354] Op 'quant_fp8' not present in model, enabling with '+quant_fp8' has no effect
+(EngineCore pid=182) WARNING 10-11 18:41:25 [compilation.py:1354] Op 'grouped_topk' not present in model, enabling with '+grouped_topk' has no effect
+(EngineCore pid=182) WARNING 10-11 18:41:25 [compilation.py:1354] Op 'sparse_attn_indexer' doesn't exist (or wasn't imported/registered), enabling with '+sparse_attn_indexer' has no effect
+(EngineCore pid=182) INFO 10-11 18:41:25 [weight_utils.py:863] Filesystem type for checkpoints: EXT4. Checkpoint size: 56.87 GiB. Available RAM: 226.23 GiB.
+(EngineCore pid=182) INFO 10-11 18:41:25 [weight_utils.py:886] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=182) Loading safetensors checkpoint shards:   0% Completed | 0/16 [00:00<?, ?it/s]
+(EngineCore pid=182) Loading safetensors checkpoint shards:   6% Completed | 1/16 [00:01<00:25,  1.70s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  12% Completed | 2/16 [00:03<00:25,  1.83s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  19% Completed | 3/16 [00:05<00:23,  1.82s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  25% Completed | 4/16 [00:07<00:22,  1.84s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  31% Completed | 5/16 [00:09<00:20,  1.84s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  38% Completed | 6/16 [00:11<00:18,  1.88s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  44% Completed | 7/16 [00:12<00:16,  1.87s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  50% Completed | 8/16 [00:14<00:14,  1.85s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  56% Completed | 9/16 [00:16<00:12,  1.85s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  62% Completed | 10/16 [00:18<00:11,  1.85s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  69% Completed | 11/16 [00:20<00:09,  1.84s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  75% Completed | 12/16 [00:22<00:07,  1.85s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  81% Completed | 13/16 [00:23<00:05,  1.85s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  88% Completed | 14/16 [00:25<00:03,  1.85s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  94% Completed | 15/16 [00:27<00:01,  1.85s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards: 100% Completed | 16/16 [00:28<00:00,  1.49s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards: 100% Completed | 16/16 [00:28<00:00,  1.77s/it]
+(EngineCore pid=182) 
+(EngineCore pid=182) INFO 10-11 18:41:54 [default_loader.py:430] Loading weights took 28.39 seconds
+(EngineCore pid=182) INFO 10-11 18:41:54 [unquantized.py:399] Using MoEPrepareAndFinalizeNoDPEPModular
+(EngineCore pid=182) INFO 10-11 18:41:54 [unquantized.py:400] Using AiterExperts MoE backend
+(EngineCore pid=182) INFO 10-11 18:41:54 [model_runner.py:404] Model loading took 56.93 GiB memory and 31.734561 seconds
+(EngineCore pid=182) INFO 10-11 18:41:54 [interface.py:635] Setting kv cache block size to 64 for ROCM_AITER_UNIFIED_ATTN backend.
+(EngineCore pid=182) INFO 10-11 18:41:54 [utils.py:306] Using LBHNC KV cache layout.
+(EngineCore pid=182) INFO 10-11 18:42:03 [backends.py:1094] Using cache directory: /root/.cache/vllm/torch_compile_cache/7718188baa/rank_0_0/backbone for vLLM's torch.compile
+(EngineCore pid=182) INFO 10-11 18:42:03 [backends.py:1155] Dynamo bytecode transform time: 8.00 s
+(EngineCore pid=182) INFO 10-11 18:42:09 [backends.py:393] Compiling a graph for compile range (1, 16384) takes 4.87 s
+(EngineCore pid=182) INFO 10-11 18:42:12 [backends.py:920] collected artifacts: 49 entries, 3 artifacts, 2288475 bytes total
+(EngineCore pid=182) INFO 10-11 18:42:12 [decorators.py:719] saved AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/8d3d43c3bf3e98765afa89e59dfd18d394dc764ca493b2710856e22b307427c2/rank_0_0/model
+(EngineCore pid=182) INFO 10-11 18:42:12 [monitor.py:53] torch.compile took 17.05 s in total
+(EngineCore pid=182) [aiter] import [module_rmsnorm_quant] under /opt/python/lib/python3.14/site-packages/aiter/jit/module_rmsnorm_quant.so
+(EngineCore pid=182) [aiter] import [module_moe_asm] under /opt/python/lib/python3.14/site-packages/aiter/jit/module_moe_asm.so
+(EngineCore pid=182) [aiter] merge tuned file under model_configs/ and configs/ /opt/python/lib/python3.14/site-packages/aiter/configs/tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_minimax-m2_5.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/q3vl_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/kimik3_a16w4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/glm5_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/minimax_m3_mxfp8_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_ds_v3.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/kimik3_a4w4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/kimik3_a8w4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/glm5_mxfp8_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/mimo_v2_5_pro_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_qwen3_235b.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_glm5_1.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/k2_horizon_375b_bf16_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/kimik2_fp8fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/gptoss_a16w4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/kimik2_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/glm5_ptpc_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/minimax_m25_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/kimik2_i4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_glm5.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/glm47_fp8_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/dsv3_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/qwen3next_80b_fp8_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/gptoss_fp8fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/dsv4_fp8fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/qwen3_235b_bf16_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/kimik3_i4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/minimax_m3_a16w4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/qwen3_8_2400b_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/gptoss_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/a8w8_blockscale_tuned_fmoe_qwen3_5_397b.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/minimax_m3_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/qwen3_vl_fp4_tuned_fmoe.csv:/opt/python/lib/python3.14/site-packages/aiter/configs/model_configs/qwen3_5_397b_fp4_tuned_fmoe.csv
+(EngineCore pid=182) [aiter] [fused_moe] duplicate tuned rows (primary) in /tmp/aiter_configs/tuned_fmoe.csv; keeping first match for 12 rows
+(EngineCore pid=182) [aiter] [fused_moe] duplicate tuned rows after disabling act_type in /tmp/aiter_configs/tuned_fmoe.csv; keeping first match for 96 rows
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 1024
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16384, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] import [module_moe_sorting_opus] under /opt/python/lib/python3.14/site-packages/aiter/jit/module_moe_sorting_opus.so
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 1024
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16384, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] import [module_moe_ck2stages_b16_b16_preshuffle_on_b16_silu_no_mulWeightStage2] under /opt/python/lib/python3.14/site-packages/aiter/jit/module_moe_ck2stages_b16_b16_preshuffle_on_b16_silu_no_mulWeightStage2.so
+(EngineCore pid=182) [aiter] type hints mismatch, override to --> ck_moe_stage1(hidden_states: torch.Tensor, w1: torch.Tensor, w2: torch.Tensor, sorted_token_ids: torch.Tensor, sorted_expert_ids: torch.Tensor, num_valid_ids: torch.Tensor, out: torch.Tensor, topk: int, kernelName: str = None, w1_scale: Optional[torch.Tensor] = None, a1_scale: Optional[torch.Tensor] = None, block_m: Optional[int] = 32, sorted_weights: Optional[torch.Tensor] = None, quant_type: int = 0, activation: int = 0, splitk: Optional[int] = 1, non_temporal_load: bool = False, dst_type: Optional[str] = None, is_shuffled: bool = True) -> None
+(EngineCore pid=182) [aiter] type hints mismatch, override to --> ck_moe_stage2(inter_states: torch.Tensor, w1: torch.Tensor, w2: torch.Tensor, sorted_token_ids: torch.Tensor, sorted_expert_ids: torch.Tensor, num_valid_ids: torch.Tensor, out: torch.Tensor, topk: int, kernelName: str = None, w2_scale: Optional[torch.Tensor] = None, a2_scale: Optional[torch.Tensor] = None, block_m: Optional[int] = 32, sorted_weights: Optional[torch.Tensor] = None, quant_type: int = 0, activation: int = 0, splitk: Optional[int] = 1, non_temporal_load: bool = False, dst_type: Optional[str] = None, is_shuffled: bool = True) -> None
+(EngineCore pid=182) INFO 10-11 18:42:14 [monitor.py:81] Initial profiling/warmup run took 1.46 s
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 64 use_nt = True, estimated_m_per_expert = 32
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 512, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 64 use_nt = True, estimated_m_per_expert = 32
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 512, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):   2%|▏         | 1/51 [00:01<00:52,  1.05s/it]Capturing CUDA graphs (PIECEWISE):   4%|▍         | 2/51 [00:01<00:25,  1.94it/s]Capturing CUDA graphs (PIECEWISE):   6%|▌         | 3/51 [00:01<00:16,  2.89it/s]Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/51 [00:01<00:12,  3.79it/s]Capturing CUDA graphs (PIECEWISE):  10%|▉         | 5/51 [00:01<00:10,  4.55it/s]Capturing CUDA graphs (PIECEWISE):  12%|█▏        | 6/51 [00:01<00:08,  5.16it/s]Capturing CUDA graphs (PIECEWISE):  14%|█▎        | 7/51 [00:01<00:07,  5.65it/s]Capturing CUDA graphs (PIECEWISE):  16%|█▌        | 8/51 [00:02<00:07,  6.00it/s]Capturing CUDA graphs (PIECEWISE):  18%|█▊        | 9/51 [00:02<00:06,  6.31it/s]Capturing CUDA graphs (PIECEWISE):  20%|█▉        | 10/51 [00:02<00:06,  6.56it/s]Capturing CUDA graphs (PIECEWISE):  22%|██▏       | 11/51 [00:02<00:05,  6.75it/s]Capturing CUDA graphs (PIECEWISE):  24%|██▎       | 12/51 [00:02<00:05,  6.80it/s]Capturing CUDA graphs (PIECEWISE):  25%|██▌       | 13/51 [00:02<00:05,  6.77it/s]Capturing CUDA graphs (PIECEWISE):  27%|██▋       | 14/51 [00:02<00:05,  6.89it/s]Capturing CUDA graphs (PIECEWISE):  29%|██▉       | 15/51 [00:03<00:05,  6.95it/s]Capturing CUDA graphs (PIECEWISE):  31%|███▏      | 16/51 [00:03<00:05,  6.98it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = True, estimated_m_per_expert = 16
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 256, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = True, estimated_m_per_expert = 16
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 256, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):  33%|███▎      | 17/51 [00:03<00:04,  7.01it/s]Capturing CUDA graphs (PIECEWISE):  35%|███▌      | 18/51 [00:04<00:13,  2.46it/s]Capturing CUDA graphs (PIECEWISE):  37%|███▋      | 19/51 [00:04<00:10,  3.04it/s]Capturing CUDA graphs (PIECEWISE):  39%|███▉      | 20/51 [00:04<00:08,  3.67it/s]Capturing CUDA graphs (PIECEWISE):  41%|████      | 21/51 [00:04<00:06,  4.30it/s]Capturing CUDA graphs (PIECEWISE):  43%|████▎     | 22/51 [00:04<00:05,  4.87it/s]Capturing CUDA graphs (PIECEWISE):  45%|████▌     | 23/51 [00:05<00:05,  5.38it/s]Capturing CUDA graphs (PIECEWISE):  47%|████▋     | 24/51 [00:05<00:04,  5.81it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▉     | 25/51 [00:05<00:04,  6.11it/s]Capturing CUDA graphs (PIECEWISE):  51%|█████     | 26/51 [00:05<00:04,  6.23it/s]Capturing CUDA graphs (PIECEWISE):  53%|█████▎    | 27/51 [00:05<00:03,  6.45it/s]Capturing CUDA graphs (PIECEWISE):  55%|█████▍    | 28/51 [00:05<00:03,  6.57it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 29/51 [00:05<00:03,  6.74it/s]Capturing CUDA graphs (PIECEWISE):  59%|█████▉    | 30/51 [00:06<00:03,  6.80it/s]Capturing CUDA graphs (PIECEWISE):  61%|██████    | 31/51 [00:06<00:02,  6.92it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 32/51 [00:06<00:02,  6.95it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 64 use_nt = True, estimated_m_per_expert = 8
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 128, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 64 use_nt = True, estimated_m_per_expert = 8
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 128, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):  65%|██████▍   | 33/51 [00:06<00:02,  6.95it/s]Capturing CUDA graphs (PIECEWISE):  67%|██████▋   | 34/51 [00:06<00:02,  7.03it/s]Capturing CUDA graphs (PIECEWISE):  69%|██████▊   | 35/51 [00:06<00:02,  7.06it/s]Capturing CUDA graphs (PIECEWISE):  71%|███████   | 36/51 [00:06<00:02,  7.10it/s]Capturing CUDA graphs (PIECEWISE):  73%|███████▎  | 37/51 [00:07<00:01,  7.09it/s]Capturing CUDA graphs (PIECEWISE):  75%|███████▍  | 38/51 [00:07<00:01,  6.95it/s]Capturing CUDA graphs (PIECEWISE):  76%|███████▋  | 39/51 [00:07<00:01,  6.87it/s]Capturing CUDA graphs (PIECEWISE):  78%|███████▊  | 40/51 [00:07<00:01,  6.93it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 4
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 64, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 4
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 64, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):  80%|████████  | 41/51 [00:07<00:01,  6.97it/s]Capturing CUDA graphs (PIECEWISE):  82%|████████▏ | 42/51 [00:07<00:01,  7.04it/s]Capturing CUDA graphs (PIECEWISE):  84%|████████▍ | 43/51 [00:07<00:01,  7.07it/s]Capturing CUDA graphs (PIECEWISE):  86%|████████▋ | 44/51 [00:08<00:00,  7.08it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 2
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 32, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 2
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 32, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):  88%|████████▊ | 45/51 [00:08<00:00,  7.04it/s]Capturing CUDA graphs (PIECEWISE):  90%|█████████ | 46/51 [00:08<00:00,  7.09it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 1
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 1
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):  92%|█████████▏| 47/51 [00:08<00:00,  7.08it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 8, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 8, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):  94%|█████████▍| 48/51 [00:08<00:00,  7.12it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):  96%|█████████▌| 49/51 [00:08<00:00,  6.77it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 2, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 2, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):  98%|█████████▊| 50/51 [00:08<00:00,  7.14it/s][aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 32 use_nt = True, estimated_m_per_expert = 0
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:09<00:00,  2.48it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:09<00:00,  5.15it/s]
+(EngineCore pid=182) Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  50%|█████     | 1/2 [00:00<00:00,  8.08it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00,  8.22it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00,  8.20it/s]
+(EngineCore pid=182) INFO 10-11 18:42:25 [model_runner.py:960] Graph capturing finished in 10 secs, took 5.09 GiB
+(EngineCore pid=182) INFO 10-11 18:42:26 [gpu_worker.py:625] Available KV cache memory: 111.88 GiB
+(EngineCore pid=182) INFO 10-11 18:42:26 [gpu_worker.py:640] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.9200 is equivalent to --gpu-memory-utilization=0.8931 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.9469. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.
+(EngineCore pid=182) INFO 10-11 18:42:26 [kv_cache_utils.py:2032] GPU KV cache size: 1,221,952 tokens, Maximum concurrency for 131,072 tokens per request: 9.32x
+(EngineCore pid=182) INFO 10-11 18:42:26 [kernel_warmup.py:124] JIT kernel warmup starting.
+(EngineCore pid=182) INFO 10-11 18:42:26 [kernel_warmup.py:134] JIT kernel warmup finished in 0.00s.
+(EngineCore pid=182) INFO 10-11 18:42:26 [ll_bf16.py:30] cuteDSL (CUTLASS Python) not available, ll_bf16_gemm disabled
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):   2%|▏         | 1/51 [00:00<00:07,  6.49it/s]Capturing CUDA graphs (PIECEWISE):   4%|▍         | 2/51 [00:00<00:07,  6.53it/s]Capturing CUDA graphs (PIECEWISE):   6%|▌         | 3/51 [00:00<00:07,  6.66it/s]Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/51 [00:00<00:06,  6.73it/s]Capturing CUDA graphs (PIECEWISE):  10%|▉         | 5/51 [00:00<00:06,  6.65it/s]Capturing CUDA graphs (PIECEWISE):  12%|█▏        | 6/51 [00:00<00:06,  6.74it/s]Capturing CUDA graphs (PIECEWISE):  14%|█▎        | 7/51 [00:01<00:06,  6.81it/s]Capturing CUDA graphs (PIECEWISE):  16%|█▌        | 8/51 [00:01<00:06,  6.83it/s]Capturing CUDA graphs (PIECEWISE):  18%|█▊        | 9/51 [00:01<00:06,  6.86it/s]Capturing CUDA graphs (PIECEWISE):  20%|█▉        | 10/51 [00:01<00:05,  6.86it/s]Capturing CUDA graphs (PIECEWISE):  22%|██▏       | 11/51 [00:01<00:05,  6.89it/s]Capturing CUDA graphs (PIECEWISE):  24%|██▎       | 12/51 [00:01<00:05,  6.90it/s]Capturing CUDA graphs (PIECEWISE):  25%|██▌       | 13/51 [00:01<00:05,  6.90it/s]Capturing CUDA graphs (PIECEWISE):  27%|██▋       | 14/51 [00:02<00:05,  6.81it/s]Capturing CUDA graphs (PIECEWISE):  29%|██▉       | 15/51 [00:02<00:05,  6.82it/s]Capturing CUDA graphs (PIECEWISE):  31%|███▏      | 16/51 [00:02<00:05,  6.84it/s]Capturing CUDA graphs (PIECEWISE):  33%|███▎      | 17/51 [00:02<00:04,  6.82it/s]Capturing CUDA graphs (PIECEWISE):  35%|███▌      | 18/51 [00:02<00:04,  6.88it/s]Capturing CUDA graphs (PIECEWISE):  37%|███▋      | 19/51 [00:02<00:04,  6.87it/s]Capturing CUDA graphs (PIECEWISE):  39%|███▉      | 20/51 [00:02<00:04,  6.89it/s]Capturing CUDA graphs (PIECEWISE):  41%|████      | 21/51 [00:03<00:04,  6.67it/s]Capturing CUDA graphs (PIECEWISE):  43%|████▎     | 22/51 [00:03<00:04,  6.66it/s]Capturing CUDA graphs (PIECEWISE):  45%|████▌     | 23/51 [00:03<00:04,  6.78it/s]Capturing CUDA graphs (PIECEWISE):  47%|████▋     | 24/51 [00:03<00:03,  6.83it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▉     | 25/51 [00:03<00:03,  6.89it/s]Capturing CUDA graphs (PIECEWISE):  51%|█████     | 26/51 [00:03<00:03,  6.90it/s]Capturing CUDA graphs (PIECEWISE):  53%|█████▎    | 27/51 [00:03<00:03,  6.89it/s]Capturing CUDA graphs (PIECEWISE):  55%|█████▍    | 28/51 [00:04<00:03,  6.94it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 29/51 [00:04<00:03,  6.96it/s]Capturing CUDA graphs (PIECEWISE):  59%|█████▉    | 30/51 [00:04<00:03,  6.93it/s]Capturing CUDA graphs (PIECEWISE):  61%|██████    | 31/51 [00:04<00:02,  6.92it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 32/51 [00:04<00:02,  6.92it/s]Capturing CUDA graphs (PIECEWISE):  65%|██████▍   | 33/51 [00:04<00:02,  6.86it/s]Capturing CUDA graphs (PIECEWISE):  67%|██████▋   | 34/51 [00:04<00:02,  6.86it/s]Capturing CUDA graphs (PIECEWISE):  69%|██████▊   | 35/51 [00:05<00:02,  6.88it/s]Capturing CUDA graphs (PIECEWISE):  71%|███████   | 36/51 [00:05<00:02,  6.89it/s]Capturing CUDA graphs (PIECEWISE):  73%|███████▎  | 37/51 [00:05<00:02,  6.89it/s]Capturing CUDA graphs (PIECEWISE):  75%|███████▍  | 38/51 [00:05<00:01,  6.91it/s]Capturing CUDA graphs (PIECEWISE):  76%|███████▋  | 39/51 [00:05<00:01,  6.87it/s]Capturing CUDA graphs (PIECEWISE):  78%|███████▊  | 40/51 [00:05<00:01,  6.79it/s]Capturing CUDA graphs (PIECEWISE):  80%|████████  | 41/51 [00:06<00:01,  6.76it/s]Capturing CUDA graphs (PIECEWISE):  82%|████████▏ | 42/51 [00:06<00:01,  6.84it/s]Capturing CUDA graphs (PIECEWISE):  84%|████████▍ | 43/51 [00:06<00:01,  6.86it/s]Capturing CUDA graphs (PIECEWISE):  86%|████████▋ | 44/51 [00:06<00:01,  6.93it/s]Capturing CUDA graphs (PIECEWISE):  88%|████████▊ | 45/51 [00:06<00:00,  6.85it/s]Capturing CUDA graphs (PIECEWISE):  90%|█████████ | 46/51 [00:06<00:00,  6.78it/s]Capturing CUDA graphs (PIECEWISE):  92%|█████████▏| 47/51 [00:06<00:00,  6.77it/s]Capturing CUDA graphs (PIECEWISE):  94%|█████████▍| 48/51 [00:07<00:00,  6.83it/s]Capturing CUDA graphs (PIECEWISE):  96%|█████████▌| 49/51 [00:07<00:00,  7.13it/s]Capturing CUDA graphs (PIECEWISE):  98%|█████████▊| 50/51 [00:07<00:00,  7.31it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:07<00:00,  7.42it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:07<00:00,  6.89it/s]
+(EngineCore pid=182) Capturing CUDA graphs (FULL):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):   2%|▏         | 1/51 [00:00<00:06,  7.99it/s]Capturing CUDA graphs (FULL):   4%|▍         | 2/51 [00:00<00:06,  8.01it/s]Capturing CUDA graphs (FULL):   6%|▌         | 3/51 [00:00<00:06,  7.94it/s]Capturing CUDA graphs (FULL):   8%|▊         | 4/51 [00:00<00:05,  7.98it/s]Capturing CUDA graphs (FULL):  10%|▉         | 5/51 [00:00<00:05,  7.90it/s]Capturing CUDA graphs (FULL):  12%|█▏        | 6/51 [00:00<00:05,  7.86it/s]Capturing CUDA graphs (FULL):  14%|█▎        | 7/51 [00:00<00:05,  7.80it/s]Capturing CUDA graphs (FULL):  16%|█▌        | 8/51 [00:01<00:05,  7.89it/s]Capturing CUDA graphs (FULL):  18%|█▊        | 9/51 [00:01<00:05,  7.82it/s]Capturing CUDA graphs (FULL):  20%|█▉        | 10/51 [00:01<00:05,  7.87it/s]Capturing CUDA graphs (FULL):  22%|██▏       | 11/51 [00:01<00:05,  7.96it/s]Capturing CUDA graphs (FULL):  24%|██▎       | 12/51 [00:01<00:04,  7.97it/s]Capturing CUDA graphs (FULL):  25%|██▌       | 13/51 [00:01<00:04,  7.96it/s]Capturing CUDA graphs (FULL):  27%|██▋       | 14/51 [00:02<00:14,  2.59it/s]Capturing CUDA graphs (FULL):  29%|██▉       | 15/51 [00:02<00:11,  3.22it/s]Capturing CUDA graphs (FULL):  31%|███▏      | 16/51 [00:02<00:09,  3.88it/s]Capturing CUDA graphs (FULL):  33%|███▎      | 17/51 [00:03<00:07,  4.52it/s]Capturing CUDA graphs (FULL):  35%|███▌      | 18/51 [00:04<00:14,  2.24it/s]Capturing CUDA graphs (FULL):  37%|███▋      | 19/51 [00:04<00:11,  2.82it/s]Capturing CUDA graphs (FULL):  39%|███▉      | 20/51 [00:04<00:08,  3.46it/s]Capturing CUDA graphs (FULL):  41%|████      | 21/51 [00:04<00:07,  4.11it/s]Capturing CUDA graphs (FULL):  43%|████▎     | 22/51 [00:04<00:06,  4.73it/s]Capturing CUDA graphs (FULL):  45%|████▌     | 23/51 [00:04<00:05,  5.30it/s]Capturing CUDA graphs (FULL):  47%|████▋     | 24/51 [00:04<00:04,  5.73it/s]Capturing CUDA graphs (FULL):  49%|████▉     | 25/51 [00:04<00:04,  6.10it/s]Capturing CUDA graphs (FULL):  51%|█████     | 26/51 [00:05<00:03,  6.37it/s]Capturing CUDA graphs (FULL):  53%|█████▎    | 27/51 [00:05<00:03,  6.61it/s]Capturing CUDA graphs (FULL):  55%|█████▍    | 28/51 [00:05<00:03,  6.80it/s]Capturing CUDA graphs (FULL):  57%|█████▋    | 29/51 [00:05<00:03,  6.94it/s]Capturing CUDA graphs (FULL):  59%|█████▉    | 30/51 [00:05<00:03,  6.94it/s]Capturing CUDA graphs (FULL):  61%|██████    | 31/51 [00:06<00:07,  2.53it/s]Capturing CUDA graphs (FULL):  63%|██████▎   | 32/51 [00:07<00:10,  1.74it/s]Capturing CUDA graphs (FULL):  65%|██████▍   | 33/51 [00:07<00:08,  2.24it/s]Capturing CUDA graphs (FULL):  67%|██████▋   | 34/51 [00:07<00:06,  2.83it/s]Capturing CUDA graphs (FULL):  69%|██████▊   | 35/51 [00:08<00:04,  3.47it/s]Capturing CUDA graphs (FULL):  71%|███████   | 36/51 [00:08<00:03,  4.11it/s]Capturing CUDA graphs (FULL):  73%|███████▎  | 37/51 [00:08<00:02,  4.75it/s]Capturing CUDA graphs (FULL):  75%|███████▍  | 38/51 [00:08<00:02,  5.26it/s]Capturing CUDA graphs (FULL):  76%|███████▋  | 39/51 [00:08<00:02,  5.70it/s]Capturing CUDA graphs (FULL):  78%|███████▊  | 40/51 [00:09<00:04,  2.34it/s]Capturing CUDA graphs (FULL):  80%|████████  | 41/51 [00:10<00:06,  1.66it/s]Capturing CUDA graphs (FULL):  82%|████████▏ | 42/51 [00:10<00:04,  2.17it/s]Capturing CUDA graphs (FULL):  84%|████████▍ | 43/51 [00:10<00:02,  2.74it/s]Capturing CUDA graphs (FULL):  86%|████████▋ | 44/51 [00:11<00:02,  3.39it/s]Capturing CUDA graphs (FULL):  88%|████████▊ | 45/51 [00:12<00:03,  1.95it/s]Capturing CUDA graphs (FULL):  90%|█████████ | 46/51 [00:13<00:03,  1.50it/s]Capturing CUDA graphs (FULL):  92%|█████████▏| 47/51 [00:14<00:03,  1.29it/s]Capturing CUDA graphs (FULL):  94%|█████████▍| 48/51 [00:15<00:02,  1.17it/s]Capturing CUDA graphs (FULL):  96%|█████████▌| 49/51 [00:15<00:01,  1.58it/s]Capturing CUDA graphs (FULL):  98%|█████████▊| 50/51 [00:15<00:00,  2.09it/s]Capturing CUDA graphs (FULL): 100%|██████████| 51/51 [00:16<00:00,  1.55it/s]Capturing CUDA graphs (FULL): 100%|██████████| 51/51 [00:16<00:00,  3.10it/s]
+(EngineCore pid=182) INFO 10-11 18:42:50 [model_runner.py:960] Graph capturing finished in 24 secs, took 5.28 GiB
+(EngineCore pid=182) INFO 10-11 18:42:50 [gpu_worker.py:797] CUDA graph pool memory: 5.28 GiB (actual), 5.15 GiB (estimated), difference: 0.13 GiB (2.4%).
+(EngineCore pid=182) INFO 10-11 18:42:50 [gpu_worker.py:860] Free memory on device (191.36/191.69 GiB) on startup. Desired GPU memory utilization is (0.92, 176.35 GiB). Actual usage is 58.63 GiB for consumed memory (weights + non-torch), 5.84 GiB for peak activation, and 5.28 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=114297866793` (106.45 GiB) to fit into requested memory, or `--kv-cache-memory=130415570432` (121.46 GiB) to fully utilize gpu memory. Current kv cache memory in use is 111.88 GiB.
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 128
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 2048, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 128
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 2048, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 64
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1024, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 64
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1024, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) INFO 10-11 18:42:56 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=182) INFO 10-11 18:42:56 [torch_utils.py:277] Reducing Torch threads from 20 to 1 for serving. Set OMP_NUM_THREADS in the external environment to override.
+(EngineCore pid=182) INFO 10-11 18:42:56 [core.py:361] init engine (profile, create kv cache, warmup model) took 61.66 s (compilation: 17.05 s)
+(EngineCore pid=182) INFO 10-11 18:42:57 [kernel.py:369] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['aiter', 'native'], fused_add_rms_norm=['aiter', 'native'])
+(EngineCore pid=182) INFO 10-11 18:42:57 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant, mla_dual_rms_norm
+(APIServer pid=1) INFO 10-11 18:42:57 [entry.py:135] Supported tasks: ['generate']
+(APIServer pid=1) INFO 10-11 18:42:57 [hf.py:547] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(APIServer pid=1) WARNING 10-11 18:42:57 [model.py:1759] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'repetition_penalty': 1.05, 'temperature': 0.7, 'top_k': 20, 'top_p': 0.8}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(APIServer pid=1) INFO 10-11 18:42:57 [entry.py:139] Starting vLLM server on http://0.0.0.0:8000
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:61] Available routes are:
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /openapi.json, Methods: HEAD, GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /docs, Methods: HEAD, GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /redoc, Methods: HEAD, GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /load, Methods: GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /version, Methods: GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /health, Methods: GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /metrics, Methods: GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /tokenize, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /detokenize, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/models, Methods: GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /ping, Methods: GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /ping, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /invocations, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/responses, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/completions, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/messages, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /generative_scoring, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/chat/completions/render, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/messages/render, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/completions/render, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/chat/completions/derender, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /v1/completions/derender, Methods: POST
+(APIServer pid=1) INFO 10-11 18:42:57 [launcher.py:70] Route: /inference/v1/generate, Methods: POST
+(APIServer pid=1) INFO:     Started server process [1]
+(APIServer pid=1) INFO:     Waiting for application startup.
+(APIServer pid=1) INFO:     Application startup complete.
+(APIServer pid=1) INFO:     <droplet-ip>:37456 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37472 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60966 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60974 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46010 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46020 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46020 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46020 - "POST /v1/completions HTTP/1.1" 200 OK
+(EngineCore pid=182) WARNING 10-11 18:43:37 [jit_monitor.py:141] Triton kernel JIT compilation during inference: kernel_unified_attention_2d. This causes a latency spike; consider extending warmup to cover this shape/config.
+(APIServer pid=1) INFO 10-11 18:43:37 [loggers.py:310] Engine 000: Avg prompt throughput: 102.4 tokens/s, Avg generation throughput: 2.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:46020 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46020 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46020 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46032 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46046 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46054 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46058 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46074 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46078 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49228 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49230 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49236 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:43:47 [loggers.py:310] Engine 000: Avg prompt throughput: 102.4 tokens/s, Avg generation throughput: 10.3 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:49248 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49250 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49266 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49268 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49274 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49274 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49274 - "POST /v1/completions HTTP/1.1" 200 OK
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 256
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4096, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 256
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4096, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(APIServer pid=1) INFO:     <droplet-ip>:49282 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49274 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49274 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49274 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49292 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:43:57 [loggers.py:310] Engine 000: Avg prompt throughput: 819.2 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-11 18:44:07 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47522 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47526 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47526 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47526 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47526 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47526 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47526 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47530 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:44:27 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47536 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47550 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47552 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47558 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47572 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47586 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33890 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33892 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33904 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:44:37 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:33912 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33920 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33930 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33944 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33960 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33974 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33986 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34002 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41682 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41696 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:44:47 [loggers.py:310] Engine 000: Avg prompt throughput: 1228.7 tokens/s, Avg generation throughput: 135.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:41704 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41708 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41716 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41728 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41734 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41748 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41752 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48948 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48952 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48968 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:44:57 [loggers.py:310] Engine 000: Avg prompt throughput: 1638.4 tokens/s, Avg generation throughput: 184.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.3%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:48980 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48990 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49004 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:11874 - "GET / HTTP/1.1" 404 Not Found
+(APIServer pid=1) INFO:     <droplet-ip>:49018 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33946 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49034 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:45:07 [loggers.py:310] Engine 000: Avg prompt throughput: 409.6 tokens/s, Avg generation throughput: 90.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-11 18:45:17 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:46684 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46688 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46688 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46694 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:45:37 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:46702 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46708 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46716 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46728 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46730 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46738 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47904 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47916 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47918 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:45:47 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47928 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47940 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47954 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47956 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47962 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47962 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47962 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47970 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47982 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47984 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47986 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47990 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47998 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57018 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57024 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47962 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47970 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47982 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47984 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57036 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:45:57 [loggers.py:310] Engine 000: Avg prompt throughput: 3277.0 tokens/s, Avg generation throughput: 251.7 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:57048 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57058 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57066 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47962 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47970 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47982 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47984 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57068 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57082 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57090 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57106 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47962 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47970 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47982 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47984 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60398 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60414 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:46:07 [loggers.py:310] Engine 000: Avg prompt throughput: 3276.5 tokens/s, Avg generation throughput: 476.8 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:60420 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60430 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47962 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47970 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:46:17 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 90.7 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-11 18:46:27 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:35502 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35506 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35506 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35506 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35506 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35506 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35506 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35510 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41360 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41366 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41380 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:46:47 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:41392 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41396 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41412 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41428 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41436 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41442 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33368 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33378 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33382 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33386 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:46:57 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:33398 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33398 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33398 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33420 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33404 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33424 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33430 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33440 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33452 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33456 - "GET /metrics HTTP/1.1" 200 OK
+(EngineCore pid=182) WARNING 10-11 18:47:00 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _topk_topp_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(APIServer pid=1) INFO:     <droplet-ip>:33460 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33466 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33480 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33494 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33398 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33420 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33424 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33404 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33430 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33440 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55622 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55638 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55648 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:47:07 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.0 tokens/s, Avg generation throughput: 610.8 tokens/s, Running: 8 reqs, Waiting: 0 reqs, GPU KV cache usage: 2.8%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:55652 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55664 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55674 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33398 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33424 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33404 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33420 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33430 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33440 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55680 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55690 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55692 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55704 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41976 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33398 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33424 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33404 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33420 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33430 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33440 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41986 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:47:17 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.3 tokens/s, Avg generation throughput: 722.4 tokens/s, Running: 8 reqs, Waiting: 0 reqs, GPU KV cache usage: 2.8%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:41994 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41998 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42014 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42022 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33398 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33424 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:47:27 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 305.1 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-11 18:47:37 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:35678 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54440 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54440 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54440 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54440 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54440 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54440 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54444 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54454 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:47:57 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:54466 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54476 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54484 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54492 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54508 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54510 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50564 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50566 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50572 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:48:07 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:50584 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50598 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50602 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50604 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50604 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50604 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50606 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50620 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50636 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50640 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50652 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50678 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50692 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50704 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50706 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50714 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50728 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50732 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50736 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50750 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50754 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50758 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50772 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50788 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50794 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34074 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34076 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:48:17 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.2 tokens/s, Avg generation throughput: 727.3 tokens/s, Running: 16 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:34078 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50604 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50606 - "POST /v1/completions HTTP/1.1" 200 OK
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 512
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 8192, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(EngineCore pid=182) [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 512
+(EngineCore pid=182) [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 8192, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
+(APIServer pid=1) INFO:     <droplet-ip>:50620 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50636 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50640 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50652 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50678 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50692 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50704 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50706 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50714 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50728 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50732 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50736 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50750 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34094 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34100 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34102 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34118 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34122 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34124 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59658 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59662 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50604 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50606 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50620 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50636 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50640 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50652 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50678 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50692 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50704 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50714 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50706 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50728 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50750 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50732 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50736 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59672 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:48:27 [loggers.py:310] Engine 000: Avg prompt throughput: 9830.3 tokens/s, Avg generation throughput: 912.4 tokens/s, Running: 13 reqs, Waiting: 3 reqs, GPU KV cache usage: 4.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:59676 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59680 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59686 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59694 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59708 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59710 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50604 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50606 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50620 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50636 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50640 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50652 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50678 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50692 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50704 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50714 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50706 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50728 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50750 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50732 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50736 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41628 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41644 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41648 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:48:37 [loggers.py:310] Engine 000: Avg prompt throughput: 9829.4 tokens/s, Avg generation throughput: 1068.3 tokens/s, Running: 16 reqs, Waiting: 0 reqs, GPU KV cache usage: 5.6%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:41658 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41664 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41674 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41690 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50604 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50606 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:48:47 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 568.7 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-11 18:48:57 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:43268 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43284 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43284 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43284 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43284 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43284 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43284 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43300 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:49:17 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:43316 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43320 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43324 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43326 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43330 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43344 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43360 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33954 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33966 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33978 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:49:27 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:33984 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33986 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33996 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34012 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34020 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34020 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34020 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34022 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34024 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34032 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38144 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38146 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38154 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38164 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38178 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38180 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38188 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38196 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38198 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57462 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57472 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57486 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57496 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57500 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57504 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57514 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34020 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57520 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57532 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57546 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47452 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47458 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47468 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:49:57 [loggers.py:310] Engine 000: Avg prompt throughput: 12697.4 tokens/s, Avg generation throughput: 25.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 6.7%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47472 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47488 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47498 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47506 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47522 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47538 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33378 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33382 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33384 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:50:07 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 10.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:33394 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33404 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33416 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33424 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34020 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34020 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:50:17 [loggers.py:310] Engine 000: Avg prompt throughput: 12697.0 tokens/s, Avg generation throughput: 25.6 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-11 18:50:27 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47660 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47670 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47670 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47670 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47670 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47670 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47670 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47676 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:50:47 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47690 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47694 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47708 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47712 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47728 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47738 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47742 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49390 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49396 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49404 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:50:57 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:49406 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49412 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49422 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49424 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49426 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49438 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49434 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49452 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49452 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49452 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49466 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48216 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49476 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49492 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48220 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48232 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48246 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48252 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48260 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48270 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48282 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48284 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39838 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39848 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39860 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39874 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39886 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39888 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39900 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39910 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39918 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:39924 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45878 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45884 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:51:27 [loggers.py:310] Engine 000: Avg prompt throughput: 12696.8 tokens/s, Avg generation throughput: 0.4 tokens/s, Running: 2 reqs, Waiting: 2 reqs, GPU KV cache usage: 16.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:45896 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45910 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45914 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45924 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45928 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45944 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45960 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36520 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36528 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36544 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:51:37 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.3 tokens/s, Running: 2 reqs, Waiting: 2 reqs, GPU KV cache usage: 20.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:36550 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36564 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36572 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36584 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36594 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36610 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34338 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34352 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34356 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:51:47 [loggers.py:310] Engine 000: Avg prompt throughput: 12698.4 tokens/s, Avg generation throughput: 1.1 tokens/s, Running: 3 reqs, Waiting: 1 reqs, GPU KV cache usage: 28.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:34368 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34378 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34380 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34390 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34398 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34400 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33580 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33584 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33596 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:51:57 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.4 tokens/s, Running: 3 reqs, Waiting: 1 reqs, GPU KV cache usage: 30.9%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:33608 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33616 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45198 - "GET / HTTP/1.1" 404 Not Found
+(APIServer pid=1) INFO:     <droplet-ip>:33622 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33634 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33648 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33654 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33656 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53972 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53976 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53992 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:52:07 [loggers.py:310] Engine 000: Avg prompt throughput: 12696.7 tokens/s, Avg generation throughput: 1.7 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 38.9%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:54008 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54024 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54028 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54040 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54054 - "GET /metrics HTTP/1.1" 200 OK
+(EngineCore pid=182) WARNING 10-11 18:52:14 [jit_monitor.py:141] Triton kernel JIT compilation during inference: kernel_unified_attention_3d. This causes a latency spike; consider extending warmup to cover this shape/config.
+(APIServer pid=1) INFO:     <droplet-ip>:54056 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56040 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56050 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56060 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:52:17 [loggers.py:310] Engine 000: Avg prompt throughput: 12697.2 tokens/s, Avg generation throughput: 11.7 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 41.6%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:56074 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56084 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56096 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56098 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49452 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49466 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56110 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49476 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49492 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56120 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60246 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60258 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60266 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:52:27 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 86.8 tokens/s, Running: 1 reqs, Waiting: 3 reqs, GPU KV cache usage: 6.7%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:60268 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60278 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60280 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60284 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60298 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60312 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60316 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53710 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53724 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:52:37 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 2 reqs, Waiting: 2 reqs, GPU KV cache usage: 10.7%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53734 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53748 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53762 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53764 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53766 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53774 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53788 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51584 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51594 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51600 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:52:47 [loggers.py:310] Engine 000: Avg prompt throughput: 12697.2 tokens/s, Avg generation throughput: 0.5 tokens/s, Running: 2 reqs, Waiting: 2 reqs, GPU KV cache usage: 17.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:51608 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51624 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51636 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51648 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51650 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51660 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55226 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55238 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55250 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:52:57 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.3 tokens/s, Running: 3 reqs, Waiting: 1 reqs, GPU KV cache usage: 21.5%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:55256 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55268 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55272 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55278 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55292 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55302 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51068 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51072 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51076 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:53:07 [loggers.py:310] Engine 000: Avg prompt throughput: 12697.4 tokens/s, Avg generation throughput: 1.0 tokens/s, Running: 3 reqs, Waiting: 1 reqs, GPU KV cache usage: 28.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:51092 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51096 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51098 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51100 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51112 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51118 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51122 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36654 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36658 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36660 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:53:17 [loggers.py:310] Engine 000: Avg prompt throughput: 12696.8 tokens/s, Avg generation throughput: 0.9 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 33.5%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:36668 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36680 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36690 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36700 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36712 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:36728 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51912 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51928 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51938 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:53:27 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 1.5 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 40.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:51950 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51952 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51964 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51978 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:51994 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:52006 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43744 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43756 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43768 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:53:37 [loggers.py:310] Engine 000: Avg prompt throughput: 12697.1 tokens/s, Avg generation throughput: 50.2 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 41.6%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:43780 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43794 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43810 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49452 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49466 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:53:47 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 48.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-11 18:53:57 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:56976 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56988 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56988 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56988 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56988 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56988 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56988 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34522 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34532 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34546 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:54:17 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:34562 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34578 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34590 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34600 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34614 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34618 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33904 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33918 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33930 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:54:27 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:33944 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33948 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33954 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33958 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33970 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33960 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33980 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33980 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33980 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33986 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33984 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34002 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33990 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34028 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34010 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34022 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34020 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34044 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46820 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46836 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46846 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46860 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46868 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46872 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46874 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46882 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46888 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48378 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48394 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48396 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:54:47 [loggers.py:310] Engine 000: Avg prompt throughput: 13106.1 tokens/s, Avg generation throughput: 1.1 tokens/s, Running: 3 reqs, Waiting: 5 reqs, GPU KV cache usage: 16.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:48410 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48418 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48424 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48428 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48432 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48438 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47646 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47654 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47664 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:54:57 [loggers.py:310] Engine 000: Avg prompt throughput: 13105.8 tokens/s, Avg generation throughput: 2.6 tokens/s, Running: 5 reqs, Waiting: 3 reqs, GPU KV cache usage: 26.8%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47672 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47682 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47686 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47690 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47700 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47704 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47716 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43088 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43100 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:55:07 [loggers.py:310] Engine 000: Avg prompt throughput: 13105.9 tokens/s, Avg generation throughput: 3.6 tokens/s, Running: 7 reqs, Waiting: 1 reqs, GPU KV cache usage: 36.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:43108 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43124 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43126 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43128 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43130 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43146 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43156 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46488 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46502 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46510 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:55:17 [loggers.py:310] Engine 000: Avg prompt throughput: 13100.2 tokens/s, Avg generation throughput: 55.2 tokens/s, Running: 8 reqs, Waiting: 0 reqs, GPU KV cache usage: 43.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:46526 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46532 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46546 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33980 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33986 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46554 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33984 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46562 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46564 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55022 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34002 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55026 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55040 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:55:27 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.1 tokens/s, Avg generation throughput: 139.2 tokens/s, Running: 6 reqs, Waiting: 2 reqs, GPU KV cache usage: 29.6%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:55056 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55070 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55072 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33990 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55084 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55090 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55100 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43660 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43676 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34010 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43684 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:55:37 [loggers.py:310] Engine 000: Avg prompt throughput: 6552.9 tokens/s, Avg generation throughput: 2.9 tokens/s, Running: 5 reqs, Waiting: 2 reqs, GPU KV cache usage: 26.9%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:43688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43696 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43702 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43710 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34022 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43716 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43718 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43726 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55386 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55392 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34020 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55400 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:55:47 [loggers.py:310] Engine 000: Avg prompt throughput: 13106.7 tokens/s, Avg generation throughput: 3.8 tokens/s, Running: 5 reqs, Waiting: 2 reqs, GPU KV cache usage: 26.8%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:55414 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55422 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55434 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55446 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55450 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:55464 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59408 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59414 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59416 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:55:57 [loggers.py:310] Engine 000: Avg prompt throughput: 13106.6 tokens/s, Avg generation throughput: 4.2 tokens/s, Running: 7 reqs, Waiting: 1 reqs, GPU KV cache usage: 37.6%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:59430 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59434 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59450 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59460 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59472 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59476 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46744 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46760 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46762 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:56:07 [loggers.py:310] Engine 000: Avg prompt throughput: 13106.5 tokens/s, Avg generation throughput: 80.2 tokens/s, Running: 8 reqs, Waiting: 0 reqs, GPU KV cache usage: 43.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:46766 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46768 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46780 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33980 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33986 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46794 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-11 18:56:17 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 116.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%

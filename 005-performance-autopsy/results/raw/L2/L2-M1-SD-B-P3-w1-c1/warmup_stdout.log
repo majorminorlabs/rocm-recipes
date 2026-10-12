@@ -1,0 +1,67 @@
+Traceback (most recent call last):
+  File "/opt/python/bin/vllm", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/opt/python/lib/python3.14/site-packages/vllm/entrypoints/cli/main.py", line 18, in main
+    import vllm.entrypoints.cli.benchmark.main
+  File "/opt/python/lib/python3.14/site-packages/vllm/entrypoints/cli/benchmark/main.py", line 12, in <module>
+    from vllm.entrypoints.serve.utils.api_utils import VLLM_SUBCMD_PARSER_EPILOG
+  File "/opt/python/lib/python3.14/site-packages/vllm/entrypoints/serve/utils/api_utils.py", line 19, in <module>
+    from vllm.engine.arg_utils import EngineArgs
+  File "/opt/python/lib/python3.14/site-packages/vllm/engine/arg_utils.py", line 37, in <module>
+    from vllm.config import (
+    ...<32 lines>...
+    )
+  File "/opt/python/lib/python3.14/site-packages/vllm/config/__init__.py", line 23, in <module>
+    from vllm.config.model import (
+    ...<4 lines>...
+    )
+  File "/opt/python/lib/python3.14/site-packages/vllm/config/model.py", line 25, in <module>
+    from vllm.config.quantization import QuantizationConfigArgs
+  File "/opt/python/lib/python3.14/site-packages/vllm/config/quantization.py", line 10, in <module>
+    from vllm.model_executor.layers.quantization.utils.quant_utils import (
+    ...<12 lines>...
+    )
+  File "/opt/python/lib/python3.14/site-packages/vllm/model_executor/layers/quantization/__init__.py", line 7, in <module>
+    from vllm.model_executor.layers.quantization.base_config import QuantizationConfig
+  File "/opt/python/lib/python3.14/site-packages/vllm/model_executor/layers/quantization/base_config.py", line 11, in <module>
+    from transformers import PretrainedConfig
+  File "/opt/python/lib/python3.14/site-packages/transformers/__init__.py", line 30, in <module>
+    from . import dependency_versions_check
+  File "/opt/python/lib/python3.14/site-packages/transformers/dependency_versions_check.py", line 16, in <module>
+    from .utils.versions import require_version, require_version_core
+  File "/opt/python/lib/python3.14/site-packages/transformers/utils/__init__.py", line 22, in <module>
+    from .auto_docstring import (
+    ...<10 lines>...
+    )
+  File "/opt/python/lib/python3.14/site-packages/transformers/utils/auto_docstring.py", line 33, in <module>
+    from .generic import ModelOutput
+  File "/opt/python/lib/python3.14/site-packages/transformers/utils/generic.py", line 39, in <module>
+    from .import_utils import is_mlx_available, is_torch_available, is_torch_fx_proxy, resolve_internal_import
+  File "/opt/python/lib/python3.14/site-packages/transformers/utils/import_utils.py", line 51, in <module>
+    PACKAGE_DISTRIBUTION_MAPPING = importlib.metadata.packages_distributions()
+  File "/root/.local/share/uv/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/importlib/metadata/__init__.py", line 1046, in packages_distributions
+    pkg_to_dist[pkg].append(dist.metadata['Name'])
+                            ^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/importlib/metadata/__init__.py", line 471, in metadata
+    return _adapters.Message(email.message_from_string(text))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/email/__init__.py", line 37, in message_from_string
+    return Parser(*args, **kws).parsestr(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/root/.local/share/uv/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/email/parser.py", line 64, in parsestr
+    return self.parse(StringIO(text), headersonly=headersonly)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/email/parser.py", line 53, in parse
+    feedparser.feed(data)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "/root/.local/share/uv/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/email/feedparser.py", line 176, in feed
+    self._call_parse()
+    ~~~~~~~~~~~~~~~~^^
+  File "/root/.local/share/uv/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/email/feedparser.py", line 180, in _call_parse
+    self._parse()
+    ~~~~~~~~~~~^^
+  File "/root/.local/share/uv/python/cpython-3.14.8-linux-x86_64-gnu/lib/python3.14/email/feedparser.py", line 228, in _parsegen
+    if not headerRE.match(line):
+           ~~~~~~~~~~~~~~^^^^^^
+KeyboardInterrupt

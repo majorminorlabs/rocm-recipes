@@ -1,0 +1,14 @@
+{"ts": 1791753680.8559902, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753681.9360006, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753683.0145648, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753684.093513, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753685.1739218, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753686.2485654, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753687.3282237, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753688.4082325, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753689.4879096, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753690.5659223, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753691.6432693, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753692.736606, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 2048.0, "sglang_hit_rate": null}
+{"ts": 1791753693.8155143, "peak_vram_mb": 177564.96484375, "kv_usage": 0.004169071900455346, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 6144.0, "sglang_hit_rate": null}
+{"ts": 1791753694.8963273, "peak_vram_mb": 177564.96484375, "kv_usage": 0.0, "preemptions": 0.0, "prefix_hits": 0.0, "prefix_queries": 10240.0, "sglang_hit_rate": null}
