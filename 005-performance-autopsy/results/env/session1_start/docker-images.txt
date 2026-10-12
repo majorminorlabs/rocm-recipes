@@ -1,0 +1,4 @@
+REPOSITORY                     TAG       DIGEST                                                                    IMAGE ID       CREATED        SIZE
+rocm                           latest    sha256:57e7f14df2f36fdcf3481d5371d9c3ac6ecd32b6db6105fb5aa43761bc99a1fd   57e7f14df2f3   4 days ago     13.7GB
+ubuntu                         24.04     sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55   534baea6a22c   3 weeks ago    119MB
+rocm/device-metrics-exporter   v1.5.0    sha256:73f3978ad439c24a45560ad1ee56a759ddfd213ce1f7e0e0503cf91e67205c5e   73f3978ad439   5 months ago   1.32GB

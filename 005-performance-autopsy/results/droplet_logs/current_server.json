@@ -1,0 +1,15 @@
+{
+  "engine": "vllm",
+  "cfg": "VT",
+  "hf_repo": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+  "max_model_len": 131072,
+  "kv_cache_dtype": "auto",
+  "server_args": "--host 0.0.0.0 --port 8000 --max-model-len 131072 --gpu-memory-utilization 0.92 --kv-cache-dtype auto --no-enable-prefix-caching --attention-backend ROCM_AITER_UNIFIED_ATTN --max-num-batched-tokens 16384",
+  "serve_env": "",
+  "image": "rocm/vllm@sha256:e0ea9a10b729573ea8598bdc073bda0ea382fe1037eec7c0761b6fa7f46baaf4",
+  "server_log": "logs/engine_vllm_VT_20261011_185645.server.log",
+  "started_at": "2026-10-11T18:56:45+00:00",
+  "weights_precision": "bf16",
+  "gpu_memory_utilization": 0.92,
+  "knob_set": "K2"
+}

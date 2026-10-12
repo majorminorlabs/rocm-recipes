@@ -1,0 +1,31 @@
+{
+  "repo_tarball_sha256": "adbb3c6702033d417401ce1925f7307b70ee2d8bfca636c82c66a38c55b97dda",
+  "tokenizer_revision": "b2cff646eb4bb1d68355c01b18ae02e7cf42d120",
+  "prefix_tokens_requested": 1536,
+  "shared_prefix_tokens_min": 1543,
+  "target_tokens": 4096,
+  "tolerance": 32,
+  "prompts_built": 192,
+  "source_blocks_used": 2043,
+  "source_blocks_available": 3364,
+  "token_count": {
+    "min": 4066,
+    "max": 4128,
+    "mean": 4115.817708333333
+  },
+  "files_sha256": {
+    "w1-c1.jsonl": "7669311e4035c2408edc12edc314817a96b79982cda1149f6f32c4fd12884b36",
+    "w1-c4.jsonl": "745f222aeb9a853ecd88a721adcf1aeaaccefb14174a391bf657ff9ef7ff2500",
+    "w1-c8.jsonl": "d8878f4c5a86bf5a8d22a37b3445492582bdda181579f573ab0043549341b246",
+    "w1-c16.jsonl": "b90b964d1ba4634cb025437ad28e3964a045f4159d6c878c4545b178a1f1ddb7",
+    "w1-c8-r2.jsonl": "c18a2d178756897a008c99f56217cbe59bbbd0b18a7897e556f6fbff5b5a6715"
+  },
+  "splits": {
+    "w1-c1.jsonl": 8,
+    "w1-c4.jsonl": 16,
+    "w1-c8.jsonl": 32,
+    "w1-c16.jsonl": 64,
+    "w1-c8-r2.jsonl": 32
+  }
+}
+P1.6 manifest assertions passed: {"prompts_built": 192, "shared_prefix_tokens_min": 1543, "source_blocks_available": 3364, "source_blocks_used": 2043, "token_count": {"max": 4128, "mean": 4115.817708333333, "min": 4066}}

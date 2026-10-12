@@ -1,0 +1,2 @@
+[2026-10-11 16:52:29] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 692734, K size: 31.71 GB, V size: 31.71 GB
+[2026-10-11 16:54:36] max_total_num_tokens=692734, chunked_prefill_size=32768, max_prefill_tokens=16384, max_running_requests=2705, context_len=131072, available_gpu_mem=46.53 GB
