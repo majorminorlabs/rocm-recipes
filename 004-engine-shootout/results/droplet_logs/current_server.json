@@ -1,0 +1,14 @@
+{
+  "engine": "llamacpp",
+  "cfg": "LC1",
+  "hf_repo": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+  "max_model_len": 131072,
+  "kv_cache_dtype": "f16",
+  "server_args": "-m /mnt/scratch/hf/hub/models--unsloth--Qwen3-Coder-30B-A3B-Instruct-GGUF/snapshots/b17cb02dd882d5b6ab62fc777ad2995f19668350/BF16/Qwen3-Coder-30B-A3B-Instruct-BF16-00001-of-00002.gguf --alias Qwen/Qwen3-Coder-30B-A3B-Instruct --host 0.0.0.0 --port 8000 -ngl 999 -c 131072 -np 1 --jinja",
+  "serve_env": "",
+  "image": "llama.cpp@06cad0b9e77315bd2930bd4f70a6d7b37b2a01c1",
+  "server_log": "logs/engine_llamacpp_LC1_20261010_195942.server.log",
+  "started_at": "2026-10-10T19:59:42+00:00",
+  "weights_precision": "bf16",
+  "gpu_memory_utilization": null
+}

@@ -1,0 +1,1 @@
+<droplet-ip> I srv    load_model: initializing, n_slots = 4, n_ctx_slot = 34816, kv_unified = 'false'

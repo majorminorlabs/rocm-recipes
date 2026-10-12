@@ -1,0 +1,1190 @@
+(APIServer pid=1) INFO 10-10 17:13:38 [api_utils.py:347] 
+(APIServer pid=1) INFO 10-10 17:13:38 [api_utils.py:347]        █     █     █▄   ▄█
+(APIServer pid=1) INFO 10-10 17:13:38 [api_utils.py:347]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.29.1.dev0+g98dff2a81.d20261002
+(APIServer pid=1) INFO 10-10 17:13:38 [api_utils.py:347]   █▄█▀ █     █     █     █  model   Qwen/Qwen3-Coder-30B-A3B-Instruct
+(APIServer pid=1) INFO 10-10 17:13:38 [api_utils.py:347]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=1) INFO 10-10 17:13:38 [api_utils.py:347] 
+(APIServer pid=1) INFO 10-10 17:13:38 [api_utils.py:286] non-default args: {'model_tag': 'Qwen/Qwen3-Coder-30B-A3B-Instruct', 'host': '0.0.0.0', 'model': 'Qwen/Qwen3-Coder-30B-A3B-Instruct', 'max_model_len': 131072, 'attention_backend': 'ROCM_AITER_UNIFIED_ATTN', 'enable_prefix_caching': False}
+(APIServer pid=1) INFO 10-10 17:13:46 [model.py:684] Resolved architecture: Qwen3MoeForCausalLM
+(APIServer pid=1) INFO 10-10 17:13:46 [model.py:2021] Using max model len 131072
+(APIServer pid=1) INFO 10-10 17:13:46 [scheduler.py:277] Chunked prefill is enabled with max_num_batched_tokens=16384.
+(APIServer pid=1) INFO 10-10 17:13:46 [kernel.py:369] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(EngineCore pid=182) INFO 10-10 17:13:54 [core.py:123] Initializing a V1 LLM engine (v0.29.1.dev0+g98dff2a81.d20261002) with config: model='Qwen/Qwen3-Coder-30B-A3B-Instruct', speculative_config=None, tokenizer='Qwen/Qwen3-Coder-30B-A3B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=main, tokenizer_revision=main, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, per_request_spec_decode_metrics='none', kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=Qwen/Qwen3-Coder-30B-A3B-Instruct, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['+sparse_attn_indexer', 'none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::qwen4_exp_compute_ple_ngram_ids', 'vllm::qwen4_exp_ple_short_conv', 'vllm::qwen4_exp_qsa_with_output', 'vllm::linear_attention', 'vllm::qwen_gdn_attention_core', 'vllm::qwen_gdn_attention_core_fused_norm_packed', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::hpc_rope_norm_forward', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_mla_dual_rms_norm': False, 'fuse_rope_kvcache': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=182) INFO 10-10 17:13:54 [parallel_state.py:1775] world_size=1 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_ee48f138787a4b96afd517ae2c87fcc5 backend=nccl
+(EngineCore pid=182) INFO 10-10 17:13:54 [parallel_state.py:2119] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank 0, EPLB rank N/A
+(EngineCore pid=182) INFO 10-10 17:13:54 [gpu_worker.py:429] Using V2 Model Runner
+(EngineCore pid=182) INFO 10-10 17:13:55 [model_runner.py:382] Loading model from scratch...
+(EngineCore pid=182) INFO 10-10 17:13:56 [rocm.py:638] Using ROCM_AITER_UNIFIED_ATTN backend (selected via --attention-backend).
+(EngineCore pid=182) INFO 10-10 17:13:56 [rocm_aiter_unified_attn.py:165] Using aiter unified attention for RocmAiterUnifiedAttentionImpl
+(EngineCore pid=182) [aiter] import [module_aiter_core] under /opt/python/lib/python3.14/site-packages/aiter/jit/module_aiter_core.so
+(EngineCore pid=182) INFO 10-10 17:13:58 [unquantized.py:319] Using TRITON Unquantized MoE backend out of potential backends: ['ROCm AITER', 'TRITON', 'BATCHED_TRITON'].
+(EngineCore pid=182) WARNING 10-10 17:13:58 [compilation.py:1354] Op 'sparse_attn_indexer' doesn't exist (or wasn't imported/registered), enabling with '+sparse_attn_indexer' has no effect
+(EngineCore pid=182) INFO 10-10 17:13:58 [weight_utils.py:863] Filesystem type for checkpoints: EXT4. Checkpoint size: 56.87 GiB. Available RAM: 226.47 GiB.
+(EngineCore pid=182) INFO 10-10 17:13:58 [weight_utils.py:886] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=182) Loading safetensors checkpoint shards:   0% Completed | 0/16 [00:00<?, ?it/s]
+(EngineCore pid=182) Loading safetensors checkpoint shards:   6% Completed | 1/16 [00:01<00:27,  1.81s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  12% Completed | 2/16 [00:03<00:27,  1.99s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  19% Completed | 3/16 [00:05<00:26,  2.02s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  25% Completed | 4/16 [00:08<00:24,  2.03s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  31% Completed | 5/16 [00:10<00:22,  2.02s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  38% Completed | 6/16 [00:12<00:20,  2.05s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  44% Completed | 7/16 [00:14<00:18,  2.04s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  50% Completed | 8/16 [00:16<00:16,  2.03s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  56% Completed | 9/16 [00:18<00:14,  2.01s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  62% Completed | 10/16 [00:20<00:11,  1.99s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  69% Completed | 11/16 [00:22<00:09,  2.00s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  75% Completed | 12/16 [00:24<00:08,  2.01s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  81% Completed | 13/16 [00:26<00:06,  2.01s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  88% Completed | 14/16 [00:28<00:03,  1.98s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards:  94% Completed | 15/16 [00:29<00:01,  1.96s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards: 100% Completed | 16/16 [00:30<00:00,  1.58s/it]
+(EngineCore pid=182) Loading safetensors checkpoint shards: 100% Completed | 16/16 [00:30<00:00,  1.92s/it]
+(EngineCore pid=182) 
+(EngineCore pid=182) INFO 10-10 17:14:29 [default_loader.py:430] Loading weights took 30.70 seconds
+(EngineCore pid=182) INFO 10-10 17:14:29 [unquantized.py:399] Using MoEPrepareAndFinalizeNoDPEPModular
+(EngineCore pid=182) INFO 10-10 17:14:29 [unquantized.py:400] Using TritonExperts MoE backend
+(EngineCore pid=182) INFO 10-10 17:14:30 [model_runner.py:404] Model loading took 62.18 GiB memory and 34.578797 seconds
+(EngineCore pid=182) INFO 10-10 17:14:30 [interface.py:635] Setting kv cache block size to 64 for ROCM_AITER_UNIFIED_ATTN backend.
+(EngineCore pid=182) INFO 10-10 17:14:30 [utils.py:306] Using LBHNC KV cache layout.
+(EngineCore pid=182) INFO 10-10 17:14:40 [backends.py:1094] Using cache directory: /root/.cache/vllm/torch_compile_cache/8fe05745eb/rank_0_0/backbone for vLLM's torch.compile
+(EngineCore pid=182) INFO 10-10 17:14:40 [backends.py:1155] Dynamo bytecode transform time: 8.79 s
+(EngineCore pid=182) INFO 10-10 17:15:02 [backends.py:393] Compiling a graph for compile range (1, 16384) takes 22.64 s
+(EngineCore pid=182) INFO 10-10 17:15:05 [backends.py:920] collected artifacts: 49 entries, 3 artifacts, 5091798 bytes total
+(EngineCore pid=182) INFO 10-10 17:15:05 [decorators.py:719] saved AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/3431f6205259f8c06294517c80eabd2603c92d4f7b83a5eea5253770f22fe69b/rank_0_0/model
+(EngineCore pid=182) INFO 10-10 17:15:05 [monitor.py:53] torch.compile took 34.77 s in total
+(EngineCore pid=182) WARNING 10-10 17:15:07 [fused_moe.py:1167] Using default MoE config. Performance might be sub-optimal! Config file not found at /opt/python/lib/python3.14/site-packages/vllm/model_executor/layers/fused_moe/configs/E=128,N=768,device_name=AMD_Instinct_MI300X.json
+(EngineCore pid=182) INFO 10-10 17:15:07 [monitor.py:81] Initial profiling/warmup run took 1.78 s
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):   2%|▏         | 1/51 [00:01<01:22,  1.66s/it]Capturing CUDA graphs (PIECEWISE):   4%|▍         | 2/51 [00:01<00:36,  1.33it/s]Capturing CUDA graphs (PIECEWISE):   6%|▌         | 3/51 [00:01<00:22,  2.15it/s]Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/51 [00:02<00:15,  3.06it/s]Capturing CUDA graphs (PIECEWISE):  10%|▉         | 5/51 [00:02<00:11,  3.98it/s]Capturing CUDA graphs (PIECEWISE):  12%|█▏        | 6/51 [00:02<00:09,  4.86it/s]Capturing CUDA graphs (PIECEWISE):  14%|█▎        | 7/51 [00:02<00:07,  5.63it/s]Capturing CUDA graphs (PIECEWISE):  16%|█▌        | 8/51 [00:02<00:06,  6.33it/s]Capturing CUDA graphs (PIECEWISE):  18%|█▊        | 9/51 [00:02<00:06,  6.88it/s]Capturing CUDA graphs (PIECEWISE):  20%|█▉        | 10/51 [00:02<00:05,  7.27it/s]Capturing CUDA graphs (PIECEWISE):  22%|██▏       | 11/51 [00:02<00:05,  7.52it/s]Capturing CUDA graphs (PIECEWISE):  24%|██▎       | 12/51 [00:02<00:05,  7.63it/s]Capturing CUDA graphs (PIECEWISE):  25%|██▌       | 13/51 [00:03<00:04,  7.70it/s]Capturing CUDA graphs (PIECEWISE):  27%|██▋       | 14/51 [00:03<00:04,  7.77it/s]Capturing CUDA graphs (PIECEWISE):  29%|██▉       | 15/51 [00:03<00:04,  7.82it/s]Capturing CUDA graphs (PIECEWISE):  31%|███▏      | 16/51 [00:03<00:04,  7.89it/s]Capturing CUDA graphs (PIECEWISE):  33%|███▎      | 17/51 [00:03<00:04,  7.99it/s]Capturing CUDA graphs (PIECEWISE):  35%|███▌      | 18/51 [00:04<00:14,  2.34it/s]Capturing CUDA graphs (PIECEWISE):  37%|███▋      | 19/51 [00:04<00:10,  3.00it/s]Capturing CUDA graphs (PIECEWISE):  39%|███▉      | 20/51 [00:04<00:08,  3.76it/s]Capturing CUDA graphs (PIECEWISE):  41%|████      | 21/51 [00:05<00:06,  4.56it/s]Capturing CUDA graphs (PIECEWISE):  43%|████▎     | 22/51 [00:05<00:05,  5.38it/s]Capturing CUDA graphs (PIECEWISE):  45%|████▌     | 23/51 [00:05<00:04,  6.15it/s]Capturing CUDA graphs (PIECEWISE):  47%|████▋     | 24/51 [00:05<00:04,  6.72it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▉     | 25/51 [00:05<00:03,  7.17it/s]Capturing CUDA graphs (PIECEWISE):  51%|█████     | 26/51 [00:05<00:03,  7.52it/s]Capturing CUDA graphs (PIECEWISE):  53%|█████▎    | 27/51 [00:05<00:03,  7.84it/s]Capturing CUDA graphs (PIECEWISE):  55%|█████▍    | 28/51 [00:05<00:02,  8.05it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 29/51 [00:05<00:02,  8.21it/s]Capturing CUDA graphs (PIECEWISE):  59%|█████▉    | 30/51 [00:06<00:02,  8.13it/s]Capturing CUDA graphs (PIECEWISE):  61%|██████    | 31/51 [00:06<00:02,  8.20it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 32/51 [00:06<00:02,  8.26it/s]Capturing CUDA graphs (PIECEWISE):  65%|██████▍   | 33/51 [00:07<00:05,  3.51it/s]Capturing CUDA graphs (PIECEWISE):  67%|██████▋   | 34/51 [00:07<00:03,  4.30it/s]Capturing CUDA graphs (PIECEWISE):  69%|██████▊   | 35/51 [00:07<00:03,  5.09it/s]Capturing CUDA graphs (PIECEWISE):  71%|███████   | 36/51 [00:07<00:02,  5.87it/s]Capturing CUDA graphs (PIECEWISE):  73%|███████▎  | 37/51 [00:07<00:03,  3.51it/s]Capturing CUDA graphs (PIECEWISE):  75%|███████▍  | 38/51 [00:07<00:03,  4.32it/s]Capturing CUDA graphs (PIECEWISE):  76%|███████▋  | 39/51 [00:08<00:02,  5.15it/s]Capturing CUDA graphs (PIECEWISE):  78%|███████▊  | 40/51 [00:08<00:01,  5.95it/s]Capturing CUDA graphs (PIECEWISE):  80%|████████  | 41/51 [00:08<00:03,  3.15it/s]Capturing CUDA graphs (PIECEWISE):  82%|████████▏ | 42/51 [00:08<00:02,  3.90it/s]Capturing CUDA graphs (PIECEWISE):  84%|████████▍ | 43/51 [00:09<00:01,  4.69it/s]Capturing CUDA graphs (PIECEWISE):  86%|████████▋ | 44/51 [00:09<00:01,  5.53it/s]Capturing CUDA graphs (PIECEWISE):  88%|████████▊ | 45/51 [00:09<00:01,  3.82it/s]Capturing CUDA graphs (PIECEWISE):  90%|█████████ | 46/51 [00:09<00:01,  4.66it/s]Capturing CUDA graphs (PIECEWISE):  92%|█████████▏| 47/51 [00:09<00:00,  5.47it/s]Capturing CUDA graphs (PIECEWISE):  94%|█████████▍| 48/51 [00:09<00:00,  6.26it/s]Capturing CUDA graphs (PIECEWISE):  96%|█████████▌| 49/51 [00:10<00:00,  3.84it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:11<00:00,  2.13it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:11<00:00,  4.28it/s]
+(EngineCore pid=182) Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00, 11.44it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00, 11.43it/s]
+(EngineCore pid=182) INFO 10-10 17:15:21 [model_runner.py:960] Graph capturing finished in 12 secs, took 5.11 GiB
+(EngineCore pid=182) INFO 10-10 17:15:22 [gpu_worker.py:625] Available KV cache memory: 91.36 GiB
+(EngineCore pid=182) INFO 10-10 17:15:22 [gpu_worker.py:640] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.9200 is equivalent to --gpu-memory-utilization=0.8930 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.9470. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.
+(EngineCore pid=182) INFO 10-10 17:15:22 [kv_cache_utils.py:2032] GPU KV cache size: 997,888 tokens, Maximum concurrency for 131,072 tokens per request: 7.61x
+(EngineCore pid=182) INFO 10-10 17:15:22 [kernel_warmup.py:124] JIT kernel warmup starting.
+(EngineCore pid=182) INFO 10-10 17:15:22 [kernel_warmup.py:134] JIT kernel warmup finished in 0.00s.
+(EngineCore pid=182) INFO 10-10 17:15:22 [ll_bf16.py:30] cuteDSL (CUTLASS Python) not available, ll_bf16_gemm disabled
+(EngineCore pid=182) Capturing CUDA graphs (PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):   2%|▏         | 1/51 [00:00<00:06,  8.13it/s]Capturing CUDA graphs (PIECEWISE):   4%|▍         | 2/51 [00:00<00:06,  8.15it/s]Capturing CUDA graphs (PIECEWISE):   6%|▌         | 3/51 [00:00<00:05,  8.32it/s]Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/51 [00:00<00:05,  8.31it/s]Capturing CUDA graphs (PIECEWISE):  10%|▉         | 5/51 [00:00<00:05,  8.60it/s]Capturing CUDA graphs (PIECEWISE):  12%|█▏        | 6/51 [00:00<00:05,  8.79it/s]Capturing CUDA graphs (PIECEWISE):  14%|█▎        | 7/51 [00:00<00:04,  8.91it/s]Capturing CUDA graphs (PIECEWISE):  16%|█▌        | 8/51 [00:00<00:04,  8.82it/s]Capturing CUDA graphs (PIECEWISE):  18%|█▊        | 9/51 [00:01<00:04,  8.88it/s]Capturing CUDA graphs (PIECEWISE):  20%|█▉        | 10/51 [00:01<00:04,  8.97it/s]Capturing CUDA graphs (PIECEWISE):  22%|██▏       | 11/51 [00:01<00:04,  9.07it/s]Capturing CUDA graphs (PIECEWISE):  24%|██▎       | 12/51 [00:01<00:04,  9.02it/s]Capturing CUDA graphs (PIECEWISE):  25%|██▌       | 13/51 [00:01<00:04,  9.11it/s]Capturing CUDA graphs (PIECEWISE):  27%|██▋       | 14/51 [00:01<00:04,  9.17it/s]Capturing CUDA graphs (PIECEWISE):  29%|██▉       | 15/51 [00:01<00:03,  9.23it/s]Capturing CUDA graphs (PIECEWISE):  31%|███▏      | 16/51 [00:01<00:03,  9.29it/s]Capturing CUDA graphs (PIECEWISE):  33%|███▎      | 17/51 [00:01<00:03,  9.18it/s]Capturing CUDA graphs (PIECEWISE):  35%|███▌      | 18/51 [00:02<00:03,  9.23it/s]Capturing CUDA graphs (PIECEWISE):  37%|███▋      | 19/51 [00:02<00:03,  9.26it/s]Capturing CUDA graphs (PIECEWISE):  39%|███▉      | 20/51 [00:02<00:03,  9.27it/s]Capturing CUDA graphs (PIECEWISE):  41%|████      | 21/51 [00:02<00:03,  9.17it/s]Capturing CUDA graphs (PIECEWISE):  43%|████▎     | 22/51 [00:02<00:03,  9.11it/s]Capturing CUDA graphs (PIECEWISE):  45%|████▌     | 23/51 [00:02<00:03,  8.96it/s]Capturing CUDA graphs (PIECEWISE):  47%|████▋     | 24/51 [00:02<00:03,  8.86it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▉     | 25/51 [00:02<00:02,  8.87it/s]Capturing CUDA graphs (PIECEWISE):  51%|█████     | 26/51 [00:02<00:02,  8.87it/s]Capturing CUDA graphs (PIECEWISE):  53%|█████▎    | 27/51 [00:03<00:02,  8.99it/s]Capturing CUDA graphs (PIECEWISE):  55%|█████▍    | 28/51 [00:03<00:02,  9.02it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 29/51 [00:03<00:02,  8.84it/s]Capturing CUDA graphs (PIECEWISE):  59%|█████▉    | 30/51 [00:03<00:02,  8.69it/s]Capturing CUDA graphs (PIECEWISE):  61%|██████    | 31/51 [00:03<00:02,  8.65it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 32/51 [00:03<00:02,  8.62it/s]Capturing CUDA graphs (PIECEWISE):  65%|██████▍   | 33/51 [00:03<00:02,  8.60it/s]Capturing CUDA graphs (PIECEWISE):  67%|██████▋   | 34/51 [00:03<00:01,  8.51it/s]Capturing CUDA graphs (PIECEWISE):  69%|██████▊   | 35/51 [00:03<00:01,  8.62it/s]Capturing CUDA graphs (PIECEWISE):  71%|███████   | 36/51 [00:04<00:01,  8.77it/s]Capturing CUDA graphs (PIECEWISE):  73%|███████▎  | 37/51 [00:04<00:01,  8.90it/s]Capturing CUDA graphs (PIECEWISE):  75%|███████▍  | 38/51 [00:04<00:01,  8.99it/s]Capturing CUDA graphs (PIECEWISE):  76%|███████▋  | 39/51 [00:04<00:01,  8.98it/s]Capturing CUDA graphs (PIECEWISE):  78%|███████▊  | 40/51 [00:04<00:01,  9.00it/s]Capturing CUDA graphs (PIECEWISE):  80%|████████  | 41/51 [00:04<00:01,  9.12it/s]Capturing CUDA graphs (PIECEWISE):  82%|████████▏ | 42/51 [00:04<00:00,  9.15it/s]Capturing CUDA graphs (PIECEWISE):  84%|████████▍ | 43/51 [00:04<00:00,  8.78it/s]Capturing CUDA graphs (PIECEWISE):  86%|████████▋ | 44/51 [00:04<00:00,  8.65it/s]Capturing CUDA graphs (PIECEWISE):  88%|████████▊ | 45/51 [00:05<00:00,  8.89it/s]Capturing CUDA graphs (PIECEWISE):  90%|█████████ | 46/51 [00:05<00:00,  9.07it/s]Capturing CUDA graphs (PIECEWISE):  92%|█████████▏| 47/51 [00:05<00:00,  9.18it/s]Capturing CUDA graphs (PIECEWISE):  94%|█████████▍| 48/51 [00:05<00:00,  9.13it/s]Capturing CUDA graphs (PIECEWISE):  96%|█████████▌| 49/51 [00:05<00:00,  9.25it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:05<00:00, 10.01it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:05<00:00,  9.00it/s]
+(EngineCore pid=182) Capturing CUDA graphs (FULL):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):   4%|▍         | 2/51 [00:00<00:04, 11.30it/s]Capturing CUDA graphs (FULL):   8%|▊         | 4/51 [00:00<00:04, 11.48it/s]Capturing CUDA graphs (FULL):  12%|█▏        | 6/51 [00:00<00:03, 11.52it/s]Capturing CUDA graphs (FULL):  16%|█▌        | 8/51 [00:00<00:03, 11.42it/s]Capturing CUDA graphs (FULL):  20%|█▉        | 10/51 [00:00<00:03, 11.44it/s]Capturing CUDA graphs (FULL):  24%|██▎       | 12/51 [00:01<00:03, 11.53it/s]Capturing CUDA graphs (FULL):  27%|██▋       | 14/51 [00:02<00:08,  4.43it/s]Capturing CUDA graphs (FULL):  31%|███▏      | 16/51 [00:02<00:06,  5.41it/s]Capturing CUDA graphs (FULL):  35%|███▌      | 18/51 [00:03<00:09,  3.47it/s]Capturing CUDA graphs (FULL):  39%|███▉      | 20/51 [00:03<00:07,  4.37it/s]Capturing CUDA graphs (FULL):  41%|████      | 21/51 [00:03<00:06,  4.80it/s]Capturing CUDA graphs (FULL):  43%|████▎     | 22/51 [00:03<00:05,  5.29it/s]Capturing CUDA graphs (FULL):  47%|████▋     | 24/51 [00:03<00:04,  6.46it/s]Capturing CUDA graphs (FULL):  51%|█████     | 26/51 [00:04<00:03,  7.43it/s]Capturing CUDA graphs (FULL):  53%|█████▎    | 27/51 [00:04<00:03,  7.80it/s]Capturing CUDA graphs (FULL):  57%|█████▋    | 29/51 [00:04<00:02,  8.55it/s]Capturing CUDA graphs (FULL):  61%|██████    | 31/51 [00:05<00:05,  3.92it/s]Capturing CUDA graphs (FULL):  63%|██████▎   | 32/51 [00:06<00:07,  2.56it/s]Capturing CUDA graphs (FULL):  67%|██████▋   | 34/51 [00:06<00:04,  3.51it/s]Capturing CUDA graphs (FULL):  71%|███████   | 36/51 [00:06<00:03,  4.52it/s]Capturing CUDA graphs (FULL):  75%|███████▍  | 38/51 [00:06<00:02,  5.55it/s]Capturing CUDA graphs (FULL):  78%|███████▊  | 40/51 [00:08<00:03,  3.38it/s]Capturing CUDA graphs (FULL):  80%|████████  | 41/51 [00:09<00:04,  2.36it/s]Capturing CUDA graphs (FULL):  82%|████████▏ | 42/51 [00:09<00:03,  2.78it/s]Capturing CUDA graphs (FULL):  84%|████████▍ | 43/51 [00:09<00:02,  3.31it/s]Capturing CUDA graphs (FULL):  86%|████████▋ | 44/51 [00:09<00:01,  3.95it/s]Capturing CUDA graphs (FULL):  88%|████████▊ | 45/51 [00:10<00:02,  2.19it/s]Capturing CUDA graphs (FULL):  90%|█████████ | 46/51 [00:11<00:03,  1.64it/s]Capturing CUDA graphs (FULL):  92%|█████████▏| 47/51 [00:12<00:02,  1.39it/s]Capturing CUDA graphs (FULL):  94%|█████████▍| 48/51 [00:13<00:02,  1.25it/s]Capturing CUDA graphs (FULL):  98%|█████████▊| 50/51 [00:13<00:00,  2.08it/s]Capturing CUDA graphs (FULL): 100%|██████████| 51/51 [00:14<00:00,  1.65it/s]Capturing CUDA graphs (FULL): 100%|██████████| 51/51 [00:14<00:00,  3.49it/s]
+(EngineCore pid=182) INFO 10-10 17:15:43 [model_runner.py:960] Graph capturing finished in 21 secs, took 5.28 GiB
+(EngineCore pid=182) INFO 10-10 17:15:43 [gpu_worker.py:797] CUDA graph pool memory: 5.28 GiB (actual), 5.17 GiB (estimated), difference: 0.11 GiB (2.0%).
+(EngineCore pid=182) INFO 10-10 17:15:43 [gpu_worker.py:860] Free memory on device (191.36/191.69 GiB) on startup. Desired GPU memory utilization is (0.92, 176.35 GiB). Actual usage is 79.14 GiB for consumed memory (weights + non-torch), 5.85 GiB for peak activation, and 5.28 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=92271479337` (85.93 GiB) to fit into requested memory, or `--kv-cache-memory=108389182976` (100.95 GiB) to fully utilize gpu memory. Current kv cache memory in use is 91.36 GiB.
+(EngineCore pid=182) INFO 10-10 17:15:48 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=182) INFO 10-10 17:15:48 [torch_utils.py:277] Reducing Torch threads from 20 to 1 for serving. Set OMP_NUM_THREADS in the external environment to override.
+(EngineCore pid=182) INFO 10-10 17:15:48 [core.py:361] init engine (profile, create kv cache, warmup model) took 78.59 s (compilation: 34.77 s)
+(EngineCore pid=182) INFO 10-10 17:15:49 [kernel.py:369] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(APIServer pid=1) INFO 10-10 17:15:49 [entry.py:135] Supported tasks: ['generate']
+(APIServer pid=1) INFO 10-10 17:15:49 [hf.py:547] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(APIServer pid=1) WARNING 10-10 17:15:49 [model.py:1759] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'repetition_penalty': 1.05, 'temperature': 0.7, 'top_k': 20, 'top_p': 0.8}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(APIServer pid=1) INFO 10-10 17:15:49 [entry.py:139] Starting vLLM server on http://0.0.0.0:8000
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:61] Available routes are:
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /openapi.json, Methods: GET, HEAD
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /docs, Methods: GET, HEAD
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /redoc, Methods: GET, HEAD
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /load, Methods: GET
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /version, Methods: GET
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /health, Methods: GET
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /metrics, Methods: GET
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /tokenize, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /detokenize, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/models, Methods: GET
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /ping, Methods: GET
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /ping, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /invocations, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/responses, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/completions, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/messages, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /generative_scoring, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/chat/completions/render, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/messages/render, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/completions/render, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/chat/completions/derender, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /v1/completions/derender, Methods: POST
+(APIServer pid=1) INFO 10-10 17:15:49 [launcher.py:70] Route: /inference/v1/generate, Methods: POST
+(APIServer pid=1) INFO:     Started server process [1]
+(APIServer pid=1) INFO:     Waiting for application startup.
+(APIServer pid=1) INFO:     Application startup complete.
+(APIServer pid=1) INFO:     <droplet-ip>:33668 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34460 - "GET /v1/models HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48784 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48794 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48794 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48794 - "POST /v1/completions HTTP/1.1" 200 OK
+(EngineCore pid=182) WARNING 10-10 17:17:37 [jit_monitor.py:141] Triton kernel JIT compilation during inference: kernel_unified_attention_2d. This causes a latency spike; consider extending warmup to cover this shape/config.
+(APIServer pid=1) INFO:     <droplet-ip>:48794 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48794 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48794 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:17:40 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:17:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:44510 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44520 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44520 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44520 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44520 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44520 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44520 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:18:00 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.6 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:18:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:38278 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38286 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38286 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38286 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38286 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38286 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38286 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:18:50 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:43420 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43426 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43426 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:19:00 [loggers.py:310] Engine 000: Avg prompt throughput: 102.4 tokens/s, Avg generation throughput: 18.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:43426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43426 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:43426 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:19:10 [loggers.py:310] Engine 000: Avg prompt throughput: 307.2 tokens/s, Avg generation throughput: 83.6 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:19:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:59454 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59464 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59464 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59464 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59464 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59464 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:59464 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:20:00 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:58008 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:58012 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:58012 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:58012 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:20:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 3.3%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:58012 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:58012 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:58012 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:20:20 [loggers.py:310] Engine 000: Avg prompt throughput: 9829.3 tokens/s, Avg generation throughput: 76.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 3.3%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:58012 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:58012 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:20:30 [loggers.py:310] Engine 000: Avg prompt throughput: 3276.6 tokens/s, Avg generation throughput: 25.6 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:20:40 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:37274 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37276 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37276 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37276 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37276 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37276 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37276 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:21:10 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53678 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53682 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53682 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53682 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:21:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:21:40 [loggers.py:310] Engine 000: Avg prompt throughput: 12696.7 tokens/s, Avg generation throughput: 23.1 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 12.8%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53682 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:21:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 2.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 9.9%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:22:00 [loggers.py:310] Engine 000: Avg prompt throughput: 12698.0 tokens/s, Avg generation throughput: 14.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 12.7%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53682 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:22:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 11.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 9.9%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:22:20 [loggers.py:310] Engine 000: Avg prompt throughput: 12698.1 tokens/s, Avg generation throughput: 4.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 12.7%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53682 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:22:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 21.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 8.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) WARNING:  Invalid HTTP request received.
+(APIServer pid=1) WARNING:  Invalid HTTP request received.
+(APIServer pid=1) INFO 10-10 17:22:40 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 12.7%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53682 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53682 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:22:50 [loggers.py:310] Engine 000: Avg prompt throughput: 12696.6 tokens/s, Avg generation throughput: 25.6 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:23:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:46650 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46662 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46662 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46662 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46662 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:23:50 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:42720 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:24:00 [loggers.py:310] Engine 000: Avg prompt throughput: 102.4 tokens/s, Avg generation throughput: 20.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:42724 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:24:10 [loggers.py:310] Engine 000: Avg prompt throughput: 716.8 tokens/s, Avg generation throughput: 184.4 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:24:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:50262 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50272 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50272 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50272 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50272 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:24:50 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 7.1 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:50272 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50272 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:25:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 5.7 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:35544 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35552 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35552 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35552 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35566 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35574 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35586 - "POST /v1/completions HTTP/1.1" 200 OK
+(EngineCore pid=182) WARNING 10-10 17:25:05 [jit_monitor.py:141] Triton kernel JIT compilation during inference: fused_moe_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(APIServer pid=1) INFO:     <droplet-ip>:35552 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35566 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35574 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35586 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35552 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35566 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:25:10 [loggers.py:310] Engine 000: Avg prompt throughput: 819.1 tokens/s, Avg generation throughput: 204.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:25:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:45580 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45586 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45586 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45586 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45586 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45586 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:45586 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:26:00 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53400 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53410 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53410 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53410 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53418 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53422 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53436 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53446 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53450 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53448 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53452 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53460 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53472 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53486 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53524 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53490 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53518 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53506 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53540 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:26:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(EngineCore pid=182) WARNING 10-10 17:26:15 [jit_monitor.py:141] Triton kernel JIT compilation during inference: _topk_topp_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(APIServer pid=1) INFO:     <droplet-ip>:53410 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53418 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53422 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53436 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53446 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53450 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53448 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53452 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53460 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53472 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53486 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53524 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53490 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53518 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53506 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53540 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53410 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53418 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:26:20 [loggers.py:310] Engine 000: Avg prompt throughput: 3276.7 tokens/s, Avg generation throughput: 819.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:26:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:38092 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38100 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38100 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38100 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38100 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38100 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:38100 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:27:10 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:48004 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48014 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48014 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48014 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48030 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48032 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48044 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48056 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48080 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48098 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48124 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48132 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48148 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48174 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48194 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48210 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48212 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48244 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48258 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48202 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48134 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48112 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48230 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48190 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48164 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48096 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48088 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48064 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48208 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48262 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48266 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48272 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48288 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48296 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48324 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48332 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48300 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48338 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48298 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48344 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48342 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48384 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48364 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48362 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48398 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48408 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48420 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48402 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48430 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48428 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48448 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48436 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48458 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48492 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48464 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48488 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48502 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48466 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48486 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48520 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48514 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48536 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48542 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48540 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48548 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48560 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:27:20 [loggers.py:310] Engine 000: Avg prompt throughput: 6552.3 tokens/s, Avg generation throughput: 817.2 tokens/s, Running: 64 reqs, Waiting: 0 reqs, GPU KV cache usage: 7.5%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:48014 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48030 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48032 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48044 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48056 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48080 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48098 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48124 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48132 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48148 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48174 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48194 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48210 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48212 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48244 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48258 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48202 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48134 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48112 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48230 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48190 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48164 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48096 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48088 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48064 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48208 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48262 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48266 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48272 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48288 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48296 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48324 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48332 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48300 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48338 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48298 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48344 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48342 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48384 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48364 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48362 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48398 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48408 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48420 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48402 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48426 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48430 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48428 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48448 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48436 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48458 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48492 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48464 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48488 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48502 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48466 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48486 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48520 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48514 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48536 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48542 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48540 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48548 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48560 - "POST /v1/completions HTTP/1.1" 200 OK
+(EngineCore pid=182) WARNING 10-10 17:27:24 [jit_monitor.py:141] Triton kernel JIT compilation during inference: kernel_unified_attention_3d. This causes a latency spike; consider extending warmup to cover this shape/config.
+(APIServer pid=1) INFO 10-10 17:27:30 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.6 tokens/s, Avg generation throughput: 2411.9 tokens/s, Running: 63 reqs, Waiting: 0 reqs, GPU KV cache usage: 8.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:48014 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48030 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:27:40 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 47.5 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:27:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:57134 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57146 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57146 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57146 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57146 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57146 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57146 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:29:40 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:29:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:48494 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48504 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48504 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48504 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48514 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48522 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48526 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48534 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48536 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48548 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48558 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48574 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48580 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48596 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48612 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48622 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48638 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48650 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48652 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48656 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48668 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48676 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48682 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48686 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48698 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48704 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48718 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48730 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48742 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48748 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48756 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48770 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48776 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48792 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48798 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48804 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48816 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48820 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48826 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48834 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48842 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48854 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48870 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48874 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48882 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48894 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48900 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48910 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48922 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48930 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48938 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48950 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48952 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48958 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48974 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48984 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48996 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48998 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49002 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49006 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49014 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49022 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49034 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49042 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49058 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49054 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49068 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49082 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49094 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49104 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49098 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49120 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49128 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49134 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49146 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49162 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49170 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49182 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49194 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49200 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49204 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49220 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49228 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49224 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49250 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49222 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49242 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49254 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49286 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49270 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49304 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49292 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49302 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49318 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49336 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49348 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49364 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49326 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49370 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49380 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49394 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49404 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49410 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49418 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49448 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49416 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49458 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49470 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49478 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49490 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49498 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49518 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49538 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49516 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49546 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49548 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49514 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49564 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49574 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49584 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49592 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49594 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49604 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49608 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49610 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49618 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49646 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49632 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49658 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:30:00 [loggers.py:310] Engine 000: Avg prompt throughput: 13103.4 tokens/s, Avg generation throughput: 2901.7 tokens/s, Running: 128 reqs, Waiting: 0 reqs, GPU KV cache usage: 16.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:48504 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48514 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48522 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48526 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48534 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48536 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48548 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48558 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48574 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48580 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48596 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48612 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48622 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48638 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48650 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48652 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48656 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48668 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48676 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48682 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48686 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48698 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48704 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48718 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48730 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48742 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48748 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48756 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48770 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48776 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48792 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48798 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48804 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48816 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48820 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48826 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48834 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48842 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48854 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48870 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48874 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48882 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48894 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48900 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48910 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48922 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48930 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48938 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48950 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48952 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48958 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48974 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48984 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48996 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48998 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49002 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49006 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49014 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49022 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49034 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49042 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49058 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49054 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49068 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49082 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49094 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49104 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49098 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49120 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49128 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49134 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49146 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49162 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49170 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49182 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49194 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49200 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49204 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49220 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49228 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49224 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49250 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49222 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49242 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49254 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49286 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49270 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49304 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49292 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49302 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49318 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49336 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49348 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49364 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49326 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49370 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49380 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49394 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49404 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49410 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49418 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49448 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49416 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49458 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49470 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49478 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49490 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49498 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49518 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49538 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49516 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49546 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49548 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49514 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49564 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49574 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49584 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49592 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49594 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49604 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49608 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49610 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49618 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49646 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49632 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49658 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48504 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:48514 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:30:10 [loggers.py:310] Engine 000: Avg prompt throughput: 13105.9 tokens/s, Avg generation throughput: 3650.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:30:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:46604 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46610 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46610 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46610 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46610 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46610 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:46610 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:31:50 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:32:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:44974 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:32:10 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.9 tokens/s, Avg generation throughput: 51.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:32:20 [loggers.py:310] Engine 000: Avg prompt throughput: 9828.4 tokens/s, Avg generation throughput: 76.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:32:30 [loggers.py:310] Engine 000: Avg prompt throughput: 9830.6 tokens/s, Avg generation throughput: 76.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:44976 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:32:40 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:56888 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56900 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56900 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56900 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56900 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56900 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:56900 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:33:10 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:33:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:37198 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37208 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37208 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37208 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37224 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37226 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37236 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:33:30 [loggers.py:310] Engine 000: Avg prompt throughput: 13107.3 tokens/s, Avg generation throughput: 14.5 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 13.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:37208 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37224 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37226 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37236 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:33:40 [loggers.py:310] Engine 000: Avg prompt throughput: 13106.9 tokens/s, Avg generation throughput: 102.4 tokens/s, Running: 4 reqs, Waiting: 0 reqs, GPU KV cache usage: 13.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:37208 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:37224 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:33:50 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 87.9 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:34:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:34972 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34974 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34974 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34974 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34974 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34974 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:34974 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:34:20 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:34:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47772 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35876 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35876 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35876 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35892 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35896 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35906 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35912 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35928 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35938 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35942 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:34:40 [loggers.py:310] Engine 000: Avg prompt throughput: 9830.2 tokens/s, Avg generation throughput: 1.0 tokens/s, Running: 4 reqs, Waiting: 4 reqs, GPU KV cache usage: 13.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:34:50 [loggers.py:310] Engine 000: Avg prompt throughput: 16382.1 tokens/s, Avg generation throughput: 140.7 tokens/s, Running: 8 reqs, Waiting: 0 reqs, GPU KV cache usage: 26.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:35876 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35892 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35896 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35906 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35912 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35928 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35938 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35942 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:35:00 [loggers.py:310] Engine 000: Avg prompt throughput: 13106.9 tokens/s, Avg generation throughput: 65.1 tokens/s, Running: 6 reqs, Waiting: 1 reqs, GPU KV cache usage: 18.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:35876 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35892 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:35:10 [loggers.py:310] Engine 000: Avg prompt throughput: 13106.6 tokens/s, Avg generation throughput: 202.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:35:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:33960 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33966 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33966 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33966 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33966 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33966 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:33966 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:35:50 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:36:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:49872 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49884 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49884 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49884 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49886 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49898 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49910 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49914 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49930 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49942 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49956 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50018 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49932 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49934 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49966 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49992 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50006 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49982 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50030 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:36:10 [loggers.py:310] Engine 000: Avg prompt throughput: 13106.0 tokens/s, Avg generation throughput: 1.7 tokens/s, Running: 5 reqs, Waiting: 11 reqs, GPU KV cache usage: 16.4%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:36:20 [loggers.py:310] Engine 000: Avg prompt throughput: 19660.5 tokens/s, Avg generation throughput: 8.4 tokens/s, Running: 11 reqs, Waiting: 5 reqs, GPU KV cache usage: 36.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:36:30 [loggers.py:310] Engine 000: Avg prompt throughput: 19658.0 tokens/s, Avg generation throughput: 22.0 tokens/s, Running: 16 reqs, Waiting: 0 reqs, GPU KV cache usage: 52.6%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:49884 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49886 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49898 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49910 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49914 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49930 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:36:40 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.5 tokens/s, Avg generation throughput: 366.9 tokens/s, Running: 13 reqs, Waiting: 2 reqs, GPU KV cache usage: 43.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:49942 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49956 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50018 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49932 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49934 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:36:50 [loggers.py:310] Engine 000: Avg prompt throughput: 16384.0 tokens/s, Avg generation throughput: 13.7 tokens/s, Running: 14 reqs, Waiting: 1 reqs, GPU KV cache usage: 44.5%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:49966 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49992 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50006 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49982 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:50030 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:37:00 [loggers.py:310] Engine 000: Avg prompt throughput: 19661.8 tokens/s, Avg generation throughput: 13.8 tokens/s, Running: 14 reqs, Waiting: 2 reqs, GPU KV cache usage: 46.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:37:10 [loggers.py:310] Engine 000: Avg prompt throughput: 9829.6 tokens/s, Avg generation throughput: 385.5 tokens/s, Running: 8 reqs, Waiting: 0 reqs, GPU KV cache usage: 26.5%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:49884 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:49886 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:37:20 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 7.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:37:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:41540 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41546 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41546 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41546 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41546 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41546 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:41546 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:37:50 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:38:00 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:60070 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60078 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60078 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60078 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60078 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60078 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:38:10 [loggers.py:310] Engine 000: Avg prompt throughput: 9830.4 tokens/s, Avg generation throughput: 63.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 3.3%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:60078 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60078 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:60078 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:38:20 [loggers.py:310] Engine 000: Avg prompt throughput: 3276.8 tokens/s, Avg generation throughput: 39.4 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:38:30 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:54678 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54688 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54688 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54688 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:39:00 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53284 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53288 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53288 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53288 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53300 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53320 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53334 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53344 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53354 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53370 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53374 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53376 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53392 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53394 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53404 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53412 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53428 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53452 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53460 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53464 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53476 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53482 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53492 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53502 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53510 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53522 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53534 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53556 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53548 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53564 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53580 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53590 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53592 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53606 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53610 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53618 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53620 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53636 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53640 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53656 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53676 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53684 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53698 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53710 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53726 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53736 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53738 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53746 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53756 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53772 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53788 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53794 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53800 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53804 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53816 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53832 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53842 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53852 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53866 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53880 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53888 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53896 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53902 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53916 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53926 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53940 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53952 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53966 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53968 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53974 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53978 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53992 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54000 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54008 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54018 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54030 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54040 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54042 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54050 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54058 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54070 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54086 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54098 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54112 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54126 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54134 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54136 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54146 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54160 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54170 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54180 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54314 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54188 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54320 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54190 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54326 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54194 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54336 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54200 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54340 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54202 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54344 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54218 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54352 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54232 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54366 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54238 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54378 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54248 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54384 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54262 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54392 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54278 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54394 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54286 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54406 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54296 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54298 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54416 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54428 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54438 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54440 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54470 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54456 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54484 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54488 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54492 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:39:10 [loggers.py:310] Engine 000: Avg prompt throughput: 1843.1 tokens/s, Avg generation throughput: 3.0 tokens/s, Running: 35 reqs, Waiting: 9 reqs, GPU KV cache usage: 3.7%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53288 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53300 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53320 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53334 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53344 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53354 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53370 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53374 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53376 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53392 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53394 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53404 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53412 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53428 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53452 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53460 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53464 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53476 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53482 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53492 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53502 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53510 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53522 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53534 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53556 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53548 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53564 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53580 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53590 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53592 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53606 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53610 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53618 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53620 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53636 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53640 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53656 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53676 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53684 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53698 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53710 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53726 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53736 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53738 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53746 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53756 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53772 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53788 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53800 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53794 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53804 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53816 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53832 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53842 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53852 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53866 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53880 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53888 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53896 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53902 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53916 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53926 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53940 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53952 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53968 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53966 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53974 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53978 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53992 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54000 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54008 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54018 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54030 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54040 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54042 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54050 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54058 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54070 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54086 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54098 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54126 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54112 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54134 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54136 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54146 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54160 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54170 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54180 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54314 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54188 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54320 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54190 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54326 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54194 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54336 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54200 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54202 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54340 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54344 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54218 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54352 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54232 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54366 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54238 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54378 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54248 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54384 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54262 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54392 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54278 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54394 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54286 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54296 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54406 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54298 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54416 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54428 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54438 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54440 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54442 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54470 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54456 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54484 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54488 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:54492 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:39:20 [loggers.py:310] Engine 000: Avg prompt throughput: 20990.5 tokens/s, Avg generation throughput: 3308.2 tokens/s, Running: 112 reqs, Waiting: 2 reqs, GPU KV cache usage: 12.1%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:53288 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:53300 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:39:30 [loggers.py:310] Engine 000: Avg prompt throughput: 3379.3 tokens/s, Avg generation throughput: 3242.3 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:39:40 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:44296 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44302 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44302 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44302 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44302 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44302 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:44302 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:41:00 [loggers.py:310] Engine 000: Avg prompt throughput: 204.8 tokens/s, Avg generation throughput: 12.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:41:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:35020 - "POST /tokenize HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35036 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35036 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35036 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35036 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:41:20 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.1 tokens/s, Avg generation throughput: 37.0 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 3.3%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:35036 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35036 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35036 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:35036 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:41:30 [loggers.py:310] Engine 000: Avg prompt throughput: 6553.8 tokens/s, Avg generation throughput: 65.4 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:41:40 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:43488 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47340 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47348 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:41:50 [loggers.py:310] Engine 000: Avg prompt throughput: 9693.6 tokens/s, Avg generation throughput: 2.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 3.2%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO:     <droplet-ip>:47352 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47358 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:47374 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57212 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57222 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO:     <droplet-ip>:57228 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=1) INFO 10-10 17:42:00 [loggers.py:310] Engine 000: Avg prompt throughput: 19389.7 tokens/s, Avg generation throughput: 4.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=1) INFO 10-10 17:42:10 [loggers.py:310] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%

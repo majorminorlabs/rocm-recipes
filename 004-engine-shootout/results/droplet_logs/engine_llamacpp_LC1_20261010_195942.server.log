@@ -1,0 +1,186 @@
+<droplet-ip> I srv  llama_server: initializing ...
+<droplet-ip> I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+<droplet-ip> W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+<droplet-ip> I srv    load_model: loading model '/mnt/scratch/hf/hub/models--unsloth--Qwen3-Coder-30B-A3B-Instruct-GGUF/snapshots/b17cb02dd882d5b6ab62fc777ad2995f19668350/BF16/Qwen3-Coder-30B-A3B-Instruct-BF16-00001-of-00002.gguf'
+<droplet-ip> W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+<droplet-ip> I cmn          init: llama threadpool init, n_threads = 20
+<droplet-ip> I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 131072, kv_unified = 'false'
+<droplet-ip> I srv  llama_server: model loaded
+<droplet-ip> I srv  llama_server: listening on http://0.0.0.0:8000
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+<droplet-ip> I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   6144, progress = 0.19, t =   3.71 s / 1654.01 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   8192, progress = 0.25, t =   4.77 s / 1716.86 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  10240, progress = 0.32, t =   5.85 s / 1751.32 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  12288, progress = 0.38, t =   6.95 s / 1767.10 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  14336, progress = 0.44, t =   8.08 s / 1774.92 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  16384, progress = 0.51, t =   9.18 s / 1783.86 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  18432, progress = 0.57, t =  10.34 s / 1781.83 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  20480, progress = 0.63, t =  11.53 s / 1776.05 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  22528, progress = 0.70, t =  12.72 s / 1770.92 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  24576, progress = 0.76, t =  13.93 s / 1764.61 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  26624, progress = 0.82, t =  15.14 s / 1758.77 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  28672, progress = 0.89, t =  16.43 s / 1745.12 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  30720, progress = 0.95, t =  17.69 s / 1736.30 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 0 | prompt eval time =   18820.74 ms / 32313 tokens (    0.58 ms per token,  1716.88 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 0 |        eval time =      86.19 ms /     8 tokens (   12.31 ms per token,    81.21 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 0 |       total time =   18906.93 ms / 32321 tokens
+<droplet-ip> I slot print_timing: id  0 | task 0 |    graphs reused =          7
+<droplet-ip> I slot      release: id  0 | task 0 | stop processing: n_tokens = 32320, truncated = 0
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.136 (> 0.100 thold), f_keep = 0.136
+<droplet-ip> I slot launch_slot_: id  0 | task 24 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =   6144, progress = 0.33, t =   3.22 s / 1910.05 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =   8192, progress = 0.39, t =   4.31 s / 1902.56 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  10240, progress = 0.45, t =   5.42 s / 1890.58 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  12288, progress = 0.52, t =   6.55 s / 1876.02 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  14336, progress = 0.58, t =   7.70 s / 1860.86 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  16384, progress = 0.64, t =   8.92 s / 1837.73 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  18432, progress = 0.71, t =  10.11 s / 1822.49 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  20480, progress = 0.77, t =  11.32 s / 1809.95 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  22528, progress = 0.83, t =  12.55 s / 1795.61 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  24576, progress = 0.90, t =  13.83 s / 1777.58 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt processing, n_tokens =  26624, progress = 0.96, t =  15.09 s / 1764.42 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 24 | prompt eval time =   15996.73 ms / 27921 tokens (    0.57 ms per token,  1745.42 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 24 |        eval time =      84.17 ms /     8 tokens (   12.02 ms per token,    83.17 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 24 |       total time =   16080.90 ms / 27929 tokens
+<droplet-ip> I slot print_timing: id  0 | task 24 |    graphs reused =         13
+<droplet-ip> I slot      release: id  0 | task 24 | stop processing: n_tokens = 32321, truncated = 0
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.136 (> 0.100 thold), f_keep = 0.136
+<droplet-ip> I slot launch_slot_: id  0 | task 46 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =   6144, progress = 0.33, t =   3.23 s / 1904.21 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =   8192, progress = 0.39, t =   4.32 s / 1898.48 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  10240, progress = 0.45, t =   5.42 s / 1888.22 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  12288, progress = 0.52, t =   6.55 s / 1877.00 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  14336, progress = 0.58, t =   7.70 s / 1861.82 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  16384, progress = 0.64, t =   8.91 s / 1838.76 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  18432, progress = 0.71, t =  10.11 s / 1823.80 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  20480, progress = 0.77, t =  11.31 s / 1811.58 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  22528, progress = 0.83, t =  12.53 s / 1797.71 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  24576, progress = 0.90, t =  13.81 s / 1778.96 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt processing, n_tokens =  26624, progress = 0.96, t =  15.08 s / 1766.04 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 46 | prompt eval time =   15978.78 ms / 27922 tokens (    0.57 ms per token,  1747.44 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 46 |        eval time =      83.64 ms /     8 tokens (   11.95 ms per token,    83.69 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 46 |       total time =   16062.42 ms / 27930 tokens
+<droplet-ip> I slot print_timing: id  0 | task 46 |    graphs reused =         19
+<droplet-ip> I slot      release: id  0 | task 46 | stop processing: n_tokens = 32322, truncated = 0
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 14413254225
+<droplet-ip> W srv         alloc:  - making room for prompt cache entry, removing oldest entry (size = 3030.371 MiB)
+<droplet-ip> I slot launch_slot_: id  0 | task 68 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =   6144, progress = 0.19, t =   3.18 s / 1934.59 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =   8192, progress = 0.25, t =   4.24 s / 1933.91 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  10240, progress = 0.32, t =   5.34 s / 1918.03 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  12288, progress = 0.38, t =   6.44 s / 1908.17 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  14336, progress = 0.44, t =   7.55 s / 1899.94 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  16384, progress = 0.51, t =   8.65 s / 1893.35 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  18432, progress = 0.57, t =   9.84 s / 1873.81 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  20480, progress = 0.63, t =  11.02 s / 1858.23 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  22528, progress = 0.70, t =  12.21 s / 1845.59 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  24576, progress = 0.76, t =  13.42 s / 1831.45 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  26624, progress = 0.82, t =  14.67 s / 1815.32 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  28672, progress = 0.89, t =  15.93 s / 1799.89 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt processing, n_tokens =  30720, progress = 0.95, t =  17.20 s / 1786.47 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 68 | prompt eval time =   18328.99 ms / 32310 tokens (    0.57 ms per token,  1762.78 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 68 |        eval time =      84.95 ms /     8 tokens (   12.14 ms per token,    82.41 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 68 |       total time =   18413.93 ms / 32318 tokens
+<droplet-ip> I slot print_timing: id  0 | task 68 |    graphs reused =         25
+<droplet-ip> I slot      release: id  0 | task 68 | stop processing: n_tokens = 32320, truncated = 0
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 14433202165
+<droplet-ip> W srv         alloc:  - making room for prompt cache entry, removing oldest entry (size = 3030.465 MiB)
+<droplet-ip> I slot launch_slot_: id  0 | task 92 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =   6144, progress = 0.19, t =   3.15 s / 1948.92 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =   8192, progress = 0.25, t =   4.23 s / 1937.43 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  10240, progress = 0.32, t =   5.33 s / 1921.61 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  12288, progress = 0.38, t =   6.43 s / 1911.37 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  14336, progress = 0.44, t =   7.53 s / 1904.15 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  16384, progress = 0.51, t =   8.64 s / 1896.66 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  18432, progress = 0.57, t =   9.82 s / 1876.09 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  20480, progress = 0.63, t =  11.00 s / 1861.54 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  22528, progress = 0.70, t =  12.19 s / 1848.63 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  24576, progress = 0.76, t =  13.40 s / 1833.67 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  26624, progress = 0.82, t =  14.65 s / 1817.30 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  28672, progress = 0.89, t =  15.92 s / 1801.50 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt processing, n_tokens =  30720, progress = 0.95, t =  17.18 s / 1787.98 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 92 | prompt eval time =   18305.20 ms / 32304 tokens (    0.57 ms per token,  1764.74 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 92 |        eval time =      88.52 ms /     8 tokens (   12.64 ms per token,    79.08 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 92 |       total time =   18393.72 ms / 32312 tokens
+<droplet-ip> I slot print_timing: id  0 | task 92 |    graphs reused =         31
+<droplet-ip> I slot      release: id  0 | task 92 | stop processing: n_tokens = 32321, truncated = 0
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 14453114407
+<droplet-ip> W srv         alloc:  - making room for prompt cache entry, removing oldest entry (size = 3030.559 MiB)
+<droplet-ip> I slot launch_slot_: id  0 | task 116 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =   6144, progress = 0.19, t =   3.15 s / 1952.49 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =   8192, progress = 0.25, t =   4.23 s / 1938.91 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  10240, progress = 0.32, t =   5.33 s / 1922.73 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  12288, progress = 0.38, t =   6.43 s / 1910.43 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  14336, progress = 0.44, t =   7.53 s / 1903.26 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  16384, progress = 0.51, t =   8.64 s / 1896.67 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  18432, progress = 0.57, t =   9.82 s / 1876.54 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  20480, progress = 0.63, t =  11.00 s / 1861.89 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  22528, progress = 0.70, t =  12.18 s / 1849.17 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  24576, progress = 0.76, t =  13.40 s / 1834.07 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  26624, progress = 0.82, t =  14.65 s / 1817.46 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  28672, progress = 0.89, t =  15.92 s / 1801.35 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt processing, n_tokens =  30720, progress = 0.95, t =  17.18 s / 1788.00 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 116 | prompt eval time =   18309.05 ms / 32305 tokens (    0.57 ms per token,  1764.43 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 116 |        eval time =      83.18 ms /     8 tokens (   11.88 ms per token,    84.15 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 116 |       total time =   18392.23 ms / 32313 tokens
+<droplet-ip> I slot print_timing: id  0 | task 116 |    graphs reused =         37
+<droplet-ip> I slot      release: id  0 | task 116 | stop processing: n_tokens = 32322, truncated = 0
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 14473014864
+<droplet-ip> W srv         alloc:  - making room for prompt cache entry, removing oldest entry (size = 3030.371 MiB)
+<droplet-ip> I slot launch_slot_: id  0 | task 140 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =   6144, progress = 0.19, t =   3.10 s / 1981.34 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =   8192, progress = 0.25, t =   4.20 s / 1949.72 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  10240, progress = 0.32, t =   5.28 s / 1939.53 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  12288, progress = 0.38, t =   6.39 s / 1924.44 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  14336, progress = 0.44, t =   7.49 s / 1914.96 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  16384, progress = 0.51, t =   8.62 s / 1900.83 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  18432, progress = 0.57, t =   9.78 s / 1883.90 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  20480, progress = 0.63, t =  10.96 s / 1868.18 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  22528, progress = 0.70, t =  12.17 s / 1851.20 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  24576, progress = 0.76, t =  13.39 s / 1834.94 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  26624, progress = 0.82, t =  14.63 s / 1819.90 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  28672, progress = 0.89, t =  15.90 s / 1803.56 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt processing, n_tokens =  30720, progress = 0.95, t =  17.19 s / 1787.50 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 140 | prompt eval time =   18318.39 ms / 32310 tokens (    0.57 ms per token,  1763.80 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 140 |        eval time =      86.41 ms /     8 tokens (   12.34 ms per token,    81.01 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 140 |       total time =   18404.80 ms / 32318 tokens
+<droplet-ip> I slot print_timing: id  0 | task 140 |    graphs reused =         43
+<droplet-ip> I slot      release: id  0 | task 140 | stop processing: n_tokens = 32320, truncated = 0
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.199 (> 0.100 thold), f_keep = 0.199
+<droplet-ip> W srv         alloc:  - making room for prompt cache entry, removing oldest entry (size = 3030.465 MiB)
+<droplet-ip> I slot launch_slot_: id  0 | task 164 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =   6144, progress = 0.39, t =   3.26 s / 1883.19 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =   8192, progress = 0.45, t =   4.37 s / 1875.11 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =  10240, progress = 0.52, t =   5.52 s / 1855.99 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =  12288, progress = 0.58, t =   6.67 s / 1842.62 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =  14336, progress = 0.64, t =   7.85 s / 1825.77 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =  16384, progress = 0.71, t =   9.07 s / 1805.50 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =  18432, progress = 0.77, t =  10.27 s / 1794.46 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =  20480, progress = 0.83, t =  11.50 s / 1781.28 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =  22528, progress = 0.90, t =  12.75 s / 1766.23 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt processing, n_tokens =  24576, progress = 0.96, t =  14.04 s / 1751.01 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 164 | prompt eval time =   14940.70 ms / 25877 tokens (    0.58 ms per token,  1731.98 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 164 |        eval time =      83.36 ms /     8 tokens (   11.91 ms per token,    83.97 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 164 |       total time =   15024.06 ms / 25885 tokens
+<droplet-ip> I slot print_timing: id  0 | task 164 |    graphs reused =         49
+<droplet-ip> I slot      release: id  0 | task 164 | stop processing: n_tokens = 32321, truncated = 0
+<droplet-ip> I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.199 (> 0.100 thold), f_keep = 0.199
+<droplet-ip> W srv         alloc:  - making room for prompt cache entry, removing oldest entry (size = 3030.559 MiB)
+<droplet-ip> I slot launch_slot_: id  0 | task 185 | processing task, is_child = 0
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =   6144, progress = 0.39, t =   3.25 s / 1889.48 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =   8192, progress = 0.45, t =   4.34 s / 1887.38 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =  10240, progress = 0.52, t =   5.48 s / 1868.22 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =  12288, progress = 0.58, t =   6.63 s / 1852.27 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =  14336, progress = 0.64, t =   7.82 s / 1833.05 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =  16384, progress = 0.71, t =   9.04 s / 1813.08 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =  18432, progress = 0.77, t =  10.24 s / 1799.74 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =  20480, progress = 0.83, t =  11.48 s / 1784.52 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =  22528, progress = 0.90, t =  12.74 s / 1768.56 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt processing, n_tokens =  24576, progress = 0.96, t =  14.02 s / 1752.50 tokens per second
+<droplet-ip> I slot print_timing: id  0 | task 185 | prompt eval time =   14928.04 ms / 25878 tokens (    0.58 ms per token,  1733.52 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 185 |        eval time =      83.22 ms /     8 tokens (   11.89 ms per token,    84.11 tokens per second)
+<droplet-ip> I slot print_timing: id  0 | task 185 |       total time =   15011.26 ms / 25886 tokens
+<droplet-ip> I slot print_timing: id  0 | task 185 |    graphs reused =         55
+<droplet-ip> I slot      release: id  0 | task 185 | stop processing: n_tokens = 32322, truncated = 0
+<droplet-ip> I srv    operator(): operator(): cleaning up before exit...
