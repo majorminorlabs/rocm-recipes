@@ -1,0 +1,13 @@
+
+- 2026-10-10: P1.3 download wrapper stopped after completing model, GGUF and haystack downloads because its checksum display used an incorrectly escaped `awk` field reference. No artifacts were lost; the haystack SHA was independently verified as `2d5bb2ad5f422765e714617e21fa31bbaf8958aa79682c86fca6660fcc5d1b2b`, matching 003. The detached llama.cpp build continues.
+
+- P3 VT L1 repeat command was first issued with the L2 recipe under the same run ID, producing a separate raw result in `results/raw/L2/L1-M1-VT-in32768-r2/`. The correctly configured L1 repeat was then run and is saved in `results/raw/L1/L1-M1-VT-in32768-r2/`; both outputs are preserved. Correct L1 repeat status: ok, 4/4 complete, 256 output tokens.
+
+- P5 SX backend divergence: with `SGLANG_USE_AITER=0` confirmed, startup still selected the default AITER attention backend. Capacity capture showed default Triton MoE config warnings and no AITER fused-MoE selection. Preserved as observed; no undocumented flags were added.
+
+- P6 LC1 126,976-token L1 cell failed 0/2 in the vLLM benchmark client with `Never received a valid chunk to calculate TTFT`. llama-server logs show the request was processed at 126,974 prompt tokens and generated 256 tokens, but the client did not receive a valid streaming chunk. The failed run metadata and full stdout are preserved; it was not retried. Other scheduled LC1 cells continued.
+- P7 LC4 first queued block command did not start benchmarks because the script path had a typo (`scripts.bench_engine.sh`); exit 127 was captured. No LC4 benchmark was run by that attempt. The corrected planned block was then launched.
+- The plan says to delete the GGUF weights after Phase 7. They were retained under the user’s later data-preservation instruction; scratch had 4.6 TB free, so Phase 9 can proceed without deleting them.
+- User directed preserving all available data. The plan's P9.5 deletion of M7 weights was skipped; both M1 GGUF and M7 model cache remain on scratch. Results and environment captures are retained.
+- 2026-10-10 19:49 UTC report audit found the planned needle replay missing for SD, SX and LC1. Replayed the saved prompts after the main blocks; all three scored 9/9 with zero distractor hits. Results were preserved and synced. LC4 needle remains skipped as explicitly specified.
+- 2026-10-10: SGLang package version verified from the pinned image as 0.5.21. `sglang.__version__` is not provided by the package; use `importlib.metadata` for the version. AITER distribution metadata was unavailable in the image query; backend behavior is recorded from the runtime logs.

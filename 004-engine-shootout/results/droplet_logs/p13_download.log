@@ -1,0 +1,12 @@
+[90mHint: A new version of huggingface_hub (2.2.0) is available! You are using version 1.33.0.
+To update, run: hf update[0m
+[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.[0m
+Fetching 28 files:   0%|          | 0/28 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 28 files:  29%|██▊       | 8/28 [00:16<00:41,  2.05s/it]Fetching 28 files:  32%|███▏      | 9/28 [00:16<00:34,  1.80s/it]Fetching 28 files:  43%|████▎     | 12/28 [00:18<00:20,  1.29s/it]Fetching 28 files:  57%|█████▋    | 16/28 [00:21<00:12,  1.04s/it]Fetching 28 files:  64%|██████▍   | 18/28 [00:21<00:08,  1.23it/s]Fetching 28 files:  68%|██████▊   | 19/28 [00:21<00:06,  1.40it/s]Fetching 28 files:  75%|███████▌  | 21/28 [00:21<00:03,  1.89it/s]Fetching 28 files:  82%|████████▏ | 23/28 [00:25<00:05,  1.02s/it]Fetching 28 files:  86%|████████▌ | 24/28 [00:26<00:03,  1.06it/s]Fetching 28 files:  89%|████████▉ | 25/28 [00:27<00:02,  1.10it/s]Fetching 28 files: 100%|██████████| 28/28 [00:27<00:00,  1.79it/s]Fetching 28 files: 100%|██████████| 28/28 [00:27<00:00,  1.01it/s]
+[32m✓ Downloaded[0m
+  path: /root/.cache/huggingface/hub/models--Qwen--Qwen3-Coder-30B-A3B-Instruct/snapshots/b2cff646eb4bb1d68355c01b18ae02e7cf42d120
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:20<00:20, 20.23s/it]Fetching 2 files: 100%|██████████| 2/2 [01:03<00:00, 33.71s/it]Fetching 2 files: 100%|██████████| 2/2 [01:03<00:00, 31.69s/it]
+[32m✓ Downloaded[0m
+  path: /root/.cache/huggingface/hub/models--unsloth--Qwen3-Coder-30B-A3B-Instruct-GGUF/snapshots/b17cb02dd882d5b6ab62fc777ad2995f19668350
+2d5bb2ad5f422765e714617e21fa31bbaf8958aa79682c86fca6660fcc5d1b2b  /mnt/scratch/haystack/pg2600.txt
+/tmp/p13_download.sh: line 11: $1: unbound variable
