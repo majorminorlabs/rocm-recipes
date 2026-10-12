@@ -258,15 +258,15 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-11 18:18:00] INFO:     127.0.0.1:33456 - "GET /model_info HTTP/1.1" 200 OK
 [aiter] shape is M:6, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] [pid=145 pname=Process-1] start build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/build/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink
-[2026-10-11 18:18:07] INFO:     <droplet-ip>:47076 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-11 18:18:07] INFO:     172.17.0.1:47076 - "GET /v1/models HTTP/1.1" 200 OK
 /sgl-workspace/sglang/python/sglang/srt/entrypoints/http_server.py:470: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
   return await original_handler(ORJSONRequest(request.scope, request.receive))
-[2026-10-11 18:18:22] INFO:     <droplet-ip>:45356 - "GET /v1/models HTTP/1.1" 200 OK
-[2026-10-11 18:18:29] INFO:     <droplet-ip>:35800 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:18:29] INFO:     <droplet-ip>:35804 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:19:04] INFO:     <droplet-ip>:38044 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-11 18:19:04] INFO:     <droplet-ip>:56986 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:19:04] INFO:     <droplet-ip>:56986 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:18:22] INFO:     172.17.0.1:45356 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-11 18:18:29] INFO:     172.17.0.1:35800 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:18:29] INFO:     172.17.0.1:35804 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:19:04] INFO:     172.17.0.1:38044 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 18:19:04] INFO:     172.17.0.1:56986 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:19:04] INFO:     172.17.0.1:56986 - "GET /metrics HTTP/1.1" 200 OK
 [aiter] [pid=145 pname=Process-1] [32mfinish build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink], cost 111.0s [0m
 [aiter] import [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink.so
 [aiter] type hints mismatch, override to --> mha_batch_prefill(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, cu_seqlens_q: torch.Tensor, kv_indptr: torch.Tensor, kv_page_indices: torch.Tensor, max_seqlen_q: int, max_seqlen_k: int, dropout_p: float, softmax_scale: float, logits_soft_cap: float, zero_tensors: bool, is_causal: bool, window_size_left: int, window_size_right: int, sink_size: int, return_softmax_lse: bool, return_dropout_randval: bool, out: Optional[torch.Tensor] = None, bias: Optional[torch.Tensor] = None, alibi_slopes: Optional[torch.Tensor] = None, q_descale: Optional[torch.Tensor] = None, k_descale: Optional[torch.Tensor] = None, v_descale: Optional[torch.Tensor] = None, kv_block_descale: Optional[torch.Tensor] = None, kv_last_page_lens: Optional[torch.Tensor] = None, block_table: Optional[torch.Tensor] = None, seqlen_k: Optional[torch.Tensor] = None, sink_ptr: Optional[torch.Tensor] = None, gen: Optional[torch.Generator] = None) -> List[torch.Tensor]
@@ -282,32 +282,32 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1024, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
 [2026-10-11 18:19:51] Prefill batch, #new-seq: 1, #new-token: 6, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 0.05
 [2026-10-11 18:19:55] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 285.76
-[2026-10-11 18:19:55] INFO:     <droplet-ip>:56986 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 18:19:55] INFO:     172.17.0.1:56986 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-11 18:19:55] INFO:     127.0.0.1:33470 - "POST /generate HTTP/1.1" 200 OK
 [2026-10-11 18:19:55] INFO:     127.0.0.1:35716 - "POST /freeze_gc HTTP/1.1" 200 OK
 [2026-10-11 18:19:55] The server is fired up and ready to roll!
 [2026-10-11 18:19:55] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 0.41, #queue-req: 0
 [2026-10-11 18:19:55] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1828.61
-[2026-10-11 18:19:55] INFO:     <droplet-ip>:56986 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 18:19:55] INFO:     172.17.0.1:56986 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-11 18:19:55] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 156.69, #queue-req: 0
 [2026-10-11 18:19:55] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 215.56, #queue-req: 0
-[2026-10-11 18:19:56] INFO:     <droplet-ip>:56986 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:19:56] INFO:     <droplet-ip>:56986 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:19:56] INFO:     <droplet-ip>:60258 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:19:57] INFO:     <droplet-ip>:60262 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:19:58] INFO:     <droplet-ip>:60278 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:19:59] INFO:     <droplet-ip>:60290 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:01] INFO:     <droplet-ip>:60304 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:02] INFO:     <droplet-ip>:60314 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:03] INFO:     <droplet-ip>:60328 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:04] INFO:     <droplet-ip>:60344 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:05] INFO:     <droplet-ip>:33496 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:06] INFO:     <droplet-ip>:33508 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:07] INFO:     <droplet-ip>:33512 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:08] INFO:     <droplet-ip>:33522 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:09] INFO:     <droplet-ip>:33528 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-11 18:20:09] INFO:     <droplet-ip>:33538 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:09] INFO:     <droplet-ip>:33538 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:19:56] INFO:     172.17.0.1:56986 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:19:56] INFO:     172.17.0.1:56986 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:19:56] INFO:     172.17.0.1:60258 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:19:57] INFO:     172.17.0.1:60262 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:19:58] INFO:     172.17.0.1:60278 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:19:59] INFO:     172.17.0.1:60290 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:01] INFO:     172.17.0.1:60304 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:02] INFO:     172.17.0.1:60314 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:03] INFO:     172.17.0.1:60328 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:04] INFO:     172.17.0.1:60344 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:05] INFO:     172.17.0.1:33496 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:06] INFO:     172.17.0.1:33508 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:07] INFO:     172.17.0.1:33512 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:08] INFO:     172.17.0.1:33522 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:09] INFO:     172.17.0.1:33528 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-11 18:20:09] INFO:     172.17.0.1:33538 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:09] INFO:     172.17.0.1:33538 - "GET /metrics HTTP/1.1" 200 OK
 [aiter] shape is M:4096, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:4096, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:4096, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
@@ -315,14 +315,14 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4096, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
 [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 256
 [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 4096, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
-[2026-10-11 18:20:09] INFO:     <droplet-ip>:33548 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:09] INFO:     172.17.0.1:33548 - "GET /metrics HTTP/1.1" 200 OK
 [2026-10-11 18:20:09] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 292.84
-[2026-10-11 18:20:09] INFO:     <droplet-ip>:33538 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 18:20:09] INFO:     172.17.0.1:33538 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-11 18:20:09] Decode batch, #running-req: 1, #token: 4129, token usage: 0.00, cuda graph: True, gen throughput (token/s): 2.88, #queue-req: 0
 [2026-10-11 18:20:10] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 10019.63
-[2026-10-11 18:20:10] INFO:     <droplet-ip>:33538 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-11 18:20:10] INFO:     172.17.0.1:33538 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-11 18:20:10] Decode batch, #running-req: 1, #token: 4105, token usage: 0.00, cuda graph: True, gen throughput (token/s): 135.44, #queue-req: 0
 [2026-10-11 18:20:10] Decode batch, #running-req: 1, #token: 4145, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.86, #queue-req: 0
-[2026-10-11 18:20:10] INFO:     <droplet-ip>:33538 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:10] INFO:     <droplet-ip>:33538 - "GET /metrics HTTP/1.1" 200 OK
-[2026-10-11 18:20:10] INFO:     <droplet-ip>:33560 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:10] INFO:     172.17.0.1:33538 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:10] INFO:     172.17.0.1:33538 - "GET /metrics HTTP/1.1" 200 OK
+[2026-10-11 18:20:10] INFO:     172.17.0.1:33560 - "GET /metrics HTTP/1.1" 200 OK

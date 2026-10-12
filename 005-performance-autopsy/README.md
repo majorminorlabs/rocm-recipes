@@ -1,34 +1,25 @@
 # Where the defaults cost you on MI300X (mostly, they don't)
 
-This study takes the two leading setups from ROCm Recipes 004—SGLang with its defaults and vLLM with AITER attention—and tests three documented tuning knobs on each. Prefix caching, already on by default in both engines, was the only change with a measurable throughput gain for the agent-style workload. Long prompts queued but did not fail.
+This study takes the two best setups from [004-engine-shootout](../004-engine-shootout/), SGLang with defaults and vLLM with `--attention-backend ROCM_AITER_UNIFIED_ATTN`, and tests three documented tuning knobs per engine on one AMD Instinct MI300X with Qwen3-Coder-30B. Only prefix caching, which both engines turn on by default, made a measurable difference: 11% more throughput on SGLang and 8% on vLLM for 16 agents sharing a system prompt, and about 23% faster first tokens. Long prompts queued but never failed.
 
-## Configurations
+## Knobs
 
-| Config | Engine | Setting |
+| | vLLM | SGLang |
 |---|---|---|
-| Baseline | SGLang | Defaults from 004, with prefix caching off for the benchmark |
-| Baseline | vLLM | AITER attention from 004, with prefix caching off for the benchmark |
-| K1 | vLLM | `VLLM_ROCM_USE_AITER=1` |
-| K1 | SGLang | `--mem-fraction-static 0.79` |
-| K2 | vLLM | `--max-num-batched-tokens 16384` |
-| K2 | SGLang | `--chunked-prefill-size 32768` |
-| K3 | vLLM | Prefix caching on |
-| K3 | SGLang | Radix cache on with `--schedule-policy lpm` |
-| All three | Both | K1, K2 and K3 together |
-
-At 16 users, prefix caching raised measured throughput by 11% for SGLang and 8% for vLLM. The other knobs stayed within the observed noise band.
+| K1 | `VLLM_ROCM_USE_AITER=1` | `--mem-fraction-static 0.79` |
+| K2 | `--max-num-batched-tokens 16384` | `--chunked-prefill-size 32768` |
+| K3 | Prefix caching on | Radix cache on, `--schedule-policy lpm` |
+| T | All three | All three |
 
 ## Folder map
 
-- `PLAN.md`, `PLAN-005b.md`: study protocol and follow-up session.
-- `scripts/`: setup, prompt generation, serving, benchmarking and cleanup tools.
-- `results/raw/`: per-run logs and metadata.
-- `results/summary.csv`, `results/deltas.csv`: measurements and knob comparisons.
-- `results/env/`: environment records.
-- `results/droplet_logs/`: preserved server logs.
-- `notes/`: configuration selection, knob notes, reports and saved help output.
-- `inputs/from-004/`: copied source data and provenance from study 004.
-- `config.env.example`: public configuration template; fill in credentials locally.
+- `METHOD.md`: how the setups were chosen and the study was run.
+- `scripts/`: serving, load generation, metrics sampling, summarizing.
+- `results/summary.csv`: one row per run. `results/deltas.csv`: every knob compared with its baseline.
+- `results/raw/`: per-run output, metadata and once-per-second samples. `results/droplet_logs/`: server logs.
+- `inputs/from-004/`: the 004 results used to pick the setups, with checksums.
+- `notes/`: kernel selection, knob values and where they came from, partition check, friction log, session reports.
+- `config.env.example`: public configuration template.
 
 ## Reproduce
 
@@ -38,4 +29,4 @@ Install `doctl`, prepare an SSH key, and obtain an AMD Developer Cloud account. 
 cp config.env.example config.env
 ```
 
-Fill in the private droplet settings in `config.env`, then follow `PLAN.md` and `PLAN-005b.md` and use the scripts in `scripts/` to set up, run and tear down the experiment. Public image digests and the pinned llama.cpp commit are recorded in the configuration example.
+Fill in the droplet fields, then follow `METHOD.md` and use the scripts in `scripts/`. Two sessions used 7.30 GPU-hours, $14.54 at AMD's $1.99/GPU-hour list price.

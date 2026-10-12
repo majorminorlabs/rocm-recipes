@@ -260,8 +260,8 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] [pid=145 pname=Process-1] start build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/build/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink
 /sgl-workspace/sglang/python/sglang/srt/entrypoints/http_server.py:470: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
   return await original_handler(ORJSONRequest(request.scope, request.receive))
-[2026-10-10 19:52:46] INFO:     <droplet-ip>:34448 - "GET /v1/models HTTP/1.1" 200 OK
-[2026-10-10 19:52:55] INFO:     <droplet-ip>:59228 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-10 19:52:46] INFO:     172.17.0.1:34448 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-10 19:52:55] INFO:     172.17.0.1:59228 - "GET /v1/models HTTP/1.1" 200 OK
 [aiter] [pid=145 pname=Process-1] [32mfinish build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink], cost 111.9s [0m
 [aiter] import [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink.so
 [aiter] type hints mismatch, override to --> mha_batch_prefill(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, cu_seqlens_q: torch.Tensor, kv_indptr: torch.Tensor, kv_page_indices: torch.Tensor, max_seqlen_q: int, max_seqlen_k: int, dropout_p: float, softmax_scale: float, logits_soft_cap: float, zero_tensors: bool, is_causal: bool, window_size_left: int, window_size_right: int, sink_size: int, return_softmax_lse: bool, return_dropout_randval: bool, out: Optional[torch.Tensor] = None, bias: Optional[torch.Tensor] = None, alibi_slopes: Optional[torch.Tensor] = None, q_descale: Optional[torch.Tensor] = None, k_descale: Optional[torch.Tensor] = None, v_descale: Optional[torch.Tensor] = None, kv_block_descale: Optional[torch.Tensor] = None, kv_last_page_lens: Optional[torch.Tensor] = None, block_table: Optional[torch.Tensor] = None, seqlen_k: Optional[torch.Tensor] = None, sink_ptr: Optional[torch.Tensor] = None, gen: Optional[torch.Generator] = None) -> List[torch.Tensor]
@@ -283,7 +283,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:54:33] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 1, #queue-req: 0, #pending-token: 15929, cuda graph: False, input throughput (token/s): 230467.73
 [2026-10-10 19:54:37] Prefill batch, #new-seq: 1, #new-token: 15929, #cached-token: 0, token usage: 0.04, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 3790.03
 [2026-10-10 19:54:37] INFO:     127.0.0.1:40554 - "POST /generate HTTP/1.1" 200 OK
-[2026-10-10 19:54:37] INFO:     <droplet-ip>:59236 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:37] INFO:     172.17.0.1:59236 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 [2026-10-10 19:54:37] INFO:     127.0.0.1:55130 - "POST /freeze_gc HTTP/1.1" 200 OK
 [2026-10-10 19:54:37] The server is fired up and ready to roll!
 [aiter] shape is M:15930, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
@@ -291,29 +291,29 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] shape is M:15930, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:54:38] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 15930, cuda graph: False, input throughput (token/s): 24484.89
 [2026-10-10 19:54:39] Prefill batch, #new-seq: 1, #new-token: 15930, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 16979.07
-[2026-10-10 19:54:39] INFO:     <droplet-ip>:40128 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:39] INFO:     172.17.0.1:40128 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 [aiter] shape is M:15931, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:15931, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:15931, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:54:39] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 15931, cuda graph: False, input throughput (token/s): 23224.81
 [2026-10-10 19:54:40] Prefill batch, #new-seq: 1, #new-token: 15931, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 16942.08
-[2026-10-10 19:54:40] INFO:     <droplet-ip>:40134 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:40] INFO:     172.17.0.1:40134 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 [2026-10-10 19:54:41] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 15929, cuda graph: False, input throughput (token/s): 24806.17
 [2026-10-10 19:54:42] Prefill batch, #new-seq: 1, #new-token: 15929, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 16891.76
-[2026-10-10 19:54:42] INFO:     <droplet-ip>:40146 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:42] INFO:     172.17.0.1:40146 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 [2026-10-10 19:54:43] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 15930, cuda graph: False, input throughput (token/s): 24990.85
 [2026-10-10 19:54:44] Prefill batch, #new-seq: 1, #new-token: 15930, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 16778.53
-[2026-10-10 19:54:44] INFO:     <droplet-ip>:40148 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:44] INFO:     172.17.0.1:40148 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 [2026-10-10 19:54:44] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 0.38, #queue-req: 0
 [2026-10-10 19:54:44] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 15931, cuda graph: False, input throughput (token/s): 25145.62
 [2026-10-10 19:54:45] Prefill batch, #new-seq: 1, #new-token: 15931, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 16772.98
-[2026-10-10 19:54:45] INFO:     <droplet-ip>:55958 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:45] INFO:     172.17.0.1:55958 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 [2026-10-10 19:54:46] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 15929, cuda graph: False, input throughput (token/s): 24778.65
 [2026-10-10 19:54:47] Prefill batch, #new-seq: 1, #new-token: 15929, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 16873.89
-[2026-10-10 19:54:47] INFO:     <droplet-ip>:55964 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:47] INFO:     172.17.0.1:55964 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 [2026-10-10 19:54:47] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 15930, cuda graph: False, input throughput (token/s): 24799.17
 [2026-10-10 19:54:48] Prefill batch, #new-seq: 1, #new-token: 15930, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 16855.01
-[2026-10-10 19:54:48] INFO:     <droplet-ip>:55980 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:48] INFO:     172.17.0.1:55980 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 [2026-10-10 19:54:49] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 15931, cuda graph: False, input throughput (token/s): 24665.88
 [2026-10-10 19:54:50] Prefill batch, #new-seq: 1, #new-token: 15931, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 16932.56
-[2026-10-10 19:54:50] INFO:     <droplet-ip>:55984 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-10-10 19:54:50] INFO:     172.17.0.1:55984 - "POST /v1/chat/completions HTTP/1.1" 200 OK

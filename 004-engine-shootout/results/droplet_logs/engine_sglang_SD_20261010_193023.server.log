@@ -261,8 +261,8 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] Current hipcc not support: -mllvm -amdgpu-coerce-illegal-types=1, skip it.
 /sgl-workspace/sglang/python/sglang/srt/entrypoints/http_server.py:470: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
   return await original_handler(ORJSONRequest(request.scope, request.receive))
-[2026-10-10 19:31:53] INFO:     <droplet-ip>:48284 - "GET /v1/models HTTP/1.1" 200 OK
-[2026-10-10 19:32:42] INFO:     <droplet-ip>:52208 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-10 19:31:53] INFO:     172.17.0.1:48284 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-10 19:32:42] INFO:     172.17.0.1:52208 - "GET /v1/models HTTP/1.1" 200 OK
 [aiter] [pid=145 pname=Process-1] [32mfinish build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink], cost 116.5s [0m
 [aiter] import [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink.so
 [aiter] type hints mismatch, override to --> mha_batch_prefill(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, cu_seqlens_q: torch.Tensor, kv_indptr: torch.Tensor, kv_page_indices: torch.Tensor, max_seqlen_q: int, max_seqlen_k: int, dropout_p: float, softmax_scale: float, logits_soft_cap: float, zero_tensors: bool, is_causal: bool, window_size_left: int, window_size_right: int, sink_size: int, return_softmax_lse: bool, return_dropout_randval: bool, out: Optional[torch.Tensor] = None, bias: Optional[torch.Tensor] = None, alibi_slopes: Optional[torch.Tensor] = None, q_descale: Optional[torch.Tensor] = None, k_descale: Optional[torch.Tensor] = None, v_descale: Optional[torch.Tensor] = None, kv_block_descale: Optional[torch.Tensor] = None, kv_last_page_lens: Optional[torch.Tensor] = None, block_table: Optional[torch.Tensor] = None, seqlen_k: Optional[torch.Tensor] = None, sink_ptr: Optional[torch.Tensor] = None, gen: Optional[torch.Generator] = None) -> List[torch.Tensor]
@@ -274,57 +274,57 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:33:47] INFO:     127.0.0.1:53004 - "POST /generate HTTP/1.1" 200 OK
 [2026-10-10 19:33:47] INFO:     127.0.0.1:44196 - "POST /freeze_gc HTTP/1.1" 200 OK
 [2026-10-10 19:33:47] The server is fired up and ready to roll!
-[2026-10-10 19:34:23] INFO:     <droplet-ip>:35082 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:34:23] INFO:     <droplet-ip>:36686 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:34:23] INFO:     <droplet-ip>:36686 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:34:23] INFO:     172.17.0.1:35082 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:34:23] INFO:     172.17.0.1:36686 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:34:23] INFO:     172.17.0.1:36686 - "GET /metrics HTTP/1.1" 404 Not Found
 [aiter] shape is M:1024, N:10240, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:1024, N:5120, K:8192 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:1024, N:51200, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:1024, N:5120, K:25600 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:34:23] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 28.30
-[2026-10-10 19:34:23] INFO:     <droplet-ip>:36696 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:34:23] INFO:     172.17.0.1:36696 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:34:24] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 0.25, #queue-req: 0
 [2026-10-10 19:34:25] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 693.84
-[2026-10-10 19:34:25] INFO:     <droplet-ip>:36696 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:34:25] INFO:     172.17.0.1:36696 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:34:25] Decode batch, #running-req: 1, #token: 1033, token usage: 0.00, cuda graph: True, gen throughput (token/s): 41.01, #queue-req: 0
 [2026-10-10 19:34:26] Decode batch, #running-req: 1, #token: 1073, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.94, #queue-req: 0
-[2026-10-10 19:34:26] INFO:     <droplet-ip>:36696 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:34:26] INFO:     <droplet-ip>:36696 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:34:40] INFO:     <droplet-ip>:56356 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:34:40] INFO:     <droplet-ip>:56372 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:34:40] INFO:     <droplet-ip>:56372 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:34:26] INFO:     172.17.0.1:36696 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:34:26] INFO:     172.17.0.1:36696 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:34:40] INFO:     172.17.0.1:56356 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:34:40] INFO:     172.17.0.1:56372 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:34:40] INFO:     172.17.0.1:56372 - "GET /metrics HTTP/1.1" 404 Not Found
 [aiter] shape is M:16384, N:10240, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:16384, N:5120, K:8192 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:16384, N:51200, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:16384, N:5120, K:25600 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:34:43] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 913.19
 [2026-10-10 19:34:47] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4297.56
-[2026-10-10 19:34:47] INFO:     <droplet-ip>:56372 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:34:47] INFO:     172.17.0.1:56372 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:34:47] Decode batch, #running-req: 1, #token: 32793, token usage: 0.10, cuda graph: True, gen throughput (token/s): 1.88, #queue-req: 0
 [2026-10-10 19:34:48] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 42.40, #queue-req: 0
 [2026-10-10 19:34:51] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 3990.89
 [2026-10-10 19:34:55] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4288.41
-[2026-10-10 19:34:55] INFO:     <droplet-ip>:56372 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:34:55] INFO:     172.17.0.1:56372 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:34:55] Decode batch, #running-req: 1, #token: 32809, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.43, #queue-req: 0
-[2026-10-10 19:34:56] INFO:     <droplet-ip>:56372 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:34:56] INFO:     <droplet-ip>:56372 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:35:28] INFO:     <droplet-ip>:47044 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:35:28] INFO:     <droplet-ip>:47052 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:35:28] INFO:     <droplet-ip>:47052 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:34:56] INFO:     172.17.0.1:56372 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:34:56] INFO:     172.17.0.1:56372 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:35:28] INFO:     172.17.0.1:47044 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:35:28] INFO:     172.17.0.1:47052 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:35:28] INFO:     172.17.0.1:47052 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:35:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 30.64
-[2026-10-10 19:35:28] INFO:     <droplet-ip>:47058 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:35:28] INFO:     172.17.0.1:47058 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:35:28] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 1.22, #queue-req: 0
 [2026-10-10 19:35:29] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.91, #queue-req: 0
 [2026-10-10 19:35:29] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 693.64
-[2026-10-10 19:35:29] INFO:     <droplet-ip>:47058 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:35:29] INFO:     172.17.0.1:47058 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:35:30] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.95, #queue-req: 0
-[2026-10-10 19:35:31] INFO:     <droplet-ip>:47058 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:35:31] INFO:     <droplet-ip>:47058 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:35:44] INFO:     <droplet-ip>:46408 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:35:44] INFO:     <droplet-ip>:46416 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:35:44] INFO:     <droplet-ip>:46424 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:35:31] INFO:     172.17.0.1:47058 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:35:31] INFO:     172.17.0.1:47058 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:35:44] INFO:     172.17.0.1:46408 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:35:44] INFO:     172.17.0.1:46416 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:35:44] INFO:     172.17.0.1:46424 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:35:45] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 67.46
-[2026-10-10 19:35:45] INFO:     <droplet-ip>:46430 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:35:45] INFO:     172.17.0.1:46430 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:35:45] Decode batch, #running-req: 1, #token: 1033, token usage: 0.00, cuda graph: True, gen throughput (token/s): 2.73, #queue-req: 0
 [2026-10-10 19:35:46] Decode batch, #running-req: 1, #token: 1073, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.90, #queue-req: 0
 [2026-10-10 19:35:46] Decode batch, #running-req: 1, #token: 1113, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.86, #queue-req: 0
@@ -333,7 +333,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:35:49] Decode batch, #running-req: 1, #token: 1233, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.80, #queue-req: 0
 [2026-10-10 19:35:50] Decode batch, #running-req: 1, #token: 1273, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.77, #queue-req: 0
 [2026-10-10 19:35:50] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 186.39
-[2026-10-10 19:35:50] INFO:     <droplet-ip>:46430 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:35:50] INFO:     172.17.0.1:46430 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:35:51] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.86, #queue-req: 0
 [2026-10-10 19:35:52] Decode batch, #running-req: 1, #token: 1097, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.75, #queue-req: 0
 [2026-10-10 19:35:52] Decode batch, #running-req: 1, #token: 1137, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.69, #queue-req: 0
@@ -341,7 +341,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:35:54] Decode batch, #running-req: 1, #token: 1217, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.77, #queue-req: 0
 [2026-10-10 19:35:55] Decode batch, #running-req: 1, #token: 1257, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.65, #queue-req: 0
 [2026-10-10 19:35:56] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 186.03
-[2026-10-10 19:35:56] INFO:     <droplet-ip>:46430 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:35:56] INFO:     172.17.0.1:46430 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:35:56] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.89, #queue-req: 0
 [2026-10-10 19:35:57] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.60, #queue-req: 0
 [2026-10-10 19:35:58] Decode batch, #running-req: 1, #token: 1121, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.75, #queue-req: 0
@@ -350,33 +350,33 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:36:00] Decode batch, #running-req: 1, #token: 1241, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.62, #queue-req: 0
 [2026-10-10 19:36:01] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.69, #queue-req: 0
 [2026-10-10 19:36:01] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 185.93
-[2026-10-10 19:36:01] INFO:     <droplet-ip>:46430 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:36:01] INFO:     172.17.0.1:46430 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:36:02] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.75, #queue-req: 0
 [2026-10-10 19:36:03] Decode batch, #running-req: 1, #token: 1105, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.80, #queue-req: 0
 [2026-10-10 19:36:04] Decode batch, #running-req: 1, #token: 1145, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.61, #queue-req: 0
 [2026-10-10 19:36:04] Decode batch, #running-req: 1, #token: 1185, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.73, #queue-req: 0
 [2026-10-10 19:36:05] Decode batch, #running-req: 1, #token: 1225, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.72, #queue-req: 0
 [2026-10-10 19:36:06] Decode batch, #running-req: 1, #token: 1265, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.67, #queue-req: 0
-[2026-10-10 19:36:06] INFO:     <droplet-ip>:46430 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:36:06] INFO:     <droplet-ip>:37336 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:36:38] INFO:     <droplet-ip>:45892 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:36:38] INFO:     <droplet-ip>:45896 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:36:38] INFO:     <droplet-ip>:45896 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:36:06] INFO:     172.17.0.1:46430 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:36:06] INFO:     172.17.0.1:37336 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:36:38] INFO:     172.17.0.1:45892 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:36:38] INFO:     172.17.0.1:45896 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:36:38] INFO:     172.17.0.1:45896 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:36:38] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 27.74
-[2026-10-10 19:36:38] INFO:     <droplet-ip>:45896 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:36:38] INFO:     172.17.0.1:45896 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:36:39] Decode batch, #running-req: 1, #token: 1049, token usage: 0.00, cuda graph: True, gen throughput (token/s): 1.24, #queue-req: 0
 [2026-10-10 19:36:39] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.81, #queue-req: 0
 [2026-10-10 19:36:39] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 692.56
-[2026-10-10 19:36:39] INFO:     <droplet-ip>:45896 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:36:39] INFO:     172.17.0.1:45896 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:36:40] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.91, #queue-req: 0
-[2026-10-10 19:36:41] INFO:     <droplet-ip>:45896 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:36:41] INFO:     <droplet-ip>:45896 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:36:55] INFO:     <droplet-ip>:57758 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:36:55] INFO:     <droplet-ip>:57764 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:36:55] INFO:     <droplet-ip>:57764 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:36:41] INFO:     172.17.0.1:45896 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:36:41] INFO:     172.17.0.1:45896 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:36:55] INFO:     172.17.0.1:57758 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:36:55] INFO:     172.17.0.1:57764 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:36:55] INFO:     172.17.0.1:57764 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:36:58] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 892.35
 [2026-10-10 19:37:02] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4290.35
-[2026-10-10 19:37:02] INFO:     <droplet-ip>:57764 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:37:02] INFO:     172.17.0.1:57764 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:37:02] Decode batch, #running-req: 1, #token: 32785, token usage: 0.10, cuda graph: True, gen throughput (token/s): 1.84, #queue-req: 0
 [2026-10-10 19:37:03] Decode batch, #running-req: 1, #token: 32825, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.30, #queue-req: 0
 [2026-10-10 19:37:04] Decode batch, #running-req: 1, #token: 32865, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.27, #queue-req: 0
@@ -386,7 +386,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:37:08] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 42.21, #queue-req: 0
 [2026-10-10 19:37:10] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1882.73
 [2026-10-10 19:37:14] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4281.63
-[2026-10-10 19:37:14] INFO:     <droplet-ip>:57764 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:37:14] INFO:     172.17.0.1:57764 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:37:15] Decode batch, #running-req: 1, #token: 32809, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.40, #queue-req: 0
 [2026-10-10 19:37:16] Decode batch, #running-req: 1, #token: 32849, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.47, #queue-req: 0
 [2026-10-10 19:37:17] Decode batch, #running-req: 1, #token: 32889, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.45, #queue-req: 0
@@ -395,7 +395,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:37:20] Decode batch, #running-req: 1, #token: 33009, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.39, #queue-req: 0
 [2026-10-10 19:37:23] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1892.60
 [2026-10-10 19:37:27] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4281.67
-[2026-10-10 19:37:27] INFO:     <droplet-ip>:57764 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:37:27] INFO:     172.17.0.1:57764 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:37:27] Decode batch, #running-req: 1, #token: 32793, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.41, #queue-req: 0
 [2026-10-10 19:37:28] Decode batch, #running-req: 1, #token: 32833, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.12, #queue-req: 0
 [2026-10-10 19:37:29] Decode batch, #running-req: 1, #token: 32873, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.07, #queue-req: 0
@@ -404,7 +404,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:37:32] Decode batch, #running-req: 1, #token: 32993, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.12, #queue-req: 0
 [2026-10-10 19:37:35] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1880.05
 [2026-10-10 19:37:39] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4302.61
-[2026-10-10 19:37:39] INFO:     <droplet-ip>:57764 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:37:39] INFO:     172.17.0.1:57764 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:37:39] Decode batch, #running-req: 1, #token: 32777, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.41, #queue-req: 0
 [2026-10-10 19:37:40] Decode batch, #running-req: 1, #token: 32817, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.15, #queue-req: 0
 [2026-10-10 19:37:41] Decode batch, #running-req: 1, #token: 32857, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.14, #queue-req: 0
@@ -412,25 +412,25 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:37:43] Decode batch, #running-req: 1, #token: 32937, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.03, #queue-req: 0
 [2026-10-10 19:37:44] Decode batch, #running-req: 1, #token: 32977, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.06, #queue-req: 0
 [2026-10-10 19:37:45] Decode batch, #running-req: 1, #token: 33017, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.06, #queue-req: 0
-[2026-10-10 19:37:45] INFO:     <droplet-ip>:57764 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:37:45] INFO:     <droplet-ip>:57764 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:38:17] INFO:     <droplet-ip>:50046 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:38:17] INFO:     <droplet-ip>:50058 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:38:17] INFO:     <droplet-ip>:50058 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:37:45] INFO:     172.17.0.1:57764 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:37:45] INFO:     172.17.0.1:57764 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:38:17] INFO:     172.17.0.1:50046 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:38:17] INFO:     172.17.0.1:50058 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:38:17] INFO:     172.17.0.1:50058 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:38:17] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 27.12
-[2026-10-10 19:38:17] INFO:     <droplet-ip>:50072 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:38:17] INFO:     172.17.0.1:50072 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:38:18] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 1.23, #queue-req: 0
 [2026-10-10 19:38:18] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 692.93
-[2026-10-10 19:38:18] INFO:     <droplet-ip>:50072 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:38:18] INFO:     172.17.0.1:50072 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:38:19] Decode batch, #running-req: 1, #token: 1033, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.95, #queue-req: 0
 [2026-10-10 19:38:19] Decode batch, #running-req: 1, #token: 1073, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.80, #queue-req: 0
-[2026-10-10 19:38:20] INFO:     <droplet-ip>:50072 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:38:20] INFO:     <droplet-ip>:50072 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:38:33] INFO:     <droplet-ip>:40034 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:38:33] INFO:     <droplet-ip>:40048 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:38:33] INFO:     <droplet-ip>:40048 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:38:20] INFO:     172.17.0.1:50072 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:38:20] INFO:     172.17.0.1:50072 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:38:33] INFO:     172.17.0.1:40034 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:38:33] INFO:     172.17.0.1:40048 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:38:33] INFO:     172.17.0.1:40048 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:38:34] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 67.46
-[2026-10-10 19:38:34] INFO:     <droplet-ip>:40048 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:38:34] INFO:     172.17.0.1:40048 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:38:34] Decode batch, #running-req: 1, #token: 1049, token usage: 0.00, cuda graph: True, gen throughput (token/s): 2.73, #queue-req: 0
 [2026-10-10 19:38:35] Decode batch, #running-req: 1, #token: 1089, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.86, #queue-req: 0
 [2026-10-10 19:38:36] Decode batch, #running-req: 1, #token: 1129, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.75, #queue-req: 0
@@ -438,7 +438,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:38:37] Decode batch, #running-req: 1, #token: 1209, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.78, #queue-req: 0
 [2026-10-10 19:38:38] Decode batch, #running-req: 1, #token: 1249, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.81, #queue-req: 0
 [2026-10-10 19:38:39] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 186.24
-[2026-10-10 19:38:39] INFO:     <droplet-ip>:40048 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:38:39] INFO:     172.17.0.1:40048 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:38:39] Decode batch, #running-req: 1, #token: 1033, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.83, #queue-req: 0
 [2026-10-10 19:38:40] Decode batch, #running-req: 1, #token: 1073, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.71, #queue-req: 0
 [2026-10-10 19:38:41] Decode batch, #running-req: 1, #token: 1113, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.72, #queue-req: 0
@@ -447,7 +447,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:38:43] Decode batch, #running-req: 1, #token: 1233, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.65, #queue-req: 0
 [2026-10-10 19:38:44] Decode batch, #running-req: 1, #token: 1273, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.63, #queue-req: 0
 [2026-10-10 19:38:45] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 185.88
-[2026-10-10 19:38:45] INFO:     <droplet-ip>:40048 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:38:45] INFO:     172.17.0.1:40048 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:38:45] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.83, #queue-req: 0
 [2026-10-10 19:38:46] Decode batch, #running-req: 1, #token: 1097, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.71, #queue-req: 0
 [2026-10-10 19:38:47] Decode batch, #running-req: 1, #token: 1137, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.63, #queue-req: 0
@@ -455,7 +455,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:38:49] Decode batch, #running-req: 1, #token: 1217, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.59, #queue-req: 0
 [2026-10-10 19:38:49] Decode batch, #running-req: 1, #token: 1257, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.66, #queue-req: 0
 [2026-10-10 19:38:50] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 185.69
-[2026-10-10 19:38:50] INFO:     <droplet-ip>:40048 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:38:50] INFO:     172.17.0.1:40048 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:38:50] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.74, #queue-req: 0
 [2026-10-10 19:38:51] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.62, #queue-req: 0
 [2026-10-10 19:38:52] Decode batch, #running-req: 1, #token: 1121, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.65, #queue-req: 0
@@ -464,7 +464,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:38:55] Decode batch, #running-req: 1, #token: 1241, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.63, #queue-req: 0
 [2026-10-10 19:38:56] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.61, #queue-req: 0
 [2026-10-10 19:38:56] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 185.53
-[2026-10-10 19:38:56] INFO:     <droplet-ip>:40048 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:38:56] INFO:     172.17.0.1:40048 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:38:56] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.72, #queue-req: 0
 [2026-10-10 19:38:57] Decode batch, #running-req: 1, #token: 1105, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.55, #queue-req: 0
 [2026-10-10 19:38:58] Decode batch, #running-req: 1, #token: 1145, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.57, #queue-req: 0
@@ -472,7 +472,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:39:00] Decode batch, #running-req: 1, #token: 1225, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.60, #queue-req: 0
 [2026-10-10 19:39:01] Decode batch, #running-req: 1, #token: 1265, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.57, #queue-req: 0
 [2026-10-10 19:39:01] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 185.38
-[2026-10-10 19:39:01] INFO:     <droplet-ip>:40048 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:39:01] INFO:     172.17.0.1:40048 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:39:02] Decode batch, #running-req: 1, #token: 1049, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.75, #queue-req: 0
 [2026-10-10 19:39:03] Decode batch, #running-req: 1, #token: 1089, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.54, #queue-req: 0
 [2026-10-10 19:39:03] Decode batch, #running-req: 1, #token: 1129, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.48, #queue-req: 0
@@ -480,7 +480,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:39:05] Decode batch, #running-req: 1, #token: 1209, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.54, #queue-req: 0
 [2026-10-10 19:39:06] Decode batch, #running-req: 1, #token: 1249, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.49, #queue-req: 0
 [2026-10-10 19:39:07] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 185.29
-[2026-10-10 19:39:07] INFO:     <droplet-ip>:40048 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:39:07] INFO:     172.17.0.1:40048 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:39:07] Decode batch, #running-req: 1, #token: 1033, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.68, #queue-req: 0
 [2026-10-10 19:39:08] Decode batch, #running-req: 1, #token: 1073, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.53, #queue-req: 0
 [2026-10-10 19:39:09] Decode batch, #running-req: 1, #token: 1113, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.63, #queue-req: 0
@@ -489,52 +489,52 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:39:11] Decode batch, #running-req: 1, #token: 1233, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.53, #queue-req: 0
 [2026-10-10 19:39:12] Decode batch, #running-req: 1, #token: 1273, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.67, #queue-req: 0
 [2026-10-10 19:39:12] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 185.39
-[2026-10-10 19:39:12] INFO:     <droplet-ip>:40048 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:39:12] INFO:     172.17.0.1:40048 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:39:13] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.68, #queue-req: 0
 [2026-10-10 19:39:14] Decode batch, #running-req: 1, #token: 1097, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.53, #queue-req: 0
 [2026-10-10 19:39:15] Decode batch, #running-req: 1, #token: 1137, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.49, #queue-req: 0
 [2026-10-10 19:39:15] Decode batch, #running-req: 1, #token: 1177, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.54, #queue-req: 0
 [2026-10-10 19:39:16] Decode batch, #running-req: 1, #token: 1217, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.55, #queue-req: 0
 [2026-10-10 19:39:17] Decode batch, #running-req: 1, #token: 1257, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.52, #queue-req: 0
-[2026-10-10 19:39:18] INFO:     <droplet-ip>:40048 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:39:18] INFO:     <droplet-ip>:33480 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:39:48] INFO:     <droplet-ip>:44932 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:39:49] INFO:     <droplet-ip>:44944 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:39:49] INFO:     <droplet-ip>:44950 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:39:18] INFO:     172.17.0.1:40048 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:39:18] INFO:     172.17.0.1:33480 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:39:48] INFO:     172.17.0.1:44932 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:39:49] INFO:     172.17.0.1:44944 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:39:49] INFO:     172.17.0.1:44950 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:39:49] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 28.01
-[2026-10-10 19:39:49] INFO:     <droplet-ip>:44950 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:39:49] INFO:     172.17.0.1:44950 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:39:49] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 1.25, #queue-req: 0
 [2026-10-10 19:39:50] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.85, #queue-req: 0
-[2026-10-10 19:39:50] INFO:     <droplet-ip>:44950 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:39:50] INFO:     172.17.0.1:44950 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:39:50] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 692.67
 [2026-10-10 19:39:51] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.92, #queue-req: 0
-[2026-10-10 19:39:52] INFO:     <droplet-ip>:44950 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:39:52] INFO:     <droplet-ip>:44958 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:40:05] INFO:     <droplet-ip>:41678 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:40:06] INFO:     <droplet-ip>:41690 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:40:06] INFO:     <droplet-ip>:41692 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:39:52] INFO:     172.17.0.1:44950 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:39:52] INFO:     172.17.0.1:44958 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:40:05] INFO:     172.17.0.1:41678 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:40:06] INFO:     172.17.0.1:41690 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:40:06] INFO:     172.17.0.1:41692 - "GET /metrics HTTP/1.1" 404 Not Found
 [aiter] shape is M:15360, N:10240, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:15360, N:5120, K:8192 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:15360, N:51200, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:15360, N:5120, K:25600 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:40:06] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.05, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 65.63
-[2026-10-10 19:40:06] INFO:     <droplet-ip>:41696 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:06] INFO:     172.17.0.1:41696 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:40:08] Prefill batch, #new-seq: 15, #new-token: 15360, #cached-token: 0, token usage: 0.05, #running-req: 1, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 8471.45
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41698 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41728 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41712 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41736 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41714 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41750 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41800 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41764 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41770 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41786 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41824 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41806 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41828 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41814 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:08] INFO:     <droplet-ip>:41826 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41698 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41728 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41712 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41736 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41714 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41750 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41800 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41764 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41770 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41786 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41824 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41806 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41828 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41814 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:08] INFO:     172.17.0.1:41826 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:40:08] Decode batch, #running-req: 16, #token: 16528, token usage: 0.05, cuda graph: True, gen throughput (token/s): 9.45, #queue-req: 0
 [2026-10-10 19:40:09] Decode batch, #running-req: 16, #token: 17168, token usage: 0.05, cuda graph: True, gen throughput (token/s): 682.05, #queue-req: 0
 [2026-10-10 19:40:10] Decode batch, #running-req: 16, #token: 17808, token usage: 0.05, cuda graph: True, gen throughput (token/s): 680.81, #queue-req: 0
@@ -551,124 +551,124 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] shape is M:12288, N:51200, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:12288, N:5120, K:25600 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:40:14] Prefill batch, #new-seq: 4, #new-token: 4096, #cached-token: 0, token usage: 0.05, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 617.33
-[2026-10-10 19:40:14] INFO:     <droplet-ip>:41696 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:14] INFO:     <droplet-ip>:41698 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:14] INFO:     <droplet-ip>:41728 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:14] INFO:     <droplet-ip>:41712 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:14] INFO:     172.17.0.1:41696 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:14] INFO:     172.17.0.1:41698 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:14] INFO:     172.17.0.1:41728 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:14] INFO:     172.17.0.1:41712 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:40:16] Prefill batch, #new-seq: 12, #new-token: 12288, #cached-token: 0, token usage: 0.05, #running-req: 4, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 8711.60
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41736 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41714 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41750 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41800 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41764 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41770 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41786 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41824 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41806 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41828 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41814 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:40:16] INFO:     <droplet-ip>:41826 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41736 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41714 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41750 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41800 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41764 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41770 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41786 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41824 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41806 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41828 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41814 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:16] INFO:     172.17.0.1:41826 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:40:16] Decode batch, #running-req: 16, #token: 16912, token usage: 0.05, cuda graph: True, gen throughput (token/s): 216.36, #queue-req: 0
 [2026-10-10 19:40:17] Decode batch, #running-req: 16, #token: 17552, token usage: 0.05, cuda graph: True, gen throughput (token/s): 681.18, #queue-req: 0
 [2026-10-10 19:40:18] Decode batch, #running-req: 16, #token: 18192, token usage: 0.06, cuda graph: True, gen throughput (token/s): 680.84, #queue-req: 0
 [2026-10-10 19:40:19] Decode batch, #running-req: 16, #token: 18832, token usage: 0.06, cuda graph: True, gen throughput (token/s): 679.57, #queue-req: 0
 [2026-10-10 19:40:20] Decode batch, #running-req: 16, #token: 19472, token usage: 0.06, cuda graph: True, gen throughput (token/s): 678.71, #queue-req: 0
 [2026-10-10 19:40:21] Decode batch, #running-req: 16, #token: 20112, token usage: 0.06, cuda graph: True, gen throughput (token/s): 678.01, #queue-req: 0
-[2026-10-10 19:40:22] INFO:     <droplet-ip>:41696 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:40:22] INFO:     <droplet-ip>:41698 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:40:53] INFO:     <droplet-ip>:56420 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:40:53] INFO:     <droplet-ip>:56432 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:40:53] INFO:     <droplet-ip>:56432 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:40:22] INFO:     172.17.0.1:41696 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:40:22] INFO:     172.17.0.1:41698 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:40:53] INFO:     172.17.0.1:56420 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:40:53] INFO:     172.17.0.1:56432 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:40:53] INFO:     172.17.0.1:56432 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:40:54] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 27.09
-[2026-10-10 19:40:54] INFO:     <droplet-ip>:56432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:54] INFO:     172.17.0.1:56432 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:40:54] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 12.24, #queue-req: 0
 [2026-10-10 19:40:55] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.95, #queue-req: 0
-[2026-10-10 19:40:55] INFO:     <droplet-ip>:56432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:40:55] INFO:     172.17.0.1:56432 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:40:55] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 694.19
 [2026-10-10 19:40:56] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.97, #queue-req: 0
-[2026-10-10 19:40:56] INFO:     <droplet-ip>:56432 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:40:56] INFO:     <droplet-ip>:56432 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:41:11] INFO:     <droplet-ip>:54534 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:41:11] INFO:     <droplet-ip>:54550 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:41:11] INFO:     <droplet-ip>:54550 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:40:56] INFO:     172.17.0.1:56432 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:40:56] INFO:     172.17.0.1:56432 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:41:11] INFO:     172.17.0.1:54534 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:41:11] INFO:     172.17.0.1:54550 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:41:11] INFO:     172.17.0.1:54550 - "GET /metrics HTTP/1.1" 404 Not Found
 [aiter] shape is M:5120, N:10240, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:5120, N:5120, K:8192 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:5120, N:51200, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:5120, N:5120, K:25600 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:41:11] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 63.56
-[2026-10-10 19:41:11] INFO:     <droplet-ip>:54550 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:11] INFO:     172.17.0.1:54550 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:12] Prefill batch, #new-seq: 5, #new-token: 5120, #cached-token: 0, token usage: 0.07, #running-req: 1, #queue-req: 29, #pending-token: 0, cuda graph: False, input throughput (token/s): 8431.08
-[2026-10-10 19:41:12] INFO:     <droplet-ip>:54566 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:12] INFO:     <droplet-ip>:54596 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:12] INFO:     <droplet-ip>:54626 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:12] INFO:     <droplet-ip>:54642 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:12] INFO:     <droplet-ip>:54666 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:12] INFO:     172.17.0.1:54566 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:12] INFO:     172.17.0.1:54596 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:12] INFO:     172.17.0.1:54626 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:12] INFO:     172.17.0.1:54642 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:12] INFO:     172.17.0.1:54666 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:14] Prefill batch, #new-seq: 16, #new-token: 16384, #cached-token: 0, token usage: 0.12, #running-req: 6, #queue-req: 26, #pending-token: 29696, cuda graph: False, input throughput (token/s): 8357.72
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54700 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54682 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54582 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54690 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54672 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54644 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54610 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54608 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54786 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54820 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54752 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54736 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54718 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54740 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54794 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:14] INFO:     <droplet-ip>:54726 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54700 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54682 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54582 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54690 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54672 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54644 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54610 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54608 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54786 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54820 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54736 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54718 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54740 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54794 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:14] INFO:     172.17.0.1:54726 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:16] Prefill batch, #new-seq: 16, #new-token: 16384, #cached-token: 0, token usage: 0.17, #running-req: 22, #queue-req: 10, #pending-token: 26624, cuda graph: False, input throughput (token/s): 8336.19
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54704 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54774 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54772 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54766 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54804 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54830 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54846 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54870 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54880 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54860 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54894 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54910 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54912 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54918 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54920 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:16] INFO:     <droplet-ip>:54926 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54704 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54774 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54772 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54766 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54804 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54830 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54846 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54870 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54880 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54860 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54894 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54910 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54912 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54918 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54920 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:16] INFO:     172.17.0.1:54926 - "POST /v1/completions HTTP/1.1" 200 OK
 [aiter] shape is M:10240, N:10240, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:10240, N:5120, K:8192 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:10240, N:51200, K:5120 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:10240, N:5120, K:25600 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:41:18] Prefill batch, #new-seq: 16, #new-token: 16384, #cached-token: 0, token usage: 0.20, #running-req: 38, #queue-req: 0, #pending-token: 10240, cuda graph: False, input throughput (token/s): 8326.19
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:54942 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:54968 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:54958 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:54974 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:54980 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:54986 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:54988 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:55008 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:54994 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:55024 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:55040 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:55046 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:55066 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:55078 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:55050 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:18] INFO:     <droplet-ip>:55084 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:54942 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:54968 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:54958 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:54974 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:54980 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:54986 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:54988 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:55008 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:54994 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:55024 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:55040 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:55046 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:55066 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:55078 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:55050 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:18] INFO:     172.17.0.1:55084 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:19] Prefill batch, #new-seq: 10, #new-token: 10240, #cached-token: 0, token usage: 0.20, #running-req: 54, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 8613.12
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55132 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55086 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55094 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55088 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55118 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55142 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55158 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55162 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55174 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:19] INFO:     <droplet-ip>:55180 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55132 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55086 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55094 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55088 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55118 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55142 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55158 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55162 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55174 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:19] INFO:     172.17.0.1:55180 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:19] Decode batch, #running-req: 64, #token: 66112, token usage: 0.20, cuda graph: True, gen throughput (token/s): 23.26, #queue-req: 0
 [2026-10-10 19:41:20] Decode batch, #running-req: 64, #token: 68672, token usage: 0.21, cuda graph: True, gen throughput (token/s): 1975.59, #queue-req: 0
 [2026-10-10 19:41:22] Decode batch, #running-req: 64, #token: 71232, token usage: 0.22, cuda graph: True, gen throughput (token/s): 1963.73, #queue-req: 0
@@ -677,100 +677,100 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:41:26] Decode batch, #running-req: 64, #token: 78912, token usage: 0.24, cuda graph: True, gen throughput (token/s): 1925.90, #queue-req: 0
 [2026-10-10 19:41:27] Decode batch, #running-req: 64, #token: 81472, token usage: 0.25, cuda graph: True, gen throughput (token/s): 1911.10, #queue-req: 0
 [2026-10-10 19:41:28] Prefill batch, #new-seq: 5, #new-token: 5120, #cached-token: 0, token usage: 0.06, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 562.69
-[2026-10-10 19:41:28] INFO:     <droplet-ip>:54550 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:28] INFO:     <droplet-ip>:54566 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:28] INFO:     <droplet-ip>:54596 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:28] INFO:     <droplet-ip>:54626 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:28] INFO:     <droplet-ip>:54642 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:28] INFO:     172.17.0.1:54550 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:28] INFO:     172.17.0.1:54566 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:28] INFO:     172.17.0.1:54596 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:28] INFO:     172.17.0.1:54626 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:28] INFO:     172.17.0.1:54642 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:30] Prefill batch, #new-seq: 15, #new-token: 15360, #cached-token: 0, token usage: 0.11, #running-req: 5, #queue-req: 28, #pending-token: 0, cuda graph: False, input throughput (token/s): 8232.96
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54666 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54700 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54682 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54582 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54690 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54672 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54644 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54610 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54608 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54786 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54820 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54752 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54736 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54718 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:30] INFO:     <droplet-ip>:54740 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54666 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54700 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54682 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54582 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54690 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54672 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54644 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54610 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54608 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54786 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54820 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54736 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54718 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:30] INFO:     172.17.0.1:54740 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:32] Prefill batch, #new-seq: 16, #new-token: 16384, #cached-token: 0, token usage: 0.16, #running-req: 20, #queue-req: 12, #pending-token: 28672, cuda graph: False, input throughput (token/s): 8339.20
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54794 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54726 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54704 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54774 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54772 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54766 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54804 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54830 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54846 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54870 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54880 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54860 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54894 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54910 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54912 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:32] INFO:     <droplet-ip>:54918 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54794 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54726 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54704 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54774 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54772 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54766 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54804 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54830 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54846 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54870 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54880 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54860 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54894 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54910 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54912 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:32] INFO:     172.17.0.1:54918 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:34] Prefill batch, #new-seq: 16, #new-token: 16384, #cached-token: 0, token usage: 0.20, #running-req: 36, #queue-req: 0, #pending-token: 12288, cuda graph: False, input throughput (token/s): 8323.49
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54920 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54926 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54942 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54968 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54958 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54974 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54980 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54986 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54988 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:55008 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:54994 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:55024 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:55040 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:55046 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:55066 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:34] INFO:     <droplet-ip>:55078 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54920 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54926 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54942 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54968 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54958 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54974 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54980 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54986 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54988 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:55008 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:54994 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:55024 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:55040 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:55046 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:55066 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:34] INFO:     172.17.0.1:55078 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:35] Prefill batch, #new-seq: 12, #new-token: 12288, #cached-token: 0, token usage: 0.20, #running-req: 52, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 8699.69
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55050 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55084 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55132 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55086 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55094 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55088 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55118 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55142 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55158 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55162 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55174 - "POST /v1/completions HTTP/1.1" 200 OK
-[2026-10-10 19:41:35] INFO:     <droplet-ip>:55180 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55050 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55084 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55132 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55086 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55094 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55088 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55118 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55142 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55158 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55162 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55174 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:41:35] INFO:     172.17.0.1:55180 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:41:36] Decode batch, #running-req: 64, #token: 67648, token usage: 0.21, cuda graph: True, gen throughput (token/s): 278.35, #queue-req: 0
 [2026-10-10 19:41:37] Decode batch, #running-req: 64, #token: 70208, token usage: 0.22, cuda graph: True, gen throughput (token/s): 1951.20, #queue-req: 0
 [2026-10-10 19:41:39] Decode batch, #running-req: 64, #token: 72768, token usage: 0.22, cuda graph: True, gen throughput (token/s): 1934.81, #queue-req: 0
 [2026-10-10 19:41:40] Decode batch, #running-req: 64, #token: 75328, token usage: 0.23, cuda graph: True, gen throughput (token/s): 1921.08, #queue-req: 0
 [2026-10-10 19:41:41] Decode batch, #running-req: 64, #token: 77888, token usage: 0.24, cuda graph: True, gen throughput (token/s): 1907.49, #queue-req: 0
 [2026-10-10 19:41:43] Decode batch, #running-req: 64, #token: 80448, token usage: 0.25, cuda graph: True, gen throughput (token/s): 1893.92, #queue-req: 0
-[2026-10-10 19:41:44] INFO:     <droplet-ip>:54550 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:41:44] INFO:     <droplet-ip>:54566 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:42:15] INFO:     <droplet-ip>:34882 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:42:15] INFO:     <droplet-ip>:34888 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:42:15] INFO:     <droplet-ip>:34890 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:41:44] INFO:     172.17.0.1:54550 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:41:44] INFO:     172.17.0.1:54566 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:42:15] INFO:     172.17.0.1:34882 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:42:15] INFO:     172.17.0.1:34888 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:42:15] INFO:     172.17.0.1:34890 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:42:15] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 25.50
-[2026-10-10 19:42:15] INFO:     <droplet-ip>:34890 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:42:15] INFO:     172.17.0.1:34890 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:42:16] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.33, #queue-req: 0
 [2026-10-10 19:42:16] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.87, #queue-req: 0
 [2026-10-10 19:42:17] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 692.99
-[2026-10-10 19:42:17] INFO:     <droplet-ip>:34890 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:42:17] INFO:     172.17.0.1:34890 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:42:17] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.91, #queue-req: 0
-[2026-10-10 19:42:18] INFO:     <droplet-ip>:34890 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:42:18] INFO:     <droplet-ip>:34890 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:42:33] INFO:     <droplet-ip>:51022 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:42:33] INFO:     <droplet-ip>:39898 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:42:33] INFO:     <droplet-ip>:39898 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:42:18] INFO:     172.17.0.1:34890 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:42:18] INFO:     172.17.0.1:34890 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:42:33] INFO:     172.17.0.1:51022 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:42:33] INFO:     172.17.0.1:39898 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:42:33] INFO:     172.17.0.1:39898 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:42:36] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 859.39
 [2026-10-10 19:42:40] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4292.85
-[2026-10-10 19:42:40] INFO:     <droplet-ip>:39904 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:42:40] INFO:     172.17.0.1:39904 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:42:40] Decode batch, #running-req: 1, #token: 32777, token usage: 0.10, cuda graph: True, gen throughput (token/s): 1.79, #queue-req: 0
 [2026-10-10 19:42:41] Decode batch, #running-req: 1, #token: 32817, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.60, #queue-req: 0
 [2026-10-10 19:42:42] Decode batch, #running-req: 1, #token: 32857, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.54, #queue-req: 0
@@ -780,7 +780,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:42:45] Decode batch, #running-req: 1, #token: 33017, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.44, #queue-req: 0
 [2026-10-10 19:42:48] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1897.48
 [2026-10-10 19:42:52] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4288.58
-[2026-10-10 19:42:52] INFO:     <droplet-ip>:39904 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:42:52] INFO:     172.17.0.1:39904 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:42:53] Decode batch, #running-req: 1, #token: 32801, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.42, #queue-req: 0
 [2026-10-10 19:42:54] Decode batch, #running-req: 1, #token: 32841, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.24, #queue-req: 0
 [2026-10-10 19:42:55] Decode batch, #running-req: 1, #token: 32881, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.24, #queue-req: 0
@@ -789,7 +789,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:42:58] Decode batch, #running-req: 1, #token: 33001, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.10, #queue-req: 0
 [2026-10-10 19:43:01] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1886.79
 [2026-10-10 19:43:05] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4272.21
-[2026-10-10 19:43:05] INFO:     <droplet-ip>:39904 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:43:05] INFO:     172.17.0.1:39904 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:43:05] Decode batch, #running-req: 1, #token: 32785, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.40, #queue-req: 0
 [2026-10-10 19:43:06] Decode batch, #running-req: 1, #token: 32825, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.10, #queue-req: 0
 [2026-10-10 19:43:07] Decode batch, #running-req: 1, #token: 32865, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.17, #queue-req: 0
@@ -799,7 +799,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:43:11] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 42.09, #queue-req: 0
 [2026-10-10 19:43:13] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1885.67
 [2026-10-10 19:43:17] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4277.16
-[2026-10-10 19:43:17] INFO:     <droplet-ip>:39904 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:43:17] INFO:     172.17.0.1:39904 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:43:18] Decode batch, #running-req: 1, #token: 32809, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.41, #queue-req: 0
 [2026-10-10 19:43:19] Decode batch, #running-req: 1, #token: 32849, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.11, #queue-req: 0
 [2026-10-10 19:43:20] Decode batch, #running-req: 1, #token: 32889, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.12, #queue-req: 0
@@ -808,7 +808,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:43:23] Decode batch, #running-req: 1, #token: 33009, token usage: 0.10, cuda graph: True, gen throughput (token/s): 41.95, #queue-req: 0
 [2026-10-10 19:43:26] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1876.55
 [2026-10-10 19:43:30] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4262.56
-[2026-10-10 19:43:30] INFO:     <droplet-ip>:39904 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:43:30] INFO:     172.17.0.1:39904 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:43:30] Decode batch, #running-req: 1, #token: 32793, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.38, #queue-req: 0
 [2026-10-10 19:43:31] Decode batch, #running-req: 1, #token: 32833, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.22, #queue-req: 0
 [2026-10-10 19:43:32] Decode batch, #running-req: 1, #token: 32873, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.14, #queue-req: 0
@@ -817,7 +817,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:43:35] Decode batch, #running-req: 1, #token: 32993, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.20, #queue-req: 0
 [2026-10-10 19:43:38] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1881.98
 [2026-10-10 19:43:42] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4251.55
-[2026-10-10 19:43:42] INFO:     <droplet-ip>:39904 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:43:42] INFO:     172.17.0.1:39904 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:43:42] Decode batch, #running-req: 1, #token: 32777, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.37, #queue-req: 0
 [2026-10-10 19:43:43] Decode batch, #running-req: 1, #token: 32817, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.18, #queue-req: 0
 [2026-10-10 19:43:44] Decode batch, #running-req: 1, #token: 32857, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.18, #queue-req: 0
@@ -827,7 +827,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:43:48] Decode batch, #running-req: 1, #token: 33017, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.13, #queue-req: 0
 [2026-10-10 19:43:51] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1877.46
 [2026-10-10 19:43:55] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4208.27
-[2026-10-10 19:43:55] INFO:     <droplet-ip>:39904 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:43:55] INFO:     172.17.0.1:39904 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:43:56] Decode batch, #running-req: 1, #token: 32801, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.34, #queue-req: 0
 [2026-10-10 19:43:57] Decode batch, #running-req: 1, #token: 32841, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.05, #queue-req: 0
 [2026-10-10 19:43:58] Decode batch, #running-req: 1, #token: 32881, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.11, #queue-req: 0
@@ -836,55 +836,55 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:44:00] Decode batch, #running-req: 1, #token: 33001, token usage: 0.10, cuda graph: True, gen throughput (token/s): 42.12, #queue-req: 0
 [2026-10-10 19:44:04] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1881.85
 [2026-10-10 19:44:07] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4211.75
-[2026-10-10 19:44:07] INFO:     <droplet-ip>:39904 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:44:07] INFO:     172.17.0.1:39904 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:44:08] Decode batch, #running-req: 1, #token: 32785, token usage: 0.10, cuda graph: True, gen throughput (token/s): 5.35, #queue-req: 0
 [2026-10-10 19:44:09] Decode batch, #running-req: 1, #token: 32825, token usage: 0.10, cuda graph: True, gen throughput (token/s): 41.95, #queue-req: 0
 [2026-10-10 19:44:10] Decode batch, #running-req: 1, #token: 32865, token usage: 0.10, cuda graph: True, gen throughput (token/s): 41.90, #queue-req: 0
 [2026-10-10 19:44:11] Decode batch, #running-req: 1, #token: 32905, token usage: 0.10, cuda graph: True, gen throughput (token/s): 41.87, #queue-req: 0
 [2026-10-10 19:44:12] Decode batch, #running-req: 1, #token: 32945, token usage: 0.10, cuda graph: True, gen throughput (token/s): 41.91, #queue-req: 0
 [2026-10-10 19:44:13] Decode batch, #running-req: 1, #token: 32985, token usage: 0.10, cuda graph: True, gen throughput (token/s): 41.90, #queue-req: 0
-[2026-10-10 19:44:14] INFO:     <droplet-ip>:39904 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:44:14] INFO:     <droplet-ip>:39904 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:44:14] INFO:     172.17.0.1:39904 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:44:14] INFO:     172.17.0.1:39904 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:44:14] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 41.85, #queue-req: 0
-[2026-10-10 19:44:45] INFO:     <droplet-ip>:59708 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:44:45] INFO:     <droplet-ip>:59712 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:44:45] INFO:     <droplet-ip>:59712 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:44:45] INFO:     172.17.0.1:59708 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:44:45] INFO:     172.17.0.1:59712 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:44:45] INFO:     172.17.0.1:59712 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:44:45] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 27.29
-[2026-10-10 19:44:45] INFO:     <droplet-ip>:59712 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:44:45] INFO:     172.17.0.1:59712 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:44:46] Decode batch, #running-req: 1, #token: 1065, token usage: 0.00, cuda graph: True, gen throughput (token/s): 1.24, #queue-req: 0
 [2026-10-10 19:44:46] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 692.22
-[2026-10-10 19:44:46] INFO:     <droplet-ip>:59712 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:44:46] INFO:     172.17.0.1:59712 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:44:47] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 40.90, #queue-req: 0
 [2026-10-10 19:44:48] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 47.75, #queue-req: 0
-[2026-10-10 19:44:48] INFO:     <droplet-ip>:59712 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:44:48] INFO:     <droplet-ip>:59712 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:45:04] INFO:     <droplet-ip>:33102 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:45:04] INFO:     <droplet-ip>:33118 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:45:04] INFO:     <droplet-ip>:33118 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:44:48] INFO:     172.17.0.1:59712 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:44:48] INFO:     172.17.0.1:59712 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:45:04] INFO:     172.17.0.1:33102 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:45:04] INFO:     172.17.0.1:33118 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:45:04] INFO:     172.17.0.1:33118 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:45:07] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 805.89
 [2026-10-10 19:45:11] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.15, #running-req: 0, #queue-req: 6, #pending-token: 0, cuda graph: False, input throughput (token/s): 4202.63
-[2026-10-10 19:45:11] INFO:     <droplet-ip>:33118 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:45:11] INFO:     172.17.0.1:33118 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:45:13] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.20, #running-req: 1, #queue-req: 6, #pending-token: 212992, cuda graph: False, input throughput (token/s): 6506.66
 [2026-10-10 19:45:17] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.25, #running-req: 1, #queue-req: 5, #pending-token: 196608, cuda graph: False, input throughput (token/s): 4187.57
-[2026-10-10 19:45:17] INFO:     <droplet-ip>:33124 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:45:17] INFO:     172.17.0.1:33124 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:45:20] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.30, #running-req: 2, #queue-req: 5, #pending-token: 180224, cuda graph: False, input throughput (token/s): 6485.25
 [2026-10-10 19:45:24] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.35, #running-req: 2, #queue-req: 4, #pending-token: 163840, cuda graph: False, input throughput (token/s): 4242.11
-[2026-10-10 19:45:24] INFO:     <droplet-ip>:33146 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:45:24] INFO:     172.17.0.1:33146 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:45:26] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.40, #running-req: 3, #queue-req: 4, #pending-token: 147456, cuda graph: False, input throughput (token/s): 6496.52
 [2026-10-10 19:45:30] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.45, #running-req: 3, #queue-req: 3, #pending-token: 131072, cuda graph: False, input throughput (token/s): 4227.14
-[2026-10-10 19:45:30] INFO:     <droplet-ip>:33138 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:45:30] INFO:     172.17.0.1:33138 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:45:32] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.50, #running-req: 4, #queue-req: 3, #pending-token: 114688, cuda graph: False, input throughput (token/s): 6484.59
 [2026-10-10 19:45:36] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.55, #running-req: 4, #queue-req: 2, #pending-token: 98304, cuda graph: False, input throughput (token/s): 4218.22
-[2026-10-10 19:45:36] INFO:     <droplet-ip>:33162 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:45:36] INFO:     172.17.0.1:33162 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:45:39] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.60, #running-req: 5, #queue-req: 2, #pending-token: 81920, cuda graph: False, input throughput (token/s): 6483.71
 [2026-10-10 19:45:43] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.65, #running-req: 5, #queue-req: 1, #pending-token: 65536, cuda graph: False, input throughput (token/s): 4215.12
-[2026-10-10 19:45:43] INFO:     <droplet-ip>:33170 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:45:43] INFO:     172.17.0.1:33170 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:45:45] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.70, #running-req: 6, #queue-req: 1, #pending-token: 49152, cuda graph: False, input throughput (token/s): 6485.08
 [2026-10-10 19:45:49] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.75, #running-req: 6, #queue-req: 0, #pending-token: 32768, cuda graph: False, input throughput (token/s): 4219.29
-[2026-10-10 19:45:49] INFO:     <droplet-ip>:33182 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:45:49] INFO:     172.17.0.1:33182 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:45:52] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.80, #running-req: 7, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 6449.63
 [2026-10-10 19:45:56] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.80, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4218.56
-[2026-10-10 19:45:56] INFO:     <droplet-ip>:33196 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:45:56] INFO:     172.17.0.1:33196 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:45:57] Decode batch, #running-req: 8, #token: 262408, token usage: 0.80, cuda graph: True, gen throughput (token/s): 3.81, #queue-req: 0
 [2026-10-10 19:45:59] Decode batch, #running-req: 8, #token: 262728, token usage: 0.80, cuda graph: True, gen throughput (token/s): 187.47, #queue-req: 0
 [2026-10-10 19:46:00] Decode batch, #running-req: 8, #token: 263048, token usage: 0.81, cuda graph: True, gen throughput (token/s): 187.06, #queue-req: 0
@@ -893,34 +893,34 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:46:06] Decode batch, #running-req: 8, #token: 264008, token usage: 0.81, cuda graph: True, gen throughput (token/s): 186.96, #queue-req: 0
 [2026-10-10 19:46:09] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.10, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1206.22
 [2026-10-10 19:46:13] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.15, #running-req: 0, #queue-req: 6, #pending-token: 0, cuda graph: False, input throughput (token/s): 4151.05
-[2026-10-10 19:46:13] INFO:     <droplet-ip>:33118 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:46:13] INFO:     172.17.0.1:33118 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:46:16] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.20, #running-req: 1, #queue-req: 6, #pending-token: 212992, cuda graph: False, input throughput (token/s): 6453.36
 [2026-10-10 19:46:20] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.25, #running-req: 1, #queue-req: 5, #pending-token: 196608, cuda graph: False, input throughput (token/s): 4147.28
-[2026-10-10 19:46:20] INFO:     <droplet-ip>:33162 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:46:20] INFO:     172.17.0.1:33162 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:46:22] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.30, #running-req: 2, #queue-req: 5, #pending-token: 180224, cuda graph: False, input throughput (token/s): 6477.50
 [2026-10-10 19:46:26] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.35, #running-req: 2, #queue-req: 4, #pending-token: 163840, cuda graph: False, input throughput (token/s): 4149.12
-[2026-10-10 19:46:26] INFO:     <droplet-ip>:33170 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:46:26] INFO:     172.17.0.1:33170 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:46:29] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.40, #running-req: 3, #queue-req: 4, #pending-token: 147456, cuda graph: False, input throughput (token/s): 6450.03
 [2026-10-10 19:46:33] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.45, #running-req: 3, #queue-req: 3, #pending-token: 131072, cuda graph: False, input throughput (token/s): 4174.08
-[2026-10-10 19:46:33] INFO:     <droplet-ip>:33124 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:46:33] INFO:     172.17.0.1:33124 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:46:35] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.50, #running-req: 4, #queue-req: 3, #pending-token: 114688, cuda graph: False, input throughput (token/s): 6482.20
 [2026-10-10 19:46:39] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.55, #running-req: 4, #queue-req: 2, #pending-token: 98304, cuda graph: False, input throughput (token/s): 4214.46
-[2026-10-10 19:46:39] INFO:     <droplet-ip>:33146 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:46:39] INFO:     172.17.0.1:33146 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:46:41] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.60, #running-req: 5, #queue-req: 2, #pending-token: 81920, cuda graph: False, input throughput (token/s): 6471.70
 [2026-10-10 19:46:45] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.65, #running-req: 5, #queue-req: 1, #pending-token: 65536, cuda graph: False, input throughput (token/s): 4231.58
-[2026-10-10 19:46:45] INFO:     <droplet-ip>:33138 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:46:45] INFO:     172.17.0.1:33138 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:46:48] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.70, #running-req: 6, #queue-req: 1, #pending-token: 49152, cuda graph: False, input throughput (token/s): 6471.28
 [2026-10-10 19:46:52] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.75, #running-req: 6, #queue-req: 0, #pending-token: 32768, cuda graph: False, input throughput (token/s): 4199.72
-[2026-10-10 19:46:52] INFO:     <droplet-ip>:33182 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:46:52] INFO:     172.17.0.1:33182 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:46:54] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.80, #running-req: 7, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 6499.40
 [2026-10-10 19:46:58] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.80, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 4257.48
-[2026-10-10 19:46:58] INFO:     <droplet-ip>:33196 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:46:58] INFO:     172.17.0.1:33196 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:46:59] Decode batch, #running-req: 8, #token: 262280, token usage: 0.80, cuda graph: True, gen throughput (token/s): 6.00, #queue-req: 0
 [2026-10-10 19:47:01] Decode batch, #running-req: 8, #token: 262600, token usage: 0.80, cuda graph: True, gen throughput (token/s): 187.38, #queue-req: 0
 [2026-10-10 19:47:02] Decode batch, #running-req: 8, #token: 262920, token usage: 0.81, cuda graph: True, gen throughput (token/s): 187.02, #queue-req: 0
 [2026-10-10 19:47:04] Decode batch, #running-req: 8, #token: 263240, token usage: 0.81, cuda graph: True, gen throughput (token/s): 187.32, #queue-req: 0
 [2026-10-10 19:47:06] Decode batch, #running-req: 8, #token: 263560, token usage: 0.81, cuda graph: True, gen throughput (token/s): 186.85, #queue-req: 0
 [2026-10-10 19:47:07] Decode batch, #running-req: 8, #token: 263880, token usage: 0.81, cuda graph: True, gen throughput (token/s): 186.86, #queue-req: 0
-[2026-10-10 19:47:09] INFO:     <droplet-ip>:33118 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:47:09] INFO:     <droplet-ip>:33162 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:47:09] INFO:     172.17.0.1:33118 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:47:09] INFO:     172.17.0.1:33162 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:47:09] Decode batch, #running-req: 8, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 186.64, #queue-req: 0

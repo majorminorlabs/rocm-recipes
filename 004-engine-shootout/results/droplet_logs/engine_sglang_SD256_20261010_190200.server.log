@@ -260,8 +260,8 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] [pid=145 pname=Process-1] start build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/build/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink
 /sgl-workspace/sglang/python/sglang/srt/entrypoints/http_server.py:470: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
   return await original_handler(ORJSONRequest(request.scope, request.receive))
-[2026-10-10 19:05:01] INFO:     <droplet-ip>:55302 - "GET /v1/models HTTP/1.1" 200 OK
-[2026-10-10 19:05:10] INFO:     <droplet-ip>:46032 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-10 19:05:01] INFO:     172.17.0.1:55302 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-10-10 19:05:10] INFO:     172.17.0.1:46032 - "GET /v1/models HTTP/1.1" 200 OK
 [aiter] [pid=145 pname=Process-1] [32mfinish build [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink], cost 111.0s [0m
 [aiter] import [mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink] under /sgl-workspace/aiter/aiter/jit/mha_batch_prefill_bf16_nlogits_nbias_mask_nlse_ndropout_nqscale_nsink.so
 [aiter] type hints mismatch, override to --> mha_batch_prefill(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, cu_seqlens_q: torch.Tensor, kv_indptr: torch.Tensor, kv_page_indices: torch.Tensor, max_seqlen_q: int, max_seqlen_k: int, dropout_p: float, softmax_scale: float, logits_soft_cap: float, zero_tensors: bool, is_causal: bool, window_size_left: int, window_size_right: int, sink_size: int, return_softmax_lse: bool, return_dropout_randval: bool, out: Optional[torch.Tensor] = None, bias: Optional[torch.Tensor] = None, alibi_slopes: Optional[torch.Tensor] = None, q_descale: Optional[torch.Tensor] = None, k_descale: Optional[torch.Tensor] = None, v_descale: Optional[torch.Tensor] = None, kv_block_descale: Optional[torch.Tensor] = None, kv_last_page_lens: Optional[torch.Tensor] = None, block_table: Optional[torch.Tensor] = None, seqlen_k: Optional[torch.Tensor] = None, sink_ptr: Optional[torch.Tensor] = None, gen: Optional[torch.Generator] = None) -> List[torch.Tensor]
@@ -272,9 +272,9 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:06:54] INFO:     127.0.0.1:58030 - "POST /generate HTTP/1.1" 200 OK
 [2026-10-10 19:06:54] INFO:     127.0.0.1:60296 - "POST /freeze_gc HTTP/1.1" 200 OK
 [2026-10-10 19:06:54] The server is fired up and ready to roll!
-[2026-10-10 19:06:59] INFO:     <droplet-ip>:46848 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:07:00] INFO:     <droplet-ip>:46864 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:07:00] INFO:     <droplet-ip>:46864 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:06:59] INFO:     172.17.0.1:46848 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:07:00] INFO:     172.17.0.1:46864 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:00] INFO:     172.17.0.1:46864 - "GET /metrics HTTP/1.1" 404 Not Found
 [aiter] shape is M:1024, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:1024, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:1024, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
@@ -283,17 +283,17 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] run_1stage = False, xbf16 = False, ksplit = 0 q_type = QuantType.No block_m = 128 use_nt = False, estimated_m_per_expert = 64
 [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 1024, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
 [2026-10-10 19:07:00] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 169.70
-[2026-10-10 19:07:00] INFO:     <droplet-ip>:46864 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:07:00] INFO:     172.17.0.1:46864 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:07:00] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 0.33, #queue-req: 0
 [2026-10-10 19:07:00] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2812.43
-[2026-10-10 19:07:00] INFO:     <droplet-ip>:46864 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:07:00] INFO:     172.17.0.1:46864 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:07:00] Decode batch, #running-req: 1, #token: 1033, token usage: 0.00, cuda graph: True, gen throughput (token/s): 159.71, #queue-req: 0
 [2026-10-10 19:07:01] Decode batch, #running-req: 1, #token: 1073, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.98, #queue-req: 0
-[2026-10-10 19:07:01] INFO:     <droplet-ip>:46864 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:07:01] INFO:     <droplet-ip>:46864 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:07:14] INFO:     <droplet-ip>:42444 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:07:14] INFO:     <droplet-ip>:42450 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:07:14] INFO:     <droplet-ip>:42450 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:01] INFO:     172.17.0.1:46864 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:01] INFO:     172.17.0.1:46864 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:14] INFO:     172.17.0.1:42444 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:07:14] INFO:     172.17.0.1:42450 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:14] INFO:     172.17.0.1:42450 - "GET /metrics HTTP/1.1" 404 Not Found
 [aiter] shape is M:16384, N:5120, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:16384, N:2048, K:4096 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [aiter] shape is M:16384, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
@@ -304,33 +304,33 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] [fused_moe] using 2stage default for ('gfx942', 304, 16384, 2048, 768, 128, 8, <ActivationType.Silu: 0>, 'torch.bfloat16', 'torch.bfloat16', 'torch.bfloat16', 'QuantType.No', True, False) 
 [2026-10-10 19:07:15] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1116.70
 [2026-10-10 19:07:16] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 17196.32
-[2026-10-10 19:07:16] INFO:     <droplet-ip>:42450 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:07:16] INFO:     172.17.0.1:42450 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:07:16] Decode batch, #running-req: 1, #token: 32793, token usage: 0.04, cuda graph: True, gen throughput (token/s): 2.57, #queue-req: 0
 [2026-10-10 19:07:16] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cuda graph: True, gen throughput (token/s): 171.53, #queue-req: 0
 [2026-10-10 19:07:17] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 16259.18
 [2026-10-10 19:07:18] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 17162.19
-[2026-10-10 19:07:18] INFO:     <droplet-ip>:42450 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:07:18] INFO:     172.17.0.1:42450 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:07:18] Decode batch, #running-req: 1, #token: 32809, token usage: 0.04, cuda graph: True, gen throughput (token/s): 21.95, #queue-req: 0
-[2026-10-10 19:07:18] INFO:     <droplet-ip>:42450 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:07:18] INFO:     <droplet-ip>:42450 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:07:49] INFO:     <droplet-ip>:60760 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:07:49] INFO:     <droplet-ip>:60776 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:07:49] INFO:     <droplet-ip>:60776 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:18] INFO:     172.17.0.1:42450 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:18] INFO:     172.17.0.1:42450 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:49] INFO:     172.17.0.1:60760 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:07:49] INFO:     172.17.0.1:60776 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:49] INFO:     172.17.0.1:60776 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:07:49] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 33.00
-[2026-10-10 19:07:49] INFO:     <droplet-ip>:60776 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:07:49] INFO:     172.17.0.1:60776 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:07:49] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 1.30, #queue-req: 0
 [2026-10-10 19:07:49] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.94, #queue-req: 0
 [2026-10-10 19:07:49] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2795.34
-[2026-10-10 19:07:49] INFO:     <droplet-ip>:60776 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:07:49] INFO:     172.17.0.1:60776 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:07:49] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 158.44, #queue-req: 0
-[2026-10-10 19:07:50] INFO:     <droplet-ip>:60776 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:07:50] INFO:     <droplet-ip>:60776 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:08:03] INFO:     <droplet-ip>:43700 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:08:03] INFO:     <droplet-ip>:43706 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:08:03] INFO:     <droplet-ip>:43706 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:50] INFO:     172.17.0.1:60776 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:07:50] INFO:     172.17.0.1:60776 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:03] INFO:     172.17.0.1:43700 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:08:03] INFO:     172.17.0.1:43706 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:03] INFO:     172.17.0.1:43706 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:08:04] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 1104.12
 [2026-10-10 19:08:05] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 17209.71
-[2026-10-10 19:08:05] INFO:     <droplet-ip>:43706 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:08:05] INFO:     172.17.0.1:43706 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:08:05] Decode batch, #running-req: 1, #token: 32777, token usage: 0.04, cuda graph: True, gen throughput (token/s): 2.55, #queue-req: 0
 [2026-10-10 19:08:05] Decode batch, #running-req: 1, #token: 32817, token usage: 0.04, cuda graph: True, gen throughput (token/s): 171.31, #queue-req: 0
 [2026-10-10 19:08:06] Decode batch, #running-req: 1, #token: 32857, token usage: 0.04, cuda graph: True, gen throughput (token/s): 171.43, #queue-req: 0
@@ -340,30 +340,30 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:08:07] Decode batch, #running-req: 1, #token: 33017, token usage: 0.04, cuda graph: True, gen throughput (token/s): 171.36, #queue-req: 0
 [2026-10-10 19:08:07] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: False, input throughput (token/s): 7675.68
 [2026-10-10 19:08:08] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 17293.57
-[2026-10-10 19:08:08] INFO:     <droplet-ip>:43706 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:08:08] INFO:     172.17.0.1:43706 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:08:08] Decode batch, #running-req: 1, #token: 32801, token usage: 0.04, cuda graph: True, gen throughput (token/s): 21.95, #queue-req: 0
 [2026-10-10 19:08:09] Decode batch, #running-req: 1, #token: 32841, token usage: 0.04, cuda graph: True, gen throughput (token/s): 171.33, #queue-req: 0
 [2026-10-10 19:08:09] Decode batch, #running-req: 1, #token: 32881, token usage: 0.04, cuda graph: True, gen throughput (token/s): 171.26, #queue-req: 0
 [2026-10-10 19:08:09] Decode batch, #running-req: 1, #token: 32921, token usage: 0.04, cuda graph: True, gen throughput (token/s): 171.29, #queue-req: 0
 [2026-10-10 19:08:09] Decode batch, #running-req: 1, #token: 32961, token usage: 0.04, cuda graph: True, gen throughput (token/s): 171.32, #queue-req: 0
 [2026-10-10 19:08:10] Decode batch, #running-req: 1, #token: 33001, token usage: 0.04, cuda graph: True, gen throughput (token/s): 171.27, #queue-req: 0
-[2026-10-10 19:08:10] INFO:     <droplet-ip>:43706 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:08:10] INFO:     <droplet-ip>:43706 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:08:41] INFO:     <droplet-ip>:55514 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:08:41] INFO:     <droplet-ip>:55516 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:08:41] INFO:     <droplet-ip>:55516 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:10] INFO:     172.17.0.1:43706 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:10] INFO:     172.17.0.1:43706 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:41] INFO:     172.17.0.1:55514 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:08:41] INFO:     172.17.0.1:55516 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:41] INFO:     172.17.0.1:55516 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:08:41] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 31.22
-[2026-10-10 19:08:41] INFO:     <droplet-ip>:55516 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:08:41] INFO:     172.17.0.1:55516 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:08:41] Decode batch, #running-req: 1, #token: 1041, token usage: 0.00, cuda graph: True, gen throughput (token/s): 1.27, #queue-req: 0
 [2026-10-10 19:08:41] Decode batch, #running-req: 1, #token: 1081, token usage: 0.00, cuda graph: True, gen throughput (token/s): 210.98, #queue-req: 0
 [2026-10-10 19:08:41] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 2792.61
-[2026-10-10 19:08:41] INFO:     <droplet-ip>:55516 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:08:41] INFO:     172.17.0.1:55516 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:08:41] Decode batch, #running-req: 1, #token: 1057, token usage: 0.00, cuda graph: True, gen throughput (token/s): 158.11, #queue-req: 0
-[2026-10-10 19:08:42] INFO:     <droplet-ip>:55516 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:08:42] INFO:     <droplet-ip>:55516 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:08:58] INFO:     <droplet-ip>:33934 - "POST /tokenize HTTP/1.1" 200 OK
-[2026-10-10 19:08:59] INFO:     <droplet-ip>:33946 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:08:59] INFO:     <droplet-ip>:33946 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:42] INFO:     172.17.0.1:55516 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:42] INFO:     172.17.0.1:55516 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:58] INFO:     172.17.0.1:33934 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-10-10 19:08:59] INFO:     172.17.0.1:33946 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:08:59] INFO:     172.17.0.1:33946 - "GET /metrics HTTP/1.1" 404 Not Found
 [2026-10-10 19:09:00] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 241664, cuda graph: False, input throughput (token/s): 881.08
 [2026-10-10 19:09:01] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.05, #running-req: 0, #queue-req: 0, #pending-token: 225280, cuda graph: False, input throughput (token/s): 16022.90
 [2026-10-10 19:09:02] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.07, #running-req: 0, #queue-req: 0, #pending-token: 208896, cuda graph: False, input throughput (token/s): 10742.24
@@ -383,7 +383,7 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [aiter] shape is M:12288, N:128, K:2048 dtype='torch.bfloat16' otype='torch.bfloat16' bias=False, scaleAB=False, bpreshuffle=False, not found tuned config in /tmp/aiter_configs/bf16_tuned_gemm.csv, will use default config! using torch solution:0
 [2026-10-10 19:10:00] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.28, #running-req: 0, #queue-req: 0, #pending-token: 12288, cuda graph: False, input throughput (token/s): 2140.61
 [2026-10-10 19:10:07] Prefill batch, #new-seq: 1, #new-token: 12288, #cached-token: 0, token usage: 0.28, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1964.49
-[2026-10-10 19:10:07] INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:10:07] INFO:     172.17.0.1:33946 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:10:07] Decode batch, #running-req: 1, #token: 258057, token usage: 0.28, cuda graph: True, gen throughput (token/s): 0.47, #queue-req: 0
 [2026-10-10 19:10:07] Decode batch, #running-req: 1, #token: 258097, token usage: 0.28, cuda graph: True, gen throughput (token/s): 74.23, #queue-req: 0
 [2026-10-10 19:10:08] Decode batch, #running-req: 1, #token: 258137, token usage: 0.28, cuda graph: True, gen throughput (token/s): 74.23, #queue-req: 0
@@ -407,12 +407,12 @@ failed to execute:/opt/venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/llv
 [2026-10-10 19:11:05] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.27, #running-req: 0, #queue-req: 0, #pending-token: 28672, cuda graph: False, input throughput (token/s): 2294.23
 [2026-10-10 19:11:12] Prefill batch, #new-seq: 1, #new-token: 16384, #cached-token: 0, token usage: 0.28, #running-req: 0, #queue-req: 0, #pending-token: 12288, cuda graph: False, input throughput (token/s): 2137.08
 [2026-10-10 19:11:19] Prefill batch, #new-seq: 1, #new-token: 12288, #cached-token: 0, token usage: 0.28, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1965.59
-[2026-10-10 19:11:19] INFO:     <droplet-ip>:33946 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-10-10 19:11:19] INFO:     172.17.0.1:33946 - "POST /v1/completions HTTP/1.1" 200 OK
 [2026-10-10 19:11:19] Decode batch, #running-req: 1, #token: 258081, token usage: 0.28, cuda graph: True, gen throughput (token/s): 0.58, #queue-req: 0
 [2026-10-10 19:11:19] Decode batch, #running-req: 1, #token: 258121, token usage: 0.28, cuda graph: True, gen throughput (token/s): 74.34, #queue-req: 0
 [2026-10-10 19:11:20] Decode batch, #running-req: 1, #token: 258161, token usage: 0.28, cuda graph: True, gen throughput (token/s): 74.29, #queue-req: 0
 [2026-10-10 19:11:21] Decode batch, #running-req: 1, #token: 258201, token usage: 0.28, cuda graph: True, gen throughput (token/s): 74.39, #queue-req: 0
 [2026-10-10 19:11:21] Decode batch, #running-req: 1, #token: 258241, token usage: 0.28, cuda graph: True, gen throughput (token/s): 74.29, #queue-req: 0
 [2026-10-10 19:11:22] Decode batch, #running-req: 1, #token: 258281, token usage: 0.28, cuda graph: True, gen throughput (token/s): 74.33, #queue-req: 0
-[2026-10-10 19:11:22] INFO:     <droplet-ip>:33946 - "GET /metrics HTTP/1.1" 404 Not Found
-[2026-10-10 19:11:22] INFO:     <droplet-ip>:49284 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:11:22] INFO:     172.17.0.1:33946 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-10-10 19:11:22] INFO:     172.17.0.1:49284 - "GET /metrics HTTP/1.1" 404 Not Found

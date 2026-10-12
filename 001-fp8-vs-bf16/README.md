@@ -57,34 +57,20 @@ Each row is a single run.
 
 ## What broke
 
-- Public and private addresses were assigned to the wrong config fields; correcting the address and droplet ID restored access.
-- SSH refused checksum verification after a transfer; retries failed and work stopped.
-- The scratch filesystem was unmounted; mounting the existing filesystem restored scratch storage.
-- A new SSH host key was unknown; enrolling it restored access.
-- Result sync ran before setup created the remote results directory and failed.
-- Remote setup failed on the unmounted scratch filesystem; mounting it allowed setup to proceed.
-- A readiness probe received a connection reset during server initialization; a later poll succeeded.
-- The BF16 readiness probe received a connection reset; waiting allowed benchmarking to proceed.
-- The gpt-oss readiness probe received connection resets during initialization and graph capture; later polls succeeded.
-- Quality evaluation failed because transformers lacked AutoModelForVision2Seq; retries produced no score.
-- The quality dependency failure left later quality and follow-up steps pending; the session ended with server destruction.
-- A later setup again found scratch storage unmounted; mounting the existing filesystem restored it.
-- Sync on a fresh server failed before setup created the results directory.
-- A Docker image inspection template was invalid; correcting the template recorded the digest.
-- gpt-oss evaluation completed requests but failed while extracting a None response; it was retried.
-- The first gpt-oss retry failed on another None response; one retry remained.
-- The final gpt-oss retry also failed during extraction; the failure was escalated.
-- Readiness probes returned resets or empty replies while models initialized; polling eventually succeeded.
-- A local here-document expanded a literal curl token; the log entry was corrected.
-- A tmux build wrapper created no session or log; running the build command directly succeeded.
-- The deprecated huggingface-cli download command downloaded no GGUF file; the failure was escalated.
-- Repetition-run readiness probes received resets while models loaded; subsequent polls succeeded.
-- Sync checksums matched, but local and remote file counts differed because local results retained earlier sessions.
-- A later SSH check failed host-key verification; refreshing the host-key entry restored access.
-- Sync again ran before setup created the results directory and failed.
-- The final session again found scratch storage unmounted; mounting it allowed setup to proceed.
-- The container image pull took several minutes as planned.
-- Quality evaluation installed dependencies at startup and warned about a missing chat-template option; evaluation completed.
+These are the issues a first-time user of this setup would also encounter:
+
+- **Capacity.** The first attempt to create a single MI300X failed with no capacity. It became available a few hours later.
+- **Scratch disk.** The 5 TB scratch volume came unmounted on every new droplet and had to be mounted by hand (`mount /dev/vdc1 /mnt/scratch`).
+- **Eval tooling.** lm-eval 0.4.9 will not import inside the vLLM ROCm container, because the container's Transformers release removed `AutoModelForVision2Seq`. Running lm-eval in a separate `python:3.12-slim` container fixed it.
+- **Reasoning model scoring.** gpt-oss-120b sometimes returns no final answer when its reasoning uses up the token budget, and lm-eval 0.4.9 crashes on the empty response instead of scoring it. We raised the budget to 8,192 tokens and patched the filter to score empty answers as wrong.
+- **Downloads.** `huggingface-cli` in the container is retired. `hf download` works.
+- **Versioning.** Neither the host image nor the container has `/opt/rocm/.info/version`. See [VERSIONS.md](results/env/VERSIONS.md).
+- **Warmup.** The first benchmark after a server starts showed about twice the time to first token, with throughput within 3%. The benchmark script now runs a warmup first.
+- **Startup probes.** vLLM resets connections while it loads weights and captures graphs, so readiness checks should keep polling instead of treating a reset as a failure.
+
+## Method
+
+See [METHOD.md](METHOD.md) for how the study was designed and run.
 
 ## Reproduce
 

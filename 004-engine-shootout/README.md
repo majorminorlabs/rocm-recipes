@@ -15,13 +15,13 @@ This study serves Qwen3-Coder-30B on one AMD Instinct MI300X with vLLM, SGLang a
 
 ## Folder map
 
-- `PLAN.md`: study protocol and execution record.
+- `METHOD.md`: how the study was designed and run.
 - `scripts/`: server setup, benchmarking, cleanup and result tools.
 - `results/raw/`: per-run output, metadata and logs.
 - `results/summary.csv`: summarized measurements.
 - `results/env/`: environment records.
 - `results/droplet_logs/`: preserved server logs.
-- `notes/`: engine help, environment details and run notes.
+- `notes/`: kernel selection per config, image digests, friction log and session report.
 - `config.env.example`: public configuration template; fill in credentials locally.
 
 ## Reproduce
@@ -32,4 +32,4 @@ Install `doctl`, prepare an SSH key, and obtain an AMD Developer Cloud account. 
 cp config.env.example config.env
 ```
 
-Fill in the private droplet settings in `config.env`, then follow `PLAN.md` and use the scripts in `scripts/` to set up, run and tear down the experiment. The public container digests and llama.cpp commit are pinned in the example configuration.
+Fill in the private droplet settings in `config.env`, then follow `METHOD.md` and use the scripts in `scripts/` to set up, run and tear down the experiment. The public container digests and llama.cpp commit are pinned in the example configuration.
