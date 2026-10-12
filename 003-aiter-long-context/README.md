@@ -16,13 +16,10 @@ At 256K, Config C decoded at 80 tokens per second and Config E at 110. Thirty ha
 
 ## Folder map
 
-- `PLAN.md`, `PLAN-003b.md`: Session 1 and Session 2 run plans.
 - `scripts/`: server setup, benchmarking, retrieval, cleanup and result tools.
 - `results/raw/`: per-run logs, metadata, benchmark output and retrieval results.
 - `results/summary.csv`: summarized measurements.
 - `results/env/`: environment snapshots from both sessions.
-- `notes/`: backend evidence, session reports, friction and source checks.
-- `escalations/`: recorded review escalations.
 - `config.env.example`: public configuration template; fill in credentials locally.
 
 ## Reproduce
@@ -33,4 +30,4 @@ Install `doctl`, prepare an SSH key, and obtain an AMD Developer Cloud account. 
 cp config.env.example config.env
 ```
 
-Fill in the droplet fields in `config.env`, then follow the setup and run order in [PLAN.md](PLAN.md) and [PLAN-003b.md](PLAN-003b.md). The server image is pinned to the public digest in the configuration template. The study used two sessions and 6.9 GPU-hours, or $13.70 at AMD's $1.99/GPU-hour list price.
+Fill in the droplet fields in `config.env`, then use the scripts in `scripts/` to set up, run, and tear down the experiment. The server image is pinned to the public digest in the configuration template. The study used two sessions and 6.9 GPU-hours, or $13.70 at AMD's $1.99/GPU-hour list price.

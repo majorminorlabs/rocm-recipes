@@ -4,12 +4,9 @@ How much context fits on one 192 GB MI300X, how fast does it answer, and can it 
 
 ## Folder map
 
-- [PLAN.md](PLAN.md) and [PLAN-002b.md](PLAN-002b.md): the original protocol and second-session follow-up.
 - [scripts/](scripts/): setup, serving, benchmarking, retrieval, sync, teardown, and summarization commands.
 - [results/](results/): raw measurements, [summary.csv](results/summary.csv), and recorded environment details.
-- [notes/](notes/): session reports, kernel evidence, review notes, and the friction log.
-- [escalations/](escalations/): issues raised during execution.
 
 ## Rerun
 
-Install `doctl`, prepare an SSH key and AMD Developer Cloud access, then copy [config.env.example](config.env.example) to `config.env` and fill in the blank values. Follow [PLAN.md](PLAN.md) for the first session and [PLAN-002b.md](PLAN-002b.md) for the follow-up. The scripts use the configured deadline and teardown commands so the GPU is not left running after the work ends.
+Install `doctl`, prepare an SSH key and AMD Developer Cloud access, then copy [config.env.example](config.env.example) to `config.env` and fill in the blank values. Use the scripts in `scripts/` to set up, run, sync, and tear down the experiment. The scripts use the configured deadline and teardown commands so the GPU is not left running after the work ends.

@@ -57,8 +57,6 @@ Each row is a single run.
 
 ## What broke
 
-See [friction.md](notes/friction.md) for the recorded incidents.
-
 - Public and private addresses were assigned to the wrong config fields; correcting the address and droplet ID restored access.
 - SSH refused checksum verification after a transfer; retries failed and work stopped.
 - The scratch filesystem was unmounted; mounting the existing filesystem restored scratch storage.
