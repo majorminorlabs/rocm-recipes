@@ -1,0 +1,11 @@
+004-engine-shootout/results/raw/L3H/prompts-32768.json
+005-performance-autopsy/results/droplet_logs/p16_prompt_build.log
+005-performance-autopsy/results/droplet_logs/p16_prompt_build_attempt2.exit
+005-performance-autopsy/results/droplet_logs/p16_prompt_build_attempt2.log
+005-performance-autopsy/results/prompts/prompts_manifest.json
+005-performance-autopsy/results/prompts/w1-c1.jsonl
+005-performance-autopsy/results/prompts/w1-c16.jsonl
+005-performance-autopsy/results/prompts/w1-c4.jsonl
+005-performance-autopsy/results/prompts/w1-c8-r2.jsonl
+005-performance-autopsy/results/prompts/w1-c8.jsonl
+005-performance-autopsy/scripts/make_code_prompts.py

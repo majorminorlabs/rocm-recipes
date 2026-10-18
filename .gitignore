@@ -14,3 +14,11 @@ SOCIAL*.md
 **/escalations/
 __pycache__/
 *.pyc
+
+# Keep operational publication material out of research commits.
+SOCIAL/
+_internal/
+*HANDOFF*
+*PROMPT*
+*SOCIAL-DRAFTS*
+responses/
