@@ -1,6 +1,6 @@
 # ROCm Recipes
 
-Reproducible inference tests on AMD Instinct GPUs, by MAJOR//MINOR.
+I run reproducible inference tests on AMD Instinct GPUs and publish the write-ups in [ROCm Recipes](https://majorminor.xyz/research/rocm-recipes).
 
 Each folder is one study: the reproduction scripts, raw results, environment records, and a summary of findings.
 
