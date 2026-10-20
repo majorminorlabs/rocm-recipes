@@ -1,0 +1,1768 @@
+{
+  "schema_version": 1,
+  "tag": "tasks-v1",
+  "decision": "D68",
+  "decided_by": "Dippo",
+  "decision_date": "2026-10-15",
+  "phase": 3,
+  "status": "complete",
+  "count": 30,
+  "frozen": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C06",
+    "C09",
+    "C10",
+    "C11",
+    "C13",
+    "C14",
+    "C16",
+    "C18",
+    "C19",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "C26",
+    "C28",
+    "C29",
+    "C30",
+    "C32",
+    "C33",
+    "C35",
+    "C38",
+    "C39",
+    "C40",
+    "C42",
+    "C43",
+    "C45"
+  ],
+  "eligible_spares": [
+    "C17",
+    "C27",
+    "C36",
+    "C41"
+  ],
+  "ineligible": [
+    "C07"
+  ],
+  "platform": "linux/arm64",
+  "validation": "Each frozen task: three ordinary parent failures and three reference passes; focused upstream regressions, not full upstream suites.",
+  "prompt_suffix": "When you are finished, end your final message with exactly one line:\nSTATUS: DONE\nor\nSTATUS: INCOMPLETE - <one sentence on what is left>",
+  "checksums": "tasks/CHECKSUMS",
+  "checksum_algorithm": "SHA-256",
+  "checksum_paths_relative_to": "repository root",
+  "checksum_scope": "All frozen task files, their recipes, used dependency locks/image records/Dockerfiles and parent-image records, preparation scripts and this manifest; excludes CHECKSUMS itself.",
+  "executable_files": [
+    "tasks/c01/parent/werpy/metrics.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/build/lib.linux-aarch64-cpython-311/meeteval/wer/matching/cy_greedy_combination_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/build/lib.linux-aarch64-cpython-311/meeteval/wer/matching/cy_levenshtein.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/build/lib.linux-aarch64-cpython-311/meeteval/wer/matching/cy_mimo_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/build/lib.linux-aarch64-cpython-311/meeteval/wer/matching/cy_orc_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/build/lib.linux-aarch64-cpython-311/meeteval/wer/matching/cy_time_constrained_mimo_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/build/lib.linux-aarch64-cpython-311/meeteval/wer/matching/cy_time_constrained_orc_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/meeteval/wer/matching/cy_greedy_combination_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/meeteval/wer/matching/cy_levenshtein.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/meeteval/wer/matching/cy_mimo_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/meeteval/wer/matching/cy_orc_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/meeteval/wer/matching/cy_time_constrained_mimo_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c06/parent/meeteval/wer/matching/cy_time_constrained_orc_matching.cpython-311-aarch64-linux-gnu.so",
+    "tasks/c09/parent/bin/tokenx.mjs",
+    "tasks/c10/parent/bin/tokenx.mjs",
+    "tasks/c11/parent/bin/tokenx.mjs",
+    "tasks/c13/parent/docs/logos/create_all_logos.sh",
+    "tasks/c14/parent/docs/logos/create_all_logos.sh",
+    "tasks/c16/parent/docs/logos/create_all_logos.sh",
+    "tasks/c18/parent/docs/logos/create_all_logos.sh",
+    "tasks/c19/parent/docs/logos/create_all_logos.sh",
+    "tasks/c22/parent/.devcontainer/library-scripts/common-debian.sh",
+    "tasks/c22/parent/tools/circleci_dependencies.sh",
+    "tasks/c22/parent/tools/fold.sh",
+    "tasks/c22/parent/tools/github_actions_download.sh",
+    "tasks/c22/parent/tools/setup_xvfb.sh",
+    "tasks/c23/parent/.devcontainer/library-scripts/common-debian.sh",
+    "tasks/c23/parent/tools/circleci_dependencies.sh",
+    "tasks/c23/parent/tools/fold.sh",
+    "tasks/c23/parent/tools/get_dataset_versions.sh",
+    "tasks/c23/parent/tools/github_actions_download.sh",
+    "tasks/c24/parent/.devcontainer/library-scripts/common-debian.sh",
+    "tasks/c24/parent/tools/circleci_dependencies.sh",
+    "tasks/c24/parent/tools/fold.sh",
+    "tasks/c24/parent/tools/get_dataset_versions.sh",
+    "tasks/c24/parent/tools/github_actions_download.sh",
+    "tasks/c28/parent/action_files/clean_nbs",
+    "tasks/c28/parent/action_files/lint",
+    "tasks/c28/parent/action_files/nbdev_test",
+    "tasks/c28/parent/action_files/remove_logs_cells",
+    "tasks/c29/parent/action_files/clean_nbs",
+    "tasks/c29/parent/action_files/lint",
+    "tasks/c29/parent/action_files/nbdev_test",
+    "tasks/c29/parent/action_files/remove_logs_cells",
+    "tasks/c30/parent/action_files/clean_nbs",
+    "tasks/c30/parent/action_files/lint",
+    "tasks/c30/parent/action_files/nbdev_test",
+    "tasks/c30/parent/action_files/remove_logs_cells",
+    "tasks/c32/parent/action_files/clean_nbs",
+    "tasks/c32/parent/action_files/lint",
+    "tasks/c32/parent/action_files/nbdev_test",
+    "tasks/c32/parent/action_files/remove_logs_cells",
+    "tasks/c33/parent/action_files/clean_nbs",
+    "tasks/c33/parent/action_files/lint",
+    "tasks/c33/parent/action_files/nbdev_test",
+    "tasks/c33/parent/action_files/remove_logs_cells",
+    "tasks/c35/parent/docs/source/_static/logo.svg",
+    "tasks/c35/parent/src/pymovements/gaze/_utils/_parsing.py",
+    "tasks/c38/parent/docs/source/_static/logo.svg",
+    "tasks/c38/parent/src/pymovements/gaze/_utils/_parsing.py",
+    "tasks/c39/parent/docs/source/_static/logo.svg",
+    "tasks/c39/parent/src/pymovements/gaze/_utils/_parsing.py",
+    "tasks/c40/parent/docs/source/_static/logo.svg",
+    "tasks/c40/parent/src/pymovements/gaze/_utils/_parsing.py",
+    "tasks/c42/parent/docs/source/_static/logo.svg",
+    "tasks/c42/parent/src/pymovements/gaze/_utils/_parsing.py"
+  ],
+  "review_limits": "tasks/G2-REVIEW.md",
+  "training_cutoffs": [
+    {
+      "config_id": "opencode-qwen35-4b-mlx-local",
+      "trainingCutoff": null,
+      "older_candidates": [],
+      "unknown_candidates": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C06",
+        "C09",
+        "C10",
+        "C11",
+        "C13",
+        "C14",
+        "C16",
+        "C18",
+        "C19",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C28",
+        "C29",
+        "C30",
+        "C32",
+        "C33",
+        "C35",
+        "C38",
+        "C39",
+        "C40",
+        "C42",
+        "C43",
+        "C45"
+      ]
+    },
+    {
+      "config_id": "codex-luna-subscription-smoke",
+      "trainingCutoff": null,
+      "older_candidates": [],
+      "unknown_candidates": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C06",
+        "C09",
+        "C10",
+        "C11",
+        "C13",
+        "C14",
+        "C16",
+        "C18",
+        "C19",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C28",
+        "C29",
+        "C30",
+        "C32",
+        "C33",
+        "C35",
+        "C38",
+        "C39",
+        "C40",
+        "C42",
+        "C43",
+        "C45"
+      ]
+    },
+    {
+      "config_id": "claude-sonnet5-subscription-smoke",
+      "trainingCutoff": null,
+      "older_candidates": [],
+      "unknown_candidates": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C06",
+        "C09",
+        "C10",
+        "C11",
+        "C13",
+        "C14",
+        "C16",
+        "C18",
+        "C19",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C28",
+        "C29",
+        "C30",
+        "C32",
+        "C33",
+        "C35",
+        "C38",
+        "C39",
+        "C40",
+        "C42",
+        "C43",
+        "C45"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "candidate": "C01",
+      "id": "c01",
+      "digest": "c230aa82074307fade7912bf4ebfd04b0f1790f64511452aefb68b69842cae64",
+      "repo": "analyticsinmotion/werpy",
+      "commit": "111e8c3c1576965658ee694f490d5523d1f04490",
+      "upstream_author_handle": "rossarmstrong",
+      "dependency_image": {
+        "id": "sha256:03e259b6671afcd3b6deccd46b67157d23778f7ae4fc75b5d2852406dffeb3d9",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/scientific-headers.lock.json",
+        "lockHash": "879e86dc5671d9bca13e48cfb821aa9e221d42aa630dbe92324c3e8786f2f8c8"
+      },
+      "validation_evidence": "data/task-validations/c01-Jyitth",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C01",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "rossarmstrong",
+        "repo": "analyticsinmotion/werpy",
+        "license": "BSD-3-Clause",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "bd7b46a4cde4453b3d6f78c606bc08f498f703e5bb5f512ff5e8ccea8b7bc016"
+        },
+        "parent": "9fd5da1dc60d8af2b3821bd5b07bac63b16c77bf",
+        "commit": "111e8c3c1576965658ee694f490d5523d1f04490",
+        "commitDate": "2026-09-05T00:42:54.000Z",
+        "authorDate": "2026-09-05T00:42:54.000Z",
+        "commitUrl": "https://github.com/analyticsinmotion/werpy/commit/111e8c3c1576965658ee694f490d5523d1f04490",
+        "recipeHash": "c50813832d774a1f65b378ece1c5636f68e2fe79700d2351640d622430361ebc",
+        "apiSnapshotHash": "4fec03be59c754885f34c80b05ab5c30912ae6390835b4a3351ceb55f62a696c",
+        "patchHash": "ff0547f56acc59069303b09ab597694849cf39f55e10b56c3887793e722761f3",
+        "productionPaths": [
+          "werpy/errorhandler.py",
+          "werpy/summary.py",
+          "werpy/summaryp.py",
+          "werpy/wer.py",
+          "werpy/werp.py",
+          "werpy/werps.py",
+          "werpy/wers.py"
+        ],
+        "testPaths": [
+          "tests/test_errorhandler.py",
+          "tests/test_summary.py",
+          "tests/test_summaryp.py",
+          "tests/test_wer.py",
+          "tests/test_werp.py",
+          "tests/test_werps.py",
+          "tests/test_wers.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C02",
+      "id": "c02",
+      "digest": "8914bbe85400cd09d667cc0f80aa5fae7927918bdaabbe3ef8d17d738e69527f",
+      "repo": "Borewit/strtok3",
+      "commit": "99872f9e03a44e4929ffc306827f344fa567f967",
+      "upstream_author_handle": "Borewit",
+      "dependency_image": {
+        "id": "sha256:1e66e0425113aa594da7baa7787f7ec0b00b8211a03de90651ee13556e4dc5f2",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/strtok3.lock.json",
+        "lockHash": "aa45b1f0a83e8446919d632334db30eb292b17e94e30c1ea9b8f771cc1077130"
+      },
+      "validation_evidence": "data/task-validations/c02-wfjlBp",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C02",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "Borewit",
+        "repo": "Borewit/strtok3",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "c33959fabde25a1b6161d8e0fdc6fdcea1fc48095fe0bd51043247bfd214287f"
+        },
+        "parent": "d0ae1a212635d51e0f9b79561ea93d622620ee9a",
+        "commit": "99872f9e03a44e4929ffc306827f344fa567f967",
+        "commitDate": "2026-10-11T11:59:46.000Z",
+        "authorDate": "2026-10-10T13:15:05.000Z",
+        "commitUrl": "https://github.com/Borewit/strtok3/commit/99872f9e03a44e4929ffc306827f344fa567f967",
+        "recipeHash": "9fb09db66b382866ef5c6e0c43ead036501f9475585b0fbf1c254006c5808fd1",
+        "apiSnapshotHash": "08e28ccb92c10b22d96967095e569c186757a09a94905e34b14f3b50b1705383",
+        "patchHash": "b5a234e9828978be133c8c60a5d86c06f0415f88bbe1258110d8833bc6830e2b",
+        "productionPaths": [
+          "lib/AbstractTokenizer.ts",
+          "lib/BlobTokenizer.ts",
+          "lib/BufferSizeError.ts",
+          "lib/BufferTokenizer.ts",
+          "lib/FileTokenizer.ts",
+          "lib/ReadStreamTokenizer.ts",
+          "lib/core.ts",
+          "lib/types.ts"
+        ],
+        "testPaths": [
+          "test/test-buffer-limits.ts"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C03",
+      "id": "c03",
+      "digest": "e9afdf670002850f39490c6de78251a0126b35677a4fd7a7e58aea2c43069a12",
+      "repo": "Borewit/strtok3",
+      "commit": "1644cf62476c5009be9a5189013b65d170579809",
+      "upstream_author_handle": "Borewit",
+      "dependency_image": {
+        "id": "sha256:1e66e0425113aa594da7baa7787f7ec0b00b8211a03de90651ee13556e4dc5f2",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/strtok3.lock.json",
+        "lockHash": "aa45b1f0a83e8446919d632334db30eb292b17e94e30c1ea9b8f771cc1077130"
+      },
+      "validation_evidence": "data/task-validations/c03-6PDevR",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C03",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "Borewit",
+        "repo": "Borewit/strtok3",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "c33959fabde25a1b6161d8e0fdc6fdcea1fc48095fe0bd51043247bfd214287f"
+        },
+        "parent": "cc1f01679cf206a2086f1fd8770d568a879e5aeb",
+        "commit": "1644cf62476c5009be9a5189013b65d170579809",
+        "commitDate": "2026-10-11T12:53:15.000Z",
+        "authorDate": "2026-10-11T12:11:38.000Z",
+        "commitUrl": "https://github.com/Borewit/strtok3/commit/1644cf62476c5009be9a5189013b65d170579809",
+        "recipeHash": "77ba329356055746387a2a952ba470ba1fb854ce53e555d72543f441a8660c42",
+        "apiSnapshotHash": "a47115f03456b0349d458188a6a2be524682faa1d5f05092935569c724a95a01",
+        "patchHash": "5940d1b064b1698bd8536488fe175d74d1d8cbf14ec24326c0adf98f4f038afd",
+        "productionPaths": [
+          "lib/stream/StreamReader.ts"
+        ],
+        "testPaths": [
+          "test/test.ts"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C04",
+      "id": "c04",
+      "digest": "d6e47223e4d73e76cf265068d42ed81f563550c6ca61b6dbf96e1105294a20d0",
+      "repo": "Borewit/strtok3",
+      "commit": "581b3c8f68363c501573b1c652c33589d8b2af9b",
+      "upstream_author_handle": "Borewit",
+      "dependency_image": {
+        "id": "sha256:1e66e0425113aa594da7baa7787f7ec0b00b8211a03de90651ee13556e4dc5f2",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/strtok3.lock.json",
+        "lockHash": "aa45b1f0a83e8446919d632334db30eb292b17e94e30c1ea9b8f771cc1077130"
+      },
+      "validation_evidence": "data/task-validations/c04-DBCJCK",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C04",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "Borewit",
+        "repo": "Borewit/strtok3",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "c33959fabde25a1b6161d8e0fdc6fdcea1fc48095fe0bd51043247bfd214287f"
+        },
+        "parent": "b15c237238dfcff4b0ffa0a332b718ae7e76d90f",
+        "commit": "581b3c8f68363c501573b1c652c33589d8b2af9b",
+        "commitDate": "2026-10-12T16:57:02.000Z",
+        "authorDate": "2026-10-12T16:48:46.000Z",
+        "commitUrl": "https://github.com/Borewit/strtok3/commit/581b3c8f68363c501573b1c652c33589d8b2af9b",
+        "recipeHash": "41b5ff4553be1e5f80c0a930c2b6eb4abeb87345104b81a3dbf9813e6da88cc7",
+        "apiSnapshotHash": "eeaafd0e184d93c3f871dd2f97e69e9f7abca47b8f838b098f69335dd5c083dd",
+        "patchHash": "eab049aec54440daa25c8fe326c57c05c1076a74f5e083c6a72c341f0b28cb21",
+        "productionPaths": [
+          "lib/stream/StreamReader.ts"
+        ],
+        "testPaths": [
+          "test/test.ts"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C06",
+      "id": "c06",
+      "digest": "54f927b2be9990606a7eff7d3cb0a552922271574e7a0e6c25ab014e2c24408b",
+      "repo": "fgnt/meeteval",
+      "commit": "0e289dbf54cfbc5e156c0dc3e433f38d57ae48ad",
+      "upstream_author_handle": "antonsoo",
+      "dependency_image": {
+        "id": "sha256:03e259b6671afcd3b6deccd46b67157d23778f7ae4fc75b5d2852406dffeb3d9",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/scientific-headers.lock.json",
+        "lockHash": "879e86dc5671d9bca13e48cfb821aa9e221d42aa630dbe92324c3e8786f2f8c8"
+      },
+      "validation_evidence": "data/task-validations/c06-O4RjfH",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C06",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "antonsoo",
+        "repo": "fgnt/meeteval",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "5515c2bdda551fa20d771e99ab31deebbb4f9626bef6f6c25f26125c964fd34c"
+        },
+        "parent": "6e3dc81284f2d6928f7ef9e620fd3b6906daa429",
+        "commit": "0e289dbf54cfbc5e156c0dc3e433f38d57ae48ad",
+        "commitDate": "2026-10-10T07:29:46.000Z",
+        "authorDate": "2026-10-08T11:00:13.000Z",
+        "commitUrl": "https://github.com/fgnt/meeteval/commit/0e289dbf54cfbc5e156c0dc3e433f38d57ae48ad",
+        "recipeHash": "8a2938cfb01bdc6ff778b3786b1dc324f99b6702aab918138927c57d66d52c70",
+        "apiSnapshotHash": "6376242f74bb6b5c135c9b293e843c9fefbab66f4403821361b537b2bead620f",
+        "patchHash": "e36566c92b628e47cbb889465bc3f62909f788f3db749bf2f2256b859238bc67",
+        "productionPaths": [
+          "meeteval/wer/__main__.py"
+        ],
+        "testPaths": [
+          "tests/test_cli.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C09",
+      "id": "c09",
+      "digest": "84a517256cb6c5790a2b995d07de35e1f5e883a39ef73c6063f749148935bc77",
+      "repo": "johannschopplich/tokenx",
+      "commit": "8ee6026eb37574daed5481138410225231804df9",
+      "upstream_author_handle": "johannschopplich",
+      "dependency_image": {
+        "id": "sha256:ea470bbfa5b37a5f7e02e8da519ccd79d8554319ec9cc1ea2145190bb037122b",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/tokenx.lock.json",
+        "lockHash": "02ad6838a970f11987ce4ca61a67b4aef872fdf9afa128f759f289d264beba20"
+      },
+      "validation_evidence": "data/task-validations/c09-d26xGU",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C09",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "johannschopplich",
+        "repo": "johannschopplich/tokenx",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "4a57080b8ecdb3a53ec678828121849ce5df877a99b1ad8d50e165d8a2aded1b"
+        },
+        "parent": "a845ed77f866e8e53f4836ca3c20d5c9a7c017fa",
+        "commit": "8ee6026eb37574daed5481138410225231804df9",
+        "commitDate": "2026-09-02T08:17:54.000Z",
+        "authorDate": "2026-09-02T08:17:54.000Z",
+        "commitUrl": "https://github.com/johannschopplich/tokenx/commit/8ee6026eb37574daed5481138410225231804df9",
+        "recipeHash": "0ac7cf883bc9bdc9d5b3148a602893f5133095c7ab26afdfdd589de82c51a85d",
+        "apiSnapshotHash": "a073ced0896f5f634b2a4f239fe52d43dcb24da2fcea733607fb656b1d4be5bd",
+        "patchHash": "3ec4a6d7eea8fa5f18ecc93134cf4d1d958b8fd87133e0b6a6577e775e96f7e0",
+        "productionPaths": [
+          "src/cli/errors.ts",
+          "src/cli/index.ts"
+        ],
+        "testPaths": [
+          "test/errors.test.ts"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C10",
+      "id": "c10",
+      "digest": "a2b4e739570186d3110562a4f4427a05835de6c3c61dfeb705d3a3be8c4e35da",
+      "repo": "johannschopplich/tokenx",
+      "commit": "6891786f07522a99040aae7c3c8ab3372cb35a5d",
+      "upstream_author_handle": "johannschopplich",
+      "dependency_image": {
+        "id": "sha256:fbb7e466c9b6299138f3e521883fd0b78f6fa8a489059687066660b99fbb746a",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/tokenx2.lock.json",
+        "lockHash": "2d9c854465e91a4ca9b0c728c3170cb56e4716a8cc442dd24d4df49656fea918"
+      },
+      "validation_evidence": "data/task-validations/c10-Q93f40",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C10",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "johannschopplich",
+        "repo": "johannschopplich/tokenx",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "4a57080b8ecdb3a53ec678828121849ce5df877a99b1ad8d50e165d8a2aded1b"
+        },
+        "parent": "05a52b941539ddea456d5ca9a8744e685dd43b69",
+        "commit": "6891786f07522a99040aae7c3c8ab3372cb35a5d",
+        "commitDate": "2026-10-07T11:47:46.000Z",
+        "authorDate": "2026-10-07T08:16:13.000Z",
+        "commitUrl": "https://github.com/johannschopplich/tokenx/commit/6891786f07522a99040aae7c3c8ab3372cb35a5d",
+        "recipeHash": "26bf70f05507d05a45254e5e75db3d41b78b9e2b44149b160053f5bf31aee550",
+        "apiSnapshotHash": "81e6d52058879d41378f57981a2e7675b674d9b37a3391698e46444bf76c15e6",
+        "patchHash": "05ad298f1d15ec793cafaef009ea3127153dcda0fe0977bf954e613340900657",
+        "productionPaths": [
+          "src/cli/index.ts",
+          "src/cli/input.ts"
+        ],
+        "testPaths": [
+          "test/cli.test.ts"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C11",
+      "id": "c11",
+      "digest": "ac0973ad175972da9a35d9805f71133ce376eb93ddf3bcbc8706c6ecb2313332",
+      "repo": "johannschopplich/tokenx",
+      "commit": "e317547f17ac737877a034c8e5027219b5f6b60d",
+      "upstream_author_handle": "johannschopplich",
+      "dependency_image": {
+        "id": "sha256:fbb7e466c9b6299138f3e521883fd0b78f6fa8a489059687066660b99fbb746a",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/tokenx2.lock.json",
+        "lockHash": "2d9c854465e91a4ca9b0c728c3170cb56e4716a8cc442dd24d4df49656fea918"
+      },
+      "validation_evidence": "data/task-validations/c11-fZn4qG",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C11",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "johannschopplich",
+        "repo": "johannschopplich/tokenx",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "4a57080b8ecdb3a53ec678828121849ce5df877a99b1ad8d50e165d8a2aded1b"
+        },
+        "parent": "6891786f07522a99040aae7c3c8ab3372cb35a5d",
+        "commit": "e317547f17ac737877a034c8e5027219b5f6b60d",
+        "commitDate": "2026-10-07T11:47:46.000Z",
+        "authorDate": "2026-10-07T08:16:16.000Z",
+        "commitUrl": "https://github.com/johannschopplich/tokenx/commit/e317547f17ac737877a034c8e5027219b5f6b60d",
+        "recipeHash": "3a03363c5d80286e5b19c8e988440691918568e3f4a4781cc70143d6859961d9",
+        "apiSnapshotHash": "92dbdb22e1055bda01d347978d9fe5dacfef8ac23bbcc31ea9c5153f5f4683af",
+        "patchHash": "1760aa2bafc1dbfdda521dd6a5a24d1c57068dd789058cbf4ce7a74db0430722",
+        "productionPaths": [
+          "src/cli/input.ts"
+        ],
+        "testPaths": [
+          "test/cli.test.ts"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C13",
+      "id": "c13",
+      "digest": "92201bb2d12b8f6651b246605777849cc6e5e78736f0159414145278404018a5",
+      "repo": "mad-lab-fau/tpcp",
+      "commit": "ba60a27dd17ee671b956898963169b67366084ba",
+      "upstream_author_handle": "AKuederle",
+      "dependency_image": {
+        "id": "sha256:5eaf5806d55e4fbf37cfd1a927e14712dd957a50a061eaf8290941b6eb647d5a",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/tpcp2.lock.json",
+        "lockHash": "cf06314121a952bb921f0ae221954ae8f3d8b22fca65baabbffed9f3f577b247"
+      },
+      "validation_evidence": "data/task-validations/c13-U8xKNC",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C13",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "AKuederle",
+        "repo": "mad-lab-fau/tpcp",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "82a15e1f046d7d11cd5aa602a5b051078b811fb2776ddbaf14c67a3ee6084203"
+        },
+        "parent": "8d5a574da529f7a986f99c860895c0f947f6e407",
+        "commit": "ba60a27dd17ee671b956898963169b67366084ba",
+        "commitDate": "2026-09-28T10:03:41.000Z",
+        "authorDate": "2026-09-28T09:50:45.000Z",
+        "commitUrl": "https://github.com/mad-lab-fau/tpcp/commit/ba60a27dd17ee671b956898963169b67366084ba",
+        "recipeHash": "1c426a3010246eb75f06e4df21cee985fead686aa19c4bfb6860cdcc44683d6d",
+        "apiSnapshotHash": "bd3c2a8ec21c687bc8177f717576f3f8c559dad5d4665c06df081f6316faca2b",
+        "patchHash": "33a7c406bda33893d12ee99ea47d7082e00cdf48d43ff3bf7967dc34e9ef1511",
+        "productionPaths": [
+          "src/tpcp/testing/_algorithm_test_mixin.py"
+        ],
+        "testPaths": [
+          "tests/test_algorithm_test_mixin.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C14",
+      "id": "c14",
+      "digest": "be12324193c7f08993f403b6db17094e9242422bdeda0b7852cf5bbc5ce3c6d9",
+      "repo": "mad-lab-fau/tpcp",
+      "commit": "5146d54cf58fdc0b60704b683efd315aac1ace49",
+      "upstream_author_handle": "AKuederle",
+      "dependency_image": {
+        "id": "sha256:b0d193c31ec8bf515ab5ef41b1b621999582af2487a8fbe7ed29d88f1335d0fe",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/tpcp3.lock.json",
+        "lockHash": "44bfc1c545df21de11d1a13955e01ecded85915db223d466abe3258c221c27b3"
+      },
+      "validation_evidence": "data/task-validations/c14-IUnupV",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C14",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "AKuederle",
+        "repo": "mad-lab-fau/tpcp",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "82a15e1f046d7d11cd5aa602a5b051078b811fb2776ddbaf14c67a3ee6084203"
+        },
+        "parent": "e71d90b9439d35c57c6cb3e91e8e2056b3947218",
+        "commit": "5146d54cf58fdc0b60704b683efd315aac1ace49",
+        "commitDate": "2026-09-28T11:27:20.000Z",
+        "authorDate": "2026-09-28T10:55:52.000Z",
+        "commitUrl": "https://github.com/mad-lab-fau/tpcp/commit/5146d54cf58fdc0b60704b683efd315aac1ace49",
+        "recipeHash": "73c3223ee58f7df8472b955cb53b660e1af15de483c787abbda8372a1566ee52",
+        "apiSnapshotHash": "32acd43684c31eca4c4dc4050e6f9a1b1c8bd461ad7f988f9ed3aeb53f7e6da8",
+        "patchHash": "d961238273efe07b2130ce5ce8445c076343cda8bc905348515bae7dda1169b1",
+        "productionPaths": [
+          "src/tpcp/_dataset.py"
+        ],
+        "testPaths": [
+          "tests/test_dataset.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C16",
+      "id": "c16",
+      "digest": "a4f735fd42eea1cc46410cb3bdb10124b378e79fffd90162b83e964702f24e91",
+      "repo": "mad-lab-fau/tpcp",
+      "commit": "d9ac2e6c7489bc034394935cb795c1514ff5b8ce",
+      "upstream_author_handle": "AKuederle",
+      "dependency_image": {
+        "id": "sha256:b0d193c31ec8bf515ab5ef41b1b621999582af2487a8fbe7ed29d88f1335d0fe",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/tpcp3.lock.json",
+        "lockHash": "44bfc1c545df21de11d1a13955e01ecded85915db223d466abe3258c221c27b3"
+      },
+      "validation_evidence": "data/task-validations/c16-endH4M",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C16",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "AKuederle",
+        "repo": "mad-lab-fau/tpcp",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "82a15e1f046d7d11cd5aa602a5b051078b811fb2776ddbaf14c67a3ee6084203"
+        },
+        "parent": "1a9707a5ea17702a1b5c646faea49e8a53564933",
+        "commit": "d9ac2e6c7489bc034394935cb795c1514ff5b8ce",
+        "commitDate": "2026-09-28T11:55:54.000Z",
+        "authorDate": "2026-09-28T11:41:19.000Z",
+        "commitUrl": "https://github.com/mad-lab-fau/tpcp/commit/d9ac2e6c7489bc034394935cb795c1514ff5b8ce",
+        "recipeHash": "1ff84d8c243c681780414eedf90b3fe02f50e4729df89e0eee0e19e9dae44a62",
+        "apiSnapshotHash": "c9746acfa3e05b691e34ed7274ce4398abbc5bd690b2527ee03dbaf2b8f2dbd7",
+        "patchHash": "2a481cf895cc9214dc4de6549b77250330a460e8cf111a4db80ed7a3bfe119f6",
+        "productionPaths": [
+          "src/tpcp/optimize/_optimize.py"
+        ],
+        "testPaths": [
+          "tests/test_pipelines/test_optimize.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C18",
+      "id": "c18",
+      "digest": "c96003d20ac859bb937107a7a1397a2f571b96d31fb33b5e32c0577c4d0bccad",
+      "repo": "mad-lab-fau/tpcp",
+      "commit": "78a4695446572bbcaa2c68ea24a05abdb1c519fe",
+      "upstream_author_handle": "AKuederle",
+      "dependency_image": {
+        "id": "sha256:b0d193c31ec8bf515ab5ef41b1b621999582af2487a8fbe7ed29d88f1335d0fe",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/tpcp3.lock.json",
+        "lockHash": "44bfc1c545df21de11d1a13955e01ecded85915db223d466abe3258c221c27b3"
+      },
+      "validation_evidence": "data/task-validations/c18-PBR5pJ",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C18",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "AKuederle",
+        "repo": "mad-lab-fau/tpcp",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "82a15e1f046d7d11cd5aa602a5b051078b811fb2776ddbaf14c67a3ee6084203"
+        },
+        "parent": "5e72ffaf7619a26ce6aa1038f9cf9e82ebe23c5c",
+        "commit": "78a4695446572bbcaa2c68ea24a05abdb1c519fe",
+        "commitDate": "2026-09-28T12:11:36.000Z",
+        "authorDate": "2026-09-28T11:56:36.000Z",
+        "commitUrl": "https://github.com/mad-lab-fau/tpcp/commit/78a4695446572bbcaa2c68ea24a05abdb1c519fe",
+        "recipeHash": "026236572bb3abf217b16ba9ef7bc526567718346bb4954ccb932c9413279387",
+        "apiSnapshotHash": "4e1ffb763d47280b07014ee5fdc7799723a353304a0e372c339656ffa9aae585",
+        "patchHash": "ca1070f0902c167b06f6ba0916a0d57f5c4be223caab9b5a5dc9614dc749d9ef",
+        "productionPaths": [
+          "src/tpcp/validate/_scorer.py"
+        ],
+        "testPaths": [
+          "tests/test_pipelines/test_scorer.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C19",
+      "id": "c19",
+      "digest": "6bf933e8703d9a2f4c1c375076312284d7854eb33b87bee2d67de67042511164",
+      "repo": "mad-lab-fau/tpcp",
+      "commit": "13c40c73bb73c8c317e9d090896f19f69bffc054",
+      "upstream_author_handle": "AKuederle",
+      "dependency_image": {
+        "id": "sha256:b0d193c31ec8bf515ab5ef41b1b621999582af2487a8fbe7ed29d88f1335d0fe",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/tpcp3.lock.json",
+        "lockHash": "44bfc1c545df21de11d1a13955e01ecded85915db223d466abe3258c221c27b3"
+      },
+      "validation_evidence": "data/task-validations/c19-LadN5p",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C19",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "AKuederle",
+        "repo": "mad-lab-fau/tpcp",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "82a15e1f046d7d11cd5aa602a5b051078b811fb2776ddbaf14c67a3ee6084203"
+        },
+        "parent": "724fe2800f2dfcf7b21b04adb9dfd35ecad3b980",
+        "commit": "13c40c73bb73c8c317e9d090896f19f69bffc054",
+        "commitDate": "2026-09-28T15:00:40.000Z",
+        "authorDate": "2026-09-28T14:53:56.000Z",
+        "commitUrl": "https://github.com/mad-lab-fau/tpcp/commit/13c40c73bb73c8c317e9d090896f19f69bffc054",
+        "recipeHash": "d8f25af9e577bac3e00f0ba809432cb1844120d6b43d327e8bd7ad4bb5c8a043",
+        "apiSnapshotHash": "f7ddf4066b22abbfc1a28e616f4f06fa737c21319d9a5a3aba6eedf2080de289",
+        "patchHash": "1a72cbab073db489dc64aea48c2c14e23a32a0d16663f2754989934dc908f434",
+        "productionPaths": [
+          "src/tpcp/validate/_composed_splitters.py",
+          "src/tpcp/validate/_cross_val_helper.py"
+        ],
+        "testPaths": [
+          "tests/test_pipelines/test_splitters.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C22",
+      "id": "c22",
+      "digest": "fa14c8169fcb422b4448c049bf6017fea38524b94312818e0e45e6e4a687b400",
+      "repo": "mne-tools/mne-nirs",
+      "commit": "1bbc9519c955c153375e2bd23a0e706d254a85cd",
+      "upstream_author_handle": "kalomak",
+      "dependency_image": {
+        "id": "sha256:e76cb68a5eab75500c8769ba0163b3809e6c296db852abfae53e5d8eb51ff8d0",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/mne.lock.json",
+        "lockHash": "74810263783028469cbcf14bf3fcc62047ead620e592b08bd79ec2596164a73b"
+      },
+      "validation_evidence": "data/task-validations/c22-c2dEv4",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C22",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "kalomak",
+        "repo": "mne-tools/mne-nirs",
+        "license": "BSD-3-Clause",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "cacbab4a5cd9be56ba6c07979f4ef5a4188293d6c029e762addcae929f60f6bc"
+        },
+        "parent": "4a66a23e7fa8af4a1aa144363cde662c172b4267",
+        "commit": "1bbc9519c955c153375e2bd23a0e706d254a85cd",
+        "commitDate": "2026-09-22T14:16:33.000Z",
+        "authorDate": "2026-09-22T14:16:33.000Z",
+        "commitUrl": "https://github.com/mne-tools/mne-nirs/commit/1bbc9519c955c153375e2bd23a0e706d254a85cd",
+        "recipeHash": "cff1ee5893862947424d86db14a0b5f52c300b1b603452308df59ebff973f367",
+        "apiSnapshotHash": "638c1d4a39168935dec00a6bb7c524a84a7c0d5ef35f21903eef03e35343bafa",
+        "patchHash": "3cef4120eb962dc056859a121bd9cedc61821ee4f4086a99f883cb24dcd7cb1d",
+        "productionPaths": [
+          "mne_nirs/preprocessing/_peak_power.py",
+          "mne_nirs/preprocessing/_scalp_coupling_segmented.py",
+          "mne_nirs/visualisation/_plot_quality_metrics.py"
+        ],
+        "testPaths": [
+          "mne_nirs/preprocessing/tests/test_quality.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/mne-tools/mne-nirs/pull/719",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C23",
+      "id": "c23",
+      "digest": "8df7eb7041c6afc84f2d49d2461bc45c1cb48fd8723920d1fc410b82e8dc09f4",
+      "repo": "mne-tools/mne-nirs",
+      "commit": "830557684c4960352fbe2cbaebb1ca31b27cfea5",
+      "upstream_author_handle": "kalomak",
+      "dependency_image": {
+        "id": "sha256:e76cb68a5eab75500c8769ba0163b3809e6c296db852abfae53e5d8eb51ff8d0",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/mne.lock.json",
+        "lockHash": "74810263783028469cbcf14bf3fcc62047ead620e592b08bd79ec2596164a73b"
+      },
+      "validation_evidence": "data/task-validations/c23-AObQIX",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C23",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "kalomak",
+        "repo": "mne-tools/mne-nirs",
+        "license": "BSD-3-Clause",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "cacbab4a5cd9be56ba6c07979f4ef5a4188293d6c029e762addcae929f60f6bc"
+        },
+        "parent": "6fc3739bb25d64bdf7e1133e8e61d8aa0565e3d4",
+        "commit": "830557684c4960352fbe2cbaebb1ca31b27cfea5",
+        "commitDate": "2026-10-10T00:53:16.000Z",
+        "authorDate": "2026-10-10T00:53:16.000Z",
+        "commitUrl": "https://github.com/mne-tools/mne-nirs/commit/830557684c4960352fbe2cbaebb1ca31b27cfea5",
+        "recipeHash": "3bc45ea31bc40185c42775d95bb80209af3ff062611635042901aa4ea891fc6b",
+        "apiSnapshotHash": "d7323afc18885f2a9f60e1634d3aab19630da48bc8b35ea3522b27c0657ef464",
+        "patchHash": "782b92158de6ebf7186c85383317c0fe0bc891b8f76d5973cd082365642775ec",
+        "productionPaths": [
+          "mne_nirs/preprocessing/_peak_power.py",
+          "mne_nirs/preprocessing/_scalp_coupling_segmented.py"
+        ],
+        "testPaths": [
+          "mne_nirs/preprocessing/tests/test_quality.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/mne-tools/mne-nirs/pull/728",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C24",
+      "id": "c24",
+      "digest": "eb278191e42361cc706eb9af796c2901d664dde7ca3fee39d2f2a3799b99b518",
+      "repo": "mne-tools/mne-nirs",
+      "commit": "8872606cd4d5d22046dfaed063e6be6717970687",
+      "upstream_author_handle": "kalomak",
+      "dependency_image": {
+        "id": "sha256:e76cb68a5eab75500c8769ba0163b3809e6c296db852abfae53e5d8eb51ff8d0",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/mne.lock.json",
+        "lockHash": "74810263783028469cbcf14bf3fcc62047ead620e592b08bd79ec2596164a73b"
+      },
+      "validation_evidence": "data/task-validations/c24-qpwc5T",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C24",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "kalomak",
+        "repo": "mne-tools/mne-nirs",
+        "license": "BSD-3-Clause",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "cacbab4a5cd9be56ba6c07979f4ef5a4188293d6c029e762addcae929f60f6bc"
+        },
+        "parent": "830557684c4960352fbe2cbaebb1ca31b27cfea5",
+        "commit": "8872606cd4d5d22046dfaed063e6be6717970687",
+        "commitDate": "2026-10-10T01:04:35.000Z",
+        "authorDate": "2026-10-10T01:04:35.000Z",
+        "commitUrl": "https://github.com/mne-tools/mne-nirs/commit/8872606cd4d5d22046dfaed063e6be6717970687",
+        "recipeHash": "f27e6cac92a23bb6d10287afee27b8ab496917207b72d5335aeda38b618986a6",
+        "apiSnapshotHash": "355663db08d9e0b5d5d1a39d2fedf70169709cc68b9ac85259e21d0bd99834bf",
+        "patchHash": "62e48e1e39207b5c54a13e4fb23fc05c01970ca00408e7a5554a6757f20f4bfc",
+        "productionPaths": [
+          "mne_nirs/preprocessing/_peak_power.py",
+          "mne_nirs/preprocessing/_scalp_coupling_segmented.py"
+        ],
+        "testPaths": [
+          "mne_nirs/preprocessing/tests/test_quality.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/mne-tools/mne-nirs/pull/727",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C25",
+      "id": "c25",
+      "digest": "f5c2234227476a47974e3de0b66b8033ba1955ba6a484ef9c01154b0e980b91b",
+      "repo": "niieani/gpt-tokenizer",
+      "commit": "a3205e40393243808d237303321774aff35b3112",
+      "upstream_author_handle": "OsamaAnsar",
+      "dependency_image": {
+        "id": "sha256:cee1807c9eaca4597e69319e5475e1d889869f9d8affd0b6fb1ba14bf919a2c5",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/gpt-tokenizer2.lock.json",
+        "lockHash": "9d070be8b1435651508dab014939211ba5f17efc8a92e28151709c5cc11fe7cf"
+      },
+      "validation_evidence": "data/task-validations/c25-TfrhwC",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C25",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "OsamaAnsar",
+        "repo": "niieani/gpt-tokenizer",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "55c0b09ede96ed11bd312d90b200d74807cad56415cb491a76364e6a537d3b92"
+        },
+        "parent": "51df02dda28c20798d35e5670e209cb05aa5207b",
+        "commit": "a3205e40393243808d237303321774aff35b3112",
+        "commitDate": "2026-10-15T01:08:52.000Z",
+        "authorDate": "2026-10-15T01:08:52.000Z",
+        "commitUrl": "https://github.com/niieani/gpt-tokenizer/commit/a3205e40393243808d237303321774aff35b3112",
+        "recipeHash": "72feb3cba6413f4879e4bde0c6e9d463f5b4015105171f7911ab0280f5b21c12",
+        "apiSnapshotHash": "65a68edfa29d60fca5af8cfe113168b4212f778ab5c68901c6b79bfcb23f08df",
+        "patchHash": "8e8dfd7a4dc82084ed78089f9f16bcdf443bb86f32ffb9516b01cb64c8d86dbe",
+        "productionPaths": [
+          "src/BytePairEncodingCore.ts",
+          "src/encodingParams/constants.ts",
+          "src/utfUtil.ts"
+        ],
+        "testPaths": [
+          "src/unicodeWhiteSpace.test.ts"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/niieani/gpt-tokenizer/pull/91",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C26",
+      "id": "c26",
+      "digest": "71fb9175d2ac34f8dbd7733f82b8e9e0cdb99d89e9b2998af879228103f0ffcb",
+      "repo": "niieani/gpt-tokenizer",
+      "commit": "08fb752961d9f337d57b131d7aa24ab4ce7f05be",
+      "upstream_author_handle": "OsamaAnsar",
+      "dependency_image": {
+        "id": "sha256:cee1807c9eaca4597e69319e5475e1d889869f9d8affd0b6fb1ba14bf919a2c5",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/gpt-tokenizer2.lock.json",
+        "lockHash": "9d070be8b1435651508dab014939211ba5f17efc8a92e28151709c5cc11fe7cf"
+      },
+      "validation_evidence": "data/task-validations/c26-zgKJm8",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C26",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "OsamaAnsar",
+        "repo": "niieani/gpt-tokenizer",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "55c0b09ede96ed11bd312d90b200d74807cad56415cb491a76364e6a537d3b92"
+        },
+        "parent": "a3205e40393243808d237303321774aff35b3112",
+        "commit": "08fb752961d9f337d57b131d7aa24ab4ce7f05be",
+        "commitDate": "2026-10-15T01:11:46.000Z",
+        "authorDate": "2026-10-15T01:11:46.000Z",
+        "commitUrl": "https://github.com/niieani/gpt-tokenizer/commit/08fb752961d9f337d57b131d7aa24ab4ce7f05be",
+        "recipeHash": "1fc313bb0f8322f5abd1874c5b74aaa4223197ac1c25000fd7b90e4dbc24df28",
+        "apiSnapshotHash": "aa3c987ab490867f434b29d63afe60d119550a58e3910ca622131cc604089925",
+        "patchHash": "ae7b32b576fa2aa618f253c5ec7adc68ead5e1b3f9eef9aade58a28ba3d05838",
+        "productionPaths": [
+          "src/BytePairEncodingCore.ts"
+        ],
+        "testPaths": [
+          "src/specialTokensPlacement.test.ts"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/niieani/gpt-tokenizer/pull/90",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C28",
+      "id": "c28",
+      "digest": "e4d94ba15cbf88a67fd1f10c7dbc753c9394cdf6c398716ee6db9277192eb14c",
+      "repo": "Nixtla/utilsforecast",
+      "commit": "570c918116a8e8042b53a37837b192cea03e3581",
+      "upstream_author_handle": "janrth",
+      "dependency_image": {
+        "id": "sha256:40692fcd64e4efe241fd7caf2d27ecb30a8f6a736f0adb416a6f2140e8715dfa",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/scientific3.lock.json",
+        "lockHash": "3d480710f454657cce909b041f88938ad6706529964780b8db2ad2fd64bf2a40"
+      },
+      "validation_evidence": "data/task-validations/c28-0bVrkQ",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C28",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "janrth",
+        "repo": "Nixtla/utilsforecast",
+        "license": "Apache-2.0",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "c55f31a0de1538bd2ec3d5fc452b3620cb83fd2b3f6bdc806ed18d781599c27c"
+        },
+        "parent": "012aee478867f0f7652f70c77da8173ded4f859b",
+        "commit": "570c918116a8e8042b53a37837b192cea03e3581",
+        "commitDate": "2026-08-31T20:31:23.000Z",
+        "authorDate": "2026-08-31T20:31:23.000Z",
+        "commitUrl": "https://github.com/Nixtla/utilsforecast/commit/570c918116a8e8042b53a37837b192cea03e3581",
+        "recipeHash": "feaf956a737877fab87c14e64b0166d2ed36e72dee6d0bf950e08a4999873d52",
+        "apiSnapshotHash": "bea5c8037cd4bcd12cb33b25f46dfa5454b5454bcc096c95377dca478a1d8204",
+        "patchHash": "494d16c4463974859b5dac5962d6c1a1044537ed3607add775fcda3f64777a8f",
+        "productionPaths": [
+          "utilsforecast/data.py"
+        ],
+        "testPaths": [
+          "tests/test_data.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/Nixtla/utilsforecast/pull/273",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C29",
+      "id": "c29",
+      "digest": "99a7c7d9379ae16af65782ffc59c3b050e3a7c106a0f2b67f9a55c89cd0d1f40",
+      "repo": "Nixtla/utilsforecast",
+      "commit": "07aed5f20dcd37286a64077221186f8c094b25ba",
+      "upstream_author_handle": "nasaul",
+      "dependency_image": {
+        "id": "sha256:40692fcd64e4efe241fd7caf2d27ecb30a8f6a736f0adb416a6f2140e8715dfa",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/scientific3.lock.json",
+        "lockHash": "3d480710f454657cce909b041f88938ad6706529964780b8db2ad2fd64bf2a40"
+      },
+      "validation_evidence": "data/task-validations/c29-SatArx",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C29",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "nasaul",
+        "repo": "Nixtla/utilsforecast",
+        "license": "Apache-2.0",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "c55f31a0de1538bd2ec3d5fc452b3620cb83fd2b3f6bdc806ed18d781599c27c"
+        },
+        "parent": "d426534251121920deb11bd8e21485bc08fd67bf",
+        "commit": "07aed5f20dcd37286a64077221186f8c094b25ba",
+        "commitDate": "2026-09-22T12:41:02.000Z",
+        "authorDate": "2026-09-22T12:41:02.000Z",
+        "commitUrl": "https://github.com/Nixtla/utilsforecast/commit/07aed5f20dcd37286a64077221186f8c094b25ba",
+        "recipeHash": "82055b2dfe668d0c454b417821c3d2bdf343759ad9dbaaf65bf41f46a0c82080",
+        "apiSnapshotHash": "a4812ff057e0ccc9d4315899fd83f9e62c8bc120c7b1f812a7e8482b514c3b75",
+        "patchHash": "651d604486beef7573bc58694099740ae845da92bc7326b6fc03d058b0a89aff",
+        "productionPaths": [
+          "utilsforecast/losses.py"
+        ],
+        "testPaths": [
+          "tests/test_losses.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/Nixtla/utilsforecast/pull/279",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C30",
+      "id": "c30",
+      "digest": "3384edd107489c9ab33d9c08bc34e4a369816403591aebb3ec5bba1c0794ced3",
+      "repo": "Nixtla/utilsforecast",
+      "commit": "1eb61011196754c206bb0a17a6e1130573336768",
+      "upstream_author_handle": "vgvr0",
+      "dependency_image": {
+        "id": "sha256:40692fcd64e4efe241fd7caf2d27ecb30a8f6a736f0adb416a6f2140e8715dfa",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/scientific3.lock.json",
+        "lockHash": "3d480710f454657cce909b041f88938ad6706529964780b8db2ad2fd64bf2a40"
+      },
+      "validation_evidence": "data/task-validations/c30-DObEtg",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C30",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "vgvr0",
+        "repo": "Nixtla/utilsforecast",
+        "license": "Apache-2.0",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "c55f31a0de1538bd2ec3d5fc452b3620cb83fd2b3f6bdc806ed18d781599c27c"
+        },
+        "parent": "fa82e74e6cbddf37f52d7b33ff07ca497c251a63",
+        "commit": "1eb61011196754c206bb0a17a6e1130573336768",
+        "commitDate": "2026-10-02T23:19:39.000Z",
+        "authorDate": "2026-10-02T23:19:39.000Z",
+        "commitUrl": "https://github.com/Nixtla/utilsforecast/commit/1eb61011196754c206bb0a17a6e1130573336768",
+        "recipeHash": "4a9376618fe27a7c78089d30b0849cf1cc9c0a94523cd55cfdc3445473e98b44",
+        "apiSnapshotHash": "265efb08573d5f74dff992858c8de42a0f159c8c3edd15b5192f918b02b1711b",
+        "patchHash": "b9adf9c8cfade851f93dbd0520c22835f198e2e9bb806ebcd1e538cb5b8f9337",
+        "productionPaths": [
+          "utilsforecast/losses.py"
+        ],
+        "testPaths": [
+          "tests/test_losses.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/Nixtla/utilsforecast/pull/286",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C32",
+      "id": "c32",
+      "digest": "b33d379cbaf3439074e4a36b6943456332ae4ee116e1ef90b91009f3d00242d4",
+      "repo": "Nixtla/utilsforecast",
+      "commit": "64708bdf9b37918ada7acd54f203a7765bd84591",
+      "upstream_author_handle": "Blizzeq",
+      "dependency_image": {
+        "id": "sha256:40692fcd64e4efe241fd7caf2d27ecb30a8f6a736f0adb416a6f2140e8715dfa",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/scientific3.lock.json",
+        "lockHash": "3d480710f454657cce909b041f88938ad6706529964780b8db2ad2fd64bf2a40"
+      },
+      "validation_evidence": "data/task-validations/c32-WN73hm",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C32",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "Blizzeq",
+        "repo": "Nixtla/utilsforecast",
+        "license": "Apache-2.0",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "c55f31a0de1538bd2ec3d5fc452b3620cb83fd2b3f6bdc806ed18d781599c27c"
+        },
+        "parent": "af3971ece39e5b6fa361cd9ba0c29fa9465b4324",
+        "commit": "64708bdf9b37918ada7acd54f203a7765bd84591",
+        "commitDate": "2026-10-05T22:33:41.000Z",
+        "authorDate": "2026-10-05T22:33:41.000Z",
+        "commitUrl": "https://github.com/Nixtla/utilsforecast/commit/64708bdf9b37918ada7acd54f203a7765bd84591",
+        "recipeHash": "f593aa4cb05a6f5caefed2d914eb22cfa18d128cc07dbb368c241c7c059cdc2b",
+        "apiSnapshotHash": "f7cdc1aad1755db1c00b9599d3af6b9d120fa943cda3da5b507253b30f8ea0a3",
+        "patchHash": "af2f32466c2abcbbe76ef6f7daf3739cdba8793da73aa24b563c27a619cc08fe",
+        "productionPaths": [
+          "utilsforecast/feature_engineering.py"
+        ],
+        "testPaths": [
+          "tests/test_feature_engineering.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/Nixtla/utilsforecast/pull/291",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C33",
+      "id": "c33",
+      "digest": "56f423bcd5f473c4aedfac187b6559296cd9fa8e40189e77fbf107b9a498ba7c",
+      "repo": "Nixtla/utilsforecast",
+      "commit": "54fde8c790235157d7ee86110e352aae05170936",
+      "upstream_author_handle": "Blizzeq",
+      "dependency_image": {
+        "id": "sha256:40692fcd64e4efe241fd7caf2d27ecb30a8f6a736f0adb416a6f2140e8715dfa",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/scientific3.lock.json",
+        "lockHash": "3d480710f454657cce909b041f88938ad6706529964780b8db2ad2fd64bf2a40"
+      },
+      "validation_evidence": "data/task-validations/c33-I7Pdf2",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C33",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "Blizzeq",
+        "repo": "Nixtla/utilsforecast",
+        "license": "Apache-2.0",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "c55f31a0de1538bd2ec3d5fc452b3620cb83fd2b3f6bdc806ed18d781599c27c"
+        },
+        "parent": "dfd1c4c4cf803d140fdab3df2f0429fb9e2574f6",
+        "commit": "54fde8c790235157d7ee86110e352aae05170936",
+        "commitDate": "2026-10-09T21:28:22.000Z",
+        "authorDate": "2026-10-09T21:28:22.000Z",
+        "commitUrl": "https://github.com/Nixtla/utilsforecast/commit/54fde8c790235157d7ee86110e352aae05170936",
+        "recipeHash": "8ef5d699b853b96aaf034fede01b1f33ec3c66f62a83aee1efd4cd8aa99b6d08",
+        "apiSnapshotHash": "b409530b9a78c5d97569681bb66fa221af4ff8c3d07f4f81e70ddbf9526c0462",
+        "patchHash": "84fe85368a37ee6bf3b3733507d33cde61c75180914505ba8c9dae41b1befb87",
+        "productionPaths": [
+          "utilsforecast/feature_engineering.py"
+        ],
+        "testPaths": [
+          "tests/test_feature_engineering.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/Nixtla/utilsforecast/pull/296",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C35",
+      "id": "c35",
+      "digest": "bd02c0bbfb7b0ea46d92503ce3837c1555547c8286a194af867b6a8357995861",
+      "repo": "pymovements/pymovements",
+      "commit": "91c1262f50bf19c524a091974f4f31d2ff232051",
+      "upstream_author_handle": "Sanjays2402",
+      "dependency_image": {
+        "id": "sha256:c2183d34305080182b5331238735dc6067736d557686c16db6f41681999946da",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/pymovements.lock.json",
+        "lockHash": "fda0e09f47fe8e67221366fac74725030f51e1898253ef659428f3505b146461"
+      },
+      "validation_evidence": "data/task-validations/c35-5K9h4n",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C35",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "Sanjays2402",
+        "repo": "pymovements/pymovements",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "33b56ec9775a9064f0d5b7faa991037c3ec14437bf945cd8b17382efbd7ee396"
+        },
+        "parent": "3ed71cad5707f44d2c06b7df504724297afdbcdd",
+        "commit": "91c1262f50bf19c524a091974f4f31d2ff232051",
+        "commitDate": "2026-08-17T09:02:28.000Z",
+        "authorDate": "2026-08-17T09:02:28.000Z",
+        "commitUrl": "https://github.com/pymovements/pymovements/commit/91c1262f50bf19c524a091974f4f31d2ff232051",
+        "recipeHash": "1ed61eefc231bd5cfa1205457d72265ecfc68737549ea2a8810a7bd9c9d5c93d",
+        "apiSnapshotHash": "5a08324c8f1d112311228717deb389afd57d0c36543203526f198267678ba220",
+        "patchHash": "b236a528f12853b72870b3d8cef7a94c0abbf51ac7acd60f608720c28faec251",
+        "productionPaths": [
+          "src/pymovements/dataset/_utils/_archives.py"
+        ],
+        "testPaths": [
+          "tests/unit/dataset/_utils/_archives_test.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/pymovements/pymovements/pull/1653",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C38",
+      "id": "c38",
+      "digest": "8dae4d32144f41524f49ef5b4e6587d790b557cab8fa25068b65a311aeccd547",
+      "repo": "pymovements/pymovements",
+      "commit": "67a701fe0f6690f37c1c1c17a94f2f06e0dbbff1",
+      "upstream_author_handle": "saeub",
+      "dependency_image": {
+        "id": "sha256:c2183d34305080182b5331238735dc6067736d557686c16db6f41681999946da",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/pymovements.lock.json",
+        "lockHash": "fda0e09f47fe8e67221366fac74725030f51e1898253ef659428f3505b146461"
+      },
+      "validation_evidence": "data/task-validations/c38-qQRndm",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C38",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "saeub",
+        "repo": "pymovements/pymovements",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "33b56ec9775a9064f0d5b7faa991037c3ec14437bf945cd8b17382efbd7ee396"
+        },
+        "parent": "9939fd2a24931b65c8b81aea50341be667f54d57",
+        "commit": "67a701fe0f6690f37c1c1c17a94f2f06e0dbbff1",
+        "commitDate": "2026-08-25T17:22:54.000Z",
+        "authorDate": "2026-08-25T17:22:54.000Z",
+        "commitUrl": "https://github.com/pymovements/pymovements/commit/67a701fe0f6690f37c1c1c17a94f2f06e0dbbff1",
+        "recipeHash": "5a388a12b1b27ac5acdc37e1c54ce7292a03f9dc1d5b5489315bd6c85c210a7b",
+        "apiSnapshotHash": "d2d356926b52a8434ddbf1609f220cb0de365d39ab7942410b3e1c45874b7d4d",
+        "patchHash": "69af0cc950f5f4cced3f2ac1798516cfd1ee84f438f64c87fd4ca396ca65beb2",
+        "productionPaths": [
+          "src/pymovements/_utils/_column_nesting.py",
+          "src/pymovements/events/events.py",
+          "src/pymovements/gaze/_utils/_column_nesting.py",
+          "src/pymovements/gaze/gaze.py",
+          "src/pymovements/plotting/tsplot.py"
+        ],
+        "testPaths": [
+          "tests/unit/events/events_test.py",
+          "tests/unit/gaze/gaze_unnest_test.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/pymovements/pymovements/pull/1689",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C39",
+      "id": "c39",
+      "digest": "f2fbfe895235d20ef7e2f986c72f2d356bf48a7d085c37745711c6c85a531c44",
+      "repo": "pymovements/pymovements",
+      "commit": "79173ebb7c1ccd9fcd9d340b636697e0a1a04896",
+      "upstream_author_handle": "saeub",
+      "dependency_image": {
+        "id": "sha256:c2183d34305080182b5331238735dc6067736d557686c16db6f41681999946da",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/pymovements.lock.json",
+        "lockHash": "fda0e09f47fe8e67221366fac74725030f51e1898253ef659428f3505b146461"
+      },
+      "validation_evidence": "data/task-validations/c39-T3FEXT",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C39",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "saeub",
+        "repo": "pymovements/pymovements",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "33b56ec9775a9064f0d5b7faa991037c3ec14437bf945cd8b17382efbd7ee396"
+        },
+        "parent": "67a701fe0f6690f37c1c1c17a94f2f06e0dbbff1",
+        "commit": "79173ebb7c1ccd9fcd9d340b636697e0a1a04896",
+        "commitDate": "2026-08-25T18:05:10.000Z",
+        "authorDate": "2026-08-25T18:05:10.000Z",
+        "commitUrl": "https://github.com/pymovements/pymovements/commit/79173ebb7c1ccd9fcd9d340b636697e0a1a04896",
+        "recipeHash": "293d4ed9b1695376cbb63d9437a902951dd5698e4ee5c25e2c87355a3c8ec84a",
+        "apiSnapshotHash": "c4561a4296a7eb69db37e0bfe2dbf1fd873f621a51b24516a92b52c76ae1807f",
+        "patchHash": "daa86267e266865bb000030e941d319be80223f714c29fdc36af17dd26363155",
+        "productionPaths": [
+          "src/pymovements/gaze/_utils/_parsing_eyelink.py",
+          "src/pymovements/gaze/io.py"
+        ],
+        "testPaths": [
+          "tests/unit/gaze/_utils/_parsing_eyelink_test.py",
+          "tests/unit/gaze/io/asc_test.py",
+          "tests/unit/gaze/io/csv_test.py",
+          "tests/unit/gaze/io/ipc_test.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/pymovements/pymovements/pull/1687",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C40",
+      "id": "c40",
+      "digest": "a050d01604c9068386ae3b3e63e4940452ef713c37588006ea122f70aa417b3c",
+      "repo": "pymovements/pymovements",
+      "commit": "4fd7b165dc723366f7e45d7b2960ec2b19e1efd1",
+      "upstream_author_handle": "othersideofthelake",
+      "dependency_image": {
+        "id": "sha256:c2183d34305080182b5331238735dc6067736d557686c16db6f41681999946da",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/pymovements.lock.json",
+        "lockHash": "fda0e09f47fe8e67221366fac74725030f51e1898253ef659428f3505b146461"
+      },
+      "validation_evidence": "data/task-validations/c40-rkYQzM",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C40",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "othersideofthelake",
+        "repo": "pymovements/pymovements",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "33b56ec9775a9064f0d5b7faa991037c3ec14437bf945cd8b17382efbd7ee396"
+        },
+        "parent": "5854fe6fcb13c785ad5336a71585ddc2f2af5628",
+        "commit": "4fd7b165dc723366f7e45d7b2960ec2b19e1efd1",
+        "commitDate": "2026-08-26T11:47:10.000Z",
+        "authorDate": "2026-08-26T11:47:10.000Z",
+        "commitUrl": "https://github.com/pymovements/pymovements/commit/4fd7b165dc723366f7e45d7b2960ec2b19e1efd1",
+        "recipeHash": "f700f370951962510c6f80e3f915eae8cc8eefd241acd5386f4a6d7d7b181c5e",
+        "apiSnapshotHash": "d00556eaea42776e5338acd6102f0b4b34d87fa8a61ec59b0f9c7ab8cf733eb3",
+        "patchHash": "681313a343e74b07e298c0075ea4774587e086de102e29aaa58f0e38be76d3c7",
+        "productionPaths": [
+          "src/pymovements/measure/reading/processing.py"
+        ],
+        "testPaths": [
+          "tests/unit/dataset/measure_reading_test.py",
+          "tests/unit/measure/reading/processing_test.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/pymovements/pymovements/pull/1666",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C42",
+      "id": "c42",
+      "digest": "6c3520e36db8a3d4c2b611c047fd2d2c811fad653fcbb395b776d6316c47c44d",
+      "repo": "pymovements/pymovements",
+      "commit": "fe333f3afa862ae3fc7056047a1a929798cfe18b",
+      "upstream_author_handle": "cbueth",
+      "dependency_image": {
+        "id": "sha256:43385bf349a877c7aabb4306c4f80cff30e6d7d74b4bd9249c41a1b50a2f9579",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/pymovements2.lock.json",
+        "lockHash": "7883259520c16cad59b621f8862c88a14d6c5325476929df13a7c0e89fa9639c"
+      },
+      "validation_evidence": "data/task-validations/c42-BObPsu",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C42",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "cbueth",
+        "repo": "pymovements/pymovements",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "33b56ec9775a9064f0d5b7faa991037c3ec14437bf945cd8b17382efbd7ee396"
+        },
+        "parent": "2167ad82ad12ea3fe4abd0240b6b4a4bbd8b46c2",
+        "commit": "fe333f3afa862ae3fc7056047a1a929798cfe18b",
+        "commitDate": "2026-09-08T10:12:24.000Z",
+        "authorDate": "2026-09-08T10:12:24.000Z",
+        "commitUrl": "https://github.com/pymovements/pymovements/commit/fe333f3afa862ae3fc7056047a1a929798cfe18b",
+        "recipeHash": "1a2636f4808b8edf60a3d9501667125793075094d41bc8dd305eda187ce12fcb",
+        "apiSnapshotHash": "f75185bac833898a9131aa1b6dea67e864672bfe868d60a1e0a5df97aa2c4a0b",
+        "patchHash": "3e5f1dac68ccfee9c0d35dc108375e7897b93707b4689badbc470e5d20a35519",
+        "productionPaths": [
+          "src/pymovements/gaze/gaze.py",
+          "src/pymovements/transforms/segmentation.py"
+        ],
+        "testPaths": [
+          "tests/functional/data_loss_measures_test.py",
+          "tests/unit/measure/samples/measures/event_ratio_test.py",
+          "tests/unit/transforms/segmentation_test.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/pymovements/pymovements/pull/1713",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C43",
+      "id": "c43",
+      "digest": "a380d743bbb56ba907716a029ac4ca7c4da84c7323065b577c5b1b59276dc0ef",
+      "repo": "pysal/esda",
+      "commit": "6030b722dbd4ac006a93ce9835948396de2e039a",
+      "upstream_author_handle": "madhavcodez",
+      "dependency_image": {
+        "id": "sha256:b29055eb70b919030d805f707be6e5ad52903f45af80502c86484c348451ad01",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/esda.lock.json",
+        "lockHash": "b8d3241074705fd3584b449d8d912532968e04150c20009c081abe88de943750"
+      },
+      "validation_evidence": "data/task-validations/c43-umR63L",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C43",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "madhavcodez",
+        "repo": "pysal/esda",
+        "license": "BSD-3-Clause",
+        "licenseFile": {
+          "path": "LICENSE.txt",
+          "sha256": "b5f17b86e14ff6648be9c7ce217ae9934f6f17ddf60fa5315f4998ab83297d6b"
+        },
+        "parent": "dcd9c74bb2b78563c45d4f4a7977da9315d45c56",
+        "commit": "6030b722dbd4ac006a93ce9835948396de2e039a",
+        "commitDate": "2026-10-05T12:33:31.000Z",
+        "authorDate": "2026-10-05T12:33:31.000Z",
+        "commitUrl": "https://github.com/pysal/esda/commit/6030b722dbd4ac006a93ce9835948396de2e039a",
+        "recipeHash": "bdb656361f8a7961a88647c354ce5faaed36075a73a81d72014d2b9f00bfe7c0",
+        "apiSnapshotHash": "4cad66126883af13eb61d05e666564295565b0e9fa89bf1e7b4de025df360abe",
+        "patchHash": "d1e3896b21ba4802110025c368755a410fe2ee5d03188aee1936f58f37326682",
+        "productionPaths": [
+          "esda/gamma.py",
+          "esda/geary.py",
+          "esda/geary_local.py",
+          "esda/geary_local_mv.py",
+          "esda/getisord.py",
+          "esda/join_counts.py",
+          "esda/join_counts_local.py",
+          "esda/join_counts_local_bv.py",
+          "esda/join_counts_local_mv.py",
+          "esda/lee.py",
+          "esda/moran.py",
+          "esda/significance.py"
+        ],
+        "testPaths": [
+          "esda/tests/test_moran.py",
+          "esda/tests/test_significance.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": "https://github.com/pysal/esda/pull/514",
+          "pr_description_status": "description-screened",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    },
+    {
+      "candidate": "C45",
+      "id": "c45",
+      "digest": "829af5cb546eb23a297df579f32bba27c7a8326c8f23d7d7678211e05606ef8c",
+      "repo": "textstat/textstat",
+      "commit": "9ce13221257d2719988a4b45ca8a209c7a9931ba",
+      "upstream_author_handle": "x0Lazarus",
+      "dependency_image": {
+        "id": "sha256:ae839e8eb9fb430c4cfc30b4f3cab6e1bb0e0a35b38db316aee63cfc063997f0",
+        "platform": "linux/arm64",
+        "lockFile": "dependencies/textstat.lock.json",
+        "lockHash": "be91912b6dbeb4fdc3f2fb3f66fa944de96f975d9df69daf719990be4f03a7d0"
+      },
+      "validation_evidence": "data/task-validations/c45-Kx07WP",
+      "source": {
+        "kind": "public-upstream",
+        "candidateId": "C45",
+        "task_author": "upstream-human",
+        "upstream_author_handle": "x0Lazarus",
+        "repo": "textstat/textstat",
+        "license": "MIT",
+        "licenseFile": {
+          "path": "LICENSE",
+          "sha256": "a232ed3e61dab88155525287f990a485391922ed7609d884d51bdfe5ceb03ab4"
+        },
+        "parent": "e398f27543389283e847fc29568b049623c0e243",
+        "commit": "9ce13221257d2719988a4b45ca8a209c7a9931ba",
+        "commitDate": "2026-09-18T20:20:52.000Z",
+        "authorDate": "2026-09-18T20:20:52.000Z",
+        "commitUrl": "https://github.com/textstat/textstat/commit/9ce13221257d2719988a4b45ca8a209c7a9931ba",
+        "recipeHash": "dc2991b287baf9903d5495c34efba3950c2b1b434eabdfd3f7d3be46afa40703",
+        "apiSnapshotHash": "5e2c9a9435a51f4df3bfe5120602c15a06860f902f7793a5691eeaa84b8cae6e",
+        "patchHash": "143e4bde9f6a0b34d9c710bf19ee4117b3c68398fff74abddfa3ec81f2d7abf8",
+        "productionPaths": [
+          "textstat/backend/metrics/_dale_chall_readability_score_v2.py"
+        ],
+        "testPaths": [
+          "tests/textstat/test_dale_chall_readability_score_v2.py"
+        ],
+        "authorshipScreen": {
+          "linked_account_type": "User",
+          "explicit_bot_or_model_coauthor_in_commit": false,
+          "pr_url": null,
+          "pr_description_status": "no-PR-number-in-subject",
+          "pr_description_disclosure_hits": [],
+          "unassisted_authorship_attested": false
+        }
+      }
+    }
+  ],
+  "inference_calls": 0,
+  "api_spend_usd": 0,
+  "campaign_started": false
+}

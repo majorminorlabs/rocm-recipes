@@ -21,3 +21,7 @@ Every study runs on a fresh cloud GPU and records its container digest, model re
 ## License
 
 Code: MIT. Results and data: CC BY 4.0.
+
+Tier 1 evidence added after the tagged release (2026-10-20): [source, protocols, historical audits and small run records](supplements/tier1-20261020/README.md).
+
+Plans, handoffs and drafts live in _private/ and are never published.

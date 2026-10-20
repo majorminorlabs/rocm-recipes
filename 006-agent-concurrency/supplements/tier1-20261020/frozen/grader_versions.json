@@ -1,0 +1,17 @@
+{
+  "official_006": {
+    "grader_version": "1.0",
+    "atlas_commit": "279889b8f42c607344781766503602a8c462f5df",
+    "exports_unchanged": true
+  },
+  "next_study_007": {
+    "grader_version": "1.1",
+    "atlas_commit": "383a2430da31c174e6a66ca823e73a311ea3acda",
+    "branch": "codex/atlas-v1.1",
+    "proxy_image": "atlas/proxy:litellm1.105.0-node24.21.0-py3.13.16-v4",
+    "proxy_rebuild_required": true
+  },
+  "tasks_v1_commit": "019e10a72e37bf78c1ec52f335b3d4d3eec69e3d",
+  "frozen_manifest_sha256": "4f44f113e91d029e2e5cdb2321f6185063933c6a0482854f8fbc4f7607695f4e",
+  "hidden_tests_unchanged": true
+}
