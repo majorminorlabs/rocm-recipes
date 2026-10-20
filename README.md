@@ -12,6 +12,8 @@ Each folder is one study: the reproduction scripts, raw results, environment rec
 | [004-engine-shootout](004-engine-shootout/) | Which engine settings work best on one MI300X? | SGLang defaults led through 64 users; tuned vLLM led at 128, while default vLLM struggled with long prompts. |
 | [005-performance-autopsy](005-performance-autopsy/) | Which tuning knobs matter for agent traffic and long prompts? | Prefix caching raised 16-user throughput by 11% for SGLang and 8% for vLLM; the other knobs stayed within noise. |
 
+| [006-agent-concurrency](006-agent-concurrency/) | How many real coding agents fit on one MI300X? | Eight agents gave the best observed strict throughput: 2.47 solves/hour at $0.81 per solve; the time budget failed before cache capacity. |
+
 ## How these are run
 
 Every study runs on a fresh cloud GPU and records its container digest, model revision and engine version. The scripts document setup, measurement, synchronization, and teardown.

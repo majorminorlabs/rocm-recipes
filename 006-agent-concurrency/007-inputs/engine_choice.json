@@ -1,0 +1,25 @@
+{
+  "engine": "vllm",
+  "candidates": [
+    {
+      "engine": "vllm",
+      "eligible": true,
+      "solved": 3,
+      "pending_mac_grades": 0,
+      "successful_tasks_per_hour": 5.990342237126588,
+      "output_tok_per_s": null
+    },
+    {
+      "engine": "sglang",
+      "eligible": true,
+      "solved": 2,
+      "pending_mac_grades": 0,
+      "successful_tasks_per_hour": 5.0032938351081135,
+      "output_tok_per_s": null
+    }
+  ],
+  "atlas_commit": "279889b8f42c607344781766503602a8c462f5df",
+  "rehearsal": false,
+  "forced": false,
+  "forced_reason": null
+}

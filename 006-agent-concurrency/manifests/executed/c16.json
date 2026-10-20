@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "id": "rocm006-session4-c16",
+  "mode": "native",
+  "concurrency": 16,
+  "perRunS": 1800,
+  "seed": 6101516,
+  "taskSet": {
+    "tag": "tasks-v1",
+    "commit": "019e10a72e37bf78c1ec52f335b3d4d3eec69e3d",
+    "manifestSha256": "4f44f113e91d029e2e5cdb2321f6185063933c6a0482854f8fbc4f7607695f4e",
+    "checksumsSha256": "5d13dea5c5aecf593f861f3a2e8c73ac7d115282cc856de5851f5fe5ae947bfe"
+  },
+  "study": {
+    "id": "rocm-recipes-006",
+    "level": "c16",
+    "repetitions": 1,
+    "optional": false,
+    "dryRun": false
+  },
+  "budgets": {
+    "perRunUsd": 0,
+    "totalUsd": 0
+  },
+  "localCost": {
+    "hourlyRateUsd": 1.99,
+    "hardware": "1× AMD MI300X 192 GB (AMD Developer Cloud)",
+    "owned": false
+  },
+  "subscriptionCost": null,
+  "proxyProfiles": {
+    "qwen38-27b-mi300x": {
+      "upstream": {
+        "provider": "openai",
+        "baseUrl": "http://host.docker.internal:8000/v1",
+        "apiKeyEnv": null
+      },
+      "maxOutputTokens": 131072,
+      "contextWindowTokens": 131072,
+      "limitsSource": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "pricing": null
+    }
+  },
+  "runs": [
+    {
+      "task": "c24",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c33",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c38",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c10",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c22",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c30",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c26",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c13",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c28",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c06",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c29",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c40",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c03",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c32",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c19",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c42",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c18",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c02",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c09",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c35",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c45",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c43",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c39",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c14",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c23",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c01",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c16",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    },
+    {
+      "task": "c25",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c04",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 4
+    },
+    {
+      "task": "c11",
+      "config": "qwen38-27b-mi300x",
+      "attempt": 5
+    }
+  ]
+}

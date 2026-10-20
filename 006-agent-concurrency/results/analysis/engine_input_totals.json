@@ -1,0 +1,352 @@
+{
+  "source": "engine-side admission/cache counters; separate from ATLAS proxy usage",
+  "levels": [
+    {
+      "prompt_tokens": 24010346,
+      "cached_input_tokens": 22397440,
+      "uncached_input_tokens": 1612906,
+      "complete": true,
+      "counter_source": [
+        "vllm:prefix_cache_queries_total",
+        "vllm:prefix_cache_hits_total"
+      ],
+      "before": {
+        "ts": 1792274886.7983615,
+        "peak_vram_mb": 177991.77734375,
+        "rehearsal": false,
+        "kv_usage": 0.0,
+        "preemptions": 0.0,
+        "prefix_hits": 0.0,
+        "prefix_queries": 0.0,
+        "sglang_hit_rate": null,
+        "engine_ttft_histogram": {
+          "metric": "vllm:time_to_first_token_seconds",
+          "series": {
+            "[[\"engine\",\"0\"],[\"model_name\",\"Qwen/Qwen3.8-27B\"]]": {
+              "0.001": 0.0,
+              "0.005": 0.0,
+              "0.01": 0.0,
+              "0.02": 0.0,
+              "0.04": 0.0,
+              "0.06": 0.0,
+              "0.08": 0.0,
+              "0.1": 0.0,
+              "0.25": 0.0,
+              "0.5": 0.0,
+              "0.75": 0.0,
+              "1.0": 0.0,
+              "2.5": 0.0,
+              "5.0": 0.0,
+              "7.5": 0.0,
+              "10.0": 0.0,
+              "20.0": 0.0,
+              "40.0": 0.0,
+              "80.0": 0.0,
+              "160.0": 0.0,
+              "640.0": 0.0,
+              "2560.0": 0.0,
+              "+Inf": 0.0
+            }
+          }
+        },
+        "level": "c16",
+        "boundary": "before"
+      },
+      "after": {
+        "ts": 1792281880.5822492,
+        "peak_vram_mb": 179250.53515625,
+        "rehearsal": false,
+        "kv_usage": 0.0,
+        "preemptions": 0.0,
+        "prefix_hits": 22397440.0,
+        "prefix_queries": 24010346.0,
+        "sglang_hit_rate": null,
+        "engine_ttft_histogram": {
+          "metric": "vllm:time_to_first_token_seconds",
+          "series": {
+            "[[\"engine\",\"0\"],[\"model_name\",\"Qwen/Qwen3.8-27B\"]]": {
+              "0.001": 0.0,
+              "0.005": 0.0,
+              "0.01": 0.0,
+              "0.02": 0.0,
+              "0.04": 0.0,
+              "0.06": 0.0,
+              "0.08": 0.0,
+              "0.1": 0.0,
+              "0.25": 28.0,
+              "0.5": 179.0,
+              "0.75": 336.0,
+              "1.0": 469.0,
+              "2.5": 779.0,
+              "5.0": 835.0,
+              "7.5": 840.0,
+              "10.0": 843.0,
+              "20.0": 843.0,
+              "40.0": 844.0,
+              "80.0": 844.0,
+              "160.0": 844.0,
+              "640.0": 844.0,
+              "2560.0": 844.0,
+              "+Inf": 844.0
+            }
+          }
+        },
+        "level": "c16",
+        "host_cpu_percent": 7.172038129822966,
+        "host_ram_used_mb": 15924.6484375
+      },
+      "endpoint_kind": "before + final sampler record after last attempt; no explicit after tag",
+      "samples": 6240,
+      "counter_resets": 0,
+      "final_plateau_starts_at": 1792281870.730454,
+      "level": "c16",
+      "output_tokens_lower_bound": 446560,
+      "output_complete": false,
+      "atlas_measured_prompt_tokens": 22984188,
+      "atlas_measured_cached_input_tokens": 21415680,
+      "atlas_measured_uncached_input_tokens": 1568508,
+      "prompt_gap": 1026158,
+      "cached_gap": 981760,
+      "uncached_gap": 44398,
+      "missing_proxy_usage_requests": 25,
+      "sample_files": {
+        "results/raw/c16/samples.jsonl": "c4642af8976e6839005b535504e0e0880c47445c0d647f5fb03bf83a446fdff0",
+        "results/raw/c16-retry1/samples.jsonl": "3e2f1f7d9b3b2f5a249c7c2bb14931df2c0a653914409eb8fc147e7b172987a9",
+        "results/raw/c16-retry2/samples.jsonl": "a4fa81870747adef0ca1e359e5f0426718b1abe1ad8df3c7636954c04ae6c729"
+      }
+    },
+    {
+      "prompt_tokens": 36358417,
+      "cached_input_tokens": 34394880,
+      "uncached_input_tokens": 1963537,
+      "complete": true,
+      "counter_source": [
+        "vllm:prefix_cache_queries_total",
+        "vllm:prefix_cache_hits_total"
+      ],
+      "before": {
+        "ts": 1792354682.0641594,
+        "peak_vram_mb": 177991.8046875,
+        "rehearsal": false,
+        "kv_usage": 0.0,
+        "preemptions": 0.0,
+        "prefix_hits": 0.0,
+        "prefix_queries": 0.0,
+        "sglang_hit_rate": null,
+        "engine_ttft_histogram": {
+          "metric": "vllm:time_to_first_token_seconds",
+          "series": {
+            "[[\"engine\",\"0\"],[\"model_name\",\"Qwen/Qwen3.8-27B\"]]": {
+              "0.001": 0.0,
+              "0.005": 0.0,
+              "0.01": 0.0,
+              "0.02": 0.0,
+              "0.04": 0.0,
+              "0.06": 0.0,
+              "0.08": 0.0,
+              "0.1": 0.0,
+              "0.25": 0.0,
+              "0.5": 0.0,
+              "0.75": 0.0,
+              "1.0": 0.0,
+              "2.5": 0.0,
+              "5.0": 0.0,
+              "7.5": 0.0,
+              "10.0": 0.0,
+              "20.0": 0.0,
+              "40.0": 0.0,
+              "80.0": 0.0,
+              "160.0": 0.0,
+              "640.0": 0.0,
+              "2560.0": 0.0,
+              "+Inf": 0.0
+            }
+          }
+        },
+        "level": "c8",
+        "boundary": "before"
+      },
+      "after": {
+        "ts": 1792364932.6186512,
+        "peak_vram_mb": 179250.3203125,
+        "rehearsal": false,
+        "kv_usage": 0.0,
+        "preemptions": 0.0,
+        "prefix_hits": 34394880.0,
+        "prefix_queries": 36358417.0,
+        "sglang_hit_rate": null,
+        "engine_ttft_histogram": {
+          "metric": "vllm:time_to_first_token_seconds",
+          "series": {
+            "[[\"engine\",\"0\"],[\"model_name\",\"Qwen/Qwen3.8-27B\"]]": {
+              "0.001": 0.0,
+              "0.005": 0.0,
+              "0.01": 0.0,
+              "0.02": 0.0,
+              "0.04": 0.0,
+              "0.06": 0.0,
+              "0.08": 0.0,
+              "0.1": 0.0,
+              "0.25": 44.0,
+              "0.5": 297.0,
+              "0.75": 476.0,
+              "1.0": 655.0,
+              "2.5": 1065.0,
+              "5.0": 1134.0,
+              "7.5": 1142.0,
+              "10.0": 1144.0,
+              "20.0": 1144.0,
+              "40.0": 1144.0,
+              "80.0": 1144.0,
+              "160.0": 1144.0,
+              "640.0": 1144.0,
+              "2560.0": 1144.0,
+              "+Inf": 1144.0
+            }
+          }
+        },
+        "level": "c8",
+        "boundary": "after"
+      },
+      "endpoint_kind": "explicit before/after",
+      "samples": 9261,
+      "counter_resets": 0,
+      "final_plateau_starts_at": 1792364902.1683097,
+      "level": "c8",
+      "output_tokens_lower_bound": 648618,
+      "output_complete": false,
+      "atlas_measured_prompt_tokens": 35544889,
+      "atlas_measured_cached_input_tokens": 33642752,
+      "atlas_measured_uncached_input_tokens": 1902137,
+      "prompt_gap": 813528,
+      "cached_gap": 752128,
+      "uncached_gap": 61400,
+      "missing_proxy_usage_requests": 18,
+      "sample_files": {
+        "results/raw/c8/samples.jsonl": "b06fde604cfb4528cb4bbfd581e61e29310a3653978d40eb3f6e9ee7fba80341",
+        "results/raw/c8-retry1/samples.jsonl": "0a0e363a276b6586378e0ecf68d65573ab4c40b38f72869ff573ee4ca0a3c807",
+        "results/raw/c8-retry2/samples.jsonl": "358b13884b428fbce5b0990c83cefa9bc98169da0e1f3cef82fa42a10d092f43"
+      }
+    },
+    {
+      "prompt_tokens": 52060003,
+      "cached_input_tokens": 49364224,
+      "uncached_input_tokens": 2695779,
+      "complete": true,
+      "counter_source": [
+        "vllm:prefix_cache_queries_total",
+        "vllm:prefix_cache_hits_total"
+      ],
+      "before": {
+        "ts": 1792364951.4035723,
+        "peak_vram_mb": 179250.3203125,
+        "rehearsal": false,
+        "kv_usage": 0.0,
+        "preemptions": 0.0,
+        "prefix_hits": 34394880.0,
+        "prefix_queries": 36358417.0,
+        "sglang_hit_rate": null,
+        "engine_ttft_histogram": {
+          "metric": "vllm:time_to_first_token_seconds",
+          "series": {
+            "[[\"engine\",\"0\"],[\"model_name\",\"Qwen/Qwen3.8-27B\"]]": {
+              "0.001": 0.0,
+              "0.005": 0.0,
+              "0.01": 0.0,
+              "0.02": 0.0,
+              "0.04": 0.0,
+              "0.06": 0.0,
+              "0.08": 0.0,
+              "0.1": 0.0,
+              "0.25": 44.0,
+              "0.5": 297.0,
+              "0.75": 476.0,
+              "1.0": 655.0,
+              "2.5": 1065.0,
+              "5.0": 1134.0,
+              "7.5": 1142.0,
+              "10.0": 1144.0,
+              "20.0": 1144.0,
+              "40.0": 1144.0,
+              "80.0": 1144.0,
+              "160.0": 1144.0,
+              "640.0": 1144.0,
+              "2560.0": 1144.0,
+              "+Inf": 1144.0
+            }
+          }
+        },
+        "level": "c4",
+        "boundary": "before"
+      },
+      "after": {
+        "ts": 1792379616.5895553,
+        "peak_vram_mb": 179250.3203125,
+        "rehearsal": false,
+        "kv_usage": 0.0,
+        "preemptions": 0.0,
+        "prefix_hits": 83759104.0,
+        "prefix_queries": 88418420.0,
+        "sglang_hit_rate": null,
+        "engine_ttft_histogram": {
+          "metric": "vllm:time_to_first_token_seconds",
+          "series": {
+            "[[\"engine\",\"0\"],[\"model_name\",\"Qwen/Qwen3.8-27B\"]]": {
+              "0.001": 0.0,
+              "0.005": 0.0,
+              "0.01": 0.0,
+              "0.02": 0.0,
+              "0.04": 0.0,
+              "0.06": 0.0,
+              "0.08": 0.0,
+              "0.1": 0.0,
+              "0.25": 102.0,
+              "0.5": 658.0,
+              "0.75": 1108.0,
+              "1.0": 1465.0,
+              "2.5": 2362.0,
+              "5.0": 2520.0,
+              "7.5": 2544.0,
+              "10.0": 2549.0,
+              "20.0": 2557.0,
+              "40.0": 2557.0,
+              "80.0": 2557.0,
+              "160.0": 2557.0,
+              "640.0": 2557.0,
+              "2560.0": 2557.0,
+              "+Inf": 2557.0
+            }
+          }
+        },
+        "level": "c4",
+        "boundary": "after"
+      },
+      "endpoint_kind": "explicit before/after",
+      "samples": 13338,
+      "counter_resets": 0,
+      "final_plateau_starts_at": 1792379587.1792264,
+      "level": "c4",
+      "output_tokens_lower_bound": 882451,
+      "output_complete": false,
+      "atlas_measured_prompt_tokens": 51204392,
+      "atlas_measured_cached_input_tokens": 48536384,
+      "atlas_measured_uncached_input_tokens": 2668008,
+      "prompt_gap": 855611,
+      "cached_gap": 827840,
+      "uncached_gap": 27771,
+      "missing_proxy_usage_requests": 15,
+      "sample_files": {
+        "results/raw/c4/samples.jsonl": "3826c7fcb696c9d057de68be69a8ede4d720716a14c555a7f4f00e06a0c2c27b",
+        "results/raw/c4-retry1/samples.jsonl": "e28d5376a5c619885b8c451333047d11aeb36655a6e2143b62c3dfd3d7252e83",
+        "results/raw/c4-retry2/samples.jsonl": "3a1cf767d9d13294112519d6cd376e074c03bd3807fc6ba0879292d1001fc531"
+      }
+    }
+  ],
+  "metric_documentation": "https://docs.vllm.ai/en/latest/usage/metrics/",
+  "explanation": "Engine counters count prompt/cache tokens at prefix-cache lookup, independent of final streamed usage. Interrupted requests omitted final usage in ATLAS; the engine-minus-proxy gaps recover their input accounting. Output remains a completed-response lower bound.",
+  "c1": {
+    "complete": false,
+    "scope": "anecdotal n=3",
+    "reason": "Historical full sampler bracket includes additional c22 infra engine traffic; no complete input total attributed to the three-observation subset"
+  }
+}

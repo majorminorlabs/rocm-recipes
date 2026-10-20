@@ -1,0 +1,11 @@
+{
+  "official_006": {
+    "version": "1.0",
+    "commit": "279889b8f42c607344781766503602a8c462f5df"
+  },
+  "next_007": {
+    "version": "1.1",
+    "commit": "383a243"
+  },
+  "comparison": "The v1.1 workspace snapshot excludes node_modules and the proxy drains interrupted requests for reported usage. Frozen tasks are unchanged; use a common grader policy or report separate panels. Official 006 exports are unchanged."
+}

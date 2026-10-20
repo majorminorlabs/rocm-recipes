@@ -1,0 +1,1784 @@
+[
+  {
+    "requests": 17,
+    "measured_responses": 16,
+    "missing_request_ids": [
+      "db5b428c-ac78-4184-855b-091166012d31"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 360193,
+      "tokens_out": 12669,
+      "tokens_cached": 323648,
+      "tokens_uncached_in": 36545
+    },
+    "trace_sha256": "798f4d15e190b022c634bd635ec2019458d83e448c198b50d3e37b1d54c0830c",
+    "proxy_sha256": "5b34ca6b81f86f97dd8cc3f019dd9540394497f7cfdc6a13a993e488ad18bf53",
+    "run_id": "c01__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 13,
+    "measured_responses": 12,
+    "missing_request_ids": [
+      "ae310d83-facc-4bda-a09c-035662c2c38f"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 248062,
+      "tokens_out": 2306,
+      "tokens_cached": 203008,
+      "tokens_uncached_in": 45054
+    },
+    "trace_sha256": "54b4bed99d86aa185f351054be575b71dd7899da02770a98abd03d8a079481f5",
+    "proxy_sha256": "2ff72a173c83f532abcba4e739442acd9d864f91cb2682949a1a78f4cf323280",
+    "run_id": "c02__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 9,
+    "measured_responses": 8,
+    "missing_request_ids": [
+      "feda8536-9e2a-4c4f-8149-f43090405f4c"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 84912,
+      "tokens_out": 3517,
+      "tokens_cached": 68224,
+      "tokens_uncached_in": 16688
+    },
+    "trace_sha256": "40152041b97357ca115663b8d5e6b2289c6e13874cb36dadd0f4ad6ae578c933",
+    "proxy_sha256": "5d1b9cefa5464daf9ee73dd0e2eceddfd97e81c627b3cfe19890079ecb1463ba",
+    "run_id": "c03__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 20,
+    "measured_responses": 19,
+    "missing_request_ids": [
+      "e689f4b0-74a1-4d8e-a632-90fa73c75f03"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 458572,
+      "tokens_out": 12533,
+      "tokens_cached": 420160,
+      "tokens_uncached_in": 38412
+    },
+    "trace_sha256": "a70f3d306c37b76fd0c314f1ecdd527eaeeb161b11be886a345ababedf4dd1b4",
+    "proxy_sha256": "9401820ca0ae3d2972869c6a4ca0c450326db8c0174d438893bf45e7bcc74bf6",
+    "run_id": "c04__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 34,
+    "measured_responses": 34,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 793062,
+      "tokens_out": 6199,
+      "tokens_cached": 757120,
+      "tokens_uncached_in": 35942
+    },
+    "trace_sha256": "ee14eb0c83b85df68dd7ab05e5cbc873d0f7b53d7ff99661f5a399e733d37bbd",
+    "proxy_sha256": "30a3af058b04ecdc0fc12e7e4b4e41be6b85497b80b2e6fe32ef77a6035c5a61",
+    "run_id": "c06__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 2967224,
+      "tokens_out": 58387,
+      "tokens_cached": 2852928,
+      "tokens_uncached_in": 114296
+    },
+    "trace_sha256": "a2fcca8d9def9012394c11c77c6d0f94b2e21f5b035c450c769ffc18b64670a2",
+    "proxy_sha256": "e81254d76b163f200e42f6f01e9f2d8592c5ebf1cba732faa26c4e48b1aa093b",
+    "run_id": "c09__qwen38-27b-mi300x__a1161",
+    "level": "c16"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 2591438,
+      "tokens_out": 60934,
+      "tokens_cached": 2403648,
+      "tokens_uncached_in": 187790
+    },
+    "trace_sha256": "d01c66dc08bbe7fd36c26da0416344db7c1de2b0fe52f08301e395d9f5656964",
+    "proxy_sha256": "e93a51e67098e0946c035d0333a09d02c15dc53d45c966abbb3603f57ff9f32a",
+    "run_id": "c09__qwen38-27b-mi300x__a1162",
+    "level": "c16"
+  },
+  {
+    "requests": 29,
+    "measured_responses": 28,
+    "missing_request_ids": [
+      "7605dc3e-49bb-47a1-b5e9-02984397b2fe"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 646225,
+      "tokens_out": 10020,
+      "tokens_cached": 600704,
+      "tokens_uncached_in": 45521
+    },
+    "trace_sha256": "954a77b2352cccfc8965e9fbda2d7e764b1bf4f4ab29262d23990e4fd3f5eec1",
+    "proxy_sha256": "0839092127246c180c73adb8e5b67cc4679406feebf9f85e132479f49c3ab2e1",
+    "run_id": "c09__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 42,
+    "measured_responses": 41,
+    "missing_request_ids": [
+      "75146341-d099-49fa-a988-aa21d8291b77"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 878080,
+      "tokens_out": 14288,
+      "tokens_cached": 827008,
+      "tokens_uncached_in": 51072
+    },
+    "trace_sha256": "16a0dc0cce67abdedf98d007f559932265020e495484eabbb2c5872714532c82",
+    "proxy_sha256": "5632c509f1c2566f5f6089b7b22155b912eeb775293ab390a25380fa375f9216",
+    "run_id": "c10__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 20,
+    "measured_responses": 19,
+    "missing_request_ids": [
+      "433d375d-ede9-43df-b651-ffde694f7ee8"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 321953,
+      "tokens_out": 12934,
+      "tokens_cached": 293696,
+      "tokens_uncached_in": 28257
+    },
+    "trace_sha256": "e06c5057195fed868631171a394d9e524e8101a18d7bb738c7d7a24ce34bdbc0",
+    "proxy_sha256": "9180be14cbf88248eb067c38a057c18d65cb0268c066bcfcbf88c3b1f1133290",
+    "run_id": "c11__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 22,
+    "measured_responses": 21,
+    "missing_request_ids": [
+      "d50b9c58-16b6-4e1c-b156-55b559c687be"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 668082,
+      "tokens_out": 14413,
+      "tokens_cached": 616512,
+      "tokens_uncached_in": 51570
+    },
+    "trace_sha256": "9c8e5e513e8052cd8857394162555bafdb636fb58d7413e29096355533737a02",
+    "proxy_sha256": "ae5166f75e51a2a9998467d73b279bb5c6ce9e0688c3fd8a0cffcd264fb7ee8e",
+    "run_id": "c13__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 27,
+    "measured_responses": 27,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 914234,
+      "tokens_out": 11919,
+      "tokens_cached": 862784,
+      "tokens_uncached_in": 51450
+    },
+    "trace_sha256": "024f4140e678f384f74c1852fb264255c9720167b577033d1da166faba69919c",
+    "proxy_sha256": "038549f81b0dc1dc628a907e997e55f200fa80c0d25eb7f6cb0f665c4d9b28f1",
+    "run_id": "c14__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 28,
+    "measured_responses": 27,
+    "missing_request_ids": [
+      "89752298-cf63-450f-9d9d-8f6b377de3d1"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 856161,
+      "tokens_out": 12202,
+      "tokens_cached": 805376,
+      "tokens_uncached_in": 50785
+    },
+    "trace_sha256": "caed23eca1c4b7610dc81929e71eb0487faed9805999c8981e5cb942dac12ac7",
+    "proxy_sha256": "f6bf3da35577a034d84c4f913c150f013aacd4b0ca90b8ad55e5e4eed449f2e2",
+    "run_id": "c16__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 34,
+    "measured_responses": 33,
+    "missing_request_ids": [
+      "4235ebfd-ee9c-4eda-b615-b8d7cc409041"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1170017,
+      "tokens_out": 12824,
+      "tokens_cached": 1114880,
+      "tokens_uncached_in": 55137
+    },
+    "trace_sha256": "aad24dd35faa31fce5c1a731cd6261d40f2f2f45304b45634b86efb52833f7cb",
+    "proxy_sha256": "dea2ec4d114f89e0db68e0a60b7d964fe8589e26396572a47ee14fcb73cde7a0",
+    "run_id": "c18__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 31,
+    "measured_responses": 30,
+    "missing_request_ids": [
+      "fba91089-9cf1-476d-a7be-8f4546c0ab4f"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 694818,
+      "tokens_out": 12518,
+      "tokens_cached": 643968,
+      "tokens_uncached_in": 50850
+    },
+    "trace_sha256": "ed76962e3940c82266c7a7a5aaa6b863f7cedff0824d5d3c09b35c45647a14d6",
+    "proxy_sha256": "f46e4ff8b8af0d1744bfc29098fd880a17a472ff456566e7075c50357083b0fd",
+    "run_id": "c19__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 29,
+    "measured_responses": 28,
+    "missing_request_ids": [
+      "b26fe786-49d1-4dcd-b727-76d1dbaad17b"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 611189,
+      "tokens_out": 14660,
+      "tokens_cached": 564928,
+      "tokens_uncached_in": 46261
+    },
+    "trace_sha256": "96d1b295e170aed51e311798e077481284bfb20d480634a550b22f4d9cdd07c0",
+    "proxy_sha256": "c2ac027df346f510e564e42925083f9f0a3c56fa1a70ab815a929aade9e3942e",
+    "run_id": "c22__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 35,
+    "measured_responses": 34,
+    "missing_request_ids": [
+      "0076649f-7c92-45cc-98a9-94754f6aecf0"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 602926,
+      "tokens_out": 12341,
+      "tokens_cached": 566592,
+      "tokens_uncached_in": 36334
+    },
+    "trace_sha256": "c576983953834894c1317beff1eaa0b1f72536d401a24ae054145cfb9d5ae476",
+    "proxy_sha256": "13de6e4730042c91a8248bc580c2e1792936df1558dc70577c69190e658c846d",
+    "run_id": "c23__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 33,
+    "measured_responses": 32,
+    "missing_request_ids": [
+      "0f376161-5958-462f-8ab9-859385cd01a8"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 640675,
+      "tokens_out": 13773,
+      "tokens_cached": 600704,
+      "tokens_uncached_in": 39971
+    },
+    "trace_sha256": "b1acf8431e75ffc49a2f96e85bd3ce6b8045685f9fd33f15d32b87a490c37502",
+    "proxy_sha256": "4ae816bbb16b9d7f9d1b958796986de1d2c6be284d35d3b5ae989dd9c4459f0e",
+    "run_id": "c24__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 25,
+    "measured_responses": 24,
+    "missing_request_ids": [
+      "201e2eff-6ebe-425d-879f-ef39937be292"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 869050,
+      "tokens_out": 11454,
+      "tokens_cached": 806208,
+      "tokens_uncached_in": 62842
+    },
+    "trace_sha256": "f4f12723f71018ad1333039e4503004a45a3d0b8c79975f9e11cee7351b00fed",
+    "proxy_sha256": "d2dc83ca51ac9d5aaf99224dbc21728878defd27dac15f0808070f2aff0df185",
+    "run_id": "c25__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 9,
+    "measured_responses": 9,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 170768,
+      "tokens_out": 3302,
+      "tokens_cached": 140608,
+      "tokens_uncached_in": 30160
+    },
+    "trace_sha256": "7ddf8f5ca324070c4f8dfa1f7930d83b96288b32a695ab9237af713772589ca7",
+    "proxy_sha256": "7283150afa15fc29a49647572763bc777b675ec38932e0e54e0a0b2268fdbc20",
+    "run_id": "c26__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 28,
+    "measured_responses": 27,
+    "missing_request_ids": [
+      "5d066626-d8c1-458d-8887-7f5225b68b7d"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 583297,
+      "tokens_out": 14551,
+      "tokens_cached": 544960,
+      "tokens_uncached_in": 38337
+    },
+    "trace_sha256": "f4f1dec2f128b0d20b52e5e9d377eb1420417e161ab698d29aae78356d9e30de",
+    "proxy_sha256": "ddfd245209310672ff57f0e463393a7a13283c28cfcc26f62bc2536dd62aebc2",
+    "run_id": "c28__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 12,
+    "measured_responses": 11,
+    "missing_request_ids": [
+      "177bd7a9-4566-4522-b68c-e0f9944f7db8"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 181815,
+      "tokens_out": 1313,
+      "tokens_cached": 156416,
+      "tokens_uncached_in": 25399
+    },
+    "trace_sha256": "0f1e69637e89654362022d03cc3b37a52266459fc60a6046f7e7407207e06488",
+    "proxy_sha256": "3f90a38a794ae07184cd26552d0d66e2a976e7cf9d09eae209f96ad33ee3acb8",
+    "run_id": "c29__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 24,
+    "measured_responses": 23,
+    "missing_request_ids": [
+      "20e7e945-05f1-44d2-9183-23212d09bb7d"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 755230,
+      "tokens_out": 14402,
+      "tokens_cached": 704704,
+      "tokens_uncached_in": 50526
+    },
+    "trace_sha256": "1e24279a34ba601872ea331debed5291cb6c17f0c70ab022cbd545448d1a9a9c",
+    "proxy_sha256": "79216a3c43be0963866a4e5a06a5ac849cfa64ff021622abc93804f17cdb02d6",
+    "run_id": "c30__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 30,
+    "measured_responses": 29,
+    "missing_request_ids": [
+      "219be68e-6094-468c-adee-1351978acfa9"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 611021,
+      "tokens_out": 14314,
+      "tokens_cached": 571584,
+      "tokens_uncached_in": 39437
+    },
+    "trace_sha256": "d264307bf354b309315518439490694d736aff2193f51949a5227747eddb8add",
+    "proxy_sha256": "dc6babd354dc2f371bc3b810bbd68b37c21b1d882bd76b9b0ddd3dae62eec204",
+    "run_id": "c32__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 24,
+    "measured_responses": 24,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 725770,
+      "tokens_out": 10890,
+      "tokens_cached": 676416,
+      "tokens_uncached_in": 49354
+    },
+    "trace_sha256": "a7b7493d7624362539e63026192036b32e1be70a4b90d24092eee34eb89a6a17",
+    "proxy_sha256": "a8cad302c36c0912dc670a947100b4621ba5217f0ff650525ae774e052833c6f",
+    "run_id": "c33__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 18,
+    "measured_responses": 17,
+    "missing_request_ids": [
+      "f2a2cfd8-8879-46b1-82d2-1ed14a5f6843"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 265409,
+      "tokens_out": 12480,
+      "tokens_cached": 240448,
+      "tokens_uncached_in": 24961
+    },
+    "trace_sha256": "5f3b05039d3ae1f543a46b6395935d802f1e73831e3db47adb78d47023a21721",
+    "proxy_sha256": "22c06f6934156370ddd862c6be463823e14b74bbde59292d640f69a3e0af065f",
+    "run_id": "c35__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 26,
+    "measured_responses": 25,
+    "missing_request_ids": [
+      "07d51682-ab6f-4daa-82d4-1170f3184d96"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 572147,
+      "tokens_out": 12734,
+      "tokens_cached": 527488,
+      "tokens_uncached_in": 44659
+    },
+    "trace_sha256": "29205999aa597194483de5c52e479e9fb05adbfcae2eefcb61ec4ec777efac8f",
+    "proxy_sha256": "3ad302cc9db22ae1b92c1ddf9123b8f70ed4e5f0346f143a48c4eeef2bff244e",
+    "run_id": "c38__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 21,
+    "measured_responses": 20,
+    "missing_request_ids": [
+      "47caba44-f98f-4ad6-9b5c-ad91c47529d5"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 745570,
+      "tokens_out": 12786,
+      "tokens_cached": 686400,
+      "tokens_uncached_in": 59170
+    },
+    "trace_sha256": "93024ca0b462cddbec72376f51719fc7cf4e9db131f29a6740401bf567f2d8b1",
+    "proxy_sha256": "1b404d201abb9c73d25eeb0427347ede9e33d3adb05ec9cb0e32596772ff16cf",
+    "run_id": "c39__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 24,
+    "measured_responses": 23,
+    "missing_request_ids": [
+      "f4545a71-0927-4ac0-9d1d-4218ece86721"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 648596,
+      "tokens_out": 14461,
+      "tokens_cached": 596544,
+      "tokens_uncached_in": 52052
+    },
+    "trace_sha256": "9d81c87cd0aecbaed7e7730205666f9360a5e61c7dc6479104fbd06e3eb5b479",
+    "proxy_sha256": "5d70039ec1bdb2911f21a35898c9b70ae12c6113ceb6f71a7e02b346bbac1d72",
+    "run_id": "c40__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 27,
+    "measured_responses": 26,
+    "missing_request_ids": [
+      "0af6b4e6-0173-481f-9add-9e9d81f968a1"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 613028,
+      "tokens_out": 14857,
+      "tokens_cached": 572416,
+      "tokens_uncached_in": 40612
+    },
+    "trace_sha256": "ec91532d0ec436afb9c4ab0f79d32488f5ad7340e7f5ad629a4bbd3e3cb0c715",
+    "proxy_sha256": "4367bae5e06e611d871b072ed7add75079389518322ebdf1d949740f07bb866e",
+    "run_id": "c42__qwen38-27b-mi300x__a4",
+    "level": "c16"
+  },
+  {
+    "requests": 18,
+    "measured_responses": 17,
+    "missing_request_ids": [
+      "1271a9c5-4730-48c2-b9b4-b2c8f29c0e52"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 560256,
+      "tokens_out": 5909,
+      "tokens_cached": 510016,
+      "tokens_uncached_in": 50240
+    },
+    "trace_sha256": "16274a90f54632595d954975cb1e99816c6e4ddc4a8cd3bdbaf33ab72e440d52",
+    "proxy_sha256": "fea480598af4e214df322a82bcd7e6fe107f940925dbd43830fadfb65605f7aa",
+    "run_id": "c43__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 15,
+    "measured_responses": 15,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 174408,
+      "tokens_out": 4670,
+      "tokens_cached": 155584,
+      "tokens_uncached_in": 18824
+    },
+    "trace_sha256": "994590ae5dfca6e10c6ee6d0ba001beccce0b7a99e8845e98429cf640598105b",
+    "proxy_sha256": "869344463e80cf0318a3cc9f216aad6b7e13068d102de2e87c601a099d843f8d",
+    "run_id": "c45__qwen38-27b-mi300x__a5",
+    "level": "c16"
+  },
+  {
+    "requests": 32,
+    "measured_responses": 31,
+    "missing_request_ids": [
+      "d4a9937b-af15-4f7e-a90b-82e4ef674d88"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1165696,
+      "tokens_out": 32160,
+      "tokens_cached": 1098240,
+      "tokens_uncached_in": 67456
+    },
+    "trace_sha256": "bedd747e37eaa6c33faa61b1c4beca970c3d4ed39b4138b5176489a8746f6746",
+    "proxy_sha256": "2f4cb44e730ff247d7e78e6dbd4a66a71b7d4349e8f82f9c58f4fcfb9ce5fca7",
+    "run_id": "c01__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 13,
+    "measured_responses": 12,
+    "missing_request_ids": [
+      "ea5b3ce2-1fe0-49b7-a4ac-6fb162e6d08e"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 241852,
+      "tokens_out": 2173,
+      "tokens_cached": 198016,
+      "tokens_uncached_in": 43836
+    },
+    "trace_sha256": "493ab902f3c7709143f587447a4b8ce83263b01d683f02640e90e5a106b65db6",
+    "proxy_sha256": "6c9295b8df4bdba277a280aee001ae2fa6947dbf8276d811f30a7660f3bae19a",
+    "run_id": "c02__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 26,
+    "measured_responses": 25,
+    "missing_request_ids": [
+      "c6815ee7-39f9-4e31-b866-10ade4a95aa7"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 556062,
+      "tokens_out": 16439,
+      "tokens_cached": 517504,
+      "tokens_uncached_in": 38558
+    },
+    "trace_sha256": "58b2c1e46b45a7c02f027318b53e09b6041c576bf30a9cb0cb523272e190aadf",
+    "proxy_sha256": "295e5a83054c43aed73cd40283157f4ad38e75d55a2209aba93d9e7321c653ed",
+    "run_id": "c03__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 16,
+    "measured_responses": 15,
+    "missing_request_ids": [
+      "29ca1614-022d-4a86-8b24-ea37e58e540a"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 217141,
+      "tokens_out": 14859,
+      "tokens_cached": 185536,
+      "tokens_uncached_in": 31605
+    },
+    "trace_sha256": "ff60a8ce30460de9853517e2e92144a80784476b7725d9a3f69fd5368cee48a7",
+    "proxy_sha256": "c9d4faa5dbddb1cf9127664680828b27558419e9bef4cfbe1081eec2762cf9fe",
+    "run_id": "c04__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 20,
+    "measured_responses": 20,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 370821,
+      "tokens_out": 3970,
+      "tokens_cached": 346112,
+      "tokens_uncached_in": 24709
+    },
+    "trace_sha256": "718d01c03cdcbccb5336acaafd2205ce27d43754eb91927095dafbd4ca096471",
+    "proxy_sha256": "2a26be4c0ee87c6d198f22f2a61e6b1624d7b042ba3ff312cfc2de2218d1c4a6",
+    "run_id": "c06__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 52,
+    "measured_responses": 51,
+    "missing_request_ids": [
+      "eeda506d-53ee-400f-90ec-148d0b2aaa5b"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 2671315,
+      "tokens_out": 49175,
+      "tokens_cached": 2565056,
+      "tokens_uncached_in": 106259
+    },
+    "trace_sha256": "a034930ace168f0bfa0c50f719b013e55c7784258c9fc2209c05727656624a85",
+    "proxy_sha256": "acff5683dde2db78f12440dd68788c34aeb1b90d36275a7e7100bf48fab2a67b",
+    "run_id": "c09__qwen38-27b-mi300x__a1081",
+    "level": "c8"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 3099712,
+      "tokens_out": 51647,
+      "tokens_cached": 2987712,
+      "tokens_uncached_in": 112000
+    },
+    "trace_sha256": "3e17678facd51cb51f9f5030de819c0ade41048a5947c1775f05caff2f0bed0d",
+    "proxy_sha256": "26b835024f071494f784f4a203db6dc267d7c831fde3eff2243d44806764179c",
+    "run_id": "c09__qwen38-27b-mi300x__a1082",
+    "level": "c8"
+  },
+  {
+    "requests": 41,
+    "measured_responses": 40,
+    "missing_request_ids": [
+      "f4b3e849-7c8d-4f7a-9d56-31aa8367525d"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1040199,
+      "tokens_out": 22274,
+      "tokens_cached": 983424,
+      "tokens_uncached_in": 56775
+    },
+    "trace_sha256": "c40c66622a615a11bbe84a2e58788080bc02426fc7fc5d620fe15fc1a904b1e2",
+    "proxy_sha256": "9666a610116c183bc94b65af68d81a713d1bd98c7131e71036d4c1da53c3543e",
+    "run_id": "c09__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 27,
+    "measured_responses": 26,
+    "missing_request_ids": [
+      "7e7b550f-8f6d-435a-b5a1-139f97795e69"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 466680,
+      "tokens_out": 4821,
+      "tokens_cached": 438464,
+      "tokens_uncached_in": 28216
+    },
+    "trace_sha256": "772e65e4534755a4f15f64fc100659b5b40d8e6357a88179f9b4ed768d7e0e96",
+    "proxy_sha256": "24892590643969d1cdcc31422e55fd02c3478b2f6e1edd5ee86d441934794ff9",
+    "run_id": "c10__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1566616,
+      "tokens_out": 20648,
+      "tokens_cached": 1507584,
+      "tokens_uncached_in": 59032
+    },
+    "trace_sha256": "4827f7b237ff24a4f88b613db66d5664123207e123ea18189e46bb3598214189",
+    "proxy_sha256": "865060acbb38b680a6cd46c9979c0a8c6808d0eb234227a50c94f822604d5446",
+    "run_id": "c11__qwen38-27b-mi300x__a1081",
+    "level": "c8"
+  },
+  {
+    "requests": 51,
+    "measured_responses": 51,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1352494,
+      "tokens_out": 19530,
+      "tokens_cached": 1295424,
+      "tokens_uncached_in": 57070
+    },
+    "trace_sha256": "ee9a0502b2940bdb9324292a453f56eba8219a27470dc60e8f44130b90d0efbc",
+    "proxy_sha256": "39c5228c5de201cfa3d4c8cffb6b633a008e65408eca67af6bdcf5cb4419544f",
+    "run_id": "c11__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 36,
+    "measured_responses": 36,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 992297,
+      "tokens_out": 16659,
+      "tokens_cached": 941824,
+      "tokens_uncached_in": 50473
+    },
+    "trace_sha256": "e1094292033b10b5816daa12aaac6a5e45fd201c661d833106718b15664e5777",
+    "proxy_sha256": "8662b8cec136db992f4fe3c584fbc9b75f6290db8bce0de4a7a12f0ea834b735",
+    "run_id": "c13__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 39,
+    "measured_responses": 39,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1277082,
+      "tokens_out": 15844,
+      "tokens_cached": 1218880,
+      "tokens_uncached_in": 58202
+    },
+    "trace_sha256": "aed69251b800ea2746e0bfe0d8171f9856b1f009e6b5c732689f216256d89fcc",
+    "proxy_sha256": "99b6244b3fa519209af11ff836087eaea7391b46699b5de6f715d472ed9758b2",
+    "run_id": "c14__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 44,
+    "measured_responses": 44,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1802927,
+      "tokens_out": 17577,
+      "tokens_cached": 1729728,
+      "tokens_uncached_in": 73199
+    },
+    "trace_sha256": "6b4d76b84d097a49dc0d0a0d1cb06511f84215fc72875cd97842d4fe99169eac",
+    "proxy_sha256": "4d6d37cd42f62cd3ffac48f881506bdc1aa99857518517a1e03269a789900d7f",
+    "run_id": "c16__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 29,
+    "measured_responses": 29,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1038439,
+      "tokens_out": 11419,
+      "tokens_cached": 985920,
+      "tokens_uncached_in": 52519
+    },
+    "trace_sha256": "fc955f99a477f4e255b17832c5590e7d122d0f8bf143323dbdadc68d66ca97ee",
+    "proxy_sha256": "d98bf4998b8c03eaff004a43dcd87f4e567c596fd6978e439d6c2397439a254f",
+    "run_id": "c18__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 37,
+    "measured_responses": 36,
+    "missing_request_ids": [
+      "fc0bf3c6-b53d-4dcc-aa37-413d7f77e5fd"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1302611,
+      "tokens_out": 25492,
+      "tokens_cached": 1233856,
+      "tokens_uncached_in": 68755
+    },
+    "trace_sha256": "3b8e237f75fc8afd8076fe59cfddccb1cca37829beedfd668d1f8f53d5818638",
+    "proxy_sha256": "f8aa6ff938cb1e248046ec7775b7870e1c10b9b8891820cb37f8d21d0b7a9eef",
+    "run_id": "c19__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 25,
+    "measured_responses": 24,
+    "missing_request_ids": [
+      "ce67af97-d627-4dac-b407-847919eb5dba"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 540743,
+      "tokens_out": 22246,
+      "tokens_cached": 499200,
+      "tokens_uncached_in": 41543
+    },
+    "trace_sha256": "668e93cf94ff2ac66590565e209bf12c0d29865f63f757db3c8ce9b023dc00cd",
+    "proxy_sha256": "353cdd3b4d895e3dac0be46980258db736353f687fede9f7454de5849c121dee",
+    "run_id": "c22__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 42,
+    "measured_responses": 42,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1141204,
+      "tokens_out": 26605,
+      "tokens_cached": 1084928,
+      "tokens_uncached_in": 56276
+    },
+    "trace_sha256": "e0ac59761353934f0449b2293fb5b6ea30379f87d08714d3b640422395812141",
+    "proxy_sha256": "c6877eaa2bc6d5b4069d07e8c4c5cc0ef08476412fb83802efba9ad30b52f713",
+    "run_id": "c23__qwen38-27b-mi300x__a1081",
+    "level": "c8"
+  },
+  {
+    "requests": 41,
+    "measured_responses": 40,
+    "missing_request_ids": [
+      "f044928f-aae0-4a5c-9768-d3b9f162dc43"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1066335,
+      "tokens_out": 20629,
+      "tokens_cached": 1010880,
+      "tokens_uncached_in": 55455
+    },
+    "trace_sha256": "a0b8653aa78a7692addd9c3f5335fee6da0e22c37bdead7a998bad7fea5b9e13",
+    "proxy_sha256": "df751f5df47a08e529fee96fb49b2c9d2ddb6305e09f038f31b34994ea2ec7b6",
+    "run_id": "c23__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 35,
+    "measured_responses": 35,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 663315,
+      "tokens_out": 19530,
+      "tokens_cached": 619840,
+      "tokens_uncached_in": 43475
+    },
+    "trace_sha256": "d711614c1343b3e4f6916ed1a75d821e136c760f1fb1a3a603b0d5afed32e3b2",
+    "proxy_sha256": "5fe99c1cee8b05b9aa2270fb9c85784733c2e2085a9068bfa658e2a86277a6f1",
+    "run_id": "c24__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 23,
+    "measured_responses": 22,
+    "missing_request_ids": [
+      "6610e5f9-4981-44f6-b57d-5c49dc8cf2b0"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 812433,
+      "tokens_out": 21052,
+      "tokens_cached": 752960,
+      "tokens_uncached_in": 59473
+    },
+    "trace_sha256": "0fe957445266e4997125b63cb7695a84d584e1012f44f9deea85b96c6939ddfb",
+    "proxy_sha256": "7d85c6ce48d29ea8eb60e823a6ab5167213e85a04568de2472bd184ab51c3327",
+    "run_id": "c25__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 26,
+    "measured_responses": 26,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 879786,
+      "tokens_out": 10373,
+      "tokens_cached": 825344,
+      "tokens_uncached_in": 54442
+    },
+    "trace_sha256": "dd08a04789e6e4d61dc56b8622b3d1ec87e3a165dfccc41feac7f638727bb804",
+    "proxy_sha256": "3a41bfbe8b769c070c8564988686ee7503668e5f2f2857c50101cc5af9589cdc",
+    "run_id": "c26__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 26,
+    "measured_responses": 25,
+    "missing_request_ids": [
+      "24ecdc80-3edb-4a48-8e8d-91b55c37f9a9"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 517469,
+      "tokens_out": 18568,
+      "tokens_cached": 476736,
+      "tokens_uncached_in": 40733
+    },
+    "trace_sha256": "6fd4b62d3ae8e077bce9b0135f6280bc32a6d87d065da70f3c6ae8381a5bcd31",
+    "proxy_sha256": "6c92cd8c453caecc7ced4e0e0492debe90094ef4397c084b571ece41fb717ded",
+    "run_id": "c28__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 9,
+    "measured_responses": 8,
+    "missing_request_ids": [
+      "40d210cc-fbcf-4b78-934a-dfcc26429fb8"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 154281,
+      "tokens_out": 11649,
+      "tokens_cached": 121472,
+      "tokens_uncached_in": 32809
+    },
+    "trace_sha256": "f0abecbd8e8aceb4c0acce07a61b3c52bbd5215739167b9d2035872c284ccdce",
+    "proxy_sha256": "69a3b8be21883fc33cd631825c821398bc16e67ced481acf4107dfd773e174ee",
+    "run_id": "c29__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 35,
+    "measured_responses": 35,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1236111,
+      "tokens_out": 17417,
+      "tokens_cached": 1180608,
+      "tokens_uncached_in": 55503
+    },
+    "trace_sha256": "62e674cd13142127f49082dfe2c3d7640f5582163cfb79acf9664dfb8f7d9645",
+    "proxy_sha256": "1da21a9098ae8702b64755aae9fe9c996b9d43d20ddb4c08ead1138a9e5dd90f",
+    "run_id": "c30__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 36,
+    "measured_responses": 36,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 876464,
+      "tokens_out": 19292,
+      "tokens_cached": 830336,
+      "tokens_uncached_in": 46128
+    },
+    "trace_sha256": "d75558afdb5a3bfd3eee1a925a9caab7c5e8ab9f664ae038f79858e680484a11",
+    "proxy_sha256": "577285ed9208c3aba6042829980869442983ba9bef26bfd45d463972339223c8",
+    "run_id": "c32__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 30,
+    "measured_responses": 29,
+    "missing_request_ids": [
+      "24f4450b-9298-4e0d-9b7f-4bf993ac9252"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 633532,
+      "tokens_out": 20226,
+      "tokens_cached": 589888,
+      "tokens_uncached_in": 43644
+    },
+    "trace_sha256": "8bd548925f045e7ca58be034a6467a323051c8cf8ce0fb0f944e3b84efcf4282",
+    "proxy_sha256": "b8794e539b2c8f3fa47ab54b0e9cf5bb48a5850b5844a83f832aa2c8139cbec7",
+    "run_id": "c33__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 31,
+    "measured_responses": 31,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 701586,
+      "tokens_out": 17460,
+      "tokens_cached": 658944,
+      "tokens_uncached_in": 42642
+    },
+    "trace_sha256": "0cb5bdcf9b6e1822c2daa76822505d30123d5000159fbf51dbffb50473dde8e3",
+    "proxy_sha256": "091ff12418b63abe7e9a3167d5600e2455447365a8cbcd708815f70c7808bded",
+    "run_id": "c35__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 2520164,
+      "tokens_out": 23232,
+      "tokens_cached": 2431104,
+      "tokens_uncached_in": 89060
+    },
+    "trace_sha256": "908c1f89a8438cc4c979e6ca29c8b64d9b03709a54f31510f4841e1ea22c4670",
+    "proxy_sha256": "289d60e6918043446e6bee7958056ce7abd65e83519db75e5afac31a020cbac7",
+    "run_id": "c38__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 38,
+    "measured_responses": 37,
+    "missing_request_ids": [
+      "05c749a0-b73d-4ea7-8908-2cd1947c0ab3"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1700889,
+      "tokens_out": 16984,
+      "tokens_cached": 1622400,
+      "tokens_uncached_in": 78489
+    },
+    "trace_sha256": "394e50a60a818fd6513eed8e4c1af2f27b06e65070985751b4ae805659250aad",
+    "proxy_sha256": "04d4478dbf2347ea20725ed6d8536951ea31c97b5f0d5e11334aba9ab43e47b8",
+    "run_id": "c39__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 23,
+    "measured_responses": 22,
+    "missing_request_ids": [
+      "a522f923-ad37-4545-9038-dfa6ed296c43"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 503633,
+      "tokens_out": 15818,
+      "tokens_cached": 453440,
+      "tokens_uncached_in": 50193
+    },
+    "trace_sha256": "c976dd53fe9f0ef39e6c7dcd81f1d95958e736b578447ba8aeeb9e8613aabde5",
+    "proxy_sha256": "314cb77d3aeb0843fe3e208c768c1cb820d098ad6abf70078cb21774db63f94c",
+    "run_id": "c40__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 37,
+    "measured_responses": 36,
+    "missing_request_ids": [
+      "b03b8b65-e333-48e9-9d06-64ed05d73224"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1035102,
+      "tokens_out": 21828,
+      "tokens_cached": 976768,
+      "tokens_uncached_in": 58334
+    },
+    "trace_sha256": "636cc2e93d9a1c3e56004430c9b16636e4a76c4071c78d17126ffaef83dcd137",
+    "proxy_sha256": "b77e47238a1960c058f8fd27b4b663fe8a34b227de7911da89fbb620e844eaa6",
+    "run_id": "c42__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 27,
+    "measured_responses": 26,
+    "missing_request_ids": [
+      "3c05a41d-b097-4203-9744-3fa5be57df42"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1194134,
+      "tokens_out": 14389,
+      "tokens_cached": 1086592,
+      "tokens_uncached_in": 107542
+    },
+    "trace_sha256": "9acbc8946f88c95e973408030ea5bec498705f422f94cb35be03715cc150ed16",
+    "proxy_sha256": "bd1a162af22b374b6c691ee5af7ce673ea75be3c545c19965a4d830a4b70b874",
+    "run_id": "c43__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 19,
+    "measured_responses": 19,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 205764,
+      "tokens_out": 6633,
+      "tokens_cached": 188032,
+      "tokens_uncached_in": 17732
+    },
+    "trace_sha256": "bedbcc04be8a48671419c33ceded64bf90daee9081f87d435ce7959122e35aa4",
+    "proxy_sha256": "740ac955d5e7cfa206d6dc87f56ff6e516345a18265dbf3ceba3a74571173189",
+    "run_id": "c45__qwen38-27b-mi300x__a3",
+    "level": "c8"
+  },
+  {
+    "requests": 29,
+    "measured_responses": 29,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 862859,
+      "tokens_out": 23484,
+      "tokens_cached": 809536,
+      "tokens_uncached_in": 53323
+    },
+    "trace_sha256": "0ecfbdb1424d0cd0902fc4d3ff7a1bf80819a847bb5e9fda37c4c088d73785c3",
+    "proxy_sha256": "8322a46aa7b7760c22e663981db3e0a3ef8fa7c7dd5f312fe9d53b55a8ddd912",
+    "run_id": "c01__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 20,
+    "measured_responses": 19,
+    "missing_request_ids": [
+      "652044b2-8588-43c3-9820-bc3b93a2e108"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 717590,
+      "tokens_out": 29906,
+      "tokens_cached": 639808,
+      "tokens_uncached_in": 77782
+    },
+    "trace_sha256": "24619ad508429147a71810e7f90401f0b35f1efe12fd5e294f9d011c1aeb0802",
+    "proxy_sha256": "c7253364daa807cd1a7b8f3aa8e680b991d7e6f1ca539283fc80fac5875ff20d",
+    "run_id": "c02__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 31,
+    "measured_responses": 30,
+    "missing_request_ids": [
+      "a77f667b-dd3f-4c80-80a5-9ebc019075a1"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1153407,
+      "tokens_out": 34367,
+      "tokens_cached": 1031680,
+      "tokens_uncached_in": 121727
+    },
+    "trace_sha256": "1a1d6fa5c98d77bf83216d6a1b620e920b4c1d83436ef409f638e9e4eb7b10a3",
+    "proxy_sha256": "d34f5dfdbc835ed5613c50b636d8a43ddf92d189f52bfb609b9d96685c35d399",
+    "run_id": "c03__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 55,
+    "measured_responses": 54,
+    "missing_request_ids": [
+      "76dd30b4-72cb-4fbd-afd0-ba5ea9cb7751"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 2095999,
+      "tokens_out": 38351,
+      "tokens_cached": 2010112,
+      "tokens_uncached_in": 85887
+    },
+    "trace_sha256": "f570a00b6eb933b81659c86b38b4fa8989a29269cf2d24b6d42c67f33bf3ccb4",
+    "proxy_sha256": "56f669d7e6bdbad769b778928fb014953a8214e9e74e00fd6c19a1fa82f26624",
+    "run_id": "c04__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 24,
+    "measured_responses": 24,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 483707,
+      "tokens_out": 5250,
+      "tokens_cached": 454272,
+      "tokens_uncached_in": 29435
+    },
+    "trace_sha256": "18f73bb8ecd272b729b9410e77362ec859be7d222789592badd66ef5477232a7",
+    "proxy_sha256": "41661693e7309252eb7b9743f4d97e5bf779b69934dbfc4f324fc1fee9366ec0",
+    "run_id": "c06__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 39,
+    "measured_responses": 38,
+    "missing_request_ids": [
+      "8b237c0f-cf6e-4533-a20d-0fd635007392"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1172135,
+      "tokens_out": 37301,
+      "tokens_cached": 1090752,
+      "tokens_uncached_in": 81383
+    },
+    "trace_sha256": "60618a2b7f054e59b0c5c26423772f1f9e34f0eee5ba542fa81bfba2645316aa",
+    "proxy_sha256": "1f2c413c4ef0866a2e6b9185c3f7e179ae077fa611d52b7107504ca7b30ab571",
+    "run_id": "c09__qwen38-27b-mi300x__a1041",
+    "level": "c4"
+  },
+  {
+    "requests": 47,
+    "measured_responses": 46,
+    "missing_request_ids": [
+      "41f9dcf8-4838-4149-824f-2771e9a8f9d7"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1430101,
+      "tokens_out": 21358,
+      "tokens_cached": 1366144,
+      "tokens_uncached_in": 63957
+    },
+    "trace_sha256": "5aa7e73488889794e059da62d35f110420b8b138f820717fb393f4e67c811dce",
+    "proxy_sha256": "2053205cdc66534cd74494a240fd30d600ba9c9323ec3e22c87520b861327675",
+    "run_id": "c09__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 41,
+    "measured_responses": 40,
+    "missing_request_ids": [
+      "385fcb8e-c7b3-4359-a2a6-123b9569c6e2"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1575134,
+      "tokens_out": 46862,
+      "tokens_cached": 1503424,
+      "tokens_uncached_in": 71710
+    },
+    "trace_sha256": "5286bb3b67ca80e13f6c413a2c30d10bfecf9ab1a2f0e6672661d0806317acbc",
+    "proxy_sha256": "720673b4c838caf76059dbf6c94bdfff45739ee6e6c1e9bbee47d386eab29a61",
+    "run_id": "c10__qwen38-27b-mi300x__a1041",
+    "level": "c4"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 2669702,
+      "tokens_out": 47020,
+      "tokens_cached": 2575040,
+      "tokens_uncached_in": 94662
+    },
+    "trace_sha256": "5ac57a5c8b2a4ec392ddd74e0b0b94881c53420e049e3a62f69eb354fa1f03bb",
+    "proxy_sha256": "d96e1cf7556c4bd065ea990053247a9a45a13982384113388216e1a94c03fd1c",
+    "run_id": "c10__qwen38-27b-mi300x__a1042",
+    "level": "c4"
+  },
+  {
+    "requests": 33,
+    "measured_responses": 32,
+    "missing_request_ids": [
+      "20447ecd-4ea1-480a-bad8-9d1556f32678"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 938817,
+      "tokens_out": 33273,
+      "tokens_cached": 856960,
+      "tokens_uncached_in": 81857
+    },
+    "trace_sha256": "e212894dfc40e4154da79955f0842aad133a8b5115bca8b95527e6f874d6e82d",
+    "proxy_sha256": "4ff3bd6e4e80e664295d84ea3a899827c420aed2e778c55edd0986d5cc4b380c",
+    "run_id": "c10__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 55,
+    "measured_responses": 55,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1491555,
+      "tokens_out": 23358,
+      "tokens_cached": 1432704,
+      "tokens_uncached_in": 58851
+    },
+    "trace_sha256": "28fd2c6bfb06e6e1fa0b2428a5b6b47837ab56eb8e6a80bff684500b40eb8217",
+    "proxy_sha256": "b5315bf1e234edca7d274790bacb592249be155f831750e67bd998532f9412cc",
+    "run_id": "c11__qwen38-27b-mi300x__a1041",
+    "level": "c4"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1587093,
+      "tokens_out": 25303,
+      "tokens_cached": 1524224,
+      "tokens_uncached_in": 62869
+    },
+    "trace_sha256": "bac5b3073df3d7acae07251f06ef9deba04f3f203e9d9974512fb7cc856b1f23",
+    "proxy_sha256": "1e159ea3759238f832c5a9da86ac3b406a0c25745400faf92a2f38168015c104",
+    "run_id": "c11__qwen38-27b-mi300x__a1042",
+    "level": "c4"
+  },
+  {
+    "requests": 56,
+    "measured_responses": 56,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1596463,
+      "tokens_out": 24437,
+      "tokens_cached": 1531712,
+      "tokens_uncached_in": 64751
+    },
+    "trace_sha256": "42916ac4a7673023b02dfed794c2b4898382b907bca6ae2919a477470377fa9b",
+    "proxy_sha256": "46d1571af07579d310edc5a03b90cecc2c09d3b03158ee51ca966b95aa0de55f",
+    "run_id": "c11__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 31,
+    "measured_responses": 31,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1134154,
+      "tokens_out": 13946,
+      "tokens_cached": 1074112,
+      "tokens_uncached_in": 60042
+    },
+    "trace_sha256": "c2974b1a3c3333b3f35a2016455c27d2bd8bb290a7164b7810b7658e0ffb8b76",
+    "proxy_sha256": "429307d335121d95cb582639008e49a0640d6704933cc7840d1d57a879349f30",
+    "run_id": "c13__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 56,
+    "measured_responses": 56,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 2420708,
+      "tokens_out": 21206,
+      "tokens_cached": 2288832,
+      "tokens_uncached_in": 131876
+    },
+    "trace_sha256": "211b4b2d9b9945100ffff318c025cc61352c88c4c10b624f73c18a949f8dfe75",
+    "proxy_sha256": "91c65281c68de4f4374bed9d1d2ede85da608e036bd23fcd09be6e6dfe261015",
+    "run_id": "c14__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 57,
+    "measured_responses": 57,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 3000044,
+      "tokens_out": 24995,
+      "tokens_cached": 2902848,
+      "tokens_uncached_in": 97196
+    },
+    "trace_sha256": "4b3804040b195a0bd28b5792c4d1aaffeaaf329d8b4a021a1fc3e8a29f1c5e92",
+    "proxy_sha256": "9c279fd331afec27a7bc9b2151253d3ee24cb138b8cff05fda5e4132d1c3955d",
+    "run_id": "c16__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 30,
+    "measured_responses": 30,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1124423,
+      "tokens_out": 13599,
+      "tokens_cached": 1069120,
+      "tokens_uncached_in": 55303
+    },
+    "trace_sha256": "7aace300c5f720a6e62fbec9da50119594dab75047b5b2fb3b07832d62c308b4",
+    "proxy_sha256": "500cbb622341d4b1de1c3a4108f646ce3bfb7e290d0a2ba807a152ee9b1489a9",
+    "run_id": "c18__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 35,
+    "measured_responses": 34,
+    "missing_request_ids": [
+      "09400301-ea69-4d05-9b68-51267897ce08"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1331515,
+      "tokens_out": 27946,
+      "tokens_cached": 1251328,
+      "tokens_uncached_in": 80187
+    },
+    "trace_sha256": "4d9f010bae86956ea51d759a32e615f88221ccf3583347fbcda08d8d6a5676b1",
+    "proxy_sha256": "9b8e04ef64aab089217ecf6739b91996a6a6617bb8ff54f31e97b0e4fd67a78a",
+    "run_id": "c19__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 43,
+    "measured_responses": 42,
+    "missing_request_ids": [
+      "3eba4422-f40a-43d6-8c19-6ad07949fa25"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1225612,
+      "tokens_out": 26586,
+      "tokens_cached": 1168960,
+      "tokens_uncached_in": 56652
+    },
+    "trace_sha256": "16d2eb1a73e258013030be6c98875aafdb45c2cfaa04fcca3b43f3083f089a69",
+    "proxy_sha256": "4091423d469170af7d1d908a1015b737380a1a24792910a52b24b7b38fbebb3c",
+    "run_id": "c22__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 39,
+    "measured_responses": 38,
+    "missing_request_ids": [
+      "62c9ef4b-5968-4177-a0f2-f9b5bfbd60c2"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1055229,
+      "tokens_out": 29181,
+      "tokens_cached": 1000896,
+      "tokens_uncached_in": 54333
+    },
+    "trace_sha256": "be644a54a14bb43813ccb31afb1459e93ad58d0544813371eb4927ff7c1e6bae",
+    "proxy_sha256": "25ba0afa01a48140c11ad49a2a2a9c96610b26113d915525e6316479d83c84f9",
+    "run_id": "c23__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 55,
+    "measured_responses": 55,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1531066,
+      "tokens_out": 20408,
+      "tokens_cached": 1467648,
+      "tokens_uncached_in": 63418
+    },
+    "trace_sha256": "f63f3f40e737cd0f60ccba88127951a1e21b0090c3714a7671358f6e0b251f3c",
+    "proxy_sha256": "ab06ba7f20cff7b3bebaa6e76a40c401ad1b41e00ce9c5ea3e278ea379c76518",
+    "run_id": "c24__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 26,
+    "measured_responses": 25,
+    "missing_request_ids": [
+      "b3bab781-04f4-4fa5-8bd6-0a6a9212c3a8"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1555490,
+      "tokens_out": 25951,
+      "tokens_cached": 1411904,
+      "tokens_uncached_in": 143586
+    },
+    "trace_sha256": "f33e3174c81da85f2acd64bdd79176936cdadc90cbd9081b4230af2765ab3c46",
+    "proxy_sha256": "ff0628441c33a393c067378bc94645bea0c1f1ed7f28701c26bd6f0ccd84f737",
+    "run_id": "c25__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 24,
+    "measured_responses": 24,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 702089,
+      "tokens_out": 6440,
+      "tokens_cached": 658944,
+      "tokens_uncached_in": 43145
+    },
+    "trace_sha256": "5aa4dcc5487817132a63df4be696e2d866a4ddaa2c8818134e7249445cb917d0",
+    "proxy_sha256": "23df474f22aea59d877007ad678e50bbda0e79ef4b74c5f523c513bfb35ba768",
+    "run_id": "c26__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 51,
+    "measured_responses": 51,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1428239,
+      "tokens_out": 25859,
+      "tokens_cached": 1366144,
+      "tokens_uncached_in": 62095
+    },
+    "trace_sha256": "c740eb7038b3212689f6cce4b959770dcd836ddcd468446e109a28c1fc3704af",
+    "proxy_sha256": "5fe339618521d0788efc9cc9cc7ce191556342f192d4dbaebe1807808a3f94e0",
+    "run_id": "c28__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 16,
+    "measured_responses": 15,
+    "missing_request_ids": [
+      "443b47f1-d728-4606-9abf-d353559c5c09"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 448345,
+      "tokens_out": 30608,
+      "tokens_cached": 391872,
+      "tokens_uncached_in": 56473
+    },
+    "trace_sha256": "80706b4f52563bf8ba9386f24afd1c840807701f1ea2849b0902a538f5afbfb4",
+    "proxy_sha256": "64f66d83d3add82fc54b8e60ce0dc74414885d123d41543d67513eee2b816356",
+    "run_id": "c29__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 2533478,
+      "tokens_out": 18941,
+      "tokens_cached": 2457728,
+      "tokens_uncached_in": 75750
+    },
+    "trace_sha256": "09c1538fdf00beb41b958e7c27d7fd257b2af2999e413057ab0b8e1b2a1d0734",
+    "proxy_sha256": "d872ec6b3bd1aa0eb424381bb2603060cfb43eab64e8f12cb4807b3d49f1412b",
+    "run_id": "c30__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 25,
+    "measured_responses": 25,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 450029,
+      "tokens_out": 11310,
+      "tokens_cached": 420992,
+      "tokens_uncached_in": 29037
+    },
+    "trace_sha256": "81acbfacb39effb716ad96c74e08a4700d29f76d3d0a6202e594d671d5961c62",
+    "proxy_sha256": "a94e49a94f54fd50dec5244849b95f90510dce6c6bb9970f4a43f559037752a0",
+    "run_id": "c32__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 29,
+    "measured_responses": 29,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 535704,
+      "tokens_out": 12149,
+      "tokens_cached": 500864,
+      "tokens_uncached_in": 34840
+    },
+    "trace_sha256": "3a084955b64736092594f6734af8d87b346251e65ee621ffe9265cafbb73b52b",
+    "proxy_sha256": "faadd513d4d3d503a0be4a22bb1669aeb6a957845085dc769b78a85184985455",
+    "run_id": "c33__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 46,
+    "measured_responses": 45,
+    "missing_request_ids": [
+      "19851540-348a-4053-9337-450c498ea0b4"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1716983,
+      "tokens_out": 26506,
+      "tokens_cached": 1646528,
+      "tokens_uncached_in": 70455
+    },
+    "trace_sha256": "5d9504e56a97351989af36445da8b18895ec4ef4cc4080f0d535b0f73fefcf96",
+    "proxy_sha256": "d77e085475f26b64b3d7630cc3e6cee75addeb8641722fb603af81ee5b3cbfc7",
+    "run_id": "c35__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 45,
+    "measured_responses": 45,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 2126350,
+      "tokens_out": 29914,
+      "tokens_cached": 2042560,
+      "tokens_uncached_in": 83790
+    },
+    "trace_sha256": "00294f143a31d5d5114f9d19469105e9d1fdd64ace0e293016b3eaa331ac29de",
+    "proxy_sha256": "13c484bb34c2fb0a8d0ad2888ed6e10446fcc61841160d131cc139ab20ca9c3c",
+    "run_id": "c38__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 60,
+    "measured_responses": 60,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 3303001,
+      "tokens_out": 21946,
+      "tokens_cached": 3205696,
+      "tokens_uncached_in": 97305
+    },
+    "trace_sha256": "0b9c583b06c6e74e1fc5cb83f034bece66401535cfc3e3a5914b8b894f199fc7",
+    "proxy_sha256": "1ae21dc494f4c489525c714bfe2d71c63f923c5901a03ca652398f46bf1faced",
+    "run_id": "c39__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 35,
+    "measured_responses": 35,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1277617,
+      "tokens_out": 22536,
+      "tokens_cached": 1208896,
+      "tokens_uncached_in": 68721
+    },
+    "trace_sha256": "1466587ab1e658b52c00408bcceb5d75353c50d32f4b1572c65ad60c027ccd9c",
+    "proxy_sha256": "8ab68c8dee8f1089ad6bb3de98ec0f59ce50686edb4472237c18924011853abf",
+    "run_id": "c40__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 41,
+    "measured_responses": 40,
+    "missing_request_ids": [
+      "42fe1d04-dd4b-42ea-83a3-0d1791277d0f"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 1656642,
+      "tokens_out": 29817,
+      "tokens_cached": 1579968,
+      "tokens_uncached_in": 76674
+    },
+    "trace_sha256": "fd820eaede10f85bb6a350834d3336b8c4f78dc78a46c1baa63a623b781fe857",
+    "proxy_sha256": "9e542687b11445f849d04a4d4cff4972f921b5e350af701fdb328ae4a26ba80d",
+    "run_id": "c42__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 43,
+    "measured_responses": 42,
+    "missing_request_ids": [
+      "20e19af3-3886-46c3-a4a5-31495e711e3a"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 2690507,
+      "tokens_out": 48033,
+      "tokens_cached": 2426944,
+      "tokens_uncached_in": 263563
+    },
+    "trace_sha256": "7038e2324e5444d18c2ed00990c4a55600c4d755d3cddbb26d46b924ad737717",
+    "proxy_sha256": "43fa41d27db9e76c1e87ae9a746a6ff19245d0966e6ab252fd90d98aaf59aa22",
+    "run_id": "c43__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 17,
+    "measured_responses": 17,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 182605,
+      "tokens_out": 4304,
+      "tokens_cached": 167232,
+      "tokens_uncached_in": 15373
+    },
+    "trace_sha256": "91102c853b393702c2978d54a1a0687f4e8703e697f7ba6d80a2f53017bf3ff9",
+    "proxy_sha256": "8171e1f4912a9a1dfa308933a41daf73428a775f1a1a6608e4ef4d95175d1d5c",
+    "run_id": "c45__qwen38-27b-mi300x__a2",
+    "level": "c4"
+  },
+  {
+    "requests": 57,
+    "measured_responses": 56,
+    "missing_request_ids": [
+      "98b1a53e-9bcc-4a1e-b8a2-4577c8c10bfd"
+    ],
+    "complete": false,
+    "known": {
+      "tokens_in": 2195318,
+      "tokens_out": 66138,
+      "tokens_cached": 2080000,
+      "tokens_uncached_in": 115318
+    },
+    "source": "inputs/session4/history.json.gz",
+    "source_sha256": "5b3619dd5c7a4032051efd03c87643d07d3f9d55740c96eda1ea3e02280f2420",
+    "run_id": "c09__qwen38-27b-mi300x__a1",
+    "level": "c1"
+  },
+  {
+    "requests": 37,
+    "measured_responses": 37,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1811935,
+      "tokens_out": 24332,
+      "tokens_cached": 1725568,
+      "tokens_uncached_in": 86367
+    },
+    "source": "inputs/session4/history.json.gz",
+    "source_sha256": "5b3619dd5c7a4032051efd03c87643d07d3f9d55740c96eda1ea3e02280f2420",
+    "run_id": "c18__qwen38-27b-mi300x__a1",
+    "level": "c1"
+  },
+  {
+    "requests": 41,
+    "measured_responses": 41,
+    "missing_request_ids": [],
+    "complete": true,
+    "known": {
+      "tokens_in": 1503350,
+      "tokens_out": 27610,
+      "tokens_cached": 1435200,
+      "tokens_uncached_in": 68150
+    },
+    "source": "inputs/session4/history.json.gz",
+    "source_sha256": "5b3619dd5c7a4032051efd03c87643d07d3f9d55740c96eda1ea3e02280f2420",
+    "run_id": "c28__qwen38-27b-mi300x__a1",
+    "level": "c1"
+  }
+]

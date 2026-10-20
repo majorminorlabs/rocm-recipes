@@ -1,0 +1,8 @@
+config.env
+STATE.json
+notes/
+logs/
+__pycache__/
+*.pyc
+atlas/
+results/rehearsal/

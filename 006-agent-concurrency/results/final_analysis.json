@@ -1,0 +1,867 @@
+{
+  "atlas_commit": "279889b8f42c607344781766503602a8c462f5df",
+  "source_commit": "7235813",
+  "list_price_usd_per_gpu_hour": "1.99",
+  "solved_rule": "Frozen tasks-v1 category == solved; timeout/turn/token caps, tamper and infra are not solved",
+  "tests_at_cutoff_rule": "testsPassed == true on scored non-infra attempts; includes tampered artifacts, separately reported clean count",
+  "denominator_rule": "One non-infra verdict per task; unresolved grader-infra tasks excluded, not failed",
+  "token_rule": "Exact full-level totals are null if any request usage is missing. Completed-response subtotals are exact for the measured subset and lower bounds for the full level; infra retries included.",
+  "gpu_hours_rule": "First attempt start through last attempt end within each level/session, including infra retries and gaps; setup/probe/cleanup excluded",
+  "exact_token_cost_comparison_ready": false,
+  "recorded_total_billable_gpu_hours": 15.5049,
+  "levels": [
+    {
+      "pending_mac_grades": 0,
+      "level": "c16",
+      "concurrency": 16,
+      "runs": 29,
+      "solved": 3,
+      "success_rate": 0.10344827586206896,
+      "level_wall_s": 6977.509999990463,
+      "successful_tasks_per_hour": 1.5478300998514887,
+      "started_at": "2026-10-17T22:08:22.296Z",
+      "ended_at": "2026-10-18T00:04:39.806Z",
+      "fixture": false,
+      "scored": true,
+      "level_gpu_hours": 1.9381972222195731,
+      "level_gpu_cost_usd": 3.8570124722169505,
+      "billable_gpu_hours": null,
+      "billable_cost_usd": null,
+      "infra_attempts": 3,
+      "infra_reruns": 2,
+      "timing_contains_repair_gap": false,
+      "missing_status_runs": 1,
+      "solved_rule": "tasks-v1 category == solved",
+      "tests_passing_at_cutoff": 12,
+      "clean_tests_passing_at_cutoff": 11,
+      "anecdotal": false,
+      "planned_level_dropped": false,
+      "measurement_sessions": 1,
+      "pending_native_grades": 0,
+      "wall_time_basis": "sum of per-study-session attempt windows (infra included)",
+      "wall_p50_s": 1800.0,
+      "wall_p95_s": 1800.0,
+      "tokens_in": null,
+      "all_attempts_tokens_in": null,
+      "tokens_out": null,
+      "all_attempts_tokens_out": null,
+      "tokens_cached": null,
+      "all_attempts_tokens_cached": null,
+      "tokens_uncached_in": null,
+      "all_attempts_tokens_uncached_in": null,
+      "tokens_cumulative": null,
+      "all_attempts_tokens_cumulative": null,
+      "tokens_counted": null,
+      "all_attempts_tokens_counted": null,
+      "token_overshoot": null,
+      "all_attempts_token_overshoot": null,
+      "inference_s": null,
+      "all_attempts_inference_s": null,
+      "wall_s": 47905.276,
+      "all_attempts_wall_s": 52865.71000000001,
+      "turns": 695,
+      "all_attempts_turns": null,
+      "tool_calls": 814,
+      "all_attempts_tool_calls": null,
+      "tokens_in_per_task": null,
+      "tokens_out_per_task": null,
+      "tokens_cached_per_task": null,
+      "tokens_uncached_in_per_task": null,
+      "tokens_cumulative_per_task": null,
+      "tokens_counted_per_task": null,
+      "token_overshoot_per_task": null,
+      "solved_tokens_in_mean": 564413.3333333334,
+      "solved_tokens_out_mean": 7253.0,
+      "solved_turns_mean": 24.333333333333332,
+      "solved_tool_calls_mean": 25.666666666666668,
+      "solved_inference_s_mean": 839.2460285326664,
+      "solved_wall_s_mean": 862.3646666666667,
+      "failed_tokens_in_mean": null,
+      "failed_tokens_out_mean": null,
+      "failed_turns_mean": 23.923076923076923,
+      "failed_tool_calls_mean": 28.346153846153847,
+      "failed_inference_s_mean": null,
+      "failed_wall_s_mean": 1743.007,
+      "model_latency_p50_s": 18.535502175000175,
+      "model_latency_p95_s": 227.7399004815012,
+      "model_latency_p99_s": 672.4610727375967,
+      "ttft_p50_s": null,
+      "ttft_p95_s": null,
+      "ttft_p99_s": null,
+      "failure_wrong_answer": 1,
+      "failure_timeout": 25,
+      "failure_turn_cap": 0,
+      "failure_token_cap": 0,
+      "failure_context_overflow": 0,
+      "failure_agent_loop": 0,
+      "failure_infra": 3,
+      "failure_other": 0,
+      "sample_count": 6225,
+      "engine_ttft_p50_s": null,
+      "engine_ttft_p95_s": null,
+      "engine_ttft_observations": null,
+      "engine_ttft_metric": null,
+      "engine_ttft_source": "engine-side TTFT",
+      "engine_ttft_status": "missing_or_ambiguous_boundaries",
+      "peak_vram_mb": 179250.53515625,
+      "peak_kv_usage": 0.34599728629579374,
+      "peak_host_cpu_percent": 80.65693430656934,
+      "peak_host_ram_used_mb": 24656.68359375,
+      "attempts": 32,
+      "graded_tasks": 29,
+      "strict_solved": 3,
+      "wilson95": [
+        0.035814891350677044,
+        0.26385081090773793
+      ],
+      "taxonomy": {
+        "infra_error": 3,
+        "no_claim": 1,
+        "solved": 3,
+        "timeout": 25
+      },
+      "grader_infra_symlink": 3,
+      "unknown_verdict_tasks": [
+        "c09"
+      ],
+      "accounting": {
+        "windows": [
+          {
+            "study_session": 4,
+            "started_at": "2026-10-17T22:08:22.296Z",
+            "ended_at": "2026-10-18T00:04:39.806Z",
+            "microseconds": 6977510000
+          }
+        ],
+        "microseconds": 6977510000,
+        "gpu_hours_decimal": "1.938197222222222222222222222",
+        "gpu_hours_fraction": {
+          "numerator": 6977510000,
+          "denominator": 3600000000
+        },
+        "list_cost_usd_decimal": "3.857012472222222222222222222"
+      },
+      "token_total_complete": false,
+      "token_incomplete_attempts": 25,
+      "missing_usage_requests": 25,
+      "measured_usage_responses": 819,
+      "completed_response_tokens": {
+        "tokens_in": 22984188,
+        "tokens_out": 446560,
+        "tokens_cached": 21415680,
+        "tokens_uncached_in": 1568508
+      },
+      "exact_all_attempt_tokens": {
+        "tokens_in": null,
+        "tokens_out": null,
+        "tokens_cached": null,
+        "tokens_uncached_in": null
+      },
+      "tokens_per_solved": null,
+      "tokens_per_solved_lower_bound": 671689.3333333334,
+      "solved_only_mean_tokens_uncached_in": 34706.666666666664,
+      "solved_only_mean_tokens_out": 7253.0,
+      "preemptions": null,
+      "observed_preemptions_increase": 0.0,
+      "preemptions_status": "incomplete boundaries or counter reset; exact delta unavailable"
+    },
+    {
+      "pending_mac_grades": 0,
+      "level": "c8",
+      "concurrency": 8,
+      "runs": 29,
+      "solved": 7,
+      "success_rate": 0.2413793103448276,
+      "level_wall_s": 10218.726000070572,
+      "successful_tasks_per_hour": 2.4660608377038358,
+      "started_at": "2026-10-18T20:18:16.110Z",
+      "ended_at": "2026-10-18T23:08:34.836Z",
+      "fixture": false,
+      "scored": true,
+      "level_gpu_hours": 2.8385350000196032,
+      "level_gpu_cost_usd": 5.64868465003901,
+      "billable_gpu_hours": null,
+      "billable_cost_usd": null,
+      "infra_attempts": 5,
+      "infra_reruns": 4,
+      "timing_contains_repair_gap": false,
+      "missing_status_runs": 1,
+      "solved_rule": "tasks-v1 category == solved",
+      "tests_passing_at_cutoff": 12,
+      "clean_tests_passing_at_cutoff": 11,
+      "anecdotal": false,
+      "planned_level_dropped": false,
+      "measurement_sessions": 1,
+      "wall_time_basis": "sum of per-study-session attempt windows (infra included)",
+      "wall_p50_s": 1800.0,
+      "wall_p95_s": 1800.0,
+      "tokens_in": null,
+      "all_attempts_tokens_in": null,
+      "tokens_out": null,
+      "all_attempts_tokens_out": null,
+      "tokens_cached": null,
+      "all_attempts_tokens_cached": null,
+      "tokens_uncached_in": null,
+      "all_attempts_tokens_uncached_in": null,
+      "tokens_cumulative": null,
+      "all_attempts_tokens_cumulative": null,
+      "tokens_counted": null,
+      "all_attempts_tokens_counted": null,
+      "token_overshoot": null,
+      "all_attempts_token_overshoot": null,
+      "inference_s": null,
+      "all_attempts_inference_s": null,
+      "wall_s": 43530.759000000005,
+      "all_attempts_wall_s": 52146.200000000004,
+      "turns": 901,
+      "all_attempts_turns": null,
+      "tool_calls": 1004,
+      "all_attempts_tool_calls": null,
+      "tokens_in_per_task": null,
+      "tokens_out_per_task": null,
+      "tokens_cached_per_task": null,
+      "tokens_uncached_in_per_task": null,
+      "tokens_cumulative_per_task": null,
+      "tokens_counted_per_task": null,
+      "token_overshoot_per_task": null,
+      "solved_tokens_in_mean": 946512.5714285715,
+      "solved_tokens_out_mean": 15450.42857142857,
+      "solved_turns_mean": 33.142857142857146,
+      "solved_tool_calls_mean": 34.42857142857143,
+      "solved_inference_s_mean": 1004.7877818154167,
+      "solved_wall_s_mean": 1060.2408571428573,
+      "failed_tokens_in_mean": null,
+      "failed_tokens_out_mean": null,
+      "failed_turns_mean": 30.40909090909091,
+      "failed_tool_calls_mean": 34.68181818181818,
+      "failed_inference_s_mean": null,
+      "failed_wall_s_mean": 1641.3214999999998,
+      "model_latency_p50_s": 12.961667785000174,
+      "model_latency_p95_s": 153.92673398674745,
+      "model_latency_p99_s": 427.28261012199744,
+      "ttft_p50_s": null,
+      "ttft_p95_s": null,
+      "ttft_p99_s": null,
+      "failure_wrong_answer": 3,
+      "failure_timeout": 17,
+      "failure_turn_cap": 2,
+      "failure_token_cap": 0,
+      "failure_context_overflow": 0,
+      "failure_agent_loop": 0,
+      "failure_infra": 5,
+      "failure_other": 0,
+      "sample_count": 9246,
+      "engine_ttft_p50_s": 0.8840782122905028,
+      "engine_ttft_p95_s": 3.2898550724637667,
+      "engine_ttft_observations": 1144.0,
+      "engine_ttft_metric": "vllm:time_to_first_token_seconds",
+      "engine_ttft_source": "engine-side TTFT",
+      "engine_ttft_status": "ok",
+      "peak_vram_mb": 179250.3203125,
+      "peak_kv_usage": 0.20307553143374035,
+      "peak_host_cpu_percent": 94.35779816513762,
+      "peak_host_ram_used_mb": 23263.53125,
+      "attempts": 34,
+      "graded_tasks": 29,
+      "strict_solved": 7,
+      "wilson95": [
+        0.12218422442520088,
+        0.42107601617811324
+      ],
+      "taxonomy": {
+        "false_success": 2,
+        "infra_error": 5,
+        "no_claim": 1,
+        "solved": 7,
+        "timeout": 17,
+        "turn_cap": 2
+      },
+      "grader_infra_symlink": 4,
+      "unknown_verdict_tasks": [
+        "c09"
+      ],
+      "accounting": {
+        "windows": [
+          {
+            "study_session": 4,
+            "started_at": "2026-10-18T20:18:16.110Z",
+            "ended_at": "2026-10-18T23:08:34.836Z",
+            "microseconds": 10218726000
+          }
+        ],
+        "microseconds": 10218726000,
+        "gpu_hours_decimal": "2.838535",
+        "gpu_hours_fraction": {
+          "numerator": 10218726000,
+          "denominator": 3600000000
+        },
+        "list_cost_usd_decimal": "5.64868465"
+      },
+      "token_total_complete": false,
+      "token_incomplete_attempts": 18,
+      "missing_usage_requests": 18,
+      "measured_usage_responses": 1128,
+      "completed_response_tokens": {
+        "tokens_in": 35544889,
+        "tokens_out": 648618,
+        "tokens_cached": 33642752,
+        "tokens_uncached_in": 1902137
+      },
+      "exact_all_attempt_tokens": {
+        "tokens_in": null,
+        "tokens_out": null,
+        "tokens_cached": null,
+        "tokens_uncached_in": null
+      },
+      "tokens_per_solved": null,
+      "tokens_per_solved_lower_bound": 364393.5714285714,
+      "solved_only_mean_tokens_uncached_in": 46288.57142857143,
+      "solved_only_mean_tokens_out": 15450.42857142857,
+      "preemptions": 0.0,
+      "observed_preemptions_increase": 0.0,
+      "preemptions_status": "bracketed counter delta"
+    },
+    {
+      "pending_mac_grades": 0,
+      "level": "c4",
+      "concurrency": 4,
+      "runs": 29,
+      "solved": 6,
+      "success_rate": 0.20689655172413793,
+      "level_wall_s": 14628.71900010109,
+      "successful_tasks_per_hour": 1.4765476047390573,
+      "started_at": "2026-10-18T23:09:25.662Z",
+      "ended_at": "2026-10-19T03:13:14.381Z",
+      "fixture": false,
+      "scored": true,
+      "level_gpu_hours": 4.063533055583636,
+      "level_gpu_cost_usd": 8.086430780611435,
+      "billable_gpu_hours": null,
+      "billable_cost_usd": null,
+      "infra_attempts": 6,
+      "infra_reruns": 5,
+      "timing_contains_repair_gap": false,
+      "missing_status_runs": 1,
+      "solved_rule": "tasks-v1 category == solved",
+      "tests_passing_at_cutoff": 15,
+      "clean_tests_passing_at_cutoff": 13,
+      "anecdotal": false,
+      "planned_level_dropped": false,
+      "measurement_sessions": 1,
+      "wall_time_basis": "sum of per-study-session attempt windows (infra included)",
+      "wall_p50_s": 1434.972,
+      "wall_p95_s": 1800.0,
+      "tokens_in": null,
+      "all_attempts_tokens_in": null,
+      "tokens_out": null,
+      "all_attempts_tokens_out": null,
+      "tokens_cached": null,
+      "all_attempts_tokens_cached": null,
+      "tokens_uncached_in": null,
+      "all_attempts_tokens_uncached_in": null,
+      "tokens_cumulative": null,
+      "all_attempts_tokens_cumulative": null,
+      "tokens_counted": null,
+      "all_attempts_tokens_counted": null,
+      "token_overshoot": null,
+      "all_attempts_token_overshoot": null,
+      "inference_s": null,
+      "all_attempts_inference_s": null,
+      "wall_s": 38927.433000000005,
+      "all_attempts_wall_s": 47307.97100000001,
+      "turns": 1122,
+      "all_attempts_turns": null,
+      "tool_calls": 1246,
+      "all_attempts_tool_calls": null,
+      "tokens_in_per_task": null,
+      "tokens_out_per_task": null,
+      "tokens_cached_per_task": null,
+      "tokens_uncached_in_per_task": null,
+      "tokens_cumulative_per_task": null,
+      "tokens_counted_per_task": null,
+      "token_overshoot_per_task": null,
+      "solved_tokens_in_mean": 719544.1666666666,
+      "solved_tokens_out_mean": 11227.833333333334,
+      "solved_turns_mean": 30.166666666666668,
+      "solved_tool_calls_mean": 32.0,
+      "solved_inference_s_mean": 565.207893051002,
+      "solved_wall_s_mean": 636.4133333333333,
+      "failed_tokens_in_mean": null,
+      "failed_tokens_out_mean": null,
+      "failed_turns_mean": 40.91304347826087,
+      "failed_tool_calls_mean": 45.82608695652174,
+      "failed_inference_s_mean": null,
+      "failed_wall_s_mean": 1526.4762173913043,
+      "model_latency_p50_s": 10.121181667001919,
+      "model_latency_p95_s": 113.23412127358321,
+      "model_latency_p99_s": 356.11980148959884,
+      "ttft_p50_s": null,
+      "ttft_p95_s": null,
+      "ttft_p99_s": null,
+      "failure_wrong_answer": 7,
+      "failure_timeout": 13,
+      "failure_turn_cap": 3,
+      "failure_token_cap": 0,
+      "failure_context_overflow": 0,
+      "failure_agent_loop": 0,
+      "failure_infra": 6,
+      "failure_other": 0,
+      "sample_count": 13323,
+      "engine_ttft_p50_s": 0.8546348314606742,
+      "engine_ttft_p95_s": 3.7738764044943798,
+      "engine_ttft_observations": 1413.0,
+      "engine_ttft_metric": "vllm:time_to_first_token_seconds",
+      "engine_ttft_source": "engine-side TTFT",
+      "engine_ttft_status": "ok",
+      "peak_vram_mb": 179250.3203125,
+      "peak_kv_usage": 0.15468113975576658,
+      "peak_host_cpu_percent": 53.90625,
+      "peak_host_ram_used_mb": 20617.6015625,
+      "attempts": 35,
+      "graded_tasks": 29,
+      "strict_solved": 6,
+      "wilson95": [
+        0.09846070197841036,
+        0.38390090403867894
+      ],
+      "taxonomy": {
+        "false_success": 4,
+        "infra_error": 6,
+        "no_claim": 1,
+        "solved": 6,
+        "tamper": 2,
+        "timeout": 13,
+        "turn_cap": 3
+      },
+      "grader_infra_symlink": 6,
+      "unknown_verdict_tasks": [
+        "c11"
+      ],
+      "accounting": {
+        "windows": [
+          {
+            "study_session": 4,
+            "started_at": "2026-10-18T23:09:25.662Z",
+            "ended_at": "2026-10-19T03:13:14.381Z",
+            "microseconds": 14628719000
+          }
+        ],
+        "microseconds": 14628719000,
+        "gpu_hours_decimal": "4.063533055555555555555555556",
+        "gpu_hours_fraction": {
+          "numerator": 14628719000,
+          "denominator": 3600000000
+        },
+        "list_cost_usd_decimal": "8.086430780555555555555555556"
+      },
+      "token_total_complete": false,
+      "token_incomplete_attempts": 15,
+      "missing_usage_requests": 15,
+      "measured_usage_responses": 1399,
+      "completed_response_tokens": {
+        "tokens_in": 51204392,
+        "tokens_out": 882451,
+        "tokens_cached": 48536384,
+        "tokens_uncached_in": 2668008
+      },
+      "exact_all_attempt_tokens": {
+        "tokens_in": null,
+        "tokens_out": null,
+        "tokens_cached": null,
+        "tokens_uncached_in": null
+      },
+      "tokens_per_solved": null,
+      "tokens_per_solved_lower_bound": 591743.1666666666,
+      "solved_only_mean_tokens_uncached_in": 38690.833333333336,
+      "solved_only_mean_tokens_out": 11227.833333333334,
+      "preemptions": 0.0,
+      "observed_preemptions_increase": 0.0,
+      "preemptions_status": "bracketed counter delta"
+    },
+    {
+      "pending_mac_grades": 0,
+      "level": "c1",
+      "concurrency": 1,
+      "runs": 3,
+      "solved": 0,
+      "success_rate": 0.0,
+      "level_wall_s": 3254.3229999542236,
+      "successful_tasks_per_hour": 0.0,
+      "started_at": "2026-10-16T23:00:46.102Z",
+      "ended_at": "2026-10-16T23:55:00.425Z",
+      "fixture": false,
+      "scored": true,
+      "level_gpu_hours": 0.9039786110983955,
+      "level_gpu_cost_usd": 1.7989174360858071,
+      "billable_gpu_hours": null,
+      "billable_cost_usd": null,
+      "infra_attempts": 0,
+      "infra_reruns": 0,
+      "timing_contains_repair_gap": false,
+      "missing_status_runs": null,
+      "solved_rule": "tasks-v1 category == solved",
+      "tests_passing_at_cutoff": 1,
+      "clean_tests_passing_at_cutoff": 0,
+      "anecdotal": true,
+      "planned_level_dropped": true,
+      "measurement_sessions": 1,
+      "pending_native_grades": 0,
+      "wall_time_basis": "sum of per-study-session attempt windows (infra included)",
+      "wall_p50_s": 776.699,
+      "wall_p95_s": 1697.6698999999999,
+      "tokens_in": null,
+      "all_attempts_tokens_in": null,
+      "tokens_out": null,
+      "all_attempts_tokens_out": null,
+      "tokens_cached": null,
+      "all_attempts_tokens_cached": null,
+      "tokens_uncached_in": null,
+      "all_attempts_tokens_uncached_in": null,
+      "tokens_cumulative": null,
+      "all_attempts_tokens_cumulative": null,
+      "tokens_counted": null,
+      "all_attempts_tokens_counted": null,
+      "token_overshoot": null,
+      "all_attempts_token_overshoot": null,
+      "inference_s": null,
+      "all_attempts_inference_s": null,
+      "wall_s": 3251.887,
+      "all_attempts_wall_s": 3251.887,
+      "turns": null,
+      "all_attempts_turns": null,
+      "tool_calls": null,
+      "all_attempts_tool_calls": null,
+      "tokens_in_per_task": null,
+      "tokens_out_per_task": null,
+      "tokens_cached_per_task": null,
+      "tokens_uncached_in_per_task": null,
+      "tokens_cumulative_per_task": null,
+      "tokens_counted_per_task": null,
+      "token_overshoot_per_task": null,
+      "solved_tokens_in_mean": null,
+      "solved_tokens_out_mean": null,
+      "solved_turns_mean": null,
+      "solved_tool_calls_mean": null,
+      "solved_inference_s_mean": null,
+      "solved_wall_s_mean": null,
+      "failed_tokens_in_mean": null,
+      "failed_tokens_out_mean": null,
+      "failed_turns_mean": null,
+      "failed_tool_calls_mean": null,
+      "failed_inference_s_mean": null,
+      "failed_wall_s_mean": 1083.9623333333334,
+      "model_latency_p50_s": null,
+      "model_latency_p95_s": null,
+      "model_latency_p99_s": null,
+      "ttft_p50_s": null,
+      "ttft_p95_s": null,
+      "ttft_p99_s": null,
+      "failure_wrong_answer": 2,
+      "failure_timeout": 1,
+      "failure_turn_cap": 0,
+      "failure_token_cap": 0,
+      "failure_context_overflow": 0,
+      "failure_agent_loop": 0,
+      "failure_infra": 0,
+      "failure_other": 0,
+      "sample_count": 3001,
+      "engine_ttft_p50_s": null,
+      "engine_ttft_p95_s": null,
+      "engine_ttft_observations": null,
+      "engine_ttft_metric": null,
+      "engine_ttft_source": null,
+      "engine_ttft_status": "anecdotal subset; sampler includes additional historical infra attempt",
+      "peak_vram_mb": 179252.14453125,
+      "peak_kv_usage": 0.05834464043419263,
+      "peak_host_cpu_percent": 26.048870447210692,
+      "peak_host_ram_used_mb": 16930.16015625,
+      "attempts": 3,
+      "graded_tasks": 3,
+      "strict_solved": 0,
+      "wilson95": [
+        0.0,
+        0.5614970317550454
+      ],
+      "taxonomy": {
+        "false_success": 1,
+        "tamper": 1,
+        "timeout": 1
+      },
+      "grader_infra_symlink": 0,
+      "unknown_verdict_tasks": [],
+      "accounting": {
+        "windows": [
+          {
+            "study_session": 3,
+            "started_at": "2026-10-16T23:00:46.102Z",
+            "ended_at": "2026-10-16T23:55:00.425Z",
+            "microseconds": 3254323000
+          }
+        ],
+        "microseconds": 3254323000,
+        "gpu_hours_decimal": "0.9039786111111111111111111111",
+        "gpu_hours_fraction": {
+          "numerator": 3254323000,
+          "denominator": 3600000000
+        },
+        "list_cost_usd_decimal": "1.798917436111111111111111111"
+      },
+      "token_total_complete": false,
+      "token_incomplete_attempts": 1,
+      "missing_usage_requests": 1,
+      "measured_usage_responses": 134,
+      "completed_response_tokens": {
+        "tokens_in": 5510603,
+        "tokens_out": 118080,
+        "tokens_cached": 5240768,
+        "tokens_uncached_in": 269835
+      },
+      "exact_all_attempt_tokens": {
+        "tokens_in": null,
+        "tokens_out": null,
+        "tokens_cached": null,
+        "tokens_uncached_in": null
+      },
+      "tokens_per_solved": null,
+      "tokens_per_solved_lower_bound": null,
+      "solved_only_mean_tokens_uncached_in": null,
+      "solved_only_mean_tokens_out": null,
+      "preemptions": null,
+      "observed_preemptions_increase": 0.0,
+      "preemptions_status": "Historical sampler includes c22 infra, outside the anecdotal n=3 subset"
+    }
+  ],
+  "fisher_exact": [
+    {
+      "levels": [
+        "c16",
+        "c8"
+      ],
+      "table": [
+        [
+          3,
+          26
+        ],
+        [
+          7,
+          22
+        ]
+      ],
+      "two_sided_p": 0.29728796817995956,
+      "adjustment": "none; descriptive comparisons of overlapping frozen task sets"
+    },
+    {
+      "levels": [
+        "c16",
+        "c4"
+      ],
+      "table": [
+        [
+          3,
+          26
+        ],
+        [
+          6,
+          23
+        ]
+      ],
+      "two_sided_p": 0.47026323755104643,
+      "adjustment": "none; descriptive comparisons of overlapping frozen task sets"
+    },
+    {
+      "levels": [
+        "c8",
+        "c4"
+      ],
+      "table": [
+        [
+          7,
+          22
+        ],
+        [
+          6,
+          23
+        ]
+      ],
+      "two_sided_p": 1.0,
+      "adjustment": "none; descriptive comparisons of overlapping frozen task sets"
+    }
+  ],
+  "grader_infra": [
+    {
+      "run_id": "c09__qwen38-27b-mi300x__a1161",
+      "level": "c16",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c09__qwen38-27b-mi300x__a1162",
+      "level": "c16",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "222a793c35e4b01dc7a81faf3d1c1327b57f78d7989218c5e4ef8ef4da68d105",
+          "error": "Pinned treeHash, retained checkpoint workspace, no tests or Docker commands:\nUnsafe snapshot entry: node_modules/.bin/nanoid\nArchived symlinks: 9\n",
+          "retained_entry_is_symlink": true,
+          "evidence_kind": "archive replay; original grading stderr unavailable"
+        }
+      ]
+    },
+    {
+      "run_id": "c09__qwen38-27b-mi300x__a4",
+      "level": "c16",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c09__qwen38-27b-mi300x__a1081",
+      "level": "c8",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c09__qwen38-27b-mi300x__a1082",
+      "level": "c8",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c09__qwen38-27b-mi300x__a3",
+      "level": "c8",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c11__qwen38-27b-mi300x__a3",
+      "level": "c8",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c23__qwen38-27b-mi300x__a3",
+      "level": "c8",
+      "kind": "execution_infra",
+      "evidence": []
+    },
+    {
+      "run_id": "c09__qwen38-27b-mi300x__a2",
+      "level": "c4",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "82a370dfb66dd42cb592cfbdf6dc366bb4d02ba839166c6179e0ca225c7f595f",
+          "error": "Unsafe snapshot entry: node_modules/.bin/nanoid\n",
+          "unsafe_entry": "node_modules/.bin/nanoid",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c10__qwen38-27b-mi300x__a1041",
+      "level": "c4",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "773b865a076279685f1dff963c037219a92900ab823986d11ebedf0fa5ca50c1",
+          "error": "Unsafe snapshot entry: .tmp-verify/work/dangle.txt\n",
+          "unsafe_entry": ".tmp-verify/work/dangle.txt",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c10__qwen38-27b-mi300x__a2",
+      "level": "c4",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c11__qwen38-27b-mi300x__a1041",
+      "level": "c4",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c11__qwen38-27b-mi300x__a1042",
+      "level": "c4",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    },
+    {
+      "run_id": "c11__qwen38-27b-mi300x__a2",
+      "level": "c4",
+      "kind": "symlink_snapshot",
+      "evidence": [
+        {
+          "sha256": "a48cdbbf7367af8ef539ea86c1df81b4b31b917e25ef4af698c7e88543b7dfea",
+          "error": "Unsafe snapshot entry: node_modules\n",
+          "unsafe_entry": "node_modules",
+          "retained_entry_is_symlink": true
+        }
+      ]
+    }
+  ]
+}

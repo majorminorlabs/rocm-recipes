@@ -1,0 +1,20 @@
+{
+  "study": "006",
+  "source_commits": [
+    "f7c3b91",
+    "3a30a54",
+    "4df9983"
+  ],
+  "export": "Public projection: numeric/scoring fields retained; operational identities and evidence paths removed. Internal originals unchanged.",
+  "harness": {
+    "commit": "279889b8f42c607344781766503602a8c462f5df",
+    "tasks": "tasks-v1",
+    "public": false
+  },
+  "source_exports": {
+    "c16": "15cb22e7ec85d6ad9f4b12ec9d9f24ef4c279e7a37a96d121f596e3bce6ce652",
+    "c8": "aebd24afd078a9dd1f0a7eb95148c08726ecc1895fe23eb0ff01ea047339ab7d",
+    "c4": "5af304efac1d370b8e4bb356e3ee2cf983559a6c129cf05ed743d5928faa004d",
+    "c1": "a57b223b7fa08ee6a21fef109e9beef7400535fde2495a15f87e34daf127933a"
+  }
+}
