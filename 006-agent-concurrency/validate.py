@@ -12,6 +12,8 @@ def fisher(a,b,c,d):
  return sum(weight(x) for x in range(max(0,row-no),min(row,yes)+1) if weight(x)<=weight(a))/math.comb(total,row)
 def main():
  reports=[ROOT/f'results/atlas/scored/final/{l}/runs.json' for l in ('c16','c8','c4','c1')]
+ if (ROOT.parent/'.git').exists():
+  subprocess.run(['git','-C',str(ROOT.parent),'ls-files','--error-unmatch',*[str(p.relative_to(ROOT.parent)) for p in reports]],check=True,stdout=subprocess.DEVNULL)
  summaries,rows=summarize(reports,list((ROOT/'results/raw').glob('*/samples.jsonl')),strict=True)
  assert len(rows)==104 and sum(r['included'] for r in rows)==90
  analysis=json.loads((ROOT/'results/final_analysis.json').read_text())

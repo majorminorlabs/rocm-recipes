@@ -4,5 +4,5 @@ notes/
 logs/
 __pycache__/
 *.pyc
-atlas/
+/atlas/
 results/rehearsal/

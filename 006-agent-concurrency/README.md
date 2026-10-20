@@ -2,7 +2,9 @@
 
 I ran real coding agents on 30 frozen tasks with Qwen3.8-27B BF16 and vLLM on one AMD MI300X. Eight concurrent agents produced 7 strict solves in 2.838535 active GPU-hours: **2.47 solved/hour, $0.81 per solve** at the $1.99/hour list price. This is the best observed point in a small single-run study, not a statistically established optimum.
 
-[Article and charts](https://majorminor.xyz/research/rocm-recipes-006) · [Results](results/final_analysis.json) · [Engine input totals](results/analysis/engine_input_totals.json) · [Sensitivity](results/analysis/symlink_sensitivity.json)
+Write-up and charts: publication pending at https://majorminor.xyz/research/rocm-recipes-006.
+
+[Results](results/final_analysis.json) · [Engine input totals](results/analysis/engine_input_totals.json) · [Sensitivity](results/analysis/symlink_sensitivity.json)
 
 | Concurrency | Strict solved / graded | Active GPU-hours | Solved/hour | Active GPU $/solve |
 |---|---:|---:|---:|---:|
